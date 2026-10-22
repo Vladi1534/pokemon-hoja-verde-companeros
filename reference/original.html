@@ -1,0 +1,2546 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#081c15" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>Fakemon: Edición Hoja Esmeralda v3.0 (Android & Web Masterpiece)</title>
+  <style>
+    :root {
+      --gba-shell: #1b4332;
+      --gba-shell-dark: #081c15;
+      --screen-border: #141917;
+      --accent: #52b788;
+      --accent-bright: #74c69d;
+      --gold: #ffd166;
+      --danger: #e63946;
+    }
+
+    * {
+      box-sizing: border-box;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+      margin: 0;
+      padding: 6px;
+      background: radial-gradient(circle at top, #1b4332 0%, #040d09 100%);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 6px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.15rem;
+      color: #74c69d;
+      text-shadow: 0 2px 0 #000;
+      letter-spacing: 0.5px;
+    }
+
+    header p {
+      margin: 2px 0 0;
+      font-size: 0.72rem;
+      color: #b7e4c7;
+    }
+
+    .console-wrapper {
+      background: linear-gradient(145deg, var(--gba-shell), var(--gba-shell-dark));
+      border: 3px solid #081c15;
+      border-radius: 18px;
+      padding: 10px;
+      box-shadow: 0 14px 35px rgba(0,0,0,0.85), inset 0 2px 4px rgba(255,255,255,0.18);
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1120px;
+      width: 100%;
+    }
+
+    .left-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .screen-bezel {
+      background: var(--screen-border);
+      padding: 8px;
+      border-radius: 12px;
+      border: 3px solid #000;
+      box-shadow: inset 0 4px 10px rgba(0,0,0,0.95);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    canvas#gameCanvas {
+      background: #000;
+      display: block;
+      width: 480px;
+      height: 320px;
+      image-rendering: pixelated;
+      border: 2px solid #000;
+      touch-action: none;
+    }
+
+    @media (max-width: 540px) {
+      canvas#gameCanvas {
+        width: 92vw;
+        height: 61.3vw;
+      }
+      .console-wrapper {
+        padding: 6px;
+      }
+    }
+
+    /* CONTROLES TÁCTILES ANDROID SIEMPRE ACCESIBLES BAJO LA PANTALLA */
+    .gamepad-bar {
+      width: 100%;
+      background: rgba(8, 28, 21, 0.92);
+      border: 2px solid #2d6a4f;
+      border-radius: 14px;
+      padding: 8px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dpad {
+      display: grid;
+      grid-template-columns: repeat(3, 44px);
+      grid-template-rows: repeat(3, 44px);
+      gap: 3px;
+      touch-action: manipulation;
+    }
+
+    .btn {
+      background: #2b3336;
+      color: #fff;
+      border: 2px solid #111;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 3px 0 #0d1112;
+      touch-action: manipulation;
+    }
+
+    .btn:active, .btn.pressed {
+      transform: translateY(2px);
+      box-shadow: 0 1px 0 #0d1112;
+      filter: brightness(1.2);
+    }
+
+    .action-cluster {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .btn-action-a {
+      background: linear-gradient(145deg, #e63946, #9d0208);
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      font-size: 1.15rem;
+      border: 2px solid #000;
+    }
+
+    .btn-action-b {
+      background: linear-gradient(145deg, #f77f00, #bc6c25);
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      font-size: 1.05rem;
+      border: 2px solid #000;
+      margin-top: 16px;
+    }
+
+    .side-panel {
+      flex: 1;
+      min-width: 315px;
+      max-width: 520px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .card {
+      background: rgba(8, 28, 21, 0.92);
+      border: 2px solid #2d6a4f;
+      border-radius: 10px;
+      padding: 8px 10px;
+    }
+
+    .card h2 {
+      margin: 0 0 6px 0;
+      font-size: 0.86rem;
+      color: var(--accent-bright);
+      border-bottom: 1px solid #2d6a4f;
+      padding-bottom: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .quest-banner {
+      background: linear-gradient(90deg, #1b4332, #0b2117);
+      border-left: 4px solid var(--gold);
+      padding: 6px 8px;
+      border-radius: 5px;
+      font-size: 0.74rem;
+      margin-bottom: 6px;
+      color: #f8f9fa;
+    }
+
+    .status-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+      font-size: 0.73rem;
+      background: #0b2117;
+      padding: 6px;
+      border-radius: 6px;
+    }
+
+    .status-item span {
+      color: var(--gold);
+      font-weight: bold;
+    }
+
+    .top-bar-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 6px;
+    }
+
+    .btn-small {
+      padding: 5px 8px;
+      font-size: 0.72rem;
+      background: #2d6a4f;
+    }
+
+    .btn-small:hover {
+      background: #40916c;
+    }
+
+    .nav-tabs {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 4px;
+      margin-bottom: 6px;
+    }
+
+    .tab-content {
+      max-height: 220px;
+      overflow-y: auto;
+      font-size: 0.76rem;
+      padding-right: 4px;
+    }
+
+    .poke-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255,255,255,0.06);
+      padding: 5px 7px;
+      border-radius: 6px;
+      margin-bottom: 5px;
+      border-left: 4px solid var(--accent-bright);
+      gap: 6px;
+    }
+
+    .badge-type {
+      display: inline-block;
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-size: 0.65rem;
+      margin-right: 2px;
+      color: #fff;
+      text-shadow: 0 1px 1px #000;
+    }
+
+    .pokedex-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
+      gap: 5px;
+    }
+
+    .dex-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid #2d6a4f;
+      border-radius: 6px;
+      padding: 4px 5px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.68rem;
+    }
+
+    .dex-card.caught {
+      background: rgba(82, 183, 136, 0.24);
+      border-color: var(--gold);
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 12px;
+      right: 12px;
+      background: #1b4332;
+      border: 2px solid var(--gold);
+      color: #fff;
+      padding: 8px 13px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      display: none;
+      z-index: 999;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.7);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌿 FAKEMON: EDICIÓN HOJA ESMERALDA v3.0 (MASTERPIECE) 🌿</h1>
+    <p>Historia «El Prisma de Aether» • Sprites 32x32 HD + Shinies • Objetos Equipables • Táctil Android</p>
+  </header>
+
+  <div class="console-wrapper">
+    <!-- COLUMNA IZQUIERDA: PANTALLA + GAMEPAD ANDROID -->
+    <div class="left-column">
+      <div class="screen-bezel">
+        <canvas id="gameCanvas" width="480" height="320"></canvas>
+      </div>
+
+      <!-- MANDOS TÁCTILES OPTIMIZADOS PARA ANDROID Y ESCRITORIO -->
+      <div class="gamepad-bar">
+        <div class="dpad">
+          <div></div>
+          <button class="btn" id="btnUp">▲</button>
+          <div></div>
+          <button class="btn" id="btnLeft">◄</button>
+          <div style="background:#14191b; border-radius:6px;"></div>
+          <button class="btn" id="btnRight">►</button>
+          <div></div>
+          <button class="btn" id="btnDown">▼</button>
+          <div></div>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:5px; align-items:center;">
+          <button class="btn btn-small" onclick="Game.toggleFullscreen()">📱 Pantalla Completa Android</button>
+          <div style="display:flex; gap:4px;">
+            <button class="btn btn-small" id="btnMusic" onclick="SFX.toggleBgm()">🎵 Música: OFF</button>
+            <button class="btn btn-small" id="btnSound" onclick="SFX.toggle()">🔊 SFX: ON</button>
+          </div>
+          <span style="font-size:0.66rem; color:#95d5b2;">Teclado: WASD/Flechas + Z(A) / X(B)</span>
+        </div>
+
+        <div class="action-cluster">
+          <button class="btn btn-action-b" id="btnB">B</button>
+          <button class="btn btn-action-a" id="btnA">A</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- COLUMNA DERECHA: HISTORIA, MOCHILA, EQUIPO Y POKÉDEX -->
+    <div class="side-panel">
+      <div class="card">
+        <h2>
+          <span>Crónicas de Silvania</span>
+          <span id="zoneLabel" style="color:var(--gold);">Pueblo Hoja</span>
+        </h2>
+        <div class="quest-banner" id="questBanner">
+          📜 <strong>Misión Actual:</strong> Elige a tu Fakemon inicial en el Laboratorio del Prof. Olmo.
+        </div>
+        <div class="status-bar">
+          <div class="status-item">Medallas: <span id="statBadges">0/4</span></div>
+          <div class="status-item">Pokédex: <span id="statDex">0/121</span></div>
+          <div class="status-item">Dinero: <span id="statMoney">$1500</span></div>
+          <div class="status-item">Balls: <span id="statBalls">15</span></div>
+          <div class="status-item">Curación: <span id="statPotions">10</span></div>
+          <div class="status-item">Repelente: <span id="statRepel">0 pasos</span></div>
+        </div>
+        <div class="top-bar-btns">
+          <button class="btn btn-small" onclick="Game.saveGame(true)">💾 Guardar</button>
+          <button class="btn btn-small" onclick="Game.exportSave()">📤 Exportar</button>
+          <button class="btn btn-small" onclick="Game.importSave()">📥 Importar</button>
+          <button class="btn btn-small" style="background:#9d0208;" onclick="Game.resetSave()">🗑️ Reiniciar</button>
+        </div>
+      </div>
+
+      <div class="card" style="flex:1;">
+        <div class="nav-tabs">
+          <button class="btn btn-small" onclick="UI.showTab('party')">🎒 Equipo</button>
+          <button class="btn btn-small" onclick="UI.showTab('bag')">🧰 Mochila</button>
+          <button class="btn btn-small" onclick="UI.showTab('shop')">🛒 Tienda</button>
+          <button class="btn btn-small" onclick="UI.showTab('pokedex')">📖 Dex 121</button>
+          <button class="btn btn-small" onclick="UI.showTab('pc')">💻 PC (<span id="statPC">0</span>)</button>
+        </div>
+        <h2 id="tabTitle">🎒 Tu Equipo Activo</h2>
+        <div id="tabContainer" class="tab-content"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast">Partida guardada</div>
+
+<script>
+/* ============================================================================
+   1. AUDIO CHIPTUNE GBA + VIBRACIÓN HÁPTICA ANDROID
+   ============================================================================ */
+const SFX = {
+  enabled: true,
+  bgmEnabled: false,
+  ctx: null,
+  bgmTimer: null,
+  bgmStep: 0,
+
+  init() {
+    if (!this.ctx) {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      if (AudioCtx) this.ctx = new AudioCtx();
+    }
+    if (this.ctx && this.ctx.state === "suspended") {
+      this.ctx.resume();
+    }
+  },
+
+  vibrate(ms = 18) {
+    if (navigator.vibrate) {
+      try { navigator.vibrate(ms); } catch (e) {}
+    }
+  },
+
+  toggle() {
+    this.enabled = !this.enabled;
+    document.getElementById("btnSound").textContent = this.enabled ? "🔊 SFX: ON" : "🔇 SFX: OFF";
+  },
+
+  toggleBgm() {
+    this.init();
+    this.bgmEnabled = !this.bgmEnabled;
+    document.getElementById("btnMusic").textContent = this.bgmEnabled ? "🎵 Música: ON" : "🎵 Música: OFF";
+    if (this.bgmEnabled) {
+      this.startBgmLoop();
+    } else if (this.bgmTimer) {
+      clearInterval(this.bgmTimer);
+      this.bgmTimer = null;
+    }
+  },
+
+  startBgmLoop() {
+    if (this.bgmTimer) clearInterval(this.bgmTimer);
+    const overworldNotes = [330, 392, 440, 392, 523, 494, 440, 392, 349, 392, 440, 330, 294, 330, 392, 392];
+    const battleNotes = [220, 261, 330, 220, 246, 293, 349, 246, 261, 330, 392, 261, 330, 293, 246, 220];
+    this.bgmTimer = setInterval(() => {
+      if (!this.bgmEnabled || !this.enabled) return;
+      const list = Game.state === "BATTLE" ? battleNotes : overworldNotes;
+      const freq = list[this.bgmStep % list.length];
+      this.bgmStep++;
+      this.beep(freq, 0.14, "triangle", 0, 0.025);
+    }, 210);
+  },
+
+  beep(freq = 440, dur = 0.08, type = "square", slide = 0, vol = 0.07) {
+    if (!this.enabled) return;
+    try {
+      this.init();
+      if (!this.ctx) return;
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      osc.type = type;
+      osc.frequency.setValueAtTime(freq, this.ctx.currentTime);
+      if (slide !== 0) {
+        osc.frequency.linearRampToValueAtTime(freq + slide, this.ctx.currentTime + dur);
+      }
+      gain.gain.setValueAtTime(vol, this.ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + dur);
+      osc.connect(gain);
+      gain.connect(this.ctx.destination);
+      osc.start();
+      osc.stop(this.ctx.currentTime + dur);
+    } catch (e) {}
+  },
+
+  hit() { this.vibrate(35); this.beep(170, 0.13, "sawtooth", -85); },
+  select() { this.vibrate(12); this.beep(640, 0.045, "square", 70); },
+  heal() {
+    this.vibrate([20, 40, 20]);
+    [523, 659, 784].forEach((f, i) => setTimeout(() => this.beep(f, 0.11, "triangle"), i * 110));
+  },
+  fanfare() {
+    this.vibrate([30, 50, 40]);
+    [523, 659, 784, 1046].forEach((f, i) => setTimeout(() => this.beep(f, 0.12, "square"), i * 110));
+  }
+};
+
+/* ============================================================================
+   2. CATÁLOGO DE OBJETOS (CONSUMIBLES, EQUIPABLES Y OBJETOS CLAVE DE HISTORIA)
+   ============================================================================ */
+const ITEMS_DB = {
+  // Captura
+  fakeball:    { id: "fakeball", name: "Fakéball", cat: "ball", rate: 1.0, price: 50, desc: "Cápsula estándar para capturar Fakemon salvajes." },
+  superball:   { id: "superball", name: "Súperball", cat: "ball", rate: 1.5, price: 120, desc: "Cápsula de alto rendimiento (x1.5 ratio de captura)." },
+  ultraball:   { id: "ultraball", name: "Ultraball", cat: "ball", rate: 2.2, price: 250, desc: "Cápsula maestra para especies raras y Legendarios (x2.2)." },
+  // Curación y Utilidad
+  pocion:      { id: "pocion", name: "Poción", cat: "heal", healRatio: 0.6, price: 60, desc: "Restaura el 60% de los PS de un Fakemon." },
+  superpocion: { id: "superpocion", name: "Súperpoción", cat: "heal", healRatio: 1.0, price: 140, desc: "Restaura el 100% de los PS de un Fakemon." },
+  revivir:     { id: "revivir", name: "Revivir", cat: "revive", price: 220, desc: "Reanima a un Fakemon debilitado con 50% de sus PS." },
+  repelente:   { id: "repelente", name: "Repelente", cat: "util", price: 100, desc: "Evita Fakemon salvajes débiles durante 25 pasos." },
+  carameloraro:{ id: "carameloraro", name: "Caramelo Raro", cat: "level", price: 480, desc: "Sube 1 Nivel al instante (y evoluciona si corresponde)." },
+  // Objetos Equipables (Held Items Gen 3)
+  semillamilagro: { id: "semillamilagro", name: "Semilla Milagro", cat: "held", boostType: "Planta", price: 350, desc: "Equipable: Potencia ataques de Planta un +25%." },
+  carbon:         { id: "carbon", name: "Carbón Ígneo", cat: "held", boostType: "Fuego", price: 350, desc: "Equipable: Potencia ataques de Fuego un +25%." },
+  aguamistica:    { id: "aguamistica", name: "Agua Mística", cat: "held", boostType: "Agua", price: 350, desc: "Equipable: Potencia ataques de Agua un +25%." },
+  iman:           { id: "iman", name: "Imán Celeste", cat: "held", boostType: "Electrico", price: 350, desc: "Equipable: Potencia ataques Eléctricos un +25%." },
+  restos:         { id: "restos", name: "Restos", cat: "held", regen: true, price: 500, desc: "Equipable: Recupera 10% de PS al final de cada turno." },
+  // Objetos Clave de Historia
+  mapaesmeralda:  { id: "mapaesmeralda", name: "Mapa Esmeralda", cat: "key", desc: "Mapa antiguo entregado tras vencer a tu rival Kael." },
+  picorocoso:     { id: "picorocoso", name: "Pico Rocoso", cat: "key", desc: "Permite romper rocas que bloquean las cuevas de la Zona 2." },
+  tablasurf:      { id: "tablasurf", name: "Tabla Surf", cat: "key", desc: "Permite navegar sobre el agua profunda en todas las zonas." },
+  orbeprisma:     { id: "orbeprisma", name: "Orbe Prisma", cat: "key", desc: "Reliquia recuperada del Comandante Vex. Despierta a Aethermew." }
+};
+
+/* ============================================================================
+   3. TABLA DE 16 TIPOS ELEMENTALES CON PALETA DE 4 TONOS
+   ============================================================================ */
+const TYPES = {
+  Planta:    { color: '#38b000', light: '#9ef01a', dark: '#1b4332', eff: { Agua: 2, Tierra: 2, Roca: 2, Fuego: 0.5, Planta: 0.5, Volador: 0.5, Bicho: 0.5, Veneno: 0.5, Dragon: 0.5, Acero: 0.5 } },
+  Fuego:     { color: '#e63946', light: '#ff8fa3', dark: '#780000', eff: { Planta: 2, Hielo: 2, Bicho: 2, Acero: 2, Agua: 0.5, Fuego: 0.5, Roca: 0.5, Dragon: 0.5 } },
+  Agua:      { color: '#0096c7', light: '#90e0ef', dark: '#023e8a', eff: { Fuego: 2, Tierra: 2, Roca: 2, Agua: 0.5, Planta: 0.5, Dragon: 0.5 } },
+  Electrico: { color: '#ffb703', light: '#ffe66d', dark: '#b5651d', eff: { Agua: 2, Volador: 2, Planta: 0.5, Electrico: 0.5, Dragon: 0.5, Tierra: 0 } },
+  Normal:    { color: '#8d99ae', light: '#edf2f4', dark: '#4a4e69', eff: { Roca: 0.5, Acero: 0.5, Fantasma: 0 } },
+  Volador:   { color: '#48cae4', light: '#caf0f8', dark: '#0077b6', eff: { Planta: 2, Bicho: 2, Electrico: 0.5, Roca: 0.5, Acero: 0.5 } },
+  Bicho:     { color: '#70e000', light: '#ccff33', dark: '#2b9348', eff: { Planta: 2, Psiquico: 2, Siniestro: 2, Fuego: 0.5, Volador: 0.5, Fantasma: 0.5, Acero: 0.5 } },
+  Veneno:    { color: '#9d4edd', light: '#e0aaff', dark: '#5a189a', eff: { Planta: 2, Veneno: 0.5, Tierra: 0.5, Roca: 0.5, Fantasma: 0.5, Acero: 0 } },
+  Roca:      { color: '#b08968', light: '#e6ccb2', dark: '#7f5539', eff: { Fuego: 2, Hielo: 2, Volador: 2, Bicho: 2, Tierra: 0.5, Acero: 0.5 } },
+  Tierra:    { color: '#dda15e', light: '#faedcd', dark: '#9c6644', eff: { Fuego: 2, Electrico: 2, Veneno: 2, Roca: 2, Acero: 2, Planta: 0.5, Bicho: 0.5, Volador: 0 } },
+  Psiquico:  { color: '#f72585', light: '#ff70a6', dark: '#7209b7', eff: { Veneno: 2, Psiquico: 0.5, Acero: 0.5, Siniestro: 0 } },
+  Hielo:     { color: '#00bbf9', light: '#a9def9', dark: '#0077b6', eff: { Planta: 2, Tierra: 2, Volador: 2, Dragon: 2, Fuego: 0.5, Agua: 0.5, Hielo: 0.5, Acero: 0.5 } },
+  Fantasma:  { color: '#7209b7', light: '#c77dff', dark: '#3c096c', eff: { Psiquico: 2, Fantasma: 2, Siniestro: 0.5, Normal: 0 } },
+  Siniestro: { color: '#495057', light: '#adb5bd', dark: '#212529', eff: { Psiquico: 2, Fantasma: 2, Siniestro: 0.5 } },
+  Acero:     { color: '#6c757d', light: '#dee2e6', dark: '#343a40', eff: { Hielo: 2, Roca: 2, Fuego: 0.5, Agua: 0.5, Electrico: 0.5, Acero: 0.5 } },
+  Dragon:    { color: '#4361ee', light: '#4cc9f0', dark: '#3a0ca3', eff: { Dragon: 2, Acero: 0.5 } }
+};
+
+function getTypeEffectiveness(moveType, defType1, defType2) {
+  let mult = 1;
+  const chart = TYPES[moveType]?.eff || {};
+  if (defType1 && chart[defType1] !== undefined) mult *= chart[defType1];
+  if (defType2 && chart[defType2] !== undefined) mult *= chart[defType2];
+  return mult;
+}
+
+/* ============================================================================
+   4. BASE DE DATOS DE LOS 121 FAKEMON ORIGINALES
+   ============================================================================ */
+const RAW_SPECIES = [
+  [1, "Broteko", "Planta", null, 48, 52, 50, 48, 16, 2, "biped"],
+  [2, "Silvaptor", "Planta", null, 64, 70, 65, 68, 32, 3, "biped"],
+  [3, "Junglaron", "Planta", "Dragon", 88, 96, 90, 85, null, null, "serpent"],
+  [4, "Pirocach", "Fuego", null, 46, 56, 44, 56, 16, 5, "quad"],
+  [5, "Ignilobo", "Fuego", null, 62, 76, 60, 75, 32, 6, "quad"],
+  [6, "Volcanfenix", "Fuego", "Volador", 85, 100, 80, 96, null, null, "bird"],
+  [7, "Acuafin", "Agua", null, 52, 50, 56, 46, 16, 8, "aqua"],
+  [8, "Hidronaut", "Agua", null, 68, 68, 74, 60, 32, 9, "biped"],
+  [9, "Leviacero", "Agua", "Acero", 92, 90, 100, 75, null, null, "serpent"],
+  [10, "Roedint", "Normal", null, 36, 44, 35, 52, 14, 11, "quad"],
+  [11, "Dentor", "Normal", null, 65, 78, 60, 82, null, null, "quad"],
+  [12, "Plumini", "Normal", "Volador", 38, 44, 36, 56, 15, 13, "bird"],
+  [13, "Halcovent", "Normal", "Volador", 60, 66, 55, 78, 30, 14, "bird"],
+  [14, "Condoray", "Volador", "Electrico", 82, 88, 74, 102, null, null, "bird"],
+  [15, "Larvahoja", "Bicho", null, 36, 34, 35, 36, 8, 16, "bug"],
+  [16, "Crisaluz", "Bicho", "Planta", 50, 40, 68, 35, 13, 17, "bug"],
+  [17, "Maripolvo", "Bicho", "Psiquico", 68, 75, 62, 85, null, null, "bird"],
+  [18, "Aguijonid", "Bicho", "Veneno", 38, 42, 34, 45, 9, 19, "bug"],
+  [19, "Capullox", "Bicho", "Veneno", 48, 42, 65, 35, 14, 20, "bug"],
+  [20, "Avispator", "Bicho", "Veneno", 68, 86, 58, 88, null, null, "bug"],
+  [21, "Chisparat", "Electrico", null, 44, 54, 42, 76, 20, 22, "quad"],
+  [22, "Voltigato", "Electrico", null, 68, 85, 64, 105, null, null, "quad"],
+  [23, "Semillit", "Planta", null, 44, 45, 48, 40, 16, 24, "spirit"],
+  [24, "Floravel", "Planta", null, 62, 62, 68, 55, 28, 25, "biped"],
+  [25, "Reinaflor", "Planta", "Psiquico", 84, 86, 88, 78, null, null, "spirit"],
+  [26, "Zorrisombra", "Siniestro", null, 45, 56, 42, 66, 20, 27, "quad"],
+  [27, "Loboeclipse", "Siniestro", null, 72, 90, 66, 94, null, null, "quad"],
+  [28, "Geodino", "Roca", "Tierra", 50, 65, 75, 30, 20, 29, "golem"],
+  [29, "Litorex", "Roca", "Tierra", 68, 85, 95, 42, 34, 30, "golem"],
+  [30, "Titanroca", "Roca", "Tierra", 92, 110, 118, 52, null, null, "golem"],
+  [31, "Murciomb", "Veneno", "Volador", 44, 48, 42, 65, 21, 32, "bird"],
+  [32, "Vampyrox", "Veneno", "Siniestro", 74, 84, 68, 96, null, null, "bird"],
+  [33, "Topoexc", "Tierra", null, 42, 62, 48, 68, 22, 34, "biped"],
+  [34, "Taladron", "Tierra", "Acero", 72, 96, 84, 88, null, null, "golem"],
+  [35, "Honguillo", "Planta", "Veneno", 48, 46, 52, 35, 22, 36, "spirit"],
+  [36, "Esporaking", "Planta", "Veneno", 78, 76, 84, 52, null, null, "golem"],
+  [37, "Cristalin", "Roca", "Psiquico", 50, 55, 78, 45, 26, 38, "spirit"],
+  [38, "Gemagolem", "Roca", "Psiquico", 78, 85, 112, 62, null, null, "golem"],
+  [39, "Serpirroca", "Roca", "Tierra", 65, 68, 105, 58, 30, 40, "serpent"],
+  [40, "Ferroboa", "Acero", "Tierra", 85, 95, 130, 55, null, null, "serpent"],
+  [41, "Pugilito", "Normal", null, 52, 70, 48, 55, 22, 42, "biped"],
+  [42, "Brazofuerte", "Normal", "Roca", 72, 92, 70, 65, 34, 43, "biped"],
+  [43, "Colosokarate", "Normal", "Acero", 94, 115, 88, 72, null, null, "biped"],
+  [44, "Campanuz", "Psiquico", "Acero", 50, 50, 75, 45, 26, 45, "spirit"],
+  [45, "Oracampana", "Psiquico", "Acero", 76, 78, 108, 60, null, null, "spirit"],
+  [46, "Escarabajox", "Bicho", "Roca", 55, 68, 78, 45, 25, 47, "bug"],
+  [47, "Herculon", "Bicho", "Acero", 80, 105, 96, 72, null, null, "bug"],
+  [48, "Gargolita", "Roca", "Volador", 54, 65, 64, 60, 28, 49, "bird"],
+  [49, "Gargolord", "Roca", "Volador", 82, 96, 88, 84, null, null, "bird"],
+  [50, "Imanito", "Electrico", "Acero", 45, 55, 70, 55, 24, 51, "spirit"],
+  [51, "Trimagnet", "Electrico", "Acero", 65, 78, 92, 72, 36, 52, "spirit"],
+  [52, "Mechamagnet", "Electrico", "Acero", 86, 102, 112, 84, null, null, "golem"],
+  [53, "Fosilcaracol", "Roca", "Agua", 50, 55, 80, 45, 28, 54, "aqua"],
+  [54, "Ammonitex", "Roca", "Agua", 78, 86, 108, 65, null, null, "aqua"],
+  [55, "Coralit", "Agua", "Roca", 55, 55, 75, 45, 24, 56, "aqua"],
+  [56, "Arrecifon", "Agua", "Roca", 84, 82, 104, 58, null, null, "golem"],
+  [57, "Cangrejox", "Agua", null, 48, 72, 68, 50, 24, 58, "bug"],
+  [58, "Pinzarey", "Agua", "Acero", 74, 105, 96, 68, null, null, "golem"],
+  [59, "Pezbrillo", "Agua", "Electrico", 56, 52, 52, 65, 25, 60, "aqua"],
+  [60, "Abisalux", "Agua", "Electrico", 88, 82, 78, 84, null, null, "aqua"],
+  [61, "Lodoz", "Veneno", "Tierra", 58, 62, 58, 38, 26, 62, "spirit"],
+  [62, "Toxiplaga", "Veneno", "Tierra", 92, 94, 86, 55, null, null, "golem"],
+  [63, "Ranaluz", "Agua", "Planta", 52, 54, 52, 60, 22, 64, "biped"],
+  [64, "Sapocharco", "Agua", "Planta", 78, 80, 76, 74, null, null, "biped"],
+  [65, "Caballomar", "Agua", null, 46, 58, 55, 68, 24, 66, "aqua"],
+  [66, "Dracomar", "Agua", "Dragon", 66, 80, 76, 82, 36, 67, "serpent"],
+  [67, "Abisdragon", "Agua", "Dragon", 88, 102, 94, 96, null, null, "serpent"],
+  [68, "Magmimp", "Fuego", null, 48, 62, 48, 58, 22, 69, "biped"],
+  [69, "Pirobruto", "Fuego", "Roca", 68, 86, 72, 66, 35, 70, "golem"],
+  [70, "Infernodon", "Fuego", "Roca", 92, 112, 98, 74, null, null, "golem"],
+  [71, "Tortufuego", "Fuego", "Roca", 65, 75, 105, 35, 28, 72, "quad"],
+  [72, "Calderon", "Fuego", "Acero", 88, 94, 126, 45, null, null, "golem"],
+  [73, "Salamandrix", "Fuego", "Veneno", 50, 64, 48, 76, 26, 74, "serpent"],
+  [74, "Piroviper", "Fuego", "Veneno", 76, 94, 68, 102, null, null, "serpent"],
+  [75, "Mentali", "Psiquico", null, 42, 65, 42, 75, 18, 76, "spirit"],
+  [76, "Oraculon", "Psiquico", null, 60, 88, 58, 92, 32, 77, "spirit"],
+  [77, "Astralux", "Psiquico", null, 78, 114, 76, 110, null, null, "spirit"],
+  [78, "Marionet", "Fantasma", null, 48, 64, 48, 58, 25, 79, "spirit"],
+  [79, "Titiritero", "Fantasma", "Siniestro", 74, 98, 70, 84, null, null, "spirit"],
+  [80, "Arenisco", "Tierra", null, 50, 64, 58, 55, 24, 81, "quad"],
+  [81, "Dunasaurio", "Tierra", "Dragon", 78, 96, 82, 88, null, null, "serpent"],
+  [82, "Cactuspina", "Planta", "Tierra", 54, 68, 56, 45, 25, 83, "biped"],
+  [83, "Desiertoking", "Planta", "Siniestro", 82, 102, 78, 68, null, null, "biped"],
+  [84, "Fenixsol", "Fuego", "Psiquico", 80, 96, 78, 94, null, null, "bird"],
+  [85, "Escarchin", "Hielo", null, 48, 58, 50, 62, 22, 86, "quad"],
+  [86, "Glaciolobo", "Hielo", null, 68, 82, 68, 84, 35, 87, "quad"],
+  [87, "Borealking", "Hielo", "Siniestro", 88, 106, 84, 104, null, null, "quad"],
+  [88, "Coponieve", "Hielo", "Volador", 50, 55, 52, 70, 26, 89, "bird"],
+  [89, "Ventiscave", "Hielo", "Volador", 78, 86, 76, 98, null, null, "bird"],
+  [90, "Focahelada", "Hielo", "Agua", 65, 60, 65, 50, 26, 91, "aqua"],
+  [91, "Morsaglacial", "Hielo", "Agua", 98, 88, 92, 65, null, null, "aqua"],
+  [92, "Espectrin", "Fantasma", "Veneno", 42, 65, 40, 75, 20, 93, "spirit"],
+  [93, "Sombramago", "Fantasma", "Veneno", 60, 88, 56, 92, 34, 94, "spirit"],
+  [94, "Necrolord", "Fantasma", "Veneno", 80, 112, 74, 108, null, null, "spirit"],
+  [95, "Armadurix", "Acero", "Fantasma", 55, 70, 85, 45, 28, 96, "golem"],
+  [96, "Paladinox", "Acero", "Fantasma", 82, 104, 118, 62, null, null, "golem"],
+  [97, "Runaglifo", "Psiquico", "Roca", 72, 82, 92, 70, null, null, "spirit"],
+  [98, "Esfingor", "Tierra", "Psiquico", 84, 88, 96, 76, null, null, "quad"],
+  [99, "Centellon", "Electrico", "Volador", 76, 92, 74, 104, null, null, "bird"],
+  [100, "Raptorix", "Roca", "Dragon", 58, 78, 60, 76, 30, 101, "biped"],
+  [101, "Tiranorex", "Roca", "Dragon", 88, 114, 90, 88, null, null, "biped"],
+  [102, "Plesiomar", "Agua", "Hielo", 95, 85, 88, 72, null, null, "aqua"],
+  [103, "Aeroptero", "Roca", "Volador", 80, 105, 72, 115, null, null, "bird"],
+  [104, "Golemantiguo", "Roca", "Acero", 90, 98, 125, 50, null, null, "golem"],
+  [105, "Dracobebe", "Dragon", null, 52, 68, 55, 60, 28, 106, "serpent"],
+  [106, "Wyvernix", "Dragon", "Volador", 74, 92, 78, 82, 42, 107, "bird"],
+  [107, "Bahamutex", "Dragon", "Fuego", 98, 124, 98, 102, null, null, "serpent"],
+  [108, "Hidralisk", "Dragon", "Siniestro", 55, 68, 58, 58, 28, 109, "serpent"],
+  [109, "Bicefalon", "Dragon", "Siniestro", 76, 90, 76, 78, 42, 110, "serpent"],
+  [110, "Tiamatox", "Dragon", "Siniestro", 96, 118, 94, 98, null, null, "serpent"],
+  [111, "Metalking", "Acero", "Psiquico", 58, 65, 80, 55, 26, 112, "golem"],
+  [112, "Cybercore", "Acero", "Psiquico", 78, 88, 100, 72, 40, 113, "golem"],
+  [113, "Omegatron", "Acero", "Psiquico", 96, 120, 120, 88, null, null, "golem"],
+  [114, "Guardianzen", "Normal", "Dragon", 110, 95, 95, 75, null, null, "golem"],
+  [115, "Ignisave", "Fuego", "Volador", 95, 115, 95, 105, null, null, "bird"],
+  [116, "Glaciave", "Hielo", "Volador", 95, 105, 110, 100, null, null, "bird"],
+  [117, "Fulgrave", "Electrico", "Volador", 95, 115, 90, 115, null, null, "bird"],
+  [118, "Terracoloso", "Tierra", "Roca", 108, 130, 130, 85, null, null, "golem"],
+  [119, "Thalassor", "Agua", "Dragon", 108, 125, 115, 98, null, null, "serpent"],
+  [120, "Viridionix", "Planta", "Psiquico", 112, 132, 115, 118, null, null, "serpent"],
+  [121, "Aethermew", "Psiquico", "Dragon", 110, 125, 115, 125, null, null, "spirit"]
+];
+
+const MOVE_POOL = {
+  Planta:    [{ name: "Hoja Afilada", type: "Planta", pwr: 40 }, { name: "Drenadoras Luz", type: "Planta", pwr: 62 }, { name: "Tormenta Floral", type: "Planta", pwr: 88 }],
+  Fuego:     [{ name: "Ascua", type: "Fuego", pwr: 40 }, { name: "Colmillo Ígneo", type: "Fuego", pwr: 65 }, { name: "Llamarada", type: "Fuego", pwr: 90 }],
+  Agua:      [{ name: "Pistola Agua", type: "Agua", pwr: 40 }, { name: "Hidropulso", type: "Agua", pwr: 62 }, { name: "Surf Abisal", type: "Agua", pwr: 88 }],
+  Electrico: [{ name: "Impactrueno", type: "Electrico", pwr: 40 }, { name: "Chispa", type: "Electrico", pwr: 65 }, { name: "Rayo Celeste", type: "Electrico", pwr: 90 }],
+  Normal:    [{ name: "Placaje", type: "Normal", pwr: 38 }, { name: "Ataque Rápido", type: "Normal", pwr: 55 }, { name: "Golpe Cuerpo", type: "Normal", pwr: 82 }],
+  Volador:   [{ name: "Picotazo", type: "Volador", pwr: 38 }, { name: "Ataque Ala", type: "Volador", pwr: 60 }, { name: "Vendaval", type: "Volador", pwr: 86 }],
+  Bicho:     [{ name: "Picadura", type: "Bicho", pwr: 36 }, { name: "Cortefuria", type: "Bicho", pwr: 58 }, { name: "Tijera X", type: "Bicho", pwr: 82 }],
+  Veneno:    [{ name: "Picotazo Ven.", type: "Veneno", pwr: 38 }, { name: "Colmillo Tóx.", type: "Veneno", pwr: 60 }, { name: "Bomba Lodo", type: "Veneno", pwr: 86 }],
+  Roca:      [{ name: "Lanzarrocas", type: "Roca", pwr: 42 }, { name: "Tumba Rocas", type: "Roca", pwr: 62 }, { name: "Avalancha", type: "Roca", pwr: 86 }],
+  Tierra:    [{ name: "Bofetón Lodo", type: "Tierra", pwr: 38 }, { name: "Excavar", type: "Tierra", pwr: 65 }, { name: "Terremoto", type: "Tierra", pwr: 92 }],
+  Psiquico:  [{ name: "Confusión", type: "Psiquico", pwr: 42 }, { name: "Psicorrayo", type: "Psiquico", pwr: 65 }, { name: "Psíquico", type: "Psiquico", pwr: 88 }],
+  Hielo:     [{ name: "Nieve Polvo", type: "Hielo", pwr: 40 }, { name: "Viento Hielo", type: "Hielo", pwr: 62 }, { name: "Rayo Hielo", type: "Hielo", pwr: 88 }],
+  Fantasma:  [{ name: "Impresionar", type: "Fantasma", pwr: 38 }, { name: "Sombra Vil", type: "Fantasma", pwr: 60 }, { name: "Bola Sombra", type: "Fantasma", pwr: 86 }],
+  Siniestro: [{ name: "Mordisco", type: "Siniestro", pwr: 42 }, { name: "Finta Oscura", type: "Siniestro", pwr: 62 }, { name: "Triturar", type: "Siniestro", pwr: 86 }],
+  Acero:     [{ name: "Garra Metal", type: "Acero", pwr: 44 }, { name: "Ala de Acero", type: "Acero", pwr: 65 }, { name: "Cabeza Hierro", type: "Acero", pwr: 88 }],
+  Dragon:    [{ name: "Ciclón", type: "Dragon", pwr: 42 }, { name: "Dragoaliento", type: "Dragon", pwr: 65 }, { name: "Garra Dragón", type: "Dragon", pwr: 88 }]
+};
+
+const POKEDEX = {};
+RAW_SPECIES.forEach(row => {
+  const [id, name, t1, t2, hp, atk, def, spd, evoLvl, evoTo, arch] = row;
+  POKEDEX[id] = {
+    id, name, type1: t1, type2: t2,
+    baseHp: hp, baseAtk: atk, baseDef: def, baseSpd: spd,
+    evoLvl, evoTo, arch: arch || "biped",
+    isLegendary: id >= 115
+  };
+});
+
+function buildMovesForSpecies(spec, level) {
+  const moves = [MOVE_POOL.Normal[0]];
+  const t1Pool = MOVE_POOL[spec.type1] || MOVE_POOL.Normal;
+  moves.push(t1Pool[0]);
+  if (level >= 10) {
+    if (spec.type2 && MOVE_POOL[spec.type2]) moves.push(MOVE_POOL[spec.type2][0]);
+    else moves.push(MOVE_POOL.Normal[1]);
+  }
+  if (level >= 16) moves.push(t1Pool[1]);
+  if (level >= 28 || spec.isLegendary) {
+    moves[moves.length - 1] = t1Pool[2];
+    if (spec.type2 && MOVE_POOL[spec.type2]) moves[1] = MOVE_POOL[spec.type2][2];
+  }
+  return moves.slice(0, 4);
+}
+
+function createFakemonInstance(id, level, forceShiny = false) {
+  const spec = POKEDEX[id];
+  const iv = 12;
+  const isShiny = forceShiny || (Math.random() < 0.04); // 4% probabilidad de Variocolor (Shiny)
+  const maxHp = Math.floor(((2 * spec.baseHp + iv) * level) / 100) + level + 10;
+  const atk = Math.floor(((2 * spec.baseAtk + iv) * level) / 100) + 6;
+  const def = Math.floor(((2 * spec.baseDef + iv) * level) / 100) + 6;
+  const spd = Math.floor(((2 * spec.baseSpd + iv) * level) / 100) + 6;
+  return {
+    uid: Math.random().toString(36).substring(2, 9),
+    id: spec.id,
+    name: spec.name,
+    isShiny,
+    heldItem: null,
+    level,
+    exp: 0,
+    nextExp: Math.floor(level * level * 1.6) + 12,
+    maxHp,
+    hp: maxHp,
+    atk, def, spd,
+    moves: buildMovesForSpecies(spec, level)
+  };
+}
+
+/* ============================================================================
+   5. MOTOR DE SPRITES HD (32x32 CON SOMBREADO 4 TONOS, CRESTAS Y SHINY)
+   ============================================================================ */
+const SpriteCache = {};
+
+function getFakemonSprite(id, size = 80, isBack = false, isShiny = false) {
+  const key = `${id}_${size}_${isBack ? 'B' : 'F'}_${isShiny ? 'S' : 'N'}`;
+  if (SpriteCache[key]) return SpriteCache[key];
+
+  const spec = POKEDEX[id];
+  const W = 32, H = 32;
+  const grid = Array.from({ length: H }, () => Array(W).fill(null));
+
+  const t1 = TYPES[spec.type1] || TYPES.Planta;
+  const cMain = isShiny ? '#ffd166' : t1.color;
+  const cLight = isShiny ? '#fff3b0' : t1.light;
+  const cDark = isShiny ? '#b5651d' : t1.dark;
+  const cSec = isShiny ? '#4cc9f0' : (spec.type2 ? TYPES[spec.type2].color : '#f8f9fa');
+
+  let seed = id * 1299709;
+  const rand = () => {
+    seed = (seed * 16807) % 2147483647;
+    return (seed - 1) / 2147483646;
+  };
+
+  const setSym = (x, y, col) => {
+    if (x >= 1 && x < W - 1 && y >= 1 && y < H - 1) {
+      grid[y][x] = col;
+      grid[y][W - 1 - x] = col;
+    }
+  };
+
+  // Elipse con iluminación cenital de 3 tonos (Luz arriba, color base al centro, sombra abajo)
+  const fillShadedEllipseSym = (cx, cy, rx, ry, baseCol, bellyCol = null) => {
+    for (let y = Math.floor(cy - ry); y <= Math.ceil(cy + ry); y++) {
+      for (let x = Math.floor(cx - rx); x <= 15; x++) {
+        const dx = (x - cx) / rx;
+        const dy = (y - cy) / ry;
+        const dist = dx * dx + dy * dy;
+        if (dist <= 1.0) {
+          let col = baseCol;
+          if (bellyCol && dist < 0.42 && dy > -0.1) col = bellyCol;
+          else if (dy < -0.38) col = cLight;
+          else if (dy > 0.38 || dx < -0.55) col = cDark;
+          setSym(x, y, col);
+        }
+      }
+    }
+  };
+
+  const arch = spec.arch;
+  if (arch === "biped") {
+    fillShadedEllipseSym(15.5, 9, 5.5, 4.8, cMain);             // Cabeza
+    fillShadedEllipseSym(15.5, 19, 6.5, 6.2, cMain, cSec);      // Torso + Panza
+    fillShadedEllipseSym(8, 17, 2.5, 3.8, cMain);               // Brazos
+    fillShadedEllipseSym(11, 26, 2.5, 3.0, cDark);              // Patas
+  } else if (arch === "quad") {
+    fillShadedEllipseSym(15.5, 11, 5.8, 4.8, cMain);            // Cabeza
+    fillShadedEllipseSym(15.5, 19.5, 7.5, 5.2, cMain, cSec);    // Lomo
+    fillShadedEllipseSym(10.5, 5.5, 2.0, 3.2, cSec);            // Orejas largas
+    fillShadedEllipseSym(10, 26, 2.2, 3.2, cDark);              // Patas delanteras/traseras
+    fillShadedEllipseSym(13.5, 26.5, 2.0, 2.8, cDark);
+  } else if (arch === "bird") {
+    fillShadedEllipseSym(7.5, 16, 6.2, 4.2, cSec);              // Alas majestuosas
+    fillShadedEllipseSym(15.5, 18, 5.5, 5.8, cMain, cSec);      // Pecho
+    fillShadedEllipseSym(15.5, 9.5, 4.6, 4.2, cMain);           // Cabeza
+    setSym(15, 12, '#ffb703'); setSym(14, 12, '#ffb703'); setSym(15, 13, '#fb8500'); // Pico
+    setSym(12, 25, '#ffb703'); setSym(12, 26, '#ffb703');       // Garras
+  } else if (arch === "bug") {
+    fillShadedEllipseSym(15.5, 10, 4.8, 4.0, cMain);
+    fillShadedEllipseSym(15.5, 17, 6.0, 4.5, cSec, cMain);
+    fillShadedEllipseSym(15.5, 23, 5.0, 3.8, cMain);
+    setSym(12, 4, cSec); setSym(11, 3, cSec); setSym(10, 2, cLight); // Antenas
+    for (let ly = 15; ly <= 23; ly += 4) { setSym(8, ly, cDark); setSym(7, ly + 1, cDark); }
+  } else if (arch === "serpent") {
+    fillShadedEllipseSym(7.5, 14, 4.8, 5.5, cSec);              // Alas dracónicas
+    fillShadedEllipseSym(15.5, 8, 5.2, 4.2, cMain);             // Cabeza dragón
+    fillShadedEllipseSym(13, 15, 4.8, 4.8, cMain, cSec);        // Cuello S
+    fillShadedEllipseSym(15.5, 22, 7.0, 5.2, cMain, cSec);      // Cola enroscada
+    setSym(10, 4, '#ffd166'); setSym(9, 3, '#ffd166'); setSym(8, 2, '#ffd166'); // Cuernos
+  } else if (arch === "golem") {
+    fillShadedEllipseSym(15.5, 16, 9.0, 8.2, cMain, cSec);
+    fillShadedEllipseSym(6.5, 16, 3.2, 4.5, cDark);             // Puños titánicos
+    fillShadedEllipseSym(11, 25.5, 3.2, 3.0, cDark);
+  } else if (arch === "aqua") {
+    fillShadedEllipseSym(7, 17, 4.5, 2.8, cSec);                // Aletas laterales
+    fillShadedEllipseSym(15.5, 16, 7.2, 6.5, cMain, cSec);      // Cuerpo marino
+    fillShadedEllipseSym(15.5, 7, 2.2, 3.2, cSec);              // Cresta dorsal
+  } else { // spirit
+    fillShadedEllipseSym(15.5, 15, 7.0, 7.0, cMain, cSec);
+    fillShadedEllipseSym(7, 13, 2.5, 4.5, cLight);              // Aura flotante
+    setSym(9, 24, cMain); setSym(12, 25, cSec); setSym(15, 26, cMain);
+  }
+
+  // Detalles únicos deterministas por criatura (crestas, gemas, escamas)
+  for (let i = 0; i < 6; i++) {
+    const rx = 9 + Math.floor(rand() * 6);
+    const ry = 6 + Math.floor(rand() * 14);
+    if (grid[ry][rx]) setSym(rx, ry, i % 2 === 0 ? cSec : cLight);
+  }
+
+  // Corona y Halo Divino para los 7 Legendarios (#115-#121)
+  if (spec.isLegendary) {
+    fillShadedEllipseSym(5.5, 11, 3.2, 6.5, cLight);
+    setSym(15, 2, '#ffd166'); setSym(13, 3, '#ffd166'); setSym(11, 2, '#ffd166');
+    setSym(15, 3, '#fff');
+  }
+
+  // Ojos grandes estilo GBA con pupila y brillo blanco
+  const eyeY = arch === "serpent" ? 8 : (arch === "golem" ? 13 : 10);
+  if (!isBack) {
+    setSym(12, eyeY, '#111');
+    setSym(12, eyeY + 1, '#111');
+    setSym(13, eyeY, '#111');
+    setSym(13, eyeY + 1, spec.isLegendary ? '#ff0055' : '#111');
+    setSym(12, eyeY, '#ffffff'); // Reflejo ocular
+  }
+
+  // Pase de delineado negro pixel-art alrededor de toda la silueta
+  const outlined = grid.map(r => [...r]);
+  const dirs = [[1,0],[-1,0],[0,1],[0,-1]];
+  for (let y = 1; y < H - 1; y++) {
+    for (let x = 1; x < W - 1; x++) {
+      if (!grid[y][x]) {
+        for (const [dx, dy] of dirs) {
+          if (grid[y + dy][x + dx]) {
+            outlined[y][x] = '#0d1117';
+            break;
+          }
+        }
+      }
+    }
+  }
+
+  const off = document.createElement('canvas');
+  off.width = W;
+  off.height = H;
+  const octx = off.getContext('2d');
+  for (let y = 0; y < H; y++) {
+    for (let x = 0; x < W; x++) {
+      if (outlined[y][x]) {
+        octx.fillStyle = outlined[y][x];
+        octx.fillRect(x, y, 1, 1);
+      }
+    }
+  }
+
+  const finalCanvas = document.createElement('canvas');
+  finalCanvas.width = size;
+  finalCanvas.height = size;
+  const fctx = finalCanvas.getContext('2d');
+  fctx.imageSmoothingEnabled = false;
+  fctx.drawImage(off, 0, 0, size, size);
+
+  SpriteCache[key] = finalCanvas;
+  return finalCanvas;
+}
+
+/* ============================================================================
+   6. MAPAS CON HISTORIA, NPCS, OBJETOS EN EL SUELO Y OBSTÁCULOS
+   ============================================================================ */
+// Códigos de Tile:
+// 0: Camino, 1: Árbol/Muro, 2: Hierba Alta, 3: Agua (Navegable con Tabla Surf),
+// 4: Centro Fakemon, 5: Ruta Siguiente, 6: Ruta Anterior, 7: Altar Legendario,
+// 8: Líder de Gimnasio, 9: Cápsula de Objeto (Item Ball), 10: NPC Historia / Equipo Umbra, 11: Roca Rompible (Pico Rocoso)
+const MAPS = [
+  {
+    name: "Zona 1: Pueblo Hoja y Bosque Esmeralda",
+    wildPool: [10, 12, 15, 18, 21, 23, 26],
+    levelRange: [2, 4],
+    legendaryId: 120, // Viridionix
+    legendaryLvl: 25,
+    gymLeader: {
+      name: "Líder Silvana",
+      badge: 1,
+      badgeName: "Medalla Raíz",
+      intro: "«¡Bienvenido al Gimnasio Esmeralda! Como guardiana del primer Fragmento del Prisma, pondré a prueba tu vínculo con la naturaleza.»",
+      winText: "«¡Increíble combate! Toma la Medalla Raíz y el Pico Rocoso para despejar los derrumbes rumbo a la Montaña Rocosa.»",
+      rewardKey: "picorocoso",
+      team: [[23, 7], [2, 9]]
+    },
+    storyNpc: {
+      id: "z1_rival_umbra",
+      name: "Rival Kael y Recluta Umbra",
+      dialogBefore: "Kael: «¡Eh, espera! Antes de que vayas a por el Equipo Umbra, ¡veamos cuánto ha crecido tu Fakemon inicial!»",
+      winText: "Kael: «¡Qué fuerza! Toma este Mapa Esmeralda y esta Semilla Milagro. ¡El Líder Silvana te espera al sur!»",
+      rewardItem: "semillamilagro",
+      rewardKey: "mapaesmeralda",
+      team: [[12, 4], [10, 5]]
+    },
+    itemBall: { id: "z1_ball", item: "superball", qty: 3, name: "3 Súperballs" },
+    grid: [
+      [1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,1],
+      [1,4,0,0,0,1,2,2,2,2,0,0,0,11,0,1],
+ [1,0,0,0,0,1,2,2,9,2,0,1,1,1,0,1],
+      [1,0,0,10,0,0,0,0,0,0,0,1,7,0,0,1],
+      [1,1,1,0,1,1,2,2,2,1,0,1,1,1,0,1],
+      [1,2,2,0,2,2,2,2,2,1,0,0,0,0,0,1],
+      [1,2,2,0,2,2,0,0,0,1,1,1,0,1,1,1],
+      [1,2,2,0,0,0,0,8,0,0,0,0,0,2,2,1],
+      [1,3,3,3,1,1,2,2,2,2,2,2,2,2,2,1],
+      [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+    ]
+  },
+  {
+    name: "Zona 2: Montaña Rocosa y Mina Umbra",
+    wildPool: [28, 31, 33, 35, 37, 39, 41, 44, 46, 48, 50, 53],
+    levelRange: [8, 13],
+    legendaryId: 118, // Terracoloso
+    legendaryLvl: 30,
+    gymLeader: {
+      name: "Líder Roco",
+      badge: 2,
+      badgeName: "Medalla Litio",
+      intro: "«¡Mis Fakemon de Roca resisten hasta la presión del magma! ¡Demuestra que puedes proteger el segundo Fragmento del Prisma!»",
+      winText: "«¡Firme como el diamante! Recibe la Medalla Litio y la Tabla Surf: ahora podrás navegar sobre cualquier bloque de agua.»",
+      rewardKey: "tablasurf",
+      team: [[28, 13], [37, 14], [29, 16]]
+    },
+    storyNpc: {
+      id: "z2_umbra",
+      name: "Capitán Umbra",
+      dialogBefore: "Capitán Umbra: «¡No dejaremos que frustres la excavación del Comandante Vex! ¡Despertaremos a Terracoloso por la fuerza!»",
+      winText: "Capitán Umbra: «¡Maldición! Nos retiramos al Volcán Magma... ¡Se me cayó este Carbón Ígneo!»",
+      rewardItem: "carbon",
+      team: [[31, 11], [26, 12], [33, 13]]
+    },
+    itemBall: { id: "z2_ball", item: "carameloraro", qty: 2, name: "2 Caramelos Raros" },
+    grid: [
+      [1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,1],
+      [1,6,0,0,2,2,2,1,4,0,0,2,2,0,0,1],
+      [1,0,0,0,2,9,2,1,0,0,0,2,2,0,0,1],
+      [1,1,1,0,0,0,0,1,0,1,1,1,10,0,0,1],
+      [1,7,11,0,2,2,0,0,0,1,8,0,0,2,2,1],
+      [1,1,1,1,2,2,2,2,0,1,1,1,2,2,2,1],
+      [1,2,2,2,2,2,2,2,0,0,0,0,2,2,2,1],
+      [1,2,2,0,0,0,0,0,0,2,2,2,2,2,2,1],
+      [1,2,2,0,3,3,3,3,2,2,2,2,2,2,2,1],
+      [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+    ]
+  },
+  {
+    name: "Zona 3: Costa Azul y Volcán Magma",
+    wildPool: [55, 57, 59, 61, 63, 65, 68, 71, 73, 75, 78, 80, 82, 84],
+    levelRange: [16, 23],
+    legendaryId: 119, // Thalassor
+    legendaryLvl: 35,
+    gymLeader: {
+      name: "Líder Pyro",
+      badge: 3,
+      badgeName: "Medalla Magma",
+      intro: "«¡El Volcán ruge por la ambición del Equipo Umbra! ¡Solo quien domine el fuego interior podrá subir a la Cumbre Helada!»",
+      winText: "«¡Tu espíritu quema más fuerte que el volcán! Toma la Medalla Magma y estos Restos para curar a tu líder en cada turno.»",
+      rewardItem: "restos",
+      team: [[66, 22], [69, 24], [84, 26]]
+    },
+    storyNpc: {
+      id: "z3_lyra",
+      name: "Ejecutiva Lyra (Umbra)",
+      dialogBefore: "Ejecutiva Lyra: «¡Con el calor del volcán y el abismo marino ya casi rompemos el sello de Thalassor! ¡No pasarás de aquí!»",
+      winText: "Ejecutiva Lyra: «¡Imposible! El Comandante Vex ya está en la Cumbre Helada con el Orbe Prisma...»",
+      rewardItem: "aguamistica",
+      team: [[32, 20], [74, 21], [79, 23]]
+    },
+    itemBall: { id: "z3_ball", item: "ultraball", qty: 4, name: "4 Ultraballs" },
+    grid: [
+      [1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,1],
+      [1,6,0,3,3,3,0,0,4,0,2,2,2,0,0,1],
+      [1,0,0,3,7,3,0,0,9,0,2,2,2,0,0,1],
+      [1,0,0,3,3,3,0,1,1,1,0,10,0,0,0,1],
+      [1,2,2,0,0,0,0,1,8,0,0,2,2,2,2,1],
+      [1,2,2,2,2,2,0,1,1,1,0,2,2,2,2,1],
+      [1,3,3,2,2,2,0,0,0,0,0,2,2,2,2,1],
+      [1,3,3,2,2,2,2,2,2,2,2,2,2,2,2,1],
+      [1,3,3,3,3,2,2,2,2,2,2,2,2,2,2,1],
+      [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+    ]
+  },
+  {
+    name: "Zona 4: Cumbre Helada y Templo del Prisma",
+    wildPool: [85, 88, 90, 92, 95, 97, 98, 99, 100, 102, 103, 104, 105, 108, 111, 114, 115, 116, 117],
+    levelRange: [26, 36],
+    legendaryId: 121, // Aethermew
+    legendaryLvl: 45,
+    gymLeader: {
+      name: "Campeón Draco",
+      badge: 4,
+      badgeName: "Corona Esmeralda",
+      intro: "«¡Salvaste Silvania del Equipo Umbra! Ahora, como Campeón de la Liga, ¡enfrentémonos por el título de Maestro Fakemon!»",
+      winText: "«¡Salve al nuevo Campeón de Silvania! Con las 4 Medallas y el Orbe Prisma, el altar de Aethermew (#121) te reconoce como digno.»",
+      rewardItem: "carameloraro",
+      team: [[87, 34], [94, 36], [107, 38], [113, 40]]
+    },
+    storyNpc: {
+      id: "z4_vex",
+      name: "Comandante Vex (Líder Umbra)",
+      dialogBefore: "Comandante Vex: «¡El Prisma de Aether será mío! ¡Con él controlaré a las 121 especies de Silvania! ¡En guardia!»",
+      winText: "Comandante Vex: «¿Mi ambición eclipsada por el lazo con tus Fakemon...? Te entrego el Orbe Prisma. El Equipo Umbra se disuelve hoy.»",
+      rewardKey: "orbeprisma",
+      rewardItem: "iman",
+      team: [[27, 31], [96, 33], [110, 35]]
+    },
+    itemBall: { id: "z4_ball", item: "carameloraro", qty: 3, name: "3 Caramelos Raros" },
+    grid: [
+      [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+      [1,6,0,0,4,0,2,2,2,1,7,0,0,8,0,1],
+      [1,0,0,9,0,0,2,2,2,1,1,1,10,0,0,1],
+      [1,2,2,2,1,1,0,0,0,0,0,0,0,2,2,1],
+      [1,2,2,2,1,1,0,2,2,2,2,2,2,2,2,1],
+      [1,0,0,0,0,0,0,2,2,2,2,2,2,2,2,1],
+      [1,0,2,2,2,2,2,2,2,3,3,3,2,2,2,1],
+ [1,0,2,2,2,2,2,2,2,3,3,3,2,2,2,1],
+      [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+      [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+    ]
+  }
+];
+
+/* ============================================================================
+   7. MOTOR PRINCIPAL, GUARDADO V3 Y GESTIÓN DE MISIONES DE HISTORIA
+   ============================================================================ */
+const SAVE_KEY = "FAKEMON_HOJA_ESMERALDA_SAVE_V3";
+
+const Game = {
+  state: "STARTER_SELECT",
+  starterCursor: 0,
+  starterId: 1,
+  mapIndex: 0,
+  player: { x: 2, y: 2, dir: "DOWN", stepFrame: 0 },
+  party: [],
+  pc: [],
+  caughtIds: {},
+  badges: [],
+  money: 1500,
+  repelSteps: 0,
+  inventory: {
+    fakeball: 15,
+    superball: 2,
+    ultraball: 0,
+    pocion: 10,
+    superpocion: 2,
+    revivir: 1,
+    repelente: 2,
+    carameloraro: 1,
+    semillamilagro: 0,
+    carbon: 0,
+    aguamistica: 0,
+    iman: 0,
+    restos: 0
+  },
+  keyItems: {},
+  flags: {},
+  dialogQueue: [],
+  dialogCallback: null,
+  battle: null,
+  particles: [],
+  animTick: 0,
+
+  init() {
+    if (!this.loadGame()) {
+      this.state = "STARTER_SELECT";
+    }
+    UI.refreshStats();
+    UI.showTab('party');
+    requestAnimationFrame(() => this.loop());
+  },
+
+  toggleFullscreen() {
+    const docEl = document.documentElement;
+    if (!document.fullscreenElement) {
+      if (docEl.requestFullscreen) docEl.requestFullscreen();
+    } else {
+      if (document.exitFullscreen) document.exitFullscreen();
+    }
+  },
+
+  getCurrentQuestText() {
+    if (this.party.length === 0) return "Elige a tu Fakemon inicial en el Laboratorio del Prof. Olmo.";
+    if (!this.flags["z1_rival_umbra"]) return "Acto I: Habla con tu rival Kael (casilla !!) en el Bosque Esmeralda.";
+    if (!this.badges.includes(1)) return "Acto I: Desafía a la Líder Silvana (GIM) en Pueblo Hoja para ganar el Pico Rocoso.";
+    if (!this.flags["z2_umbra"]) return "Acto II: Cruza a la Zona 2 (RUTA►) y detén al Capitán del Equipo Umbra (!!).";
+    if (!this.badges.includes(2)) return "Acto II: Vence al Líder Roco (GIM) en la Montaña Rocosa para obtener la Tabla Surf.";
+    if (!this.flags["z3_lyra"]) return "Acto III: Derrota a la Ejecutiva Lyra (!!) en el Volcán Magma (Zona 3).";
+    if (!this.badges.includes(3)) return "Acto III: Derrota al Líder Pyro (GIM) en la Zona 3 para abrir paso a la Cumbre.";
+    if (!this.flags["z4_vex"]) return "Acto Final: Vence al Comandante Vex (!!) en la Cumbre Helada para recuperar el Orbe Prisma.";
+    if (!this.badges.includes(4)) return "Gran Final: Vence al Campeón Draco (GIM) en el Templo del Prisma.";
+    return "Post-Game: ¡Eres el Campeón! Captura a Aethermew (#121) en el altar ★ y completa los 121 Fakemon.";
+  },
+
+  chooseStarter(starterId) {
+    SFX.fanfare();
+    this.starterId = starterId;
+    const starter = createFakemonInstance(starterId, 5, false);
+    this.party = [starter];
+    this.caughtIds[starterId] = true;
+    this.state = "OVERWORLD";
+    this.showDialog([
+      `Prof. Olmo: «¡Excelente elección! ${starter.name} (Nv.5) será tu compañero en la región de Silvania.»`,
+      `Prof. Olmo: «El Equipo Umbra busca los 4 Fragmentos del Prisma Esmeralda. ¡Tu rival Kael te espera más adelante en la ruta!»`
+    ]);
+    this.saveGame(false);
+    UI.refreshStats();
+    UI.showTab('party');
+  },
+
+  showDialog(lines, onDone = null) {
+    this.dialogQueue = Array.isArray(lines) ? [...lines] : [lines];
+    this.dialogCallback = onDone;
+    this.state = "DIALOG";
+  },
+
+  advanceDialog() {
+    SFX.select();
+    this.dialogQueue.shift();
+    if (this.dialogQueue.length === 0) {
+      this.state = "OVERWORLD";
+      if (this.dialogCallback) {
+        const cb = this.dialogCallback;
+        this.dialogCallback = null;
+        cb();
+      }
+    }
+  },
+
+  movePlayer(dx, dy, dir) {
+    if (this.state !== "OVERWORLD") return;
+    this.player.dir = dir;
+    this.player.stepFrame = (this.player.stepFrame + 1) % 2;
+
+    const map = MAPS[this.mapIndex];
+    const nx = this.player.x + dx;
+    const ny = this.player.y + dy;
+
+    if (ny < 0 || ny >= map.grid.length || nx < 0 || nx >= map.grid[0].length) return;
+    const tile = map.grid[ny][nx];
+
+    if (tile === 1) return;
+
+    // Agua: navegable si tienes la Tabla Surf
+    if (tile === 3 && !this.keyItems["tablasurf"]) {
+      this.showDialog("El agua es profunda y cristalina. Necesitas la Tabla Surf (Medalla #2) para navegar.");
+      return;
+    }
+
+    // Roca rompible: requiere Pico Rocoso
+    if (tile === 11 && !this.keyItems["picorocoso"]) {
+      this.showDialog("Un derrumbe de roca bloquea el paso. Necesitas el Pico Rocoso (Medalla #1) para despejarlo.");
+      return;
+    }
+
+    this.player.x = nx;
+    this.player.y = ny;
+
+    if (this.repelSteps > 0) {
+      this.repelSteps--;
+      if (this.repelSteps === 0) UI.toast("⚠️ El efecto del Repelente se ha agotado.");
+      UI.refreshStats();
+    }
+
+    if (tile === 4) {
+      this.healPartyWithMessage();
+    } else if (tile === 5) {
+      if (this.mapIndex === 0 && !this.badges.includes(1)) {
+        this.showDialog("Un guardia bloquea la salida: «¡El Equipo Umbra merodea las montañas! Gana primero la Medalla Raíz de la Líder Silvana.»");
+        return;
+      }
+      if (this.mapIndex < MAPS.length - 1) {
+        this.mapIndex++;
+        this.player.x = 2;
+        this.player.y = 2;
+        SFX.select();
+        this.showDialog(`Entraste en ${MAPS[this.mapIndex].name}. Nivel salvaje: ${MAPS[this.mapIndex].levelRange[0]}-${MAPS[this.mapIndex].levelRange[1]}.`);
+        this.saveGame(false);
+        UI.refreshStats();
+      }
+    } else if (tile === 6) {
+      if (this.mapIndex > 0) {
+        this.mapIndex--;
+        this.player.x = 13;
+        this.player.y = 1;
+        SFX.select();
+        this.showDialog(`Regresaste a ${MAPS[this.mapIndex].name}.`);
+        this.saveGame(false);
+        UI.refreshStats();
+      }
+    } else if (tile === 7) {
+      if (this.mapIndex === 3 && !this.keyItems["orbeprisma"]) {
+        this.showDialog("El altar de Aethermew (#121) está sellado. Derrota al Comandante Vex (!!) para recuperar el Orbe Prisma.");
+        return;
+      }
+      const leadLv = Math.max(...this.party.map(p => p.level));
+      if (leadLv < 12 && this.mapIndex === 0) {
+        this.showDialog(`El altar de Viridionix (Nv.${map.legendaryLvl}) brilla con energía ancestral. ¡Entrena hasta Nv.12 antes de retarlo!`);
+      } else {
+        this.startWildBattle(map.legendaryId, map.legendaryLvl, true);
+      }
+    } else if (tile === 8) {
+      this.startGymBattle(map.gymLeader);
+    } else if (tile === 9) {
+      const ib = map.itemBall;
+      if (!this.flags[ib.id]) {
+        SFX.fanfare();
+        this.flags[ib.id] = true;
+        this.inventory[ib.item] = (this.inventory[ib.item] || 0) + ib.qty;
+        this.saveGame(false);
+        UI.refreshStats();
+        UI.renderCurrentTab();
+        this.showDialog(`🎁 ¡Encontraste una cápsula de objetos con ${ib.name}!`);
+      } else {
+        this.showDialog("Ya recogiste el objeto de esta cápsula.");
+      }
+    } else if (tile === 10) {
+      const npc = map.storyNpc;
+      if (!this.flags[npc.id]) {
+        this.showDialog(npc.dialogBefore, () => {
+          this.startStoryBattle(npc);
+        });
+      } else {
+        this.showDialog(`${npc.name}: «¡Sigue adelante! El destino del Prisma de Aether está en tus manos.»`);
+      }
+    } else if (tile === 2 || tile === 3) {
+      if (this.repelSteps > 0) return;
+      if (Math.random() < 0.17) {
+        const pool = map.wildPool;
+        const randId = pool[Math.floor(Math.random() * pool.length)];
+        const [minLv, maxLv] = map.levelRange;
+        let randLv = Math.floor(Math.random() * (maxLv - minLv + 1)) + minLv;
+        const playerMaxLv = Math.max(...this.party.map(p => p.level));
+        if (this.mapIndex === 0) {
+          randLv = Math.min(randLv, Math.max(2, playerMaxLv - 1));
+        }
+        this.startWildBattle(randId, randLv, false);
+      }
+    }
+  },
+
+  healPartyWithMessage() {
+    SFX.heal();
+    this.party.forEach(p => { p.hp = p.maxHp; });
+    if (this.inventory.fakeball < 5) this.inventory.fakeball = 10;
+    if (this.inventory.pocion < 3) this.inventory.pocion = 5;
+    UI.refreshStats();
+    UI.renderCurrentTab();
+    this.saveGame(false);
+    UI.toast("💖 ¡Equipo restaurado al 100% en el Centro Fakemon!");
+  },
+
+  spawnParticles(x, y, color) {
+    for (let i = 0; i < 16; i++) {
+      const angle = (Math.PI * 2 * i) / 16;
+      const speed = 1.5 + Math.random() * 2.8;
+      this.particles.push({
+        x, y,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        color,
+        life: 18
+      });
+    }
+  },
+
+  startWildBattle(speciesId, level, isStaticLegend = false) {
+    SFX.select();
+    if (this.party.every(p => p.hp <= 0)) this.healPartyWithMessage();
+    const enemy = createFakemonInstance(speciesId, level, false);
+    const shinyTxt = enemy.isShiny ? " ✨¡VARIOCOLOR (SHINY)!✨" : "";
+    this.battle = {
+      isTrainer: false,
+      trainerName: null,
+      enemyTeam: [enemy],
+      enemyIndex: 0,
+      enemy,
+      playerIndex: Math.max(0, this.party.findIndex(p => p.hp > 0)),
+      menuState: "MAIN",
+      cursor: 0,
+      enemyShake: 0,
+      playerShake: 0,
+      message: isStaticLegend
+        ? `¡El Legendario ${enemy.name} (Nv.${enemy.level})${shinyTxt} desató su poder!`
+        : `¡Un ${enemy.name} salvaje (Nv.${enemy.level})${shinyTxt} cortó el paso!`,
+      nextAction: null
+    };
+    this.state = "BATTLE";
+  },
+
+  startStoryBattle(npc) {
+    SFX.select();
+    if (this.party.every(p => p.hp <= 0)) this.healPartyWithMessage();
+    let teamSpecs = npc.team;
+    // Si es el primer duelo contra Kael, su segundo Fakemon es el inicial con ventaja contra el tuyo
+    if (npc.id === "z1_rival_umbra") {
+      const rivalStarter = this.starterId === 1 ? 4 : (this.starterId === 4 ? 7 : 1);
+      teamSpecs = [[12, 3], [rivalStarter, 5]];
+    }
+    const enemyTeam = teamSpecs.map(([id, lv]) => createFakemonInstance(id, lv, false));
+    this.battle = {
+      isTrainer: true,
+      isStoryNpc: true,
+      npcData: npc,
+      trainerName: npc.name,
+      enemyTeam,
+      enemyIndex: 0,
+      enemy: enemyTeam[0],
+      playerIndex: Math.max(0, this.party.findIndex(p => p.hp > 0)),
+      menuState: "MESSAGE",
+      cursor: 0,
+      enemyShake: 0,
+      playerShake: 0,
+      message: `¡${npc.name} te desafía! Envía a ${enemyTeam[0].name} (Nv.${enemyTeam[0].level}).`,
+      nextAction: () => { this.battle.menuState = "MAIN"; }
+    };
+    this.state = "BATTLE";
+  },
+
+  startGymBattle(leader) {
+    SFX.select();
+    if (this.party.every(p => p.hp <= 0)) this.healPartyWithMessage();
+    this.showDialog(leader.intro, () => {
+      const enemyTeam = leader.team.map(([id, lv]) => createFakemonInstance(id, lv, false));
+      this.battle = {
+        isTrainer: true,
+        isStoryNpc: false,
+        leaderData: leader,
+        trainerName: leader.name,
+        badgeId: leader.badge,
+        enemyTeam,
+        enemyIndex: 0,
+        enemy: enemyTeam[0],
+        playerIndex: Math.max(0, this.party.findIndex(p => p.hp > 0)),
+        menuState: "MESSAGE",
+        cursor: 0,
+        enemyShake: 0,
+        playerShake: 0,
+        message: `¡${leader.name} envía a ${enemyTeam[0].name} (Nv.${enemyTeam[0].level})!`,
+        nextAction: () => { this.battle.menuState = "MAIN"; }
+      };
+      this.state = "BATTLE";
+    });
+  },
+
+  saveGame(notify = true) {
+    const data = {
+      starterId: this.starterId,
+      mapIndex: this.mapIndex,
+      player: this.player,
+      party: this.party,
+      pc: this.pc,
+      caughtIds: this.caughtIds,
+      badges: this.badges,
+      money: this.money,
+      repelSteps: this.repelSteps,
+      inventory: this.inventory,
+      keyItems: this.keyItems,
+      flags: this.flags
+    };
+    localStorage.setItem(SAVE_KEY, JSON.stringify(data));
+    if (notify) UI.toast("💾 Partida v3.0 guardada en el dispositivo");
+  },
+
+  loadGame() {
+    const raw = localStorage.getItem(SAVE_KEY);
+    if (!raw) return false;
+    try {
+      const d = JSON.parse(raw);
+      if (!d.party || d.party.length === 0) return false;
+      this.starterId = d.starterId || 1;
+      this.mapIndex = d.mapIndex || 0;
+      this.player = d.player || { x: 2, y: 2, dir: "DOWN", stepFrame: 0 };
+      this.party = d.party;
+      this.pc = d.pc || [];
+      this.caughtIds = d.caughtIds || {};
+      this.badges = d.badges || [];
+      this.money = d.money ?? 1500;
+      this.repelSteps = d.repelSteps || 0;
+      this.inventory = Object.assign(this.inventory, d.inventory || {});
+      this.keyItems = d.keyItems || {};
+      this.flags = d.flags || {};
+      this.state = "OVERWORLD";
+      return true;
+    } catch (e) {
+      return false;
+    }
+  },
+
+  exportSave() {
+    this.saveGame(false);
+    const raw = localStorage.getItem(SAVE_KEY);
+    prompt("Copia tu código de partida para llevarlo a tu móvil Android o PC:", btoa(unescape(encodeURIComponent(raw))));
+  },
+
+  importSave() {
+    const code = prompt("Pega tu código de respaldo:");
+    if (!code) return;
+    try {
+      const json = decodeURIComponent(escape(atob(code.trim())));
+      JSON.parse(json);
+      localStorage.setItem(SAVE_KEY, json);
+      this.loadGame();
+      UI.refreshStats();
+      UI.renderCurrentTab();
+      UI.toast("📥 ¡Partida restaurada con éxito!");
+    } catch (e) {
+      alert("Código inválido.");
+    }
+  },
+
+  resetSave() {
+    if (!confirm("¿Empezar una nueva historia desde el Laboratorio del Prof. Olmo?")) return;
+    localStorage.removeItem(SAVE_KEY);
+    location.reload();
+  },
+
+  loop() {
+    this.animTick++;
+    Renderer.draw();
+    requestAnimationFrame(() => this.loop());
+  }
+};
+
+/* ============================================================================
+   8. MOTOR DE COMBATE V3 (OBJETOS EQUIPADOS, SUPERBALLS/ULTRABALLS Y PARTÍCULAS)
+   ============================================================================ */
+const BattleEngine = {
+  handleConfirm() {
+    const b = Game.battle;
+    if (!b) return;
+    SFX.select();
+
+    if (b.menuState === "MESSAGE") {
+      if (b.nextAction) {
+        const fn = b.nextAction;
+        b.nextAction = null;
+        fn();
+      } else {
+        b.menuState = "MAIN";
+      }
+      return;
+    }
+
+    const playerMon = Game.party[b.playerIndex];
+
+    if (b.menuState === "MAIN") {
+      if (b.cursor === 0) { b.menuState = "MOVES"; b.cursor = 0; }
+      else if (b.cursor === 1) { b.menuState = "BAG"; b.cursor = 0; }
+      else if (b.cursor === 2) { b.menuState = "PARTY"; b.cursor = 0; }
+      else if (b.cursor === 3) {
+        if (b.isTrainer) {
+          this.setMsg("¡No puedes huir de un combate contra un Entrenador!", () => { b.menuState = "MAIN"; });
+        } else {
+          this.setMsg("¡Escapaste sin problemas!", () => { Game.state = "OVERWORLD"; });
+        }
+      }
+    } else if (b.menuState === "MOVES") {
+      const move = playerMon.moves[b.cursor];
+      this.runTurnWithMove(playerMon, b.enemy, move);
+    } else if (b.menuState === "BAG") {
+      const bagOrder = ["fakeball", "superball", "ultraball", "pocion", "superpocion"];
+      const itemId = bagOrder[b.cursor];
+      if (["fakeball", "superball", "ultraball"].includes(itemId)) {
+        this.tryCatch(itemId);
+      } else {
+        this.useBattlePotion(playerMon, itemId);
+      }
+    } else if (b.menuState === "PARTY") {
+      const chosen = Game.party[b.cursor];
+      if (!chosen || chosen.hp <= 0) {
+        this.setMsg("¡Ese Fakemon está debilitado!", () => { b.menuState = "PARTY"; });
+      } else if (b.cursor === b.playerIndex) {
+        this.setMsg(`¡${chosen.name} ya está combatiendo!`, () => { b.menuState = "PARTY"; });
+      } else {
+        b.playerIndex = b.cursor;
+        this.setMsg(`¡Relevo! ¡Adelante ${chosen.name} (Nv.${chosen.level})!`, () => {
+          this.enemyAttack(chosen, b.enemy, () => { b.menuState = "MAIN"; b.cursor = 0; });
+        });
+      }
+    }
+  },
+
+  handleCancel() {
+    const b = Game.battle;
+    if (!b) return;
+    if (["MOVES", "BAG", "PARTY"].includes(b.menuState)) {
+      b.menuState = "MAIN";
+      b.cursor = 0;
+    }
+  },
+
+  setMsg(msg, nextFn) {
+    Game.battle.message = msg;
+    Game.battle.menuState = "MESSAGE";
+    Game.battle.nextAction = nextFn;
+  },
+
+  calcDamage(attacker, defender, move, isWildEnemy = false) {
+    const specAtk = POKEDEX[attacker.id];
+    const specDef = POKEDEX[defender.id];
+    const eff = getTypeEffectiveness(move.type, specDef.type1, specDef.type2);
+    const stab = (move.type === specAtk.type1 || move.type === specAtk.type2) ? 1.35 : 1.0;
+
+    // Bonificación de Objeto Equipado (+25% si coincide el tipo)
+    let heldMod = 1.0;
+    if (attacker.heldItem && ITEMS_DB[attacker.heldItem]?.boostType === move.type) {
+      heldMod = 1.25;
+    }
+
+    const randFactor = 0.88 + Math.random() * 0.12;
+    const wildMod = isWildEnemy ? 0.82 : 1.0;
+    const base = (((2 * attacker.level / 5 + 2) * move.pwr * (attacker.atk / defender.def)) / 48) + 1.5;
+    const dmg = Math.max(1, Math.floor(base * stab * eff * heldMod * randFactor * wildMod));
+    return { dmg, eff };
+  },
+
+  applyEndTurnHeldItems(playerMon, onDone) {
+    if (playerMon.hp > 0 && playerMon.hp < playerMon.maxHp && playerMon.heldItem === "restos") {
+      const heal = Math.max(2, Math.floor(playerMon.maxHp * 0.1));
+      playerMon.hp = Math.min(playerMon.maxHp, playerMon.hp + heal);
+      UI.renderCurrentTab();
+      this.setMsg(`✨ Los Restos de ${playerMon.name} restauraron +${heal} PS.`, onDone);
+    } else {
+      onDone();
+    }
+  },
+
+  runTurnWithMove(playerMon, enemyMon, playerMove) {
+    const playerFirst = playerMon.spd >= enemyMon.spd;
+    const finishRound = () => {
+      this.applyEndTurnHeldItems(playerMon, () => {
+        Game.battle.menuState = "MAIN";
+        Game.battle.cursor = 0;
+      });
+    };
+
+    if (playerFirst) {
+      this.playerAttack(playerMon, enemyMon, playerMove, () => {
+        if (enemyMon.hp <= 0) this.handleEnemyFaint(playerMon, enemyMon);
+        else this.enemyAttack(playerMon, enemyMon, finishRound);
+      });
+    } else {
+      this.enemyAttack(playerMon, enemyMon, () => {
+        if (playerMon.hp > 0) {
+          this.playerAttack(playerMon, enemyMon, playerMove, () => {
+            if (enemyMon.hp <= 0) this.handleEnemyFaint(playerMon, enemyMon);
+            else finishRound();
+          });
+        }
+      });
+    }
+  },
+
+  playerAttack(playerMon, enemyMon, move, onDone) {
+    SFX.hit();
+    Game.battle.enemyShake = 14;
+    Game.spawnParticles(355, 76, TYPES[move.type]?.color || "#fff");
+    const { dmg, eff } = this.calcDamage(playerMon, enemyMon, move, false);
+    enemyMon.hp = Math.max(0, enemyMon.hp - dmg);
+    const effTxt = eff > 1 ? " ¡Es súper efectivo!" : (eff < 1 && eff > 0 ? " No es muy efectivo..." : (eff === 0 ? " ¡No afecta!" : ""));
+    this.setMsg(`${playerMon.name} usó ${move.name}.${effTxt} (-${dmg} PS)`, onDone);
+  },
+
+  enemyAttack(playerMon, enemyMon, onDone) {
+    SFX.hit();
+    Game.battle.playerShake = 14;
+    const enemyMove = enemyMon.moves[Math.floor(Math.random() * enemyMon.moves.length)];
+    Game.spawnParticles(124, 160, TYPES[enemyMove.type]?.color || "#fff");
+    const { dmg, eff } = this.calcDamage(enemyMon, playerMon, enemyMove, !Game.battle.isTrainer);
+    playerMon.hp = Math.max(0, playerMon.hp - dmg);
+    UI.renderCurrentTab();
+
+    const effTxt = eff > 1 ? " ¡Es súper efectivo!" : (eff < 1 && eff > 0 ? " No es muy efectivo..." : "");
+    this.setMsg(`${enemyMon.name} rival usó ${enemyMove.name}.${effTxt} (-${dmg} PS)`, () => {
+      if (playerMon.hp <= 0) {
+        const nextIdx = Game.party.findIndex(p => p.hp > 0);
+        if (nextIdx !== -1) {
+          Game.battle.playerIndex = nextIdx;
+          this.setMsg(`¡${playerMon.name} cayó debilitado! ¡Adelante, ${Game.party[nextIdx].name}!`, () => {
+            Game.battle.menuState = "MAIN";
+            Game.battle.cursor = 0;
+          });
+        } else {
+          this.setMsg("¡Tu equipo fue derrotado! Regresas de urgencia al Centro Fakemon...", () => {
+            Game.player.x = 2;
+            Game.player.y = 2;
+            Game.healPartyWithMessage();
+            Game.state = "OVERWORLD";
+          });
+        }
+      } else {
+        onDone();
+      }
+    });
+  },
+
+  levelUpFakemon(mon) {
+    mon.level++;
+    mon.nextExp = Math.floor(mon.level * mon.level * 1.6) + 12;
+    let evoMsg = "";
+    const spec = POKEDEX[mon.id];
+    if (spec.evoLvl && mon.level >= spec.evoLvl && spec.evoTo) {
+      const newSpec = POKEDEX[spec.evoTo];
+      const oldName = mon.name;
+      mon.id = newSpec.id;
+      mon.name = newSpec.name;
+      Game.caughtIds[newSpec.id] = true;
+      evoMsg = ` ¡Subió a Nv.${mon.level} y evolucionó de ${oldName} a ${newSpec.name}!`;
+    } else {
+      evoMsg = ` ¡${mon.name} subió a Nv.${mon.level}!`;
+    }
+    const updated = createFakemonInstance(mon.id, mon.level, mon.isShiny);
+    mon.maxHp = updated.maxHp;
+    mon.hp = updated.maxHp;
+    mon.atk = updated.atk;
+    mon.def = updated.def;
+    mon.spd = updated.spd;
+    mon.moves = updated.moves;
+    return evoMsg;
+  },
+
+  handleEnemyFaint(playerMon, enemyMon) {
+    SFX.fanfare();
+    const expGain = Math.floor(enemyMon.level * 17) + 12;
+    playerMon.exp += expGain;
+    Game.money += enemyMon.level * 28;
+
+    let levelUpMsg = "";
+    while (playerMon.exp >= playerMon.nextExp) {
+      playerMon.exp -= playerMon.nextExp;
+      levelUpMsg = this.levelUpFakemon(playerMon);
+    }
+
+    UI.refreshStats();
+    UI.renderCurrentTab();
+
+    this.setMsg(`¡${enemyMon.name} fue derrotado! +${expGain} EXP.${levelUpMsg}`, () => {
+      const b = Game.battle;
+      if (b.isTrainer && b.enemyIndex < b.enemyTeam.length - 1) {
+        b.enemyIndex++;
+        b.enemy = b.enemyTeam[b.enemyIndex];
+        this.setMsg(`¡${b.trainerName} envía a ${b.enemy.name} (Nv.${b.enemy.level})!`, () => {
+          b.menuState = "MAIN";
+          b.cursor = 0;
+        });
+      } else if (b.isTrainer && b.isStoryNpc) {
+        const npc = b.npcData;
+        Game.flags[npc.id] = true;
+        Game.money += 350;
+        if (npc.rewardItem) Game.inventory[npc.rewardItem] = (Game.inventory[npc.rewardItem] || 0) + 1;
+        if (npc.rewardKey) Game.keyItems[npc.rewardKey] = true;
+        Game.saveGame(false);
+        UI.refreshStats();
+        UI.renderCurrentTab();
+        this.setMsg(`¡Venciste a ${npc.name}! (+$350)`, () => {
+          Game.showDialog(npc.winText);
+        });
+      } else if (b.isTrainer && b.leaderData) {
+        const leader = b.leaderData;
+        if (!Game.badges.includes(b.badgeId)) Game.badges.push(b.badgeId);
+        if (leader.rewardKey) Game.keyItems[leader.rewardKey] = true;
+        if (leader.rewardItem) Game.inventory[leader.rewardItem] = (Game.inventory[leader.rewardItem] || 0) + 1;
+        Game.money += 600;
+        Game.saveGame(false);
+        UI.refreshStats();
+        UI.renderCurrentTab();
+        this.setMsg(`🏆 ¡Ganaste la ${leader.badgeName} de ${leader.name}! (+$600)`, () => {
+          Game.showDialog(leader.winText);
+        });
+      } else {
+        Game.saveGame(false);
+        Game.state = "OVERWORLD";
+      }
+    });
+  },
+
+  tryCatch(ballId) {
+    const b = Game.battle;
+    if (b.isTrainer) {
+      this.setMsg("¡No puedes capturar el Fakemon de otro Entrenador!", () => { b.menuState = "MAIN"; });
+      return;
+    }
+    if ((Game.inventory[ballId] || 0) <= 0) {
+      this.setMsg(`¡No te quedan ${ITEMS_DB[ballId].name}s! Compra más en la pestaña Tienda.`, () => { b.menuState = "BAG"; });
+      return;
+    }
+
+    Game.inventory[ballId]--;
+    UI.refreshStats();
+
+    const ballMult = ITEMS_DB[ballId].rate || 1.0;
+    const hpFactor = (3 * b.enemy.maxHp - 2 * b.enemy.hp) / (3 * b.enemy.maxHp);
+    const baseRate = POKEDEX[b.enemy.id].isLegendary ? 0.28 : 0.68;
+    const prob = Math.min(0.98, baseRate * hpFactor * ballMult + 0.14);
+
+    Game.spawnParticles(355, 76, "#ffd166");
+
+    if (Math.random() < prob) {
+      SFX.fanfare();
+      Game.caughtIds[b.enemy.id] = true;
+      let dest = "a tu Equipo";
+      if (Game.party.length < 6) Game.party.push(b.enemy);
+      else { Game.pc.push(b.enemy); dest = "a la Caja del PC"; }
+      Game.saveGame(false);
+      UI.refreshStats();
+      UI.renderCurrentTab();
+      this.setMsg(`✨ ¡Gotcha! ¡${b.enemy.name} (Nv.${b.enemy.level}) fue capturado con ${ITEMS_DB[ballId].name} y enviado ${dest}!`, () => {
+        Game.state = "OVERWORLD";
+      });
+    } else {
+      this.setMsg(`¡Oh no! ¡${b.enemy.name} rompió la ${ITEMS_DB[ballId].name}!`, () => {
+        this.enemyAttack(Game.party[b.playerIndex], b.enemy, () => {
+          b.menuState = "MAIN";
+          b.cursor = 0;
+        });
+      });
+    }
+  },
+
+  useBattlePotion(playerMon, itemId) {
+    if ((Game.inventory[itemId] || 0) <= 0) {
+      this.setMsg(`¡No tienes ${ITEMS_DB[itemId].name}!`, () => { Game.battle.menuState = "BAG"; });
+      return;
+    }
+    SFX.heal();
+    Game.inventory[itemId]--;
+    const ratio = ITEMS_DB[itemId].healRatio || 0.6;
+    const heal = Math.max(24, Math.floor(playerMon.maxHp * ratio));
+    playerMon.hp = Math.min(playerMon.maxHp, playerMon.hp + heal);
+    UI.refreshStats();
+    UI.renderCurrentTab();
+    this.setMsg(`Usaste ${ITEMS_DB[itemId].name} en ${playerMon.name}. Recuperó +${heal} PS.`, () => {
+      this.enemyAttack(playerMon, Game.battle.enemy, () => {
+        Game.battle.menuState = "MAIN";
+        Game.battle.cursor = 0;
+      });
+    });
+  }
+};
+
+/* ============================================================================
+   9. RENDERIZADOR CANVAS HD (CON PARTÍCULAS, NPCS Y CÁPSULAS DE OBJETOS)
+   ============================================================================ */
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+
+const Renderer = {
+  draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (Game.state === "STARTER_SELECT") {
+      this.drawStarterSelect();
+    } else if (Game.state === "OVERWORLD" || Game.state === "DIALOG") {
+      this.drawOverworld();
+      if (Game.state === "DIALOG") this.drawDialogBox(Game.dialogQueue[0] || "");
+    } else if (Game.state === "BATTLE") {
+      this.drawBattle();
+    }
+  },
+
+  drawStarterSelect() {
+    ctx.fillStyle = "#0b2117";
+    ctx.fillRect(0, 0, 480, 320);
+
+    ctx.fillStyle = "#74c69d";
+    ctx.font = "bold 16px Courier New";
+    ctx.fillText("LABORATORIO DEL PROF. OLMO — CRÓNICAS DE SILVANIA", 18, 28);
+
+    ctx.fillStyle = "#fff";
+    ctx.font = "12px Courier New";
+    ctx.fillText("Elige tu Fakemon inicial (Nv. 5) con ◄ ► y pulsa el botón A:", 22, 48);
+
+    const starters = [1, 4, 7];
+    starters.forEach((id, idx) => {
+      const x = 36 + idx * 142;
+      const y = 64;
+      const sel = Game.starterCursor === idx;
+      const spec = POKEDEX[id];
+
+      ctx.fillStyle = sel ? "#2d6a4f" : "#14261d";
+      ctx.fillRect(x, y, 124, 156);
+      ctx.strokeStyle = sel ? "#ffd166" : "#40916c";
+      ctx.lineWidth = sel ? 3 : 1;
+      ctx.strokeRect(x, y, 124, 156);
+
+      const bob = sel ? Math.sin(Game.animTick * 0.12) * 3 : 0;
+      const spr = getFakemonSprite(id, 80, false, false);
+      ctx.drawImage(spr, x + 22, y + 6 + bob);
+
+      ctx.fillStyle = "#fff";
+      ctx.font = "bold 13px Courier New";
+      ctx.fillText(`#00${id} ${spec.name}`, x + 10, y + 104);
+
+      ctx.fillStyle = TYPES[spec.type1].color;
+      ctx.fillRect(x + 27, y + 112, 70, 16);
+      ctx.fillStyle = "#fff";
+      ctx.font = "bold 11px Courier New";
+      ctx.fillText(spec.type1, x + 40, y + 124);
+
+      ctx.fillStyle = "#b7e4c7";
+      ctx.font = "10px Courier New";
+      ctx.fillText(`PS:${spec.baseHp} ATQ:${spec.baseAtk}`, x + 16, y + 144);
+    });
+
+    this.drawDialogBox("Prof. Olmo: «¡El Equipo Umbra busca los 4 Fragmentos del Prisma de Aether! Elige a tu compañero para comenzar la aventura.»");
+  },
+
+  drawOverworld() {
+    const map = MAPS[Game.mapIndex];
+    const tileW = 30;
+    const tileH = 32;
+
+    for (let r = 0; r < map.grid.length; r++) {
+      for (let c = 0; c < map.grid[0].length; c++) {
+        const t = map.grid[r][c];
+        const x = c * tileW;
+        const y = r * tileH;
+
+        ctx.fillStyle = (r + c) % 2 === 0 ? "#74c69d" : "#6bbf94";
+        ctx.fillRect(x, y, tileW, tileH);
+
+        if (t === 1) { // Árboles frondosos
+          ctx.fillStyle = "#1b4332";
+          ctx.fillRect(x + 2, y + 2, tileW - 4, tileH - 3);
+          ctx.fillStyle = "#2d6a4f";
+          ctx.fillRect(x + 4, y + 4, tileW - 8, tileH - 10);
+          ctx.fillStyle = "#52b788";
+          ctx.fillRect(x + 7, y + 6, tileW - 14, 7);
+        } else if (t === 2) { // Hierba alta
+          ctx.fillStyle = "#52b788";
+          ctx.fillRect(x, y, tileW, tileH);
+          ctx.fillStyle = "#1b4332";
+          ctx.fillRect(x + 4, y + 8, 3, 12);
+          ctx.fillRect(x + 10, y + 11, 3, 9);
+          ctx.fillRect(x + 16, y + 7, 3, 13);
+          ctx.fillRect(x + 22, y + 10, 3, 10);
+        } else if (t === 3) { // Agua con olas
+          ctx.fillStyle = "#0077b6";
+          ctx.fillRect(x, y, tileW, tileH);
+          ctx.fillStyle = "#90e0ef";
+          const wave = Math.floor(Math.sin(Game.animTick * 0.06 + c) * 3);
+          ctx.fillRect(x + 6 + wave, y + 12, 12, 2);
+        } else if (t === 4) { // Centro Fakemon
+          ctx.fillStyle = "#d62828";
+          ctx.fillRect(x + 1, y + 2, tileW - 2, 13);
+          ctx.fillStyle = "#f8f9fa";
+          ctx.fillRect(x + 1, y + 15, tileW - 2, 15);
+          ctx.fillStyle = "#fff";
+          ctx.font = "bold 9px Courier New";
+          ctx.fillText("CURA", x + 3, y + 12);
+        } else if (t === 5 || t === 6) {
+          ctx.fillStyle = "#ffb703";
+          ctx.fillRect(x + 2, y + 4, tileW - 4, tileH - 8);
+          ctx.fillStyle = "#000";
+          ctx.font = "bold 9px Courier New";
+          ctx.fillText(t === 5 ? "RUTA►" : "◄RUTA", x + 2, y + 19);
+        } else if (t === 7) { // Altar Legendario
+          ctx.fillStyle = "#5a189a";
+          ctx.fillRect(x + 2, y + 2, tileW - 4, tileH - 4);
+          ctx.fillStyle = "#ffd166";
+          ctx.font = "bold 16px Courier New";
+          ctx.fillText("★", x + 7, y + 21);
+        } else if (t === 8) { // Gimnasio
+          ctx.fillStyle = "#f77f00";
+          ctx.fillRect(x + 2, y + 3, tileW - 4, tileH - 6);
+          ctx.fillStyle = "#fff";
+          ctx.font = "bold 9px Courier New";
+          ctx.fillText("GIM", x + 6, y + 19);
+        } else if (t === 9) { // Cápsula de Objeto (Item Ball)
+          if (!Game.flags[map.itemBall.id]) {
+            ctx.fillStyle = "#e63946";
+            ctx.beginPath();
+            ctx.arc(x + 15, y + 16, 7, Math.PI, 0);
+            ctx.fill();
+            ctx.fillStyle = "#fff";
+            ctx.beginPath();
+            ctx.arc(x + 15, y + 16, 7, 0, Math.PI);
+            ctx.fill();
+            ctx.strokeStyle = "#111";
+            ctx.lineWidth = 2;
+            ctx.stroke();
+          }
+        } else if (t === 10) { // Evento de Historia / Rival / Equipo Umbra
+          const done = !!Game.flags[map.storyNpc.id];
+          ctx.fillStyle = done ? "#495057" : "#7209b7";
+          ctx.fillRect(x + 5, y + 4, 20, 24);
+          ctx.fillStyle = "#ffd166";
+          ctx.font = "bold 11px Courier New";
+          ctx.fillText(done ? "OK" : "!!", x + 8, y + 19);
+        } else if (t === 11) { // Roca Rompible
+          ctx.fillStyle = Game.keyItems["picorocoso"] ? "#95d5b2" : "#7f5539";
+          ctx.fillRect(x + 4, y + 5, 22, 22);
+          ctx.fillStyle = "#fff";
+          ctx.font = "bold 8px Courier New";
+          ctx.fillText("ROCA", x + 5, y + 19);
+        }
+      }
+    }
+
+    // Jugador (con tabla de surf si está sobre el agua)
+    const px = Game.player.x * tileW;
+    const py = Game.player.y * tileH;
+    const onWater = map.grid[Game.player.y][Game.player.x] === 3;
+    if (onWater) {
+      ctx.fillStyle = "#ffb703";
+      ctx.beginPath();
+      ctx.ellipse(px + 15, py + 25, 13, 6, 0, 0, Math.PI * 2);
+      ctx.fill();
+    } else {
+      ctx.fillStyle = "rgba(0,0,0,0.3)";
+      ctx.fillRect(px + 6, py + 26, 18, 4);
+    }
+    ctx.fillStyle = "#d90429";
+    ctx.fillRect(px + 6, py + 3, 18, 7);
+    ctx.fillStyle = "#fff";
+    ctx.fillRect(px + 8, py + 8, 14, 2);
+    ctx.fillStyle = "#ffcad4";
+    ctx.fillRect(px + 8, py + 10, 14, 7);
+    ctx.fillStyle = "#111";
+    ctx.fillRect(px + 10, py + 12, 2, 3);
+    ctx.fillRect(px + 18, py + 12, 2, 3);
+    ctx.fillStyle = "#1d3557";
+    ctx.fillRect(px + 6, py + 17, 18, 7);
+    ctx.fillStyle = "#111";
+    ctx.fillRect(px + 8, py + 24, 6, 5);
+    ctx.fillRect(px + 16, py + 24, 6, 5);
+  },
+
+  drawBattle() {
+    const b = Game.battle;
+    const playerMon = Game.party[b.playerIndex];
+    const enemyMon = b.enemy;
+
+    const grad = ctx.createLinearGradient(0, 0, 0, 218);
+    grad.addColorStop(0, "#48cae4");
+    grad.addColorStop(0.55, "#caf0f8");
+    grad.addColorStop(1, "#95d5b2");
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, 480, 218);
+
+    // Plataformas de combate
+    ctx.fillStyle = "#52b788";
+    ctx.beginPath();
+    ctx.ellipse(355, 114, 78, 22, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.strokeStyle = "#1b4332";
+    ctx.lineWidth = 3;
+    ctx.stroke();
+
+    ctx.fillStyle = "#52b788";
+    ctx.beginPath();
+    ctx.ellipse(125, 204, 86, 24, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+
+    if (b.enemyShake > 0) b.enemyShake--;
+    if (b.playerShake > 0) b.playerShake--;
+    const eShakeX = b.enemyShake % 2 === 1 ? 6 : 0;
+    const pShakeX = b.playerShake % 2 === 1 ? -6 : 0;
+    const bob = Math.sin(Game.animTick * 0.1) * 2.5;
+
+    const enemySprite = getFakemonSprite(enemyMon.id, 92, false, enemyMon.isShiny);
+    ctx.drawImage(enemySprite, 309 + eShakeX, 26 + bob);
+
+    const playerSprite = getFakemonSprite(playerMon.id, 96, true, playerMon.isShiny);
+    ctx.drawImage(playerSprite, 76 + pShakeX, 110 - bob * 0.5);
+
+    // Partículas elementales de combate
+    for (let i = Game.particles.length - 1; i >= 0; i--) {
+      const pt = Game.particles[i];
+      pt.x += pt.vx;
+      pt.y += pt.vy;
+      pt.life--;
+      ctx.fillStyle = pt.color;
+      ctx.fillRect(pt.x, pt.y, 5, 5);
+      if (pt.life <= 0) Game.particles.splice(i, 1);
+    }
+
+    this.drawHudBox(14, 12, enemyMon, true);
+    this.drawHudBox(250, 130, playerMon, false);
+
+    // Panel inferior GBA
+    ctx.fillStyle = "#141917";
+    ctx.fillRect(0, 218, 480, 102);
+    ctx.strokeStyle = "#ffd166";
+    ctx.lineWidth = 4;
+    ctx.strokeRect(2, 220, 476, 98);
+
+    if (b.menuState === "MESSAGE") {
+      ctx.fillStyle = "#fff";
+      ctx.font = "bold 13px Courier New";
+      this.wrapText(b.message, 16, 248, 444, 19);
+      ctx.fillStyle = "#ffd166";
+      ctx.font = "11px Courier New";
+      ctx.fillText("Toca A (Z / Enter) para continuar ▼", 225, 306);
+    } else if (b.menuState === "MAIN") {
+      ctx.fillStyle = "#fff";
+      ctx.font = "bold 14px Courier New";
+      ctx.fillText("¿Qué hará", 18, 255);
+      ctx.fillStyle = "#ffd166";
+      ctx.fillText(`${playerMon.name}?`, 18, 276);
+
+      ctx.fillStyle = "#f8f9fa";
+      ctx.fillRect(215, 224, 258, 90);
+      ctx.strokeStyle = "#2d6a4f";
+      ctx.strokeRect(215, 224, 258, 90);
+
+      const opts = ["LUCHAR", "MOCHILA", "FAKEMON", "HUIR"];
+      opts.forEach((opt, idx) => {
+        const ox = 230 + (idx % 2) * 120;
+        const oy = 256 + Math.floor(idx / 2) * 34;
+        ctx.fillStyle = b.cursor === idx ? "#d62828" : "#111";
+        ctx.font = "bold 14px Courier New";
+        ctx.fillText((b.cursor === idx ? "►" : " ") + opt, ox, oy);
+      });
+    } else if (b.menuState === "MOVES") {
+      playerMon.moves.forEach((mv, idx) => {
+        const mx = 16 + (idx % 2) * 228;
+        const my = 252 + Math.floor(idx / 2) * 34;
+        ctx.fillStyle = b.cursor === idx ? "#ffd166" : "#fff";
+        ctx.font = "bold 12px Courier New";
+        ctx.fillText(`${b.cursor === idx ? "►" : " "} ${mv.name} (${mv.type} ${mv.pwr})`, mx, my);
+      });
+    } else if (b.menuState === "BAG") {
+      const bagItems = [
+        `Fakéball (x${Game.inventory.fakeball || 0})`,
+        `Súperball (x${Game.inventory.superball || 0})`,
+        `Ultraball (x${Game.inventory.ultraball || 0})`,
+        `Poción 60% (x${Game.inventory.pocion || 0})`,
+        `Súperpoción 100% (x${Game.inventory.superpocion || 0})`
+      ];
+      bagItems.forEach((txt, idx) => {
+        const bx = 16 + (idx % 2) * 228;
+        const by = 244 + Math.floor(idx / 2) * 24;
+        ctx.fillStyle = b.cursor === idx ? "#ffd166" : "#fff";
+        ctx.font = "bold 12px Courier New";
+        ctx.fillText(`${b.cursor === idx ? "►" : " "} ${txt}`, bx, by);
+      });
+    } else if (b.menuState === "PARTY") {
+      ctx.fillStyle = "#95d5b2";
+      ctx.font = "11px Courier New";
+      ctx.fillText("Elige un Fakemon para relevar (B para volver):", 16, 238);
+      Game.party.forEach((pm, idx) => {
+        const px = 16 + (idx % 2) * 228;
+        const py = 256 + Math.floor(idx / 2) * 20;
+        ctx.fillStyle = b.cursor === idx ? "#ffd166" : (pm.hp > 0 ? "#fff" : "#e63946");
+        ctx.font = "bold 12px Courier New";
+        ctx.fillText(`${b.cursor === idx ? "►" : " "}${pm.name} Nv${pm.level} (${pm.hp}/${pm.maxHp})`, px, py);
+      });
+    }
+  },
+
+  drawHudBox(x, y, mon, isEnemy) {
+    ctx.fillStyle = "#f8f9fa";
+    ctx.fillRect(x, y, 216, 68);
+    ctx.strokeStyle = "#1b4332";
+    ctx.lineWidth = 3;
+    ctx.strokeRect(x, y, 216, 68);
+
+    ctx.fillStyle = "#111";
+    ctx.font = "bold 12px Courier New";
+    const caughtMark = isEnemy && Game.caughtIds[mon.id] ? "●" : "";
+    const shinyMark = mon.isShiny ? "★" : "";
+    ctx.fillText(`${caughtMark}${shinyMark}${mon.name}`, x + 8, y + 18);
+    ctx.fillText(`Nv.${mon.level}`, x + 160, y + 18);
+
+    ctx.fillStyle = "#343a40";
+    ctx.fillRect(x + 36, y + 25, 166, 10);
+    const ratio = Math.max(0, mon.hp / mon.maxHp);
+    ctx.fillStyle = ratio > 0.5 ? "#2b9348" : (ratio > 0.22 ? "#f77f00" : "#d62828");
+    ctx.fillRect(x + 36, y + 25, Math.floor(166 * ratio), 10);
+
+    ctx.fillStyle = "#111";
+    ctx.font = "bold 10px Courier New";
+    ctx.fillText("PS", x + 10, y + 34);
+    ctx.fillText(`${mon.hp}/${mon.maxHp}`, x + 132, y + 50);
+
+    const spec = POKEDEX[mon.id];
+    ctx.fillStyle = TYPES[spec.type1].color;
+    ctx.fillRect(x + 10, y + 40, 62, 14);
+    ctx.fillStyle = "#fff";
+    ctx.font = "bold 10px Courier New";
+    ctx.fillText(spec.type1, x + 14, y + 50);
+
+    if (mon.heldItem && ITEMS_DB[mon.heldItem]) {
+      ctx.fillStyle = "#5a189a";
+      ctx.font = "bold 9px Courier New";
+      ctx.fillText(`💍${ITEMS_DB[mon.heldItem].name.slice(0, 8)}`, x + 76, y + 50);
+    }
+
+    if (!isEnemy) {
+      ctx.fillStyle = "#adb5bd";
+      ctx.fillRect(x + 8, y + 58, 198, 5);
+      const expRatio = Math.min(1, mon.exp / mon.nextExp);
+      ctx.fillStyle = "#00bbf9";
+      ctx.fillRect(x + 8, y + 58, Math.floor(198 * expRatio), 5);
+    }
+  },
+
+  drawDialogBox(text) {
+    ctx.fillStyle = "rgba(255, 255, 255, 0.97)";
+    ctx.fillRect(10, 224, 460, 86);
+    ctx.strokeStyle = "#1b4332";
+    ctx.lineWidth = 4;
+    ctx.strokeRect(10, 224, 460, 86);
+
+    ctx.fillStyle = "#111";
+    ctx.font = "bold 12px Courier New";
+    this.wrapText(text, 20, 246, 438, 18);
+    ctx.fillStyle = "#d62828";
+    ctx.font = "bold 11px Courier New";
+    ctx.fillText("Toca A (Z / Enter) ▼", 325, 302);
+  },
+
+  wrapText(text, x, y, maxWidth, lineHeight) {
+    const words = String(text).split(' ');
+    let line = '';
+    for (let n = 0; n < words.length; n++) {
+      const testLine = line + words[n] + ' ';
+      if (ctx.measureText(testLine).width > maxWidth && n > 0) {
+        ctx.fillText(line, x, y);
+        line = words[n] + ' ';
+        y += lineHeight;
+      } else {
+        line = testLine;
+      }
+    }
+    ctx.fillText(line, x, y);
+  }
+};
+
+/* ============================================================================
+   10. PANEL INTERACTIVO (EQUIPO, MOCHILA CON OBJETOS CLAVE/EQUIPABLES, TIENDA, DEX)
+   ============================================================================ */
+const UI = {
+  currentTab: 'party',
+
+  refreshStats() {
+    document.getElementById("zoneLabel").textContent = MAPS[Game.mapIndex].name.split(":")[1] || "Pueblo Hoja";
+    document.getElementById("questBanner").innerHTML = `📜 <strong>Misión:</strong> ${Game.getCurrentQuestText()}`;
+    document.getElementById("statBadges").textContent = `${Game.badges.length}/4`;
+    document.getElementById("statDex").textContent = `${Object.keys(Game.caughtIds).length}/121`;
+    document.getElementById("statMoney").textContent = `$${Game.money}`;
+    const totalBalls = (Game.inventory.fakeball || 0) + (Game.inventory.superball || 0) + (Game.inventory.ultraball || 0);
+    const totalPots = (Game.inventory.pocion || 0) + (Game.inventory.superpocion || 0);
+    document.getElementById("statBalls").textContent = totalBalls;
+    document.getElementById("statPotions").textContent = totalPots;
+    document.getElementById("statRepel").textContent = `${Game.repelSteps}p`;
+    document.getElementById("statPC").textContent = Game.pc.length;
+  },
+
+  showTab(tab) {
+    this.currentTab = tab;
+    this.renderCurrentTab();
+  },
+
+  renderCurrentTab() {
+    const container = document.getElementById("tabContainer");
+    const title = document.getElementById("tabTitle");
+    container.innerHTML = "";
+
+    if (this.currentTab === "party") {
+      title.textContent = `🎒 Equipo Activo (${Game.party.length}/6)`;
+      Game.party.forEach((mon, idx) => {
+        const spec = POKEDEX[mon.id];
+        const row = document.createElement("div");
+        row.className = "poke-row";
+        const spr = getFakemonSprite(mon.id, 42, false, mon.isShiny);
+        const left = document.createElement("div");
+        left.style.display = "flex";
+        left.style.alignItems = "center";
+        left.style.gap = "7px";
+        left.appendChild(spr);
+
+        const heldTxt = mon.heldItem ? `<span style="color:var(--gold);">💍 ${ITEMS_DB[mon.heldItem].name}</span>` : `<span style="color:#95d5b2;">Sin objeto</span>`;
+        const info = document.createElement("div");
+        info.innerHTML = `
+          <strong>#${String(mon.id).padStart(3,'0')} ${mon.isShiny ? '★' : ''}${mon.name}</strong> (Nv.${mon.level})<br/>
+          <span class="badge-type" style="background:${TYPES[spec.type1].color}">${spec.type1}</span>
+          ${spec.type2 ? `<span class="badge-type" style="background:${TYPES[spec.type2].color}">${spec.type2}</span>` : ''}
+          <small>PS: ${mon.hp}/${mon.maxHp} | ${heldTxt}</small>
+        `;
+        left.appendChild(info);
+        row.appendChild(left);
+
+        const right = document.createElement("div");
+        right.style.display = "flex";
+        right.style.gap = "4px";
+        if (idx > 0) {
+          right.innerHTML += `<button class="btn btn-small" onclick="UI.makeLeader(${idx})">⭐ Líder</button>`;
+        }
+        if (mon.heldItem) {
+          right.innerHTML += `<button class="btn btn-small" onclick="UI.unequipItem(${idx})">Quitar 💍</button>`;
+        }
+        row.appendChild(right);
+        container.appendChild(row);
+      });
+    } else if (this.currentTab === "bag") {
+      title.textContent = "🧰 Mochila (Consumibles, Equipables y Objetos Clave)";
+      // Objetos Clave obtenidos
+      const keys = Object.keys(Game.keyItems).filter(k => Game.keyItems[k]);
+      if (keys.length > 0) {
+        keys.forEach(kId => {
+          const kItem = ITEMS_DB[kId];
+          const row = document.createElement("div");
+          row.className = "poke-row";
+          row.style.borderLeftColor = "#ffd166";
+          row.innerHTML = `<div><strong>🗝️ ${kItem.name} (Objeto Clave)</strong><br/><small>${kItem.desc}</small></div>`;
+          container.appendChild(row);
+        });
+      }
+
+      // Objetos del inventario
+      Object.keys(Game.inventory).forEach(itemId => {
+        const qty = Game.inventory[itemId];
+        if (!qty || qty <= 0) return;
+        const item = ITEMS_DB[itemId];
+        if (!item) return;
+        const row = document.createElement("div");
+        row.className = "poke-row";
+        let actionBtn = "";
+        if (["heal", "revive", "level", "util"].includes(item.cat)) {
+          actionBtn = `<button class="btn btn-small" onclick="UI.useItemOutside('${itemId}')">Usar</button>`;
+        } else if (item.cat === "held") {
+          actionBtn = `<button class="btn btn-small" onclick="UI.equipToLeader('${itemId}')">Equipar a Líder</button>`;
+        }
+        row.innerHTML = `
+          <div><strong>${item.name} (x${qty})</strong><br/><small>${item.desc}</small></div>
+          ${actionBtn}
+        `;
+        container.appendChild(row);
+      });
+    } else if (this.currentTab === "shop") {
+      title.textContent = `🛒 Tienda Oficial de Silvania ($${Game.money})`;
+      const shopList = ["fakeball", "superball", "ultraball", "pocion", "superpocion", "revivir", "repelente", "carameloraro", "semillamilagro", "carbon", "aguamistica", "iman", "restos"];
+      shopList.forEach(itemId => {
+        const it = ITEMS_DB[itemId];
+        const row = document.createElement("div");
+        row.className = "poke-row";
+        row.innerHTML = `
+          <div><strong>${it.name}</strong> ($${it.price})<br/><small>${it.desc}</small></div>
+          <button class="btn btn-small" onclick="UI.buyItem('${itemId}')">Comprar</button>
+        `;
+        container.appendChild(row);
+      });
+    } else if (this.currentTab === "pokedex") {
+      const caughtCount = Object.keys(Game.caughtIds).length;
+      title.textContent = `📖 Pokédex de Silvania (${caughtCount}/121 Capturados)`;
+      const grid = document.createElement("div");
+      grid.className = "pokedex-grid";
+      for (let i = 1; i <= 121; i++) {
+        const spec = POKEDEX[i];
+        const isCaught = !!Game.caughtIds[i];
+        const card = document.createElement("div");
+        card.className = "dex-card" + (isCaught ? " caught" : "");
+        const spr = getFakemonSprite(i, 36, false, false);
+        card.appendChild(spr);
+        const info = document.createElement("div");
+        info.innerHTML = `
+          <strong>#${String(i).padStart(3,'0')} ${spec.name}</strong><br/>
+          <span style="color:#95d5b2;">${spec.type1}${spec.type2 ? '/'+spec.type2 : ''}</span>
+        `;
+        card.appendChild(info);
+        grid.appendChild(card);
+      }
+      container.appendChild(grid);
+    } else if (this.currentTab === "pc") {
+      title.textContent = `💻 Caja del PC (${Game.pc.length} almacenados)`;
+      if (Game.pc.length === 0) {
+        container.innerHTML = "<p style='color:#95d5b2;'>Tu Caja del PC está vacía.</p>";
+        return;
+      }
+      Game.pc.forEach((mon, idx) => {
+        const row = document.createElement("div");
+        row.className = "poke-row";
+        row.innerHTML = `
+          <div><strong>#${String(mon.id).padStart(3,'0')} ${mon.isShiny ? '★' : ''}${mon.name}</strong> (Nv.${mon.level}) - PS: ${mon.hp}/${mon.maxHp}</div>
+          <button class="btn btn-small" onclick="UI.swapFromPC(${idx})">⇄ Sacar</button>
+        `;
+        container.appendChild(row);
+      });
+    }
+  },
+
+  useItemOutside(itemId) {
+    if ((Game.inventory[itemId] || 0) <= 0 || Game.party.length === 0) return;
+    const item = ITEMS_DB[itemId];
+    const lead = Game.party[0];
+
+    if (item.cat === "util" && itemId === "repelente") {
+      Game.inventory[itemId]--;
+      Game.repelSteps += 25;
+      SFX.select();
+      this.toast("🛡️ Repelente activado por 25 pasos.");
+    } else if (item.cat === "heal") {
+      Game.inventory[itemId]--;
+      const heal = Math.floor(lead.maxHp * item.healRatio);
+      lead.hp = Math.min(lead.maxHp, lead.hp + heal);
+      SFX.heal();
+      this.toast(`💖 ${lead.name} recuperó PS.`);
+    } else if (item.cat === "revive") {
+      const fainted = Game.party.find(p => p.hp <= 0) || lead;
+      Game.inventory[itemId]--;
+      fainted.hp = Math.max(Math.floor(fainted.maxHp * 0.5), fainted.hp);
+      SFX.heal();
+      this.toast(`✨ ${fainted.name} está listo para luchar.`);
+    } else if (item.cat === "level") {
+      Game.inventory[itemId]--;
+      const msg = BattleEngine.levelUpFakemon(lead);
+      SFX.fanfare();
+      this.toast(`🍬 ¡Caramelo Raro! ${msg}`);
+    }
+    Game.saveGame(false);
+    this.refreshStats();
+    this.renderCurrentTab();
+  },
+
+  equipToLeader(itemId) {
+    if ((Game.inventory[itemId] || 0) <= 0 || Game.party.length === 0) return;
+    const lead = Game.party[0];
+    if (lead.heldItem) {
+      Game.inventory[lead.heldItem] = (Game.inventory[lead.heldItem] || 0) + 1;
+    }
+    Game.inventory[itemId]--;
+    lead.heldItem = itemId;
+    SFX.select();
+    Game.saveGame(false);
+    this.renderCurrentTab();
+    this.toast(`💍 Se equipó ${ITEMS_DB[itemId].name} a ${lead.name}.`);
+  },
+
+  unequipItem(idx) {
+    const mon = Game.party[idx];
+    if (!mon || !mon.heldItem) return;
+    const itemId = mon.heldItem;
+    Game.inventory[itemId] = (Game.inventory[itemId] || 0) + 1;
+    mon.heldItem = null;
+    SFX.select();
+    Game.saveGame(false);
+    this.renderCurrentTab();
+    this.toast(`Se guardó ${ITEMS_DB[itemId].name} en la Mochila.`);
+  },
+
+  buyItem(itemId) {
+    const it = ITEMS_DB[itemId];
+    if (Game.money < it.price) {
+      this.toast("❌ No tienes suficiente dinero.");
+      return;
+    }
+    SFX.select();
+    Game.money -= it.price;
+    Game.inventory[itemId] = (Game.inventory[itemId] || 0) + 1;
+    Game.saveGame(false);
+    this.refreshStats();
+    this.renderCurrentTab();
+    this.toast(`✅ Compraste 1 ${it.name}.`);
+  },
+
+  makeLeader(idx) {
+    const tmp = Game.party[0];
+    Game.party[0] = Game.party[idx];
+    Game.party[idx] = tmp;
+    Game.saveGame(false);
+    this.renderCurrentTab();
+  },
+
+  swapFromPC(pcIdx) {
+    const pcMon = Game.pc[pcIdx];
+    if (Game.party.length < 6) {
+      Game.party.push(pcMon);
+      Game.pc.splice(pcIdx, 1);
+    } else {
+      const last = Game.party.pop();
+      Game.party.push(pcMon);
+      Game.pc[pcIdx] = last;
+    }
+    Game.saveGame(false);
+    this.refreshStats();
+    this.renderCurrentTab();
+  },
+
+  toast(msg) {
+    const el = document.getElementById("toast");
+    el.textContent = msg;
+    el.style.display = "block";
+    clearTimeout(this._t);
+    this._t = setTimeout(() => { el.style.display = "none"; }, 2600);
+  }
+};
+
+/* ============================================================================
+   11. CONTROLADOR TÁCTIL ANDROID (CON REPETICIÓN CONTINUA) Y TECLADO
+   ============================================================================ */
+const Input = {
+  holdTimer: null,
+
+  press(dir) {
+    if (Game.state === "STARTER_SELECT") {
+      SFX.select();
+      if (dir === "LEFT") Game.starterCursor = (Game.starterCursor + 2) % 3;
+      if (dir === "RIGHT") Game.starterCursor = (Game.starterCursor + 1) % 3;
+    } else if (Game.state === "OVERWORLD") {
+      SFX.vibrate(10);
+      if (dir === "UP") Game.movePlayer(0, -1, "UP");
+      if (dir === "DOWN") Game.movePlayer(0, 1, "DOWN");
+      if (dir === "LEFT") Game.movePlayer(-1, 0, "LEFT");
+      if (dir === "RIGHT") Game.movePlayer(1, 0, "RIGHT");
+    } else if (Game.state === "BATTLE") {
+      const b = Game.battle;
+      SFX.select();
+      if (b.menuState === "MAIN" || b.menuState === "MOVES") {
+        const max = b.menuState === "MAIN" ? 4 : Game.party[b.playerIndex].moves.length;
+        if (dir === "RIGHT") b.cursor = (b.cursor + 1) % max;
+        if (dir === "LEFT") b.cursor = (b.cursor + max - 1) % max;
+        if (dir === "DOWN") b.cursor = (b.cursor + 2) % max;
+        if (dir === "UP") b.cursor = (b.cursor + max - 2) % max;
+      } else if (b.menuState === "BAG") {
+        const max = 5;
+        if (dir === "DOWN" || dir === "RIGHT") b.cursor = (b.cursor + 1) % max;
+        if (dir === "UP" || dir === "LEFT") b.cursor = (b.cursor + max - 1) % max;
+      } else if (b.menuState === "PARTY") {
+        const max = Game.party.length;
+        if (dir === "DOWN" || dir === "RIGHT") b.cursor = (b.cursor + 1) % max;
+        if (dir === "UP" || dir === "LEFT") b.cursor = (b.cursor + max - 1) % max;
+      }
+    }
+  },
+
+  triggerA() {
+    if (Game.state === "STARTER_SELECT") {
+      const ids = [1, 4, 7];
+      Game.chooseStarter(ids[Game.starterCursor]);
+    } else if (Game.state === "DIALOG") {
+      Game.advanceDialog();
+    } else if (Game.state === "BATTLE") {
+      BattleEngine.handleConfirm();
+    }
+  },
+
+  triggerB() {
+    if (Game.state === "DIALOG") {
+      Game.advanceDialog();
+    } else if (Game.state === "BATTLE") {
+      BattleEngine.handleCancel();
+    }
+  },
+
+  bindHoldButton(btnId, dir) {
+    const el = document.getElementById(btnId);
+    const start = (e) => {
+      e.preventDefault();
+      el.classList.add("pressed");
+      this.press(dir);
+      clearInterval(this.holdTimer);
+      this.holdTimer = setInterval(() => {
+        if (Game.state === "OVERWORLD") this.press(dir);
+      }, 165);
+    };
+    const end = (e) => {
+      e.preventDefault();
+      el.classList.remove("pressed");
+      clearInterval(this.holdTimer);
+    };
+    el.addEventListener("pointerdown", start);
+    el.addEventListener("pointerup", end);
+    el.addEventListener("pointerleave", end);
+    el.addEventListener("pointercancel", end);
+  }
+};
+
+// Vincular botones táctiles para Android y Mouse
+Input.bindHoldButton("btnUp", "UP");
+Input.bindHoldButton("btnDown", "DOWN");
+Input.bindHoldButton("btnLeft", "LEFT");
+Input.bindHoldButton("btnRight", "RIGHT");
+
+document.getElementById("btnA").addEventListener("pointerdown", (e) => { e.preventDefault(); Input.triggerA(); });
+document.getElementById("btnB").addEventListener("pointerdown", (e) => { e.preventDefault(); Input.triggerB(); });
+canvas.addEventListener("pointerdown", (e) => {
+  if (Game.state === "DIALOG" || (Game.state === "BATTLE" && Game.battle?.menuState === "MESSAGE")) {
+    e.preventDefault();
+    Input.triggerA();
+  }
+});
+
+window.addEventListener("keydown", (e) => {
+  const k = e.key.toLowerCase();
+  if (["arrowup", "w"].includes(k)) { e.preventDefault(); Input.press("UP"); }
+  else if (["arrowdown", "s"].includes(k)) { e.preventDefault(); Input.press("DOWN"); }
+  else if (["arrowleft", "a"].includes(k)) { e.preventDefault(); Input.press("LEFT"); }
+  else if (["arrowright", "d"].includes(k)) { e.preventDefault(); Input.press("RIGHT"); }
+  else if (["z", "enter", " "].includes(k)) { e.preventDefault(); Input.triggerA(); }
+  else if (["x", "backspace", "escape"].includes(k)) { e.preventDefault(); Input.triggerB(); }
+});
+
+window.onload = () => Game.init();
+</script>
+</body>
+</html>
