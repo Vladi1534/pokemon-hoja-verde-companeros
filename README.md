@@ -1,34 +1,50 @@
-# Pokémon Hoja Verde · Compañeros
+# Pokémon Hoja Verde · Compañeros 2.0
 
-Adaptación fan en un HTML independiente, basada en el juego HTML aportado por el usuario. No es una reproducción completa de Pokémon Verde Hoja. Sus mapas, eventos, economía, movimientos y progresión tienen adaptaciones propias.
+Aventura fan de Kanto para navegador, con un Pokémon líder que sigue al jugador. Esta edición sustituye la progresión lineal de la versión 1.0 por mapas conectados, una historia con objetivos y reglas de combate más completas. Es una adaptación con mapas y diálogos propios; no reproduce íntegramente Pokémon Verde Hoja.
 
-## Jugar
+**Jugar:** https://vladi1534.github.io/pokemon-hoja-verde-companeros/
 
-Abrir `dist/index.html` en un navegador moderno. Todos los gráficos y sonidos están integrados; no se cargan imágenes desde servicios externos. En escritorio: WASD o flechas, Z/Enter para interactuar, X/Escape para volver, Shift para correr, M para mapa y P para Pokédex. En móvil hay controles táctiles mantenidos y botones de combate independientes del lienzo.
+También puedes abrir `dist/index.html` directamente. El juego integra sus gráficos, datos y música y no necesita descargar assets de otros servicios.
 
-## Contenido
+## La aventura
 
-- Los 151 Pokémon originales con gráficos frontales, dorsales y seguidores animados por dirección.
-- Tres iniciales, equipo de seis, PC, captura, PP, eficacia e inmunidades, estados, cambios y experiencia.
-- Quince zonas exteriores y sus interiores: Pueblo Paleta, rutas, ciudades, bosque, cueva, Liga y reserva final.
-- Ocho gimnasios, cinco combates de Liga, regalos, fósiles, pesca, Surf y Mewtwo.
-- Tiendas, curación, objetos, Pokédex, evolución y elección de la rama de Eevee.
-- Guardado automático local, copia JSON exportable e importación con validación.
+- 26 zonas exteriores, con ciudades, rutas, bosque, mar, cuevas, interiores y varias plantas de mazmorra.
+- 24 hitos principales: el paquete de Oak, el rescate del bosque, el museo, los fósiles del Monte Moon, el Puente Pepita, Bill, el S. S. Anne, el casino Rocket, la Torre Pokémon, Snorlax, Safari, Silph y la Mansión.
+- Atlas con conexiones reales y accesos pendientes, mapa local con edificios y salidas, minimapa y diario. Vuelo se aprende durante la historia.
+- Entrenadores con giro, patrullas y detección por línea de visión. Las paredes y los árboles cortan su vista; un entrenador derrotado deja de interceptarte.
+- Ocho gimnasios y Liga, con requisitos de historia y progresión de niveles ampliada.
+- 18 sprites adicionales de personajes, edificios especiales y mobiliario. El líder del equipo mantiene su seguimiento animado.
 
-## Adaptaciones
+## Equipo y combate
 
-Los movimientos se aprenden automáticamente por tipo y nivel. La curva de experiencia y los encuentros están ajustados para una aventura de navegador. Evoluciones por piedra: nivel 28; por intercambio: nivel 36; Eevee: elección al nivel 25. No hay funciones en línea ni compatibilidad con partidas del HTML Fakemon anterior. La Reserva posterior a la Liga permite encontrar las 151 especies.
+Los 151 Pokémon tienen aprendizaje por especie y nivel de Verde Hoja, experiencia Gen3 y sus curvas de crecimiento. La experiencia se reparte entre quienes participan y permanecen conscientes. Los caramelos son recompensas de exploración, no un artículo ilimitado de la tienda.
 
-## Desarrollo
+Cada movimiento nuevo queda pendiente de una elección: aprender en un espacio libre, olvidar uno de los cuatro o no aprenderlo. Evolucionar conserva movimientos y PP. La ficha muestra la habilidad y permite recordar movimientos de la especie por ₽ 500.
 
-La publicación con GitHub Actions está preparada en `.github/workflows/pages.yml`: comprueba el motor, construye el juego y publica `dist` en GitHub Pages. Consulta [la guía de publicación](docs/PUBLICAR.md). La activación inicial de Pages se hace en los ajustes del repositorio. Al cambiar de URL, exporta e importa tu partida: los guardados locales no se transfieren automáticamente entre sitios.
+Rayo Solar, Excavar, Vuelo, Buceo, Cabezazo y otros ataques de carga usan dos turnos y consumen PP una sola vez. Hiperrayo requiere recuperación; los ataques de varios golpes se resuelven en un mismo turno. Hay estados, cambios de estadísticas, clima, drenaje, trampas, protección y efectos residuales.
 
-La ampliación a salas privadas, historia compartida y combates está descrita en [la propuesta multijugador](docs/MULTIPLAYER.md). Es un diseño para la siguiente versión; el juego actual es individual.
+Las habilidades normales corresponden al perfil FRLG. Las ocultas posteriores amplían esta edición y pueden aparecer en el 8% de los encuentros salvajes. Una habilidad activa por Pokémon, con efectos como Espesura, Intimidación, Levitación, Absorbe Electricidad, Agallas, Clorofila o Regeneración. La ficha explica cuando una habilidad requiere un sistema aún ausente, como combates dobles u objetos equipados.
 
-`node build.cjs` genera el HTML final con todos los datos, gráficos y módulos integrados. `node validate.cjs` comprueba 83 condiciones del motor, accesibilidad de mapas, colisiones, guardado y ciclos de combate. El archivo original se conserva en `reference/original.html`.
+## Guardado y controles
 
-La comprobación en navegador incluyó selección del inicial, movimiento, seguimiento, transición de zona, batalla con daño y PP, captura, cambio de líder, diálogo del compañero y restauración del guardado. Se comprobó una ventana de 390 píxeles mediante un iframe de prueba: sin desbordamiento horizontal, controles mantenidos funcionales y botones de combate visibles de 48 píxeles de alto. La prueba no equivale a completar una partida natural entera ni a validar cada combinación de movimientos en dispositivos físicos.
+Flechas/WASD para caminar, Shift para correr, Z/Enter para interactuar, X/Escape para volver, M para mapa y P para Pokédex. En móvil hay cruceta y botones táctiles.
 
-## Créditos
+La partida se guarda en el navegador. Exporta/importa JSON para cambiar de dispositivo o dirección. Al continuar una partida 1.0 se conserva el equipo, los movimientos y las medallas; se adapta la experiencia y se desbloquean los hitos anteriores a esas medallas. El respaldo 1.0 queda disponible desde Opciones. Para vivir todas las misiones desde el comienzo, exporta tu partida y elige Nueva aventura.
 
-Pokémon y gráficos originales © Nintendo, GAME FREAK y The Pokémon Company. Sprites de combate y datos: [PokéAPI](https://github.com/PokeAPI/sprites). Compañeros y personajes: [pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion), con los créditos originales conservados en `reference/expansion-CREDITS.md`. Estos créditos no afirman una licencia comercial sobre las marcas o gráficos originales. Mapas, interfaz, motor web y música de esta adaptación fueron creados para este proyecto.
+## Desarrollo y comprobaciones
+
+`node validate.cjs` ejecuta 140 comprobaciones, incluidas navegación de todos los mapas, destinos de portales, colisiones, cadena de eventos, migración, aprendizaje, experiencia, habilidades y turnos. Una de las pruebas recorre los 361 movimientos del catálogo para detectar errores de ejecución y PS/estados inválidos; no certifica cada interacción del juego original.
+
+`node build.cjs` genera el HTML independiente. GitHub Actions ejecuta la validación y compilación antes de publicar `dist` en Pages. Consulta [publicación](docs/PUBLICAR.md), [cambios de la versión](docs/CAMBIOS-2.0.md) y [diseño del multijugador](docs/MULTIPLAYER.md).
+
+Prueba visual 2.0: inicio, importación, elección confirmada de movimiento, evolución conservando el repertorio, ficha de habilidad oculta, atlas, mapa local y carga móvil en un iframe de 390 px. El movimiento táctil mantuvo al seguidor en la casilla anterior y no hubo desbordamiento horizontal. No equivale a completar una campaña natural ni a probar dispositivos físicos.
+
+## Alcance
+
+Esta versión sigue siendo individual. Las evoluciones por piedra e intercambio continúan adaptadas a niveles; no hay crianza, objetos equipados ni combates dobles. Relevo cambia al siguiente compañero disponible. Las reglas de movimientos se han ampliado, pero no son una implementación certificada de todas las interacciones de la consola. El multijugador se desarrollará después de validar esta base de aventura.
+
+## Créditos y fuentes
+
+Pokémon y gráficos originales © Nintendo, GAME FREAK y The Pokémon Company. Datos de aprendizaje, experiencia y movimientos: [PokéAPI](https://github.com/PokeAPI/pokeapi) y [pret/pokefirered](https://github.com/pret/pokefirered). Sprites de combate: [PokéAPI/sprites](https://github.com/PokeAPI/sprites). Personajes y seguidores: [pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion) y sus artistas.
+
+Fuentes y contratos detallados: `reference/RULES-RESEARCH.md`, `reference/World-visual-assets.md`, `reference/expansion-CREDITS.md` y `reference/PokeAPI-LICENCE.txt`. Los créditos no afirman una licencia comercial sobre marcas o gráficos originales. El HTML aportado se conserva en `reference/original.html`.
