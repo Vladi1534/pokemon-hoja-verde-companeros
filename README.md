@@ -1,4 +1,4 @@
-# Pokémon Hoja Verde · Compañeros 2.0
+# Pokémon Hoja Verde · Compañeros 2.1
 
 Aventura fan de Kanto para navegador, con un Pokémon líder que sigue al jugador. Esta edición sustituye la progresión lineal de la versión 1.0 por mapas conectados, una historia con objetivos y reglas de combate más completas. Es una adaptación con mapas y diálogos propios; no reproduce íntegramente Pokémon Verde Hoja.
 
@@ -6,7 +6,21 @@ Aventura fan de Kanto para navegador, con un Pokémon líder que sigue al jugado
 
 También puedes abrir `dist/index.html` directamente. El juego integra sus gráficos, datos y música y no necesita descargar assets de otros servicios.
 
-## La aventura
+## Nuevo: beta cooperativa 2.1
+
+Pulsa **Jugar online · Beta**, crea una sala y comparte **Invitar a un amigo**. Se admiten cuatro entrenadores visibles con su Pokémon inicial siguiendo sus pasos. Cada entrenador conserva una llave privada para recuperar su perfil desde otro navegador; está en **Mi entrenador**.
+
+- Dos humanos contra dos NPC, con decisiones individuales, objetivos y cambios de Pokémon. El servidor espera a todos antes de resolver el turno.
+- Entrenamiento individual con menor dificultad; los dos participantes reciben una oposición más fuerte. En salas de tres o cuatro, los demás pueden observar o seguir explorando.
+- Duelo PvP individual con aceptación de ambos jugadores, sin pérdida de objetos ni recompensas.
+- Misión compartida: encargo de Oak, paquete de la tienda de Ciudad Verde y regreso a Paleta. Los avances se conservan aunque alguien se desconecte.
+- Reanudación de salas y combates, incluyendo PS, PP y decisiones pendientes. Guardado online separado de la aventura individual.
+
+**Alcance de esta beta:** Paleta, Ruta 1, Ciudad Verde y seis interiores. Inicial Nv.8 y Pidgey Nv.7; equipos curados antes de cada combate. La entrega añade un nivel una sola vez. Todavía no incluye captura, gestión de mochila, intercambio ni la campaña completa en cooperativo. Los mapas siguen siendo adaptados. El siguiente tramo de trabajo será ampliar la campaña hacia Bosque Verde y Brock.
+
+El cliente funciona en GitHub Pages y el servicio se publica por separado con Sites/Cloudflare Workers + D1. El código está en [online-server](online-server/README.md); contratos y límites en [MULTIPLAYER.md](docs/MULTIPLAYER.md). El motor online usa Pokémon Showdown (`@pkmn/sim`, reglas Gen3), con sus avisos MIT conservados.
+
+## La aventura individual
 
 - 26 zonas exteriores, con ciudades, rutas, bosque, mar, cuevas, interiores y varias plantas de mazmorra.
 - 24 hitos principales: el paquete de Oak, el rescate del bosque, el museo, los fósiles del Monte Moon, el Puente Pepita, Bill, el S. S. Anne, el casino Rocket, la Torre Pokémon, Snorlax, Safari, Silph y la Mansión.
@@ -41,7 +55,7 @@ Prueba visual 2.0: inicio, importación, elección confirmada de movimiento, evo
 
 ## Alcance
 
-Esta versión sigue siendo individual. Las evoluciones por piedra e intercambio continúan adaptadas a niveles; no hay crianza, objetos equipados ni combates dobles. Relevo cambia al siguiente compañero disponible. Las reglas de movimientos se han ampliado, pero no son una implementación certificada de todas las interacciones de la consola. El multijugador se desarrollará después de validar esta base de aventura.
+La aventura individual mantiene su motor propio. Las evoluciones por piedra e intercambio continúan adaptadas a niveles; no hay crianza, objetos equipados ni combates dobles. Relevo cambia al siguiente compañero disponible. Las reglas de movimientos se han ampliado, pero no son una implementación certificada de todas las interacciones de la consola. Los combates dobles de dos humanos están disponibles en la beta online descrita arriba.
 
 ## Créditos y fuentes
 
