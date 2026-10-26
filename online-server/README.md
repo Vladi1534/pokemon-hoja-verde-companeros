@@ -1,27 +1,33 @@
-# Kanto Compañeros · servicio online 2.1
+# Kanto Compañeros · servicio online 2.2
 
-Servidor autoritativo de la beta cooperativa. GitHub Pages sirve el juego y este Worker coordina salas, decisiones de combate y progreso en D1. No usa Supabase ni conexiones del usuario a otras aplicaciones.
+Worker autoritativo para la campaña compartida. El cliente de GitHub Pages y `/play.html` usan el mismo servicio y la misma base D1.
 
-## Reproducir
+## Ejecutar y verificar
 
-- Node 24, pnpm (versión indicada en package.json).
-- Instalar dependencias con `pnpm install --frozen-lockfile`.
-- `pnpm test`: integración con D1 emulado (22 casos).
-- `pnpm build`; `pnpm test:bundle`: motor compilado en workerd, rehidratación entre solicitudes.
-- Activar el binding D1 `DB`. Las migraciones están en `drizzle/` y se aplican durante la publicación Sites.
-- `node scripts/sync-game.mjs <carpeta-del-juego>` copia el cliente compilado y la geometría compartida desde el repositorio principal.
-- `pnpm dev` para desarrollo. En la sesión administrada se usa `sites-preview start`.
+Node 24 y la versión de pnpm indicada en `package.json`. Instala con `pnpm install --frozen-lockfile`. Ejecuta `pnpm test` para las pruebas de criaturas, D1, migración, concurrencia, capturas, intercambios y secuencia de historia. `pnpm build` y `pnpm test:bundle` comprueban la compilación y reanudación del simulador en workerd.
 
-La configuración Rolldown `output.keepNames = true` es obligatoria: Showdown serializa referencias usando los nombres de clase. La prueba del bundle detecta regresiones que no aparecen al ejecutar el código fuente sin minificar.
+`node scripts/sync-game.mjs <directorio-del-juego>` genera los mapas compartidos, compila el cliente y copia `public/play.html` y `server/world.json`. `pnpm dev` inicia el desarrollo; el entorno administrado usa `sites-preview start`.
 
-## Modelo y límites
+D1 requiere el binding `DB` y las migraciones de `drizzle/`. **Conserva `build.rolldownOptions.output.keepNames = true`:** el simulador serializa referencias mediante nombres de clase. La prueba del bundle detecta su rotura durante minificación.
 
-Las salas tienen hasta cuatro entrenadores. Una invitación aleatoria permite incorporar un entrenador; otra llave privada independiente recupera un perfil. En la base sólo se almacena su SHA-256. No se reciben correos ni contraseñas. No existe listado público de salas. El cliente guarda sus llaves en este navegador y puede copiarlas desde «Mi entrenador».
+## Estado y concurrencia
 
-Las decisiones cambian una fila de sala mediante compare-and-swap de revisión; las solicitudes llevan identificadores idempotentes. Sólo el servidor crea equipos, valida acciones y otorga hitos. Las posiciones utilizan secuencias monotónicas, colisiones compartidas, límite de pasos y transición de mapas validada. El cliente interpola a los compañeros. Transporte inicial: consultas HTTP cada 350 ms, con reintentos al reconectar; todavía no utiliza WebSocket.
+Hasta cuatro miembros y un combate activo por sala. `schema:2` almacena posición, equipo, PC, inventario, genética, guardería y progreso. La migración 2.1 lee las posiciones antiguas de `presence`, mantiene llaves y niveles y completa la nueva estructura una sola vez. No importa partidas del modo individual.
 
-El motor es `@pkmn/sim@0.10.11` (Pokémon Showdown, MIT), en Gen3. Cooperativo: p1+p3 humanos, p2+p4 NPC. PvP: p1 contra p2. Los espectadores reciben sólo el estado público; nunca se publica el snapshot del simulador ni las solicitudes privadas ajenas. Los PS/PP y decisiones pendientes se serializan en cada transición. Límite de turno: 90 s. En cooperativo se elige una acción automática; en PvP pierde el ausente o empatan si faltan ambos. Límite de combate: 100 turnos.
+Todas las mutaciones, incluido movimiento, actualizan una fila mediante revisión y compare-and-swap. Las acciones tienen identificador idempotente; las direcciones llevan secuencias monotónicas. El servidor comprueba colisiones, accesos, proximidad, equipo, inventario y decisiones. Las llaves privadas se guardan como SHA-256 y nunca se incluyen en snapshots. Cada miembro sólo recibe su propio equipo y solicitud de combate.
 
-Los equipos de esta beta son un inicial Nv.8 y Pidgey Nv.7, preparados para probar el motor. Se curan antes de cada combate. La entrega de Oak añade un nivel una sola vez; el entrenamiento añade un reconocimiento de la sala una sola vez, incluso a espectadores y miembros que se incorporan después. No son medallas de gimnasio. Aún no hay captura, mochila, intercambio, crianza o campaña completa online. Las partidas de la aventura individual son independientes.
+Consultas HTTP cada 350 ms e interpolación visual. No hay WebSocket ni pruebas de carga a gran escala. La sala comparte los hitos y las medallas; los recursos y Pokémon pertenecen a cada entrenador.
 
-El código y las licencias se conservan en GitHub bajo `online-server/`; el repositorio de origen de Sites conserva las versiones desplegadas. `public/play.html` es una copia generada para acceder también desde el servidor. La API permite la procedencia de GitHub Pages, el propio Site y la vista previa local; otras procedencias se rechazan.
+## Combates
+
+`@pkmn/sim@0.10.11`, Gen3, seis Pokémon como máximo. Una persona: equipo original de nivel del NPC. Dos: p1+p3 humanos contra p2+p4; se duplica el equipo rival y se añade un nivel a cada rival. Es una adaptación de dificultad por participantes, no una mecánica original. Tres/cuatro miembros se turnan o miran; no participan todos simultáneamente en el mismo combate.
+
+PS, PP y estados se conservan en campaña; XP/EV se conceden a participantes conscientes tras resolver el encuentro. El PvP y los guías de práctica usan copias temporales recuperadas, sin recompensas de crecimiento. El turno espera 90 s: decisión automática en cooperativo; derrota del ausente o empate en PvP. Máximo 150 turnos.
+
+Los intercambios necesitan oferta y contraoferta, y después la confirmación del iniciador sobre ambas. Bloquean cambios de equipo durante la propuesta. Capturas y movimientos pendientes se aplican una sola vez.
+
+## Alcance
+
+Campaña adaptada hasta Liga y acceso a crianza en Quarta. Datos versionados en `server/data/kanto.json`: 151 especies de Kanto, ocho especies necesarias para crianza y rama Tyrogue, 354 movimientos y seis curvas de experiencia. Fuentes y diferencias en `docs/FIDELIDAD-FRLG.md` del repositorio principal. No se distribuye una ROM.
+
+El código está duplicado en `online-server/` del repositorio principal para consulta y reproducción; la fuente de Sites conserva el historial de despliegues. `public/play.html` es generado. Se permiten peticiones desde GitHub Pages, el propio Site y la vista previa administrada.

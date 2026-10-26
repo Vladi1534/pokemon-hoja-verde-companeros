@@ -7,7 +7,7 @@ const mf=new Miniflare({modules:[{type:'ESModule',path:path.resolve('dist/server
 try{
  const db=await mf.getD1Database('DB');for(const sql of fs.readFileSync('drizzle/0000_graceful_snowbird.sql','utf8').split('--> statement-breakpoint'))await db.prepare(sql).run();
  const token='f'.repeat(36),call=async input=>{const r=await mf.dispatchFetch('https://test.local/api/coop',{method:'POST',headers:{Authorization:'Bearer '+token},body:JSON.stringify(input)});const data=await r.json();assert.equal(r.status,200,JSON.stringify(data));return data};
- const a=await call({action:'create',key:token,name:'Bundle QA',starter:4});let state=await call({action:'propose',room:a.room,requestId:crypto.randomUUID(),kind:'coop'});assert.equal(state.battle.turn,1);
- state=await call({action:'choose',room:a.room,requestId:crypto.randomUUID(),battle:state.battle.id,turn:1,choice:'move 2'});assert.equal(state.battle.turn,2);assert.equal(state.battle.you.moves[1].pp,24);
+ const a=await call({action:'create',key:token,name:'Bundle QA',starter:4});await call({action:'sync',room:a.room,seq:1,steps:['right','right']});let state=await call({action:'propose',room:a.room,requestId:crypto.randomUUID(),kind:'coop',npc:'guide'});assert.equal(state.battle.turn,1);
+ state=await call({action:'choose',room:a.room,requestId:crypto.randomUUID(),battle:state.battle.id,turn:1,choice:'move 1'});assert.equal(state.battle.turn,2);assert.equal(state.battle.you.team[0].pp[0].pp,34);
  console.log('PASS production Worker bundle: create room, D1, start battle, deserialize separate request, advance turn, persist PP');
 }finally{await mf.dispose()}

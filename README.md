@@ -1,4 +1,4 @@
-# Pokémon Hoja Verde · Compañeros 2.1
+# Pokémon Hoja Verde · Compañeros 2.2
 
 Aventura fan de Kanto para navegador, con un Pokémon líder que sigue al jugador. Esta edición sustituye la progresión lineal de la versión 1.0 por mapas conectados, una historia con objetivos y reglas de combate más completas. Es una adaptación con mapas y diálogos propios; no reproduce íntegramente Pokémon Verde Hoja.
 
@@ -6,19 +6,21 @@ Aventura fan de Kanto para navegador, con un Pokémon líder que sigue al jugado
 
 También puedes abrir `dist/index.html` directamente. El juego integra sus gráficos, datos y música y no necesita descargar assets de otros servicios.
 
-## Nuevo: beta cooperativa 2.1
+## Campaña cooperativa 2.2
 
-Pulsa **Jugar online · Beta**, crea una sala y comparte **Invitar a un amigo**. Se admiten cuatro entrenadores visibles con su Pokémon inicial siguiendo sus pasos. Cada entrenador conserva una llave privada para recuperar su perfil desde otro navegador; está en **Mi entrenador**.
+Pulsa **Jugar online · Beta**, crea una sala y comparte **Invitar a un amigo**. Hasta cuatro entrenadores recorren la misma sala; cada líder sigue a su entrenador. Dos humanos pueden combatir juntos contra NPC o retarse en PvP. Guarda la llave privada de **Mi entrenador** para recuperar tu perfil.
 
-- Dos humanos contra dos NPC, con decisiones individuales, objetivos y cambios de Pokémon. El servidor espera a todos antes de resolver el turno.
-- Entrenamiento individual con menor dificultad; los dos participantes reciben una oposición más fuerte. En salas de tres o cuatro, los demás pueden observar o seguir explorando.
-- Duelo PvP individual con aceptación de ambos jugadores, sin pérdida de objetos ni recompensas.
-- Misión compartida: encargo de Oak, paquete de la tienda de Ciudad Verde y regreso a Paleta. Los avances se conservan aunque alguien se desconecte.
-- Reanudación de salas y combates, incluyendo PS, PP y decisiones pendientes. Guardado online separado de la aventura individual.
+- 105 mapas e interiores conectados, diario de 24 hitos, atlas y mapa local. Campaña adaptada desde el encargo de Oak hasta las ocho medallas, Liga y acceso a Isla Quarta.
+- Un inicial de nivel 5, equipo de seis, capturas, PC, mochila, tiendas, curación y aprendizaje/evolución con decisiones explícitas.
+- Naturalezas, IV 0–31, EV 255 por característica/510 totales, curvas de experiencia y habilidades de tercera generación. No hay habilidades ocultas en el modo online.
+- PS, PP, estados y genética persisten entre encuentros. El PvP y la práctica no alteran el equipo de campaña.
+- Intercambios con oferta de ambos jugadores y confirmación final; evoluciones por piedra e intercambio.
+- Guardería de un Pokémon en Ruta 5; crianza de dos en Isla Quarta tras desbloquearla. Huevos de nivel 5, compatibilidad, movimientos e IV heredados.
+- Historia y medallas compartidas; equipos, dinero, capturas, PC y guardería individuales. Las salas 2.1 se migran conservando sus perfiles y niveles.
 
-**Alcance de esta beta:** Paleta, Ruta 1, Ciudad Verde y seis interiores. Inicial Nv.8 y Pidgey Nv.7; equipos curados antes de cada combate. La entrega añade un nivel una sola vez. Todavía no incluye captura, gestión de mochila, intercambio ni la campaña completa en cooperativo. Los mapas siguen siendo adaptados. El siguiente tramo de trabajo será ampliar la campaña hacia Bosque Verde y Brock.
+**Estado real:** la secuencia de hitos es jugable y tiene pruebas automatizadas. Los mapas, textos y puzles son adaptaciones, todavía no una reproducción íntegra de Verde Hoja. El equilibrio cooperativo no se ha validado con una campaña natural completa. Consulta [fidelidad y límites](docs/FIDELIDAD-FRLG.md) antes de comparar con el cartucho.
 
-El cliente funciona en GitHub Pages y el servicio se publica por separado con Sites/Cloudflare Workers + D1. El código está en [online-server](online-server/README.md); contratos y límites en [MULTIPLAYER.md](docs/MULTIPLAYER.md). El motor online usa Pokémon Showdown (`@pkmn/sim`, reglas Gen3), con sus avisos MIT conservados.
+El servidor usa `@pkmn/sim@0.10.11` (MIT, reglas Gen3), Cloudflare Workers y D1. Código en [online-server](online-server/README.md); protocolo en [MULTIPLAYER.md](docs/MULTIPLAYER.md); detalle de esta entrega en [CAMBIOS-2.2.md](docs/CAMBIOS-2.2.md).
 
 ## La aventura individual
 
@@ -29,7 +31,7 @@ El cliente funciona en GitHub Pages y el servicio se publica por separado con Si
 - Ocho gimnasios y Liga, con requisitos de historia y progresión de niveles ampliada.
 - 18 sprites adicionales de personajes, edificios especiales y mobiliario. El líder del equipo mantiene su seguimiento animado.
 
-## Equipo y combate
+## Equipo y combate individual
 
 Los 151 Pokémon tienen aprendizaje por especie y nivel de Verde Hoja, experiencia Gen3 y sus curvas de crecimiento. La experiencia se reparte entre quienes participan y permanecen conscientes. Los caramelos son recompensas de exploración, no un artículo ilimitado de la tienda.
 
@@ -49,7 +51,7 @@ La partida se guarda en el navegador. Exporta/importa JSON para cambiar de dispo
 
 `node validate.cjs` ejecuta 140 comprobaciones, incluidas navegación de todos los mapas, destinos de portales, colisiones, cadena de eventos, migración, aprendizaje, experiencia, habilidades y turnos. Una de las pruebas recorre los 361 movimientos del catálogo para detectar errores de ejecución y PS/estados inválidos; no certifica cada interacción del juego original.
 
-`node build.cjs` genera el HTML independiente. GitHub Actions ejecuta la validación y compilación antes de publicar `dist` en Pages. Consulta [publicación](docs/PUBLICAR.md), [cambios de la versión](docs/CAMBIOS-2.0.md) y [diseño del multijugador](docs/MULTIPLAYER.md).
+`npm run build` genera el HTML independiente. GitHub Actions ejecuta la validación y compilación antes de publicar `dist` en Pages. Consulta [publicación](docs/PUBLICAR.md), [cambios de la versión](docs/CAMBIOS-2.2.md) y [diseño del multijugador](docs/MULTIPLAYER.md).
 
 Prueba visual 2.0: inicio, importación, elección confirmada de movimiento, evolución conservando el repertorio, ficha de habilidad oculta, atlas, mapa local y carga móvil en un iframe de 390 px. El movimiento táctil mantuvo al seguidor en la casilla anterior y no hubo desbordamiento horizontal. No equivale a completar una campaña natural ni a probar dispositivos físicos.
 

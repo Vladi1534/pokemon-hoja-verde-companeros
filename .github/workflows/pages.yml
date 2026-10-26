@@ -24,7 +24,7 @@ jobs:
       - name: Comprobar el motor
         run: node validate.cjs
       - name: Construir el juego
-        run: node build.cjs
+        run: npm run build
       - name: Preparar Pages
         uses: actions/configure-pages@v5
       - name: Subir el juego compilado
