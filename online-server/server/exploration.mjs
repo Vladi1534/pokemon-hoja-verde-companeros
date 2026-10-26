@@ -3,7 +3,7 @@ import {items} from './creatures.mjs';
 export function explore(state,member,position,id){
  const map=world.maps[position.map],obstacle=map?.blockers?.find(b=>b.id===id),item=map?.items.find(i=>i.id===id),target=obstacle||item;
  if(!target||Math.abs(position.x-target.x)+Math.abs(position.y-target.y)!==1)throw Error('Acércate al objeto y examínalo desde una casilla vecina.');
- if(obstacle){if(state.progress[target.id])return 'El sendero ya está despejado.';const reason=gate(state,target.gate);if(reason)throw Error(reason);state.progress[target.id]=true;return 'Usaste Corte. El sendero del jardín queda abierto para todo el grupo.';}
+ if(obstacle){if(state.progress[target.id]||state.sharedGates?.[target.id])return 'El sendero ya está despejado.';const reason=gate(state,target.gate);if(reason)throw Error(reason);state.progress[target.id]=true;if(state.sharedGates)state.sharedGates[target.id]=true;return 'Usaste Corte. El sendero del jardín queda abierto para todo el grupo.';}
  if(member.rewards[target.id])return 'Ya recogiste este objeto.';
  if(!items[target.key])throw Error('Objeto no disponible.');member.bag[target.key]=(member.bag[target.key]||0)+target.qty;member.rewards[target.id]=true;
  return `${item.hidden?'¡Encontraste un objeto oculto! ':''}${target.qty} × ${items[target.key].name}. Lo guardaste en tu mochila.`;

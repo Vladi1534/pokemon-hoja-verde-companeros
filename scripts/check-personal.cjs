@@ -1,0 +1,7 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),path=require('path');
+const root=path.resolve(__dirname,'..');
+const context=vm.createContext({crypto,structuredClone,TextEncoder,TextDecoder,setTimeout,clearTimeout,console});
+vm.runInContext(fs.readFileSync(path.join(root,'personal-engine.js'),'utf8'),context,{timeout:15000});
+const result=vm.runInContext(`const profile=PersonalEngine.newPersonal('Offline QA',4);const g=new PersonalEngine.LocalGame(profile);g.dispatch({action:'sync',seq:1,steps:['right','right']});let state=g.dispatch({action:'propose',kind:'coop',npc:'guide',requestId:crypto.randomUUID()});state=g.dispatch({action:'choose',battle:state.battle.id,turn:1,choice:'move 1',requestId:crypto.randomUUID()});const saved=JSON.parse(JSON.stringify(g.snapshot()));const reloaded=new PersonalEngine.LocalGame(null,saved);let again=reloaded.state();reloaded.dispatch({action:'choose',battle:again.battle.id,turn:again.battle.turn,choice:'move 1',requestId:crypto.randomUUID()});({version:PersonalEngine.version,turn:reloaded.state().battle.turn,pp:reloaded.state().battle.you.moves[0].pp,id:reloaded.member.id,original:profile.trainer.id});`,context);
+assert.equal(result.version,'2.4.0');assert.equal(result.turn,3);assert.equal(result.pp,33);assert.equal(result.id,result.original);assert.equal(typeof context.fetch,'undefined');
+console.log('PASS delivered browser bundle: offline combat, PP, identity and reload without networking');

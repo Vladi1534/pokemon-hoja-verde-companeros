@@ -1,6 +1,11 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
 @import "tw-animate-css";
 @import "../vendor/shadcn-tailwind-4.13.0.css";
+
+/* Only the React UI uses Tailwind. The generated simulator and game assets
+   under public/ have their own styles and must not be scanned for classes. */
+@source "./";
+@source "../components";
 
 @utility scrollbar-thin {
   scrollbar-width: thin;

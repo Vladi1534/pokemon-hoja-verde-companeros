@@ -1,21 +1,19 @@
-# Multijugador · 2.2 beta
+# Multijugador · 2.4
 
-Hasta cuatro personas comparten historia, medallas y posición en Kanto. Cada persona conserva equipo, capturas, dinero, mochila, PC, decisiones y guardería. La invitación permite un perfil nuevo; la llave privada permite recuperar el mismo. No hay listado público de salas ni chat.
+La partida personal usa el mismo motor en navegador y Worker. Cada entrenador lleva identidad, equipo/PC, mochila, dinero, capturas, guardería, medallas e historia. Los caminos físicos despejados pertenecen al mundo. Un invitado aparece en Paleta con su perfil; un entrenador nuevo no hereda progreso del anfitrión.
 
-Dos personas pueden desafiar juntas a un NPC: cada una controla su Pokémon y decide movimiento, objetivo o cambio. La oposición incorpora un segundo equipo y un nivel adicional por rival. Quienes no participan pueden mirar o explorar; sólo hay un combate activo por sala. El PvP es individual y requiere aceptación de ambos, sin premios ni pérdida de recursos.
+`host {portable,key,requestId}` abre el mundo. El código de invitación tiene ocho caracteres; la llave privada de 36 caracteres autoriza sólo al propietario del entrenador. `join {portable,key,invite}` importa el perfil o recupera una visita existente. `checkpoint` obtiene la copia propia. `depart` confirma la salida y devuelve el perfil final; el cliente guarda antes de continuar localmente. Los invitados detectan el cierre del anfitrión y realizan su propia salida.
 
-La campaña conserva daño, PP y estados entre encuentros; sólo enfermeras, descanso y objetos recuperan el equipo. La práctica y el PvP usan copias que no modifican el estado anterior. Se pueden capturar Pokémon en encuentros individuales, elegir el líder, depositar en PC, aprender/descartar movimientos, evolucionar, usar piedras, intercambiar y criar en Quarta.
+Hasta cuatro jugadores activos por mundo; los que se retiraron no ocupan una plaza. Los combates se indexan por ID y propietarios. Cada entrenador puede combatir de forma independiente; un encuentro cooperativo incorpora dos propietarios y un segundo equipo rival con un nivel adicional. PvP y práctica conservan el equipo anterior y no otorgan recompensas de crecimiento.
 
-Motor `@pkmn/sim@0.10.11`, reglas Gen3. El servidor guarda el simulador en cada transición. Turnos de 90 segundos y límite de 150. La falta de decisión produce acción automática en cooperativo; derrota del ausente o empate en PvP.
+Las acciones de campaña usan `member.progress` en salas personales. Sólo los participantes elegibles reciben progreso y recompensas. Los espectadores no reciben medallas. Los entrenadores comunes admiten tres victorias por persona; los jefes conservan su marca única. Los hitos previos compartidos de salas 2.1–2.3 se copian al adoptar el modelo personal.
 
-El cliente consulta por HTTP cada 350 ms y suaviza las posiciones. El servidor valida secuencias de pasos, colisiones, portales, objetos, proximidad y decisiones. Las revisiones con compare-and-swap evitan perder acciones simultáneas. Los identificadores de acción evitan recompensas duplicadas al reintentar. Los snapshots públicos omiten secretos y los equipos/elecciones privados de los demás.
+`propose {kind:'gift',other,item,qty}` o `{mon}` genera una oferta concreta. El destinatario revisa, acepta o rechaza; no se descuenta al proponer. La aceptación revalida propiedad, proximidad, inventario y espacio, y transfiere una sola vez. Intercambiar requiere oferta, contraoferta y confirmación final de ambos Pokémon. Un entrenador conserva al menos un Pokémon capaz de combatir al regalar.
 
-Las salas 2.1 migran de forma automática conservando perfiles, llaves, posición y niveles. Recarga el cliente al actualizar para usar el nuevo catálogo de mapas y los controles de campaña. El guardado individual sigue siendo independiente.
+El servidor usa D1 con revisión compare-and-swap para movimientos, decisiones y transferencias. Los IDs de solicitud evitan duplicados por reintento. Las claves se almacenan como SHA-256. Las respuestas sólo contienen el equipo y copia portable del propio entrenador. El cliente consulta cada 350 ms y suaviza posiciones; no usa WebSocket.
 
-La secuencia de historia, migración y combates tienen pruebas automatizadas con D1 local y workerd. El recorrido automático usa equipos de prueba de nivel 100: valida eventos y funcionamiento, no dificultad. Faltan una campaña natural de varias horas, pruebas de desconexión de larga duración y carga con muchas salas. Consulta [fidelidad](FIDELIDAD-FRLG.md) para sistemas todavía incompletos.
+Los turnos online tienen 90 s y los combates un máximo de 150 turnos. La falta de decisión produce acción automática en cooperativo; derrota del ausente o empate en PvP. El motor local no tiene temporizador y puede reanudar su simulador tras recargar.
 
-## Exploración y revanchas 2.3
+El cliente persiste la operación antes de conectarse o salir. Una respuesta perdida deja visible «conexión pendiente» y bloquea cambios locales hasta reintentar. Una visita terminada no admite nuevas mutaciones. Una copia exportada mientras sigues online reanuda esa visita; para llevar una partida desconectada, termina primero con «Guardar y seguir solo».
 
-`explore {object}` sólo actúa desde una casilla vecina en el mapa persistido por el servidor. Los bloqueos requieren permisos de historia/medalla y abren el paso compartido. Los objetos se registran en `member.rewards`; `trainer.collected` comunica los recogidos del mapa actual. Repetir la solicitud no duplica recompensas.
-
-Los entrenadores comunes usan `progress.wins_<npc>` con máximo tres victorias por sala. Los desafíos de historia conservan su marca única. Los guardados previos con marca de victoria y sin contador arrancan en una. La revisión de mundo 3 migra las posiciones antiguas una sola vez y cancela propuestas pendientes, preservando equipos, combates activos, historia e inventarios.
+No hay cuentas, chat, listado público, economía protegida contra trucos ni sincronización automática entre navegadores. Un archivo local es editable y no demuestra integridad competitiva. Las pruebas cubren transacciones D1 locales y el paquete Worker; falta una campaña natural prolongada y carga con muchas salas.

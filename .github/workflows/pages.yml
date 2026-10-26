@@ -22,7 +22,7 @@ jobs:
           node-version: '24'
           package-manager-cache: false
       - name: Comprobar el motor
-        run: node validate.cjs
+        run: npm test
       - name: Construir el juego
         run: npm run build
       - name: Preparar Pages

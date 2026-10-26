@@ -1,74 +1,64 @@
-# Pokémon Hoja Verde · Compañeros 2.3
+# Pokémon Hoja Verde · Compañeros 2.4
 
-Aventura fan de Kanto para navegador, con un Pokémon líder que sigue al jugador. Esta edición sustituye la progresión lineal de la versión 1.0 por mapas conectados, una historia con objetivos y reglas de combate más completas. Es una adaptación con mapas y diálogos propios; no reproduce íntegramente Pokémon Verde Hoja.
+Aventura fan de Kanto para navegador, con tu líder siguiéndote y una partida personal que puedes abrir a amigos. Los mapas y diálogos son una adaptación propia, todavía no una reproducción íntegra de Verde Hoja.
 
 **Jugar:** https://vladi1534.github.io/pokemon-hoja-verde-companeros/
 
-También puedes abrir `dist/index.html` directamente. El juego integra sus gráficos, datos y música y no necesita descargar assets de otros servicios.
+## Una partida, solo o acompañado
 
-## Exploración 2.3
+1. Crea tu entrenador e inicial y empieza en **1 jugador**.
+2. Pulsa **Mi partida → Abrir a amigos** para abrir ese mismo mundo. Comparte el código de ocho caracteres.
+3. Tu amigo inicia o continúa su propia partida y pulsa **Unirme con código**. Llega a Pueblo Paleta con su equipo; un entrenador nuevo empieza con su inicial de nivel 5.
+4. Acercaos para regalar objetos/Pokémon, intercambiar o retaros. El destinatario revisa y acepta o rechaza los regalos; los intercambios requieren ambas ofertas y confirmación final.
+5. **Guardar y seguir solo** conserva tu equipo, mochila, dinero, Pokédex, historia, posición y los caminos despejados del mundo visitado. Después puedes hospedar tú o visitar otro mundo con el mismo entrenador.
 
-Ciudades compactas con trazados y puntos de referencia distintos, puerto sobre agua con pasarela real, cuatro estancias adicionales del S. S. Anne y dos casas visitables de Carmín. Hay pistas de vecinos, objetos ocultos y tres jardines opcionales que se abren con Corte y la Medalla Cascada.
+Hasta cuatro entrenadores pueden recorrer un mundo. Los encuentros individuales no bloquean los de los demás. Dos personas pueden combatir juntas contra NPC; cada una decide sus movimientos, y el rival incorpora un equipo de refuerzo. Los demás pueden explorar, combatir por su cuenta u observar. El PvP no entrega experiencia, EV, dinero ni medallas.
 
-Los entrenadores normales admiten **tres victorias en total** (primer combate y dos revanchas); cada revancha paga un tercio. Los jefes de historia y gimnasios se completan una vez; la Liga permite tres recorridos completos. En online el contador pertenece a la sala, y cada jugador recoge su propia copia de los objetos de exploración.
+Las medallas y objetos clave pertenecen a cada entrenador. La historia avanza para los participantes que cumplen sus requisitos; un invitado nuevo no recibe automáticamente las medallas del anfitrión. Los árboles cortados pertenecen al mundo y se conservan en la copia local al salir.
 
-Las posiciones antiguas se trasladan una sola vez a una casilla segura, conservando equipos y progreso. Los entrenadores ya derrotados antes de 2.3 cuentan como una victoria, pues el guardado antiguo no registraba cuántas revanchas se habían disputado.
+## Cambios de esta versión
 
-## Campaña cooperativa 2.3
+- Mismo motor de campaña y combate en solitario y online, incluyendo IV, EV, naturalezas, habilidades Gen3, crianza, PC y decisiones de aprendizaje/evolución.
+- Encuentros en hierba alta desde el inicio, antes de entregar el paquete de Oak. El césped decorativo de las ciudades sigue siendo seguro.
+- Combates independientes por entrenador, regalos con aceptación y viajes con identidad/entrenador original conservados.
+- Indicador permanente **1 jugador / Online · Tu mundo / Online · Visita**, controles de entrada y salida, panel de equipo y jugadores.
+- Combate de escritorio con rivales en diagonal y sprites más grandes; distribución móvil específica.
+- Guardado local que reanuda combates pendientes sin límite de tiempo. Caché para jugar sin internet después de cargar una vez por HTTPS y ver **Disponible sin conexión**.
 
-Pulsa **Jugar online · Beta**, crea una sala y comparte **Invitar a un amigo**. Hasta cuatro entrenadores recorren la misma sala; cada líder sigue a su entrenador. Dos humanos pueden combatir juntos contra NPC o retarse en PvP. Guarda la llave privada de **Mi entrenador** para recuperar tu perfil.
+## Guardado y versiones anteriores
 
-- 111 mapas e interiores conectados, diario de 24 hitos, atlas y mapa local. Campaña adaptada desde el encargo de Oak hasta las ocho medallas, Liga y acceso a Isla Quarta.
-- Un inicial de nivel 5, equipo de seis, capturas, PC, mochila, tiendas, curación y aprendizaje/evolución con decisiones explícitas.
-- Naturalezas, IV 0–31, EV 255 por característica/510 totales, curvas de experiencia y habilidades de tercera generación. No hay habilidades ocultas en el modo online.
-- PS, PP, estados y genética persisten entre encuentros. El PvP y la práctica no alteran el equipo de campaña.
-- Intercambios con oferta de ambos jugadores y confirmación final; evoluciones por piedra e intercambio.
-- Guardería de un Pokémon en Ruta 5; crianza de dos en Isla Quarta tras desbloquearla. Huevos de nivel 5, compatibilidad, movimientos e IV heredados.
-- Historia y medallas compartidas; equipos, dinero, capturas, PC y guardería individuales. Las salas 2.1 se migran conservando sus perfiles y niveles.
+El guardado local pertenece al navegador y dirección donde juegas. **Descargar copia / Importar mi partida** permite trasladarlo a otro dispositivo. Una copia exportada durante una visita online recupera esa visita; usa **Guardar y seguir solo** para terminarla y continuar desconectado. No cierres una transferencia pendiente: reintentar recupera la misma operación.
 
-**Estado real:** la secuencia de hitos es jugable y tiene pruebas automatizadas. Los mapas, textos y puzles son adaptaciones, todavía no una reproducción íntegra de Verde Hoja. El equilibrio cooperativo no se ha validado con una campaña natural completa. Consulta [fidelidad y límites](docs/FIDELIDAD-FRLG.md) antes de comparar con el cartucho.
+Las partidas online 2.1–2.3 se recuperan desde la pantalla inicial o su llave privada. Al convertir una sala antigua, cada entrenador conserva el progreso compartido que ya tenía. Los siguientes avances son personales. Las nuevas visitas no heredan las medallas ajenas.
 
-El servidor usa `@pkmn/sim@0.10.11` (MIT, reglas Gen3), Cloudflare Workers y D1. Código en [online-server](online-server/README.md); protocolo en [MULTIPLAYER.md](docs/MULTIPLAYER.md); detalle de esta entrega en [CAMBIOS-2.3.md](docs/CAMBIOS-2.3.md).
+La partida solitaria antigua se convierte sin borrar su original. Sus datos de experiencia y movimientos pasan al motor Gen3. Los IV/EV/naturalezas que ese motor anterior no almacenaba reciben valores iniciales de migración; las habilidades ocultas de la antigua ampliación no están implementadas en este motor Gen3. Conserva el respaldo si quieres volver a esa edición.
 
-## La aventura individual
+## Mundo y mecánicas
 
-- 26 zonas exteriores, con ciudades, rutas, bosque, mar, cuevas, interiores y varias plantas de mazmorra.
-- 24 hitos principales: el paquete de Oak, el rescate del bosque, el museo, los fósiles del Monte Moon, el Puente Pepita, Bill, el S. S. Anne, el casino Rocket, la Torre Pokémon, Snorlax, Safari, Silph y la Mansión.
-- Atlas con conexiones reales y accesos pendientes, mapa local con edificios y salidas, minimapa y diario. Vuelo se aprende durante la historia.
-- Entrenadores con giro, patrullas y detección por línea de visión. Las paredes y los árboles cortan su vista; un entrenador derrotado deja de interceptarte.
-- Ocho gimnasios y Liga, con requisitos de historia y progresión de niveles ampliada.
-- 18 sprites adicionales de personajes, edificios especiales y mobiliario. El líder del equipo mantiene su seguimiento animado.
+111 mapas e interiores, diario de 24 hitos, atlas y mapa local; campaña adaptada desde Oak hasta Liga y acceso a Isla Quarta. Ciudades con trazados distintos, puerto navegable, seis interiores del S. S. Anne, vecinos con pistas, objetos ocultos y jardines opcionales con Corte.
 
-## Equipo y combate individual
+Los entrenadores normales admiten tres victorias por entrenador, con recompensa reducida en las revanchas. Los gimnasios y jefes de historia se completan una vez; la Liga permite tres recorridos. Ayudar en un desafío ya completado no vuelve a conceder sus recompensas.
 
-Los 151 Pokémon tienen aprendizaje por especie y nivel de Verde Hoja, experiencia Gen3 y sus curvas de crecimiento. La experiencia se reparte entre quienes participan y permanecen conscientes. Los caramelos son recompensas de exploración, no un artículo ilimitado de la tienda.
+Seis Pokémon por equipo, PC de 180, PS/PP/estados persistentes, captura, piedras e intercambio, guardería individual en Ruta 5 y crianza en Quarta. Cuatro movimientos como máximo, con elección al aprender/evolucionar. Reglas Gen3 mediante `@pkmn/sim@0.10.11` (MIT): IV 0–31, EV 255 por característica/510 totales, naturalezas, habilidades normales, ataques de carga y efectos de turno.
 
-Cada movimiento nuevo queda pendiente de una elección: aprender en un espacio libre, olvidar uno de los cuatro o no aprenderlo. Evolucionar conserva movimientos y PP. La ficha muestra la habilidad y permite recordar movimientos de la especie por ₽ 500.
+Flechas/WASD: caminar; Shift: correr; Z/Enter: interactuar; X/Escape: opciones; M: mapa. En móvil: cruceta y botones táctiles.
 
-Rayo Solar, Excavar, Vuelo, Buceo, Cabezazo y otros ataques de carga usan dos turnos y consumen PP una sola vez. Hiperrayo requiere recuperación; los ataques de varios golpes se resuelven en un mismo turno. Hay estados, cambios de estadísticas, clima, drenaje, trampas, protección y efectos residuales.
+## Referencia de diseño y límites
 
-Las habilidades normales corresponden al perfil FRLG. Las ocultas posteriores amplían esta edición y pueden aparecer en el 8% de los encuentros salvajes. Una habilidad activa por Pokémon, con efectos como Espesura, Intimidación, Levitación, Absorbe Electricidad, Agallas, Clorofila o Regeneración. La ficha explica cuando una habilidad requiere un sistema aún ausente, como combates dobles u objetos equipados.
+Pokémon Revolution Online es una referencia para la claridad del equipo, la presencia de otros entrenadores y las interacciones sociales. Su [wiki oficial](https://wiki.pokemonrevolution.net/PRO) y [documentación de scripts](https://docs.pokemonrevolution.net/index.html) se consultan como referencia; este proyecto no incorpora ni afirma disponer de su motor completo. Conservamos el requisito propio de jugar localmente y abrir mundos privados a amigos.
 
-## Guardado y controles
+La historia, geometría y puzles todavía no equivalen al cartucho completo. Faltan pesca, varios eventos secundarios, MT/MO enseñables, objetos equipados y contenido posterior. No hay chat ni un mundo MMO masivo. Transporte HTTP cada 350 ms con interpolación; falta validar carga y una campaña natural completa entre varios dispositivos. Los guardados locales son editables: no se ofrece una economía competitiva protegida contra trucos.
 
-Flechas/WASD para caminar, Shift para correr, Z/Enter para interactuar, X/Escape para volver, M para mapa y P para Pokédex. En móvil hay cruceta y botones táctiles.
+Consulta [fidelidad y pendientes](docs/FIDELIDAD-FRLG.md), [multijugador](docs/MULTIPLAYER.md) y [cambios 2.4](docs/CAMBIOS-2.4.md).
 
-La partida se guarda en el navegador. Exporta/importa JSON para cambiar de dispositivo o dirección. Al continuar una partida 1.0 se conserva el equipo, los movimientos y las medallas; se adapta la experiencia y se desbloquean los hitos anteriores a esas medallas. El respaldo 1.0 queda disponible desde Opciones. Para vivir todas las misiones desde el comienzo, exporta tu partida y elige Nueva aventura.
+## Desarrollo
 
-## Desarrollo y comprobaciones
+`npm test` valida la edición anterior y el motor exacto que se entrega al navegador. `npm run build` genera `dist/index.html`, `personal-engine.js`, avisos legales y `sw.js`. Mantén los archivos juntos si abres la carpeta descargada. GitHub Actions comprueba y publica `dist` en Pages.
 
-`node validate.cjs` ejecuta 150 comprobaciones, incluidas navegación de todos los mapas, destinos de portales, colisiones, cadena de eventos, migración, aprendizaje, experiencia, habilidades y turnos. Una de las pruebas recorre los 361 movimientos del catálogo para detectar errores de ejecución y PS/estados inválidos; no certifica cada interacción del juego original.
+El código compartido está en `online-server/server/` y el adaptador local en `online-server/browser/local-engine.mjs`. Para reconstruir el motor de navegador: instala las dependencias fijadas de `online-server`, ejecuta allí `node scripts/build-personal.mjs ../personal-engine.js` y vuelve a compilar el cliente. `online-server` incluye pruebas D1 de concurrencia, campaña, transferencia, regalos, aislamiento y paquete Worker.
 
-`npm run build` genera el HTML independiente. GitHub Actions ejecuta la validación y compilación antes de publicar `dist` en Pages. Consulta [publicación](docs/PUBLICAR.md), [cambios de la versión](docs/CAMBIOS-2.3.md) y [diseño del multijugador](docs/MULTIPLAYER.md).
+## Créditos
 
-Prueba visual 2.0: inicio, importación, elección confirmada de movimiento, evolución conservando el repertorio, ficha de habilidad oculta, atlas, mapa local y carga móvil en un iframe de 390 px. El movimiento táctil mantuvo al seguidor en la casilla anterior y no hubo desbordamiento horizontal. No equivale a completar una campaña natural ni a probar dispositivos físicos.
+Pokémon y gráficos originales © Nintendo, GAME FREAK y The Pokémon Company. Datos: [PokéAPI](https://github.com/PokeAPI/pokeapi) y [pret/pokefirered](https://github.com/pret/pokefirered). Sprites: [PokéAPI/sprites](https://github.com/PokeAPI/sprites), [pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion) y sus artistas. Motor: [pkmn/sim](https://github.com/pkmn/ps).
 
-## Alcance
-
-La aventura individual mantiene su motor propio. Las evoluciones por piedra e intercambio continúan adaptadas a niveles; no hay crianza, objetos equipados ni combates dobles. Relevo cambia al siguiente compañero disponible. Las reglas de movimientos se han ampliado, pero no son una implementación certificada de todas las interacciones de la consola. Los combates dobles de dos humanos están disponibles en la beta online descrita arriba.
-
-## Créditos y fuentes
-
-Pokémon y gráficos originales © Nintendo, GAME FREAK y The Pokémon Company. Datos de aprendizaje, experiencia y movimientos: [PokéAPI](https://github.com/PokeAPI/pokeapi) y [pret/pokefirered](https://github.com/pret/pokefirered). Sprites de combate: [PokéAPI/sprites](https://github.com/PokeAPI/sprites). Personajes y seguidores: [pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion) y sus artistas.
-
-Fuentes y contratos detallados: `reference/RULES-RESEARCH.md`, `reference/World-visual-assets.md`, `reference/expansion-CREDITS.md` y `reference/PokeAPI-LICENCE.txt`. Los créditos no afirman una licencia comercial sobre marcas o gráficos originales. El HTML aportado se conserva en `reference/original.html`.
+Los avisos se conservan en `reference/`, `online-server/licenses/` y `personal-engine.js.LEGAL.txt`. No se incluye una ROM. El HTML inicial permanece en `reference/original.html`.

@@ -1,11 +1,11 @@
 {
   "name": "pokemon-hoja-verde-companeros",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "private": true,
   "description": "Aventura fan de Kanto para navegador, con un compañero que sigue al jugador.",
   "scripts": {
     "build": "node scripts/build-campaign.cjs && node build.cjs",
-    "test": "node validate.cjs"
+    "test": "node validate.cjs && node scripts/check-personal.cjs"
   },
   "engines": {
     "node": ">=22"
