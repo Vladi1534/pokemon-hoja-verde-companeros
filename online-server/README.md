@@ -1,4 +1,4 @@
-# Kanto Compañeros · servicio online 2.2
+# Kanto Compañeros · servicio online 2.3
 
 Worker autoritativo para la campaña compartida. El cliente de GitHub Pages y `/play.html` usan el mismo servicio y la misma base D1.
 
@@ -31,3 +31,5 @@ Los intercambios necesitan oferta y contraoferta, y después la confirmación de
 Campaña adaptada hasta Liga y acceso a crianza en Quarta. Datos versionados en `server/data/kanto.json`: 151 especies de Kanto, ocho especies necesarias para crianza y rama Tyrogue, 354 movimientos y seis curvas de experiencia. Fuentes y diferencias en `docs/FIDELIDAD-FRLG.md` del repositorio principal. No se distribuye una ROM.
 
 El código está duplicado en `online-server/` del repositorio principal para consulta y reproducción; la fuente de Sites conserva el historial de despliegues. `public/play.html` es generado. Se permiten peticiones desde GitHub Pages, el propio Site y la vista previa administrada.
+
+Exploración 2.3: ciudades y puerto compartidos con la versión individual, seis interiores adicionales, objetos por jugador y pasos de Corte para el grupo. Tres victorias por entrenador normal con premios de revancha reducidos; jefes de historia una vez. Migración de coordenadas antiguas mediante `worldRevision: 3`. Tests actuales: 41 de reglas/servicio y 8 de historia, más la prueba del Worker compilado.

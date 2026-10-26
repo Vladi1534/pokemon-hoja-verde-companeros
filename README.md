@@ -1,4 +1,4 @@
-# Pokémon Hoja Verde · Compañeros 2.2
+# Pokémon Hoja Verde · Compañeros 2.3
 
 Aventura fan de Kanto para navegador, con un Pokémon líder que sigue al jugador. Esta edición sustituye la progresión lineal de la versión 1.0 por mapas conectados, una historia con objetivos y reglas de combate más completas. Es una adaptación con mapas y diálogos propios; no reproduce íntegramente Pokémon Verde Hoja.
 
@@ -6,11 +6,19 @@ Aventura fan de Kanto para navegador, con un Pokémon líder que sigue al jugado
 
 También puedes abrir `dist/index.html` directamente. El juego integra sus gráficos, datos y música y no necesita descargar assets de otros servicios.
 
-## Campaña cooperativa 2.2
+## Exploración 2.3
+
+Ciudades compactas con trazados y puntos de referencia distintos, puerto sobre agua con pasarela real, cuatro estancias adicionales del S. S. Anne y dos casas visitables de Carmín. Hay pistas de vecinos, objetos ocultos y tres jardines opcionales que se abren con Corte y la Medalla Cascada.
+
+Los entrenadores normales admiten **tres victorias en total** (primer combate y dos revanchas); cada revancha paga un tercio. Los jefes de historia y gimnasios se completan una vez; la Liga permite tres recorridos completos. En online el contador pertenece a la sala, y cada jugador recoge su propia copia de los objetos de exploración.
+
+Las posiciones antiguas se trasladan una sola vez a una casilla segura, conservando equipos y progreso. Los entrenadores ya derrotados antes de 2.3 cuentan como una victoria, pues el guardado antiguo no registraba cuántas revanchas se habían disputado.
+
+## Campaña cooperativa 2.3
 
 Pulsa **Jugar online · Beta**, crea una sala y comparte **Invitar a un amigo**. Hasta cuatro entrenadores recorren la misma sala; cada líder sigue a su entrenador. Dos humanos pueden combatir juntos contra NPC o retarse en PvP. Guarda la llave privada de **Mi entrenador** para recuperar tu perfil.
 
-- 105 mapas e interiores conectados, diario de 24 hitos, atlas y mapa local. Campaña adaptada desde el encargo de Oak hasta las ocho medallas, Liga y acceso a Isla Quarta.
+- 111 mapas e interiores conectados, diario de 24 hitos, atlas y mapa local. Campaña adaptada desde el encargo de Oak hasta las ocho medallas, Liga y acceso a Isla Quarta.
 - Un inicial de nivel 5, equipo de seis, capturas, PC, mochila, tiendas, curación y aprendizaje/evolución con decisiones explícitas.
 - Naturalezas, IV 0–31, EV 255 por característica/510 totales, curvas de experiencia y habilidades de tercera generación. No hay habilidades ocultas en el modo online.
 - PS, PP, estados y genética persisten entre encuentros. El PvP y la práctica no alteran el equipo de campaña.
@@ -20,7 +28,7 @@ Pulsa **Jugar online · Beta**, crea una sala y comparte **Invitar a un amigo**.
 
 **Estado real:** la secuencia de hitos es jugable y tiene pruebas automatizadas. Los mapas, textos y puzles son adaptaciones, todavía no una reproducción íntegra de Verde Hoja. El equilibrio cooperativo no se ha validado con una campaña natural completa. Consulta [fidelidad y límites](docs/FIDELIDAD-FRLG.md) antes de comparar con el cartucho.
 
-El servidor usa `@pkmn/sim@0.10.11` (MIT, reglas Gen3), Cloudflare Workers y D1. Código en [online-server](online-server/README.md); protocolo en [MULTIPLAYER.md](docs/MULTIPLAYER.md); detalle de esta entrega en [CAMBIOS-2.2.md](docs/CAMBIOS-2.2.md).
+El servidor usa `@pkmn/sim@0.10.11` (MIT, reglas Gen3), Cloudflare Workers y D1. Código en [online-server](online-server/README.md); protocolo en [MULTIPLAYER.md](docs/MULTIPLAYER.md); detalle de esta entrega en [CAMBIOS-2.3.md](docs/CAMBIOS-2.3.md).
 
 ## La aventura individual
 
@@ -49,9 +57,9 @@ La partida se guarda en el navegador. Exporta/importa JSON para cambiar de dispo
 
 ## Desarrollo y comprobaciones
 
-`node validate.cjs` ejecuta 140 comprobaciones, incluidas navegación de todos los mapas, destinos de portales, colisiones, cadena de eventos, migración, aprendizaje, experiencia, habilidades y turnos. Una de las pruebas recorre los 361 movimientos del catálogo para detectar errores de ejecución y PS/estados inválidos; no certifica cada interacción del juego original.
+`node validate.cjs` ejecuta 150 comprobaciones, incluidas navegación de todos los mapas, destinos de portales, colisiones, cadena de eventos, migración, aprendizaje, experiencia, habilidades y turnos. Una de las pruebas recorre los 361 movimientos del catálogo para detectar errores de ejecución y PS/estados inválidos; no certifica cada interacción del juego original.
 
-`npm run build` genera el HTML independiente. GitHub Actions ejecuta la validación y compilación antes de publicar `dist` en Pages. Consulta [publicación](docs/PUBLICAR.md), [cambios de la versión](docs/CAMBIOS-2.2.md) y [diseño del multijugador](docs/MULTIPLAYER.md).
+`npm run build` genera el HTML independiente. GitHub Actions ejecuta la validación y compilación antes de publicar `dist` en Pages. Consulta [publicación](docs/PUBLICAR.md), [cambios de la versión](docs/CAMBIOS-2.3.md) y [diseño del multijugador](docs/MULTIPLAYER.md).
 
 Prueba visual 2.0: inicio, importación, elección confirmada de movimiento, evolución conservando el repertorio, ficha de habilidad oculta, atlas, mapa local y carga móvil en un iframe de 390 px. El movimiento táctil mantuvo al seguidor en la casilla anterior y no hubo desbordamiento horizontal. No equivale a completar una campaña natural ni a probar dispositivos físicos.
 

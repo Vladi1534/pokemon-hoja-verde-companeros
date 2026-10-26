@@ -1,7 +1,7 @@
 // Our map geometry and dialogue. Reference: FRLG progression, not ROM assets/scripts.
 const fs=require('fs'),vm=require('vm'),path=require('path');
 const root=path.resolve(__dirname,'..'),c=vm.createContext({});
-for(const f of ['data.js','world.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),c);
+for(const f of ['data.js','world.js','town-design.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),c);
 vm.runInContext(`
 // Remove invented mandatory errands; preserve optional residents and landmarks.
 for(const m of Object.values(MAPS)){
@@ -47,6 +47,7 @@ const nursery=house(MAPS.fourisland,'fourisland_daycare',28,9,8,5,'GUARDERÍA','
 link('vermilion','down','oneisland','badge7');link('oneisland','up','ember','national');link('oneisland','right','fourisland','rainbow');trainer('ember','rocket',10,25,'Rocket de Monte Ascuas',[[104,37],[105,37]],'rocket');storyNpc('ember','ruby',38,12,'Rubí del volcán','scientist');
 // Fix floors and exits after NPC relocation. All coordinates are validated by the server.
 for(const m of Object.values(MAPS))for(const n of m.npcs){n.homeX=n.x;n.homeY=n.y;m.grid[n.y][n.x]=m.inside?9:m.kind==='cave'?6:0;}
+applyTownDesign(MAPS);
 this.result={maps:MAPS,spawn:{map:'pallet',x:21,y:14},gyms:GYMS,league:LEAGUE};
 `,c);
 const world=JSON.parse(JSON.stringify(c.result));

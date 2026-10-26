@@ -13,3 +13,9 @@ El cliente consulta por HTTP cada 350 ms y suaviza las posiciones. El servidor v
 Las salas 2.1 migran de forma automática conservando perfiles, llaves, posición y niveles. Recarga el cliente al actualizar para usar el nuevo catálogo de mapas y los controles de campaña. El guardado individual sigue siendo independiente.
 
 La secuencia de historia, migración y combates tienen pruebas automatizadas con D1 local y workerd. El recorrido automático usa equipos de prueba de nivel 100: valida eventos y funcionamiento, no dificultad. Faltan una campaña natural de varias horas, pruebas de desconexión de larga duración y carga con muchas salas. Consulta [fidelidad](FIDELIDAD-FRLG.md) para sistemas todavía incompletos.
+
+## Exploración y revanchas 2.3
+
+`explore {object}` sólo actúa desde una casilla vecina en el mapa persistido por el servidor. Los bloqueos requieren permisos de historia/medalla y abren el paso compartido. Los objetos se registran en `member.rewards`; `trainer.collected` comunica los recogidos del mapa actual. Repetir la solicitud no duplica recompensas.
+
+Los entrenadores comunes usan `progress.wins_<npc>` con máximo tres victorias por sala. Los desafíos de historia conservan su marca única. Los guardados previos con marca de victoria y sin contador arrancan en una. La revisión de mundo 3 migra las posiciones antiguas una sola vez y cancela propuestas pendientes, preservando equipos, combates activos, historia e inventarios.

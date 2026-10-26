@@ -75,7 +75,7 @@ export function interact(s,m,p,n,input={}){const f=s.progress,key=n.data?.key;
 export function encounter(s,m,p,n){const f=s.progress;let team=n.data?.team,name=n.name,flag=n.id,badge=null,kind='trainer';
  if(n.role==='practice')return {name:'Guías de Ruta',team:[[19,7],[10,7]],flag:'training',kind:'practice'};
  if(n.role==='gym'){badge=n.data.gym+1;const requirements={3:'circuit',6:'silph',7:'secret_key'};if(requirements[badge]&&!done(s,requirements[badge]))throw Error(gate(s,requirements[badge]));if(badge===3&&!done(s,'cut_use'))throw Error(gate(s,'cut_use'));if(badge===8&&Array.from({length:7},(_,i)=>done(s,'badge'+(i+1))).some(x=>!x))throw Error('Giovanni requiere las otras siete medallas.');team=world.gyms[badge-1].team;flag='badge'+badge;}
- if(n.role==='league'){if(!done(s,'league_access'))throw Error(gate(s,'league_access'));const i=s.league||0,leader=world.league[i];team=leader.team;name=leader.name;flag='league'+i;kind='league';}
+ if(n.role==='league'){if((f.league_clears??Number(!!f.champion))>=3)throw Error('El grupo ya completó tres desafíos de la Liga.');if(!done(s,'league_access'))throw Error(gate(s,'league_access'));const i=s.league||0,leader=world.league[i];team=leader.team;name=leader.name;flag='league'+i;kind='league';}
  if(n.data?.key==='ghost'){if(!f.scope)throw Error(gate(s,'scope'));team=[[105,30]];kind='ghost';}
  if(['snorlax','snorlax16'].includes(n.data?.key)){if(!f.flute)throw Error(gate(s,'flute'));team=[[143,30]];kind='wild';}
  if(n.id==='pallet_lab_rival'||n.id==='route22_rival'){team=team.map(([id,l])=>[id===4?({1:4,4:7,7:1}[m.starter]):id,l]);}
@@ -85,6 +85,6 @@ export function encounter(s,m,p,n){const f=s.progress;let team=n.data?.team,name
  if(n.role==='league'&&s.league===4)team=[[18,59],[65,57],[112,59],...({1:[[103,59],[130,61],[6,63]],4:[[59,59],[103,61],[9,63]],7:[[130,59],[59,61],[3,63]]}[m.starter])];
  if(n.id==='route24_recruiter'&&![0,1,2,3,4].every(i=>f['route24_bridge'+i]))throw Error('Supera primero a los cinco entrenadores del puente.');
  if(n.id==='silph_3_giovanni'&&!f.silph_2_rival)throw Error('Azul te espera en el departamento de desarrollo.');
- if(!team)throw Error('Este personaje no propone un combate.');if(f[flag]&&kind!=='practice'&&kind!=='league')throw Error('Este desafío ya está completado para el grupo.');return {name,team,flag,badge,kind};
+ if(!team)throw Error('Este personaje no propone un combate.');const repeatable=n.role==='trainer'&&!/rocket|giovanni|rival|bridge\d|recruiter|mansion_2_scientist/.test(n.id);const wins=f['wins_'+flag]??Number(!!f[flag]);if(repeatable&&wins>=3)throw Error('Este entrenador ya completó tres combates con el grupo.');if(!repeatable&&f[flag]&&kind!=='practice'&&kind!=='league')throw Error('Este desafío ya está completado para el grupo.');return {name,team,flag,badge,kind,repeatable,rematch:repeatable&&wins>0};
 }
-export function victory(s,b){const e=b.encounter;if(!e)return;if(e.kind==='league'){s.league=(s.league||0)+1;if(s.league===5){s.progress.champion=true;s.league=0;}return;}if(e.flag)s.progress[e.flag]=true;}
+export function victory(s,b){const e=b.encounter;if(!e)return;if(e.kind==='league'){s.league=(s.league||0)+1;if(s.league===5){s.progress.league_clears=(s.progress.league_clears??Number(!!s.progress.champion))+1;s.progress.champion=true;s.league=0;}return;}if(e.flag){if(e.repeatable)s.progress['wins_'+e.flag]=(s.progress['wins_'+e.flag]??Number(!!s.progress[e.flag]))+1;s.progress[e.flag]=true;}}

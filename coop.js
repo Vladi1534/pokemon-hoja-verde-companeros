@@ -57,7 +57,7 @@ const Coop={
  UI.refresh=function(){original.refresh.call(this);if(Coop.active)Coop.status()};
  UI.close=function(force=false){if(!force&&!Coop.active&&this.kind==='online'&&Game.mode==='title'){this.title();return}return original.close.call(this,force)};
  UI.settings=function(){if(Coop.active)return Coop.options();return original.settings.call(this)};
- UI.map=function(){if(Coop.active)return Coop.journal();return original.map.call(this)};
+ UI.map=function(tab='atlas'){if(Coop.active)return Coop.journal();return original.map.call(this,tab)};
  Story.target=function(){if(!Coop.active)return original.target.call(this);const p=Coop.state.progress,goal=!p.accepted||p.parcel?'pallet':'viridian_shop',id=goal==='pallet'?(p.delivered?'guide':'oak'):'parcel';if(Game.mapId===goal){const n=Game.map.npcs.find(n=>n.id===id);return n?{x:n.x,y:n.y,label:n.name}:null}const route=this.route(Game.mapId,goal);return route.length?{...route[0],label:MAPS[route[0].to].name}:null;};
  Story.update=function(dt){if(!Coop.active)original.update.call(this,dt)};
  UI.title=function(){original.title.call(this);const actions=$('modal').querySelector('.save-options');if(actions){const b=document.createElement('button');b.className='primary';b.textContent='Jugar online · Beta';b.onclick=()=>Coop.form();actions.prepend(b);}const hash=new URLSearchParams(location.hash.slice(1));if(hash.get('sala'))setTimeout(()=>Coop.form(hash.get('sala')),0);else if(location.hash==='#online')setTimeout(()=>Coop.form(),0);};
