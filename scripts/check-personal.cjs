@@ -29,7 +29,7 @@ const result = vm.runInContext(`
     pp: next.battle.you.moves[0].pp, id: reloaded.member.id, original: profile.trainer.id});
 `, context);
 
-assert.equal(result.version, '2.4.0');
+assert.equal(result.version, '2.4.1');
 assert.equal(result.firstTurn, 2);
 assert.equal(result.firstPP, 39);
 assert.equal(result.resumedPP, result.firstPP);

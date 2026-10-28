@@ -14,3 +14,12 @@
 
 #onlineBattleBag{background:#365c43;color:#f4f7e1;border-color:#668264}.coop-combat-log{overflow-y:auto;scrollbar-width:thin}
 @media(max-width:760px){.topbar{flex-wrap:wrap}.top-actions{width:100%;min-width:0;justify-content:flex-end}.top-actions #onlineButton{margin-right:auto;max-width:calc(100% - 115px)}.online-mode .side-content{display:block}.online-mode .side-content>.coop-side-actions{margin:8px 0}.online-mode .side-content>.personal-players{margin:12px 0}.personal-mode{margin-bottom:12px!important}.personal-team{gap:8px}.personal-team img{width:75px;height:68px}.personal-wallet{margin:10px 0!important}}
+
+/* One actor at a time; damage remains attached to its simulator event. */
+.coop-fighter.attacking.ally img{animation:coop-attack-ally .65s ease-out}
+.coop-fighter.attacking.enemy img{animation:coop-attack-enemy .65s ease-out}
+.coop-resolving{font-weight:700;color:#345136;margin:8px 0 14px}
+#coopReplaySkip{background:#f8f6e8;color:#345136;border-color:#bbcaa4;font-size:11px}
+@keyframes coop-attack-ally{30%{transform:translate(22px,-10px) scale(1.05)}65%{transform:translate(-3px,2px)}}
+@keyframes coop-attack-enemy{30%{transform:translate(-22px,10px) scale(1.05)}65%{transform:translate(3px,-2px)}}
+@media(prefers-reduced-motion:reduce){.coop-fighter.attacking img{animation:none}}

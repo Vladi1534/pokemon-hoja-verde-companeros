@@ -1,6 +1,8 @@
-# Kanto Compañeros · motor compartido y servicio online 2.4
+# Kanto Compañeros · motor compartido y servicio online 2.4.1
 
 Los módulos de `server/` se ejecutan en Cloudflare Workers con D1 y en navegador con `browser/local-engine.mjs`. El bundle `public/personal-engine.js` permite jugar solo sin peticiones al servidor. `/play.html` y GitHub Pages son el mismo cliente.
+
+2.4.1 conserva la secuencia de movimiento al recuperarse de una derrota y normaliza los puntos de descanso antiguos. `tests/recovery.test.mjs` reproduce curación, pasos, derrota, recarga y salida del Centro. `tests/bundle.test.mjs` comprueba el mismo recorrido en el Worker compilado y la reapertura del mundo. Los eventos públicos de combate llevan índices estables para mostrar ataques y efectos en orden, sin repetir acciones al sondear. Las tablas de encuentros iniciales incluyen los ajustes de variedad del cliente.
 
 ## Verificar y compilar
 

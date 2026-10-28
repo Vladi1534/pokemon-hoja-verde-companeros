@@ -1,0 +1,32 @@
+import assert from 'node:assert/strict';
+import {LocalGame,newPersonal} from '../browser/local-engine.mjs';
+import {newBattle} from '../server/battles.mjs';
+
+const game=new LocalGame(newPersonal('Recovery QA',1));
+Object.assign(game.member.position,{map:'viridian_center',x:10,y:8,dir:'up',seq:10,seen:Date.now()-5000});
+game.dispatch({action:'quest',npc:'viridian_center_nurse',requestId:crypto.randomUUID()});
+game.dispatch({action:'sync',seq:11,steps:['down','down']});
+assert.equal(game.member.position.seq,11);
+// Exercise the complete defeat path, with the old checkpoint format also present.
+game.member.lastCenter={...game.member.lastCenter,seq:10,seen:1};
+game.member.party[0].hp=1;
+newBattle(game.row.state,{kind:'coop',players:[game.member.id],encounter:{kind:'wild',name:'Recovery fixture',team:[[18,100]]}},Date.now());
+const battle=game.state().battle;
+const lost=game.dispatch({action:'choose',battle:battle.id,turn:battle.turn,choice:'default',requestId:crypto.randomUUID()});
+assert.equal(lost.battle.result,'defeat');
+assert.equal(game.member.position.map,'viridian_center');
+assert.equal(game.member.position.y,8);
+assert.equal(game.member.position.seq,11,'returning to a Center must not rewind movement acknowledgements');
+assert(game.member.party.every(m=>m.hp>0));
+game.dispatch({action:'sync',seq:12,steps:['down']});
+assert.equal(game.member.position.y,9);
+assert.equal(game.member.position.seq,12);
+const reloaded=new LocalGame(null,JSON.parse(JSON.stringify(game.snapshot())));
+reloaded.member.position.seen=Date.now()-5000;
+reloaded.dispatch({action:'sync',seq:13,steps:Array(8).fill('down')});
+assert.equal(reloaded.member.position.map,'viridian');
+reloaded.dispatch({action:'sync',seq:14,steps:['down']});
+assert.equal(reloaded.member.position.seq,14);
+assert.equal(reloaded.member.position.y,8);
+assert(!('seq' in reloaded.portable().trainer.lastCenter));
+console.log('PASS heal, walk, lose, return to Center, reload, exit and keep moving with a legacy checkpoint');

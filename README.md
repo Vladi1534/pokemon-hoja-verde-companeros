@@ -1,4 +1,4 @@
-# Pokémon Hoja Verde · Compañeros 2.4
+# Pokémon Hoja Verde · Compañeros 2.4.1
 
 Aventura fan de Kanto para navegador, con tu líder siguiéndote y una partida personal que puedes abrir a amigos. Los mapas y diálogos son una adaptación propia, todavía no una reproducción íntegra de Verde Hoja.
 
@@ -17,6 +17,14 @@ Hasta cuatro entrenadores pueden recorrer un mundo. Los encuentros individuales 
 Las medallas y objetos clave pertenecen a cada entrenador. La historia avanza para los participantes que cumplen sus requisitos; un invitado nuevo no recibe automáticamente las medallas del anfitrión. Los árboles cortados pertenecen al mundo y se conservan en la copia local al salir.
 
 ## Cambios de esta versión
+
+- Corregido el bloqueo al recuperarse en un Centro Pokémon: el punto de descanso ya no restaura un contador antiguo de movimiento. Se recuperan también las partidas 2.4 que guardaron ese dato.
+- Ataques y efectos presentados en secuencia, con los PS actualizándose tras cada acción. «Mostrar resultado» permite saltar la presentación; las reglas de velocidad y prioridad siguen a cargo del simulador.
+- «¡Has ganado el combate!» para victorias individuales, incluso dentro de un mundo online. «¡Victoria en equipo!» sólo cuando participan dos entrenadores.
+- Nidoran♀ y Nidoran♂ en Ruta 22, Abra poco frecuente en Ruta 2 y Caterpie/Weedle en Ruta 1. Son ajustes propios de variedad inicial, aplicados tanto en solitario como online.
+- Recuperación de la sincronización antes de abrir la partida a amigos y respuesta inmediata a pulsaciones breves de dirección.
+
+La versión 2.4 incorporó:
 
 - Mismo motor de campaña y combate en solitario y online, incluyendo IV, EV, naturalezas, habilidades Gen3, crianza, PC y decisiones de aprendizaje/evolución.
 - Encuentros en hierba alta desde el inicio, antes de entregar el paquete de Oak. El césped decorativo de las ciudades sigue siendo seguro.
@@ -49,7 +57,7 @@ Pokémon Revolution Online es una referencia para la claridad del equipo, la pre
 
 La historia, geometría y puzles todavía no equivalen al cartucho completo. Faltan pesca, varios eventos secundarios, MT/MO enseñables, objetos equipados y contenido posterior. No hay chat ni un mundo MMO masivo. Transporte HTTP cada 350 ms con interpolación; falta validar carga y una campaña natural completa entre varios dispositivos. Los guardados locales son editables: no se ofrece una economía competitiva protegida contra trucos.
 
-Consulta [fidelidad y pendientes](docs/FIDELIDAD-FRLG.md), [multijugador](docs/MULTIPLAYER.md) y [cambios 2.4](docs/CAMBIOS-2.4.md).
+Consulta [fidelidad y pendientes](docs/FIDELIDAD-FRLG.md), [multijugador](docs/MULTIPLAYER.md), [cambios 2.4](docs/CAMBIOS-2.4.md) y [correcciones 2.4.1](docs/CAMBIOS-2.4.1.md).
 
 ## Desarrollo
 

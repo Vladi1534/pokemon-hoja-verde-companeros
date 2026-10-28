@@ -1,8 +1,8 @@
 import {pureAction,view,spawn,battleFor} from '../server/service.mjs';
 import {validatePortable,portable,newPersonal,legacyPersonal} from '../server/portable.mjs';
-import {heal} from '../server/creatures.mjs';
+import {recoverAtCenter} from '../server/recovery.mjs';
 export {newPersonal,legacyPersonal,validatePortable};
-export const version='2.4.0';
+export const version='2.4.1';
 // randomUUID is restricted to secure browser contexts; preview still uses cryptographic randomness.
 if(!crypto.randomUUID)crypto.randomUUID=()=>{const b=crypto.getRandomValues(new Uint8Array(16));b[6]=(b[6]&15)|64;b[8]=(b[8]&63)|128;const s=Array.from(b,n=>n.toString(16).padStart(2,'0')).join('');return s.slice(0,8)+'-'+s.slice(8,12)+'-'+s.slice(12,16)+'-'+s.slice(16,20)+'-'+s.slice(20);};
 // The browser and Worker execute the same campaign, encounters and battle simulator.
@@ -30,7 +30,7 @@ export class LocalGame {
   if(s.proposal?.expires<now)s.proposal=null;
   const response=pureAction(s,me,input,now);
   if(battleFor(s,me)&&!battleFor(s,me).ended){/* HP is committed by the shared simulator when combat ends. */}
-  else if(!me.party.some(p=>!p.eggSteps&&p.hp>0)){me.party.forEach(heal);me.position={...me.position,...me.lastCenter,fx:me.lastCenter.x,fy:me.lastCenter.y+1};delete me.spotted;me.position.notice='Tu equipo se recuperó en el último Centro Pokémon.';}
+  else if(!me.party.some(p=>!p.eggSteps&&p.hp>0))recoverAtCenter(me);
   if(input.requestId){s.actions.push(input.requestId);s.actions=s.actions.slice(-100);}
   if(input.action!=='sync'||response)row.revision++;
   this.row=row;return view(row,me,{portable:this.portable(),message:typeof response==='string'?response:'',dialog:response&&typeof response==='object'?response:null});

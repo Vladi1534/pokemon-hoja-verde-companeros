@@ -1,4 +1,5 @@
 import {newPersonal} from '../server/portable.mjs';
+import {newBattle} from '../server/battles.mjs';
 import {createRequire} from 'node:module';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -18,4 +19,21 @@ try{
  const left=await call({action:'depart',room:hosted.room,requestId:crypto.randomUUID()},guestKey);assert.equal(left.portable.trainer.bag.potion,4);assert.equal(left.portable.trainer.party[0].uid,guest.trainer.party[0].uid);
  console.log('PASS production Worker portable journey: host, join, accept gift, leave with identity and inventory');
  console.log('PASS production Worker bundle: create room, D1, start battle, deserialize separate request, advance turn, persist PP');
+ const fixture=async fn=>{const row=await db.prepare('SELECT state FROM rooms WHERE id=?').bind(hosted.room).first();const s=JSON.parse(row.state);fn(s);await db.prepare('UPDATE rooms SET state=? WHERE id=?').bind(JSON.stringify(s),hosted.room).run();};
+ const command=(action,args={})=>call({action,room:hosted.room,requestId:crypto.randomUUID(),...args},hostKey);
+ await fixture(s=>Object.assign(s.members[0].position,{map:'viridian_center',x:10,y:8,seq:20,seen:Date.now()-5000}));
+ await command('quest',{npc:'viridian_center_nurse'});
+ await command('sync',{seq:21,steps:['down']});
+ await fixture(s=>{const m=s.members[0];m.lastCenter={...m.lastCenter,seq:20,seen:1};m.party[0].hp=1;newBattle(s,{kind:'coop',players:[m.id],encounter:{kind:'wild',name:'Recovery fixture',team:[[18,100]]}},Date.now());});
+ const active=await command('sync');
+ const defeated=await command('choose',{battle:active.battle.id,turn:1,choice:'default'});
+ assert.equal(defeated.battle.result,'defeat');assert.equal(defeated.members.find(m=>m.id===hosted.me).position.seq,21);
+ await fixture(s=>s.members[0].position.seen=Date.now()-5000);
+ const outside=await command('sync',{seq:22,steps:Array(9).fill('down')});
+ assert.equal(outside.members.find(m=>m.id===hosted.me).position.map,'viridian');
+ const walked=await command('sync',{seq:23,steps:['down']});assert.equal(walked.members.find(m=>m.id===hosted.me).position.seq,23);
+ const finalProfile=(await command('depart')).portable;
+ const reopened=await call({action:'host',key:hostKey,requestId:crypto.randomUUID(),portable:finalProfile},hostKey);
+ assert.match(reopened.invite,/^[A-F0-9]{8}$/);assert.equal(reopened.me,hosted.me);
+ console.log('PASS production Worker: heal, walk, lose, exit Center, walk again and reopen world after a legacy checkpoint');
 }finally{await mf.dispose()}

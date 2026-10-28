@@ -1,5 +1,6 @@
 import world from './world.json' with {type:'json'};
 import {createMon,addMon,heal,species} from './creatures.mjs';
+import {restPoint} from './recovery.mjs';
 export {world};
 export const chapters=[
  ['parcel','El pedido de Oak','viridian_shop','viridian_shop_clerk','Recoge el paquete del profesor en la tienda de Ciudad Verde.'],
@@ -43,7 +44,7 @@ function allReward(s,key,reward){for(const m of s.members)if(!m.rewards[key]){re
 export function catchUp(s,m){if(done(s,'delivery')&&!m.rewards.dex){m.bag.ball+=5;m.rewards.dex=true;}if(done(s,'silph')&&!m.rewards.silph){addMon(m,createMon(131,25,m.id));m.bag.masterball=(m.bag.masterball||0)+1;m.rewards.silph=true;}}
 export function interact(s,m,p,n,input={}){const f=s.progress,key=n.data?.key;
  const set=(k,text)=>{f[k]=true;return text;};
- if(n.role==='heal'||n.role==='rest'){m.party.forEach(heal);m.lastCenter={...p};return 'Tu equipo recuperó todos sus PS y PP. También se eliminaron los problemas de estado.';}
+ if(n.role==='heal'||n.role==='rest'){m.party.forEach(heal);m.lastCenter=restPoint(p);return 'Tu equipo recuperó todos sus PS y PP. También se eliminaron los problemas de estado.';}
  if(n.role==='guide')return objective(s)[4];
  if(n.role==='shop'&&p.map==='viridian_shop'&&!f.delivery)return set('parcel','Este paquete es para el profesor Oak. Llévaselo a su laboratorio en Pueblo Paleta.');
  if(n.role==='talk')return n.data.lines.join(' ');

@@ -52,7 +52,11 @@ this.result={maps:MAPS,spawn:{map:'pallet',x:21,y:14},gyms:GYMS,league:LEAGUE};
 `,c);
 const world=JSON.parse(JSON.stringify(c.result));
 const encounters=JSON.parse(fs.readFileSync(path.join(root,'campaign-encounters.json'),'utf8'));
+// Intentional early-game variety, kept separate from the imported FRLG tables.
+const encounterOverrides=JSON.parse(fs.readFileSync(path.join(root,'campaign-encounter-overrides.json'),'utf8'));
+for(const [id,table]of Object.entries(encounterOverrides))encounters[id]={...encounters[id],...table,adapted:true};
 for(const [id,table]of Object.entries(encounters)){const m=world.maps[id];if(!m)continue;m.encounters=table;m.pool=[...new Set((table.land_mons||table.water_mons||[]).map(x=>x.id))];}
+world.maps.viridian.npcs.find(n=>n.id==='viridian_resident').data.lines.push('Al oeste, en Ruta 22, viven Nidoran hembra y macho. Al norte, en Ruta 2, a veces se deja ver un Abra.');
 // The invented reserve is not part of the canonical campaign.
 world.maps.viridian.portals=world.maps.viridian.portals.filter(p=>p.to!=='reserve');delete world.maps.reserve;
 

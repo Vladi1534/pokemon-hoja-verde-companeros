@@ -1,0 +1,28 @@
+{
+  "route1": {
+    "land_mons": [
+      {"id":16,"min":2,"max":4,"weight":40},
+      {"id":19,"min":2,"max":4,"weight":40},
+      {"id":10,"min":3,"max":4,"weight":10},
+      {"id":13,"min":3,"max":4,"weight":10}
+    ]
+  },
+  "route2": {
+    "land_mons": [
+      {"id":16,"min":3,"max":5,"weight":30},
+      {"id":19,"min":3,"max":5,"weight":30},
+      {"id":10,"min":3,"max":5,"weight":17},
+      {"id":13,"min":3,"max":5,"weight":18},
+      {"id":63,"min":5,"max":7,"weight":5}
+    ]
+  },
+  "route22": {
+    "land_mons": [
+      {"id":19,"min":2,"max":4,"weight":25},
+      {"id":56,"min":3,"max":5,"weight":25},
+      {"id":21,"min":3,"max":5,"weight":20},
+      {"id":29,"min":3,"max":5,"weight":15},
+      {"id":32,"min":3,"max":5,"weight":15}
+    ]
+  }
+}
