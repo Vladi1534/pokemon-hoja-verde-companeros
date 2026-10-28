@@ -1,0 +1,910 @@
+{
+  "giovanni": {
+    "frameWidth": 16,
+    "frameHeight": 32,
+    "columns": 9,
+    "rows": 1,
+    "layout": "horizontal",
+    "standing": {
+      "down": 0,
+      "up": 1,
+      "left": 2,
+      "right": 2
+    },
+    "walking": {
+      "down": [
+        3,
+        4
+      ],
+      "up": [
+        5,
+        6
+      ],
+      "left": [
+        7,
+        8
+      ]
+    },
+    "mirrorRight": true,
+    "contentRects": [
+      {
+        "x": 1,
+        "y": 11,
+        "width": 14,
+        "height": 20
+      },
+      {
+        "x": 1,
+        "y": 11,
+        "width": 14,
+        "height": 20
+      },
+      {
+        "x": 2,
+        "y": 11,
+        "width": 12,
+        "height": 20
+      },
+      {
+        "x": 0,
+        "y": 12,
+        "width": 15,
+        "height": 20
+      },
+      {
+        "x": 1,
+        "y": 12,
+        "width": 15,
+        "height": 20
+      },
+      {
+        "x": 1,
+        "y": 12,
+        "width": 14,
+        "height": 20
+      },
+      {
+        "x": 1,
+        "y": 12,
+        "width": 14,
+        "height": 20
+      },
+      {
+        "x": 2,
+        "y": 12,
+        "width": 12,
+        "height": 19
+      },
+      {
+        "x": 2,
+        "y": 12,
+        "width": 12,
+        "height": 19
+      }
+    ],
+    "nativeRendererCompatible": true
+  },
+  "surge": {
+    "frameWidth": 16,
+    "frameHeight": 32,
+    "columns": 3,
+    "rows": 1,
+    "layout": "horizontal",
+    "standing": {
+      "down": 0,
+      "up": 1,
+      "left": 2,
+      "right": 2
+    },
+    "walking": null,
+    "mirrorRight": true,
+    "contentRects": [
+      {
+        "x": 1,
+        "y": 11,
+        "width": 14,
+        "height": 20
+      },
+      {
+        "x": 1,
+        "y": 11,
+        "width": 14,
+        "height": 20
+      },
+      {
+        "x": 1,
+        "y": 11,
+        "width": 13,
+        "height": 20
+      }
+    ],
+    "nativeRendererCompatible": true
+  },
+  "erika": {
+    "frameWidth": 16,
+    "frameHeight": 32,
+    "columns": 3,
+    "rows": 1,
+    "layout": "horizontal",
+    "standing": {
+      "down": 0,
+      "up": 1,
+      "left": 2,
+      "right": 2
+    },
+    "walking": null,
+    "mirrorRight": true,
+    "contentRects": [
+      {
+        "x": 2,
+        "y": 12,
+        "width": 12,
+        "height": 19
+      },
+      {
+        "x": 2,
+        "y": 12,
+        "width": 12,
+        "height": 19
+      },
+      {
+        "x": 2,
+        "y": 12,
+        "width": 12,
+        "height": 19
+      }
+    ],
+    "nativeRendererCompatible": true
+  },
+  "koga": {
+    "frameWidth": 16,
+    "frameHeight": 32,
+    "columns": 3,
+    "rows": 1,
+    "layout": "horizontal",
+    "standing": {
+      "down": 0,
+      "up": 1,
+      "left": 2,
+      "right": 2
+    },
+    "walking": null,
+    "mirrorRight": true,
+    "contentRects": [
+      {
+        "x": 1,
+        "y": 11,
+        "width": 14,
+        "height": 20
+      },
+      {
+        "x": 1,
+        "y": 11,
+        "width": 14,
+        "height": 20
+      },
+      {
+        "x": 1,
+        "y": 11,
+        "width": 14,
+        "height": 20
+      }
+    ],
+    "nativeRendererCompatible": true
+  },
+  "sabrina": {
+    "frameWidth": 16,
+    "frameHeight": 32,
+    "columns": 3,
+    "rows": 1,
+    "layout": "horizontal",
+    "standing": {
+      "down": 0,
+      "up": 1,
+      "left": 2,
+      "right": 2
+    },
+    "walking": null,
+    "mirrorRight": true,
+    "contentRects": [
+      {
+        "x": 1,
+        "y": 12,
+        "width": 14,
+        "height": 19
+      },
+      {
+        "x": 1,
+        "y": 12,
+        "width": 14,
+        "height": 19
+      },
+      {
+        "x": 2,
+        "y": 12,
+        "width": 12,
+        "height": 19
+      }
+    ],
+    "nativeRendererCompatible": true
+  },
+  "blaine": {
+    "frameWidth": 16,
+    "frameHeight": 32,
+    "columns": 3,
+    "rows": 1,
+    "layout": "horizontal",
+    "standing": {
+      "down": 0,
+      "up": 1,
+      "left": 2,
+      "right": 2
+    },
+    "walking": null,
+    "mirrorRight": true,
+    "contentRects": [
+      {
+        "x": 1,
+        "y": 11,
+        "width": 14,
+        "height": 20
+      },
+      {
+        "x": 1,
+        "y": 11,
+        "width": 14,
+        "height": 20
+      },
+      {
+        "x": 2,
+        "y": 11,
+        "width": 12,
+        "height": 20
+      }
+    ],
+    "nativeRendererCompatible": true
+  },
+  "lorelei": {
+    "frameWidth": 16,
+    "frameHeight": 32,
+    "columns": 9,
+    "rows": 1,
+    "layout": "horizontal",
+    "standing": {
+      "down": 0,
+      "up": 1,
+      "left": 2,
+      "right": 2
+    },
+    "walking": {
+      "down": [
+        3,
+        4
+      ],
+      "up": [
+        5,
+        6
+      ],
+      "left": [
+        7,
+        8
+      ]
+    },
+    "mirrorRight": true,
+    "contentRects": [
+      {
+        "x": 1,
+        "y": 11,
+        "width": 14,
+        "height": 20
+      },
+      {
+        "x": 1,
+        "y": 11,
+        "width": 14,
+        "height": 20
+      },
+      {
+        "x": 1,
+        "y": 11,
+        "width": 15,
+        "height": 20
+      },
+      {
+        "x": 1,
+        "y": 12,
+        "width": 14,
+        "height": 20
+      },
+      {
+        "x": 1,
+        "y": 12,
+        "width": 14,
+        "height": 20
+      },
+      {
+        "x": 1,
+        "y": 12,
+        "width": 14,
+        "height": 20
+      },
+      {
+        "x": 1,
+        "y": 12,
+        "width": 14,
+        "height": 20
+      },
+      {
+        "x": 1,
+        "y": 12,
+        "width": 15,
+        "height": 19
+      },
+      {
+        "x": 1,
+        "y": 12,
+        "width": 15,
+        "height": 19
+      }
+    ],
+    "nativeRendererCompatible": true
+  },
+  "bruno": {
+    "frameWidth": 16,
+    "frameHeight": 32,
+    "columns": 3,
+    "rows": 1,
+    "layout": "horizontal",
+    "standing": {
+      "down": 0,
+      "up": 1,
+      "left": 2,
+      "right": 2
+    },
+    "walking": null,
+    "mirrorRight": true,
+    "contentRects": [
+      {
+        "x": 1,
+        "y": 11,
+        "width": 14,
+        "height": 20
+      },
+      {
+        "x": 1,
+        "y": 11,
+        "width": 14,
+        "height": 20
+      },
+      {
+        "x": 1,
+        "y": 11,
+        "width": 14,
+        "height": 20
+      }
+    ],
+    "nativeRendererCompatible": true
+  },
+  "agatha": {
+    "frameWidth": 16,
+    "frameHeight": 32,
+    "columns": 3,
+    "rows": 1,
+    "layout": "horizontal",
+    "standing": {
+      "down": 0,
+      "up": 1,
+      "left": 2,
+      "right": 2
+    },
+    "walking": null,
+    "mirrorRight": true,
+    "contentRects": [
+      {
+        "x": 1,
+        "y": 12,
+        "width": 14,
+        "height": 19
+      },
+      {
+        "x": 1,
+        "y": 12,
+        "width": 14,
+        "height": 19
+      },
+      {
+        "x": 2,
+        "y": 12,
+        "width": 13,
+        "height": 19
+      }
+    ],
+    "nativeRendererCompatible": true
+  },
+  "lance": {
+    "frameWidth": 16,
+    "frameHeight": 32,
+    "columns": 3,
+    "rows": 1,
+    "layout": "horizontal",
+    "standing": {
+      "down": 0,
+      "up": 1,
+      "left": 2,
+      "right": 2
+    },
+    "walking": null,
+    "mirrorRight": true,
+    "contentRects": [
+      {
+        "x": 0,
+        "y": 11,
+        "width": 16,
+        "height": 20
+      },
+      {
+        "x": 1,
+        "y": 11,
+        "width": 14,
+        "height": 20
+      },
+      {
+        "x": 2,
+        "y": 11,
+        "width": 12,
+        "height": 20
+      }
+    ],
+    "nativeRendererCompatible": true
+  },
+  "ash": {
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "columns": 1,
+    "rows": 6,
+    "layout": "vertical",
+    "standing": {
+      "down": 0,
+      "up": 1,
+      "left": 2,
+      "right": 2
+    },
+    "walking": {
+      "down": [
+        0,
+        3
+      ],
+      "up": [
+        1,
+        4
+      ],
+      "left": [
+        2,
+        5
+      ],
+      "right": [
+        2,
+        5
+      ]
+    },
+    "mirrorRight": true,
+    "optionalMirrorVerticalAlternateSteps": true,
+    "framePivots": [
+      {
+        "x": 128,
+        "y": 245
+      },
+      {
+        "x": 128,
+        "y": 251
+      },
+      {
+        "x": 128,
+        "y": 246
+      },
+      {
+        "x": 128,
+        "y": 249
+      },
+      {
+        "x": 128,
+        "y": 250
+      },
+      {
+        "x": 128,
+        "y": 242
+      }
+    ],
+    "contentRects": [
+      {
+        "x": 33,
+        "y": 27,
+        "width": 180,
+        "height": 222
+      },
+      {
+        "x": 31,
+        "y": 31,
+        "width": 183,
+        "height": 222
+      },
+      {
+        "x": 43,
+        "y": 14,
+        "width": 209,
+        "height": 234
+      },
+      {
+        "x": 31,
+        "y": 15,
+        "width": 185,
+        "height": 234
+      },
+      {
+        "x": 35,
+        "y": 12,
+        "width": 179,
+        "height": 240
+      },
+      {
+        "x": 32,
+        "y": 12,
+        "width": 174,
+        "height": 231
+      }
+    ],
+    "visibleContentRects": [
+      {
+        "x": 39,
+        "y": 27,
+        "width": 172,
+        "height": 218
+      },
+      {
+        "x": 39,
+        "y": 35,
+        "width": 174,
+        "height": 216
+      },
+      {
+        "x": 45,
+        "y": 17,
+        "width": 166,
+        "height": 229
+      },
+      {
+        "x": 39,
+        "y": 19,
+        "width": 174,
+        "height": 230
+      },
+      {
+        "x": 39,
+        "y": 20,
+        "width": 174,
+        "height": 230
+      },
+      {
+        "x": 33,
+        "y": 15,
+        "width": 172,
+        "height": 227
+      }
+    ],
+    "nativeRendererCompatible": false,
+    "recommendedRender": {
+      "drawWidth": 44,
+      "drawHeight": 44,
+      "preserveWholeCell": true,
+      "imageSmoothingEnabled": false,
+      "scale": 0.171875,
+      "groundX": "existing NPC tile center / shadow center",
+      "groundY": "existing Renderer.person footline",
+      "destinationX": "groundX - framePivots[frame].x * scale",
+      "destinationY": "groundY - framePivots[frame].y * scale",
+      "sourceRect": "[0, frame*256, 256, 256]",
+      "mirrorRule": "translate to groundX/groundY, scale(-1,1), draw full cell at -pivotX*scale,-pivotY*scale",
+      "sizeNote": "44x44 is a starting recommendation for this game, not a value from the source. Match current player visible height without changing square aspect."
+    }
+  },
+  "jessie": {
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "columns": 1,
+    "rows": 6,
+    "layout": "vertical",
+    "standing": {
+      "down": 0,
+      "up": 1,
+      "left": 2,
+      "right": 2
+    },
+    "walking": {
+      "down": [
+        0,
+        3
+      ],
+      "up": [
+        1,
+        4
+      ],
+      "left": [
+        2,
+        5
+      ],
+      "right": [
+        2,
+        5
+      ]
+    },
+    "mirrorRight": true,
+    "optionalMirrorVerticalAlternateSteps": true,
+    "framePivots": [
+      {
+        "x": 128,
+        "y": 249
+      },
+      {
+        "x": 128,
+        "y": 252
+      },
+      {
+        "x": 128,
+        "y": 228
+      },
+      {
+        "x": 128,
+        "y": 249
+      },
+      {
+        "x": 128,
+        "y": 256
+      },
+      {
+        "x": 128,
+        "y": 252
+      }
+    ],
+    "contentRects": [
+      {
+        "x": 35,
+        "y": 0,
+        "width": 185,
+        "height": 250
+      },
+      {
+        "x": 37,
+        "y": 10,
+        "width": 175,
+        "height": 243
+      },
+      {
+        "x": 47,
+        "y": 8,
+        "width": 165,
+        "height": 220
+      },
+      {
+        "x": 35,
+        "y": 0,
+        "width": 185,
+        "height": 250
+      },
+      {
+        "x": 40,
+        "y": 17,
+        "width": 175,
+        "height": 239
+      },
+      {
+        "x": 50,
+        "y": 0,
+        "width": 161,
+        "height": 252
+      }
+    ],
+    "visibleContentRects": [
+      {
+        "x": 37,
+        "y": 2,
+        "width": 182,
+        "height": 247
+      },
+      {
+        "x": 39,
+        "y": 10,
+        "width": 171,
+        "height": 242
+      },
+      {
+        "x": 50,
+        "y": 10,
+        "width": 160,
+        "height": 218
+      },
+      {
+        "x": 36,
+        "y": 2,
+        "width": 182,
+        "height": 247
+      },
+      {
+        "x": 42,
+        "y": 17,
+        "width": 171,
+        "height": 239
+      },
+      {
+        "x": 52,
+        "y": 0,
+        "width": 157,
+        "height": 252
+      }
+    ],
+    "nativeRendererCompatible": false,
+    "recommendedRender": {
+      "drawWidth": 44,
+      "drawHeight": 44,
+      "preserveWholeCell": true,
+      "imageSmoothingEnabled": false,
+      "scale": 0.171875,
+      "groundX": "existing NPC tile center / shadow center",
+      "groundY": "existing Renderer.person footline",
+      "destinationX": "groundX - framePivots[frame].x * scale",
+      "destinationY": "groundY - framePivots[frame].y * scale",
+      "sourceRect": "[0, frame*256, 256, 256]",
+      "mirrorRule": "translate to groundX/groundY, scale(-1,1), draw full cell at -pivotX*scale,-pivotY*scale",
+      "sizeNote": "44x44 is a starting recommendation for this game, not a value from the source. Match current player visible height without changing square aspect."
+    }
+  },
+  "james": {
+    "frameWidth": 256,
+    "frameHeight": 256,
+    "columns": 1,
+    "rows": 6,
+    "layout": "vertical",
+    "standing": {
+      "down": 0,
+      "up": 1,
+      "left": 2,
+      "right": 2
+    },
+    "walking": {
+      "down": [
+        0,
+        3
+      ],
+      "up": [
+        1,
+        4
+      ],
+      "left": [
+        2,
+        5
+      ],
+      "right": [
+        2,
+        5
+      ]
+    },
+    "mirrorRight": true,
+    "optionalMirrorVerticalAlternateSteps": true,
+    "framePivots": [
+      {
+        "x": 128,
+        "y": 251
+      },
+      {
+        "x": 128,
+        "y": 252
+      },
+      {
+        "x": 128,
+        "y": 250
+      },
+      {
+        "x": 128,
+        "y": 256
+      },
+      {
+        "x": 128,
+        "y": 251
+      },
+      {
+        "x": 128,
+        "y": 248
+      }
+    ],
+    "contentRects": [
+      {
+        "x": 32,
+        "y": 0,
+        "width": 184,
+        "height": 253
+      },
+      {
+        "x": 33,
+        "y": 1,
+        "width": 183,
+        "height": 252
+      },
+      {
+        "x": 54,
+        "y": 22,
+        "width": 159,
+        "height": 228
+      },
+      {
+        "x": 36,
+        "y": 6,
+        "width": 184,
+        "height": 250
+      },
+      {
+        "x": 36,
+        "y": 0,
+        "width": 183,
+        "height": 252
+      },
+      {
+        "x": 49,
+        "y": 3,
+        "width": 155,
+        "height": 247
+      }
+    ],
+    "visibleContentRects": [
+      {
+        "x": 35,
+        "y": 0,
+        "width": 179,
+        "height": 251
+      },
+      {
+        "x": 35,
+        "y": 7,
+        "width": 179,
+        "height": 245
+      },
+      {
+        "x": 56,
+        "y": 22,
+        "width": 156,
+        "height": 228
+      },
+      {
+        "x": 38,
+        "y": 6,
+        "width": 179,
+        "height": 250
+      },
+      {
+        "x": 38,
+        "y": 0,
+        "width": 179,
+        "height": 251
+      },
+      {
+        "x": 50,
+        "y": 3,
+        "width": 153,
+        "height": 245
+      }
+    ],
+    "nativeRendererCompatible": false,
+    "recommendedRender": {
+      "drawWidth": 44,
+      "drawHeight": 44,
+      "preserveWholeCell": true,
+      "imageSmoothingEnabled": false,
+      "scale": 0.171875,
+      "groundX": "existing NPC tile center / shadow center",
+      "groundY": "existing Renderer.person footline",
+      "destinationX": "groundX - framePivots[frame].x * scale",
+      "destinationY": "groundY - framePivots[frame].y * scale",
+      "sourceRect": "[0, frame*256, 256, 256]",
+      "mirrorRule": "translate to groundX/groundY, scale(-1,1), draw full cell at -pivotX*scale,-pivotY*scale",
+      "sizeNote": "44x44 is a starting recommendation for this game, not a value from the source. Match current player visible height without changing square aspect."
+    }
+  }
+}

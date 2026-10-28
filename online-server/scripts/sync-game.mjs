@@ -7,6 +7,7 @@ const service=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const frontend=path.resolve(process.argv[2]||'..');
 if(!fs.existsSync(path.join(frontend,'coop.js')))throw Error('Indica el directorio del juego: node scripts/sync-game.mjs <directorio>');
 execFileSync(process.execPath,['scripts/build-campaign.cjs'],{cwd:frontend,stdio:'inherit'});
+execFileSync(process.execPath,['scripts/build-runtime.cjs'],{cwd:frontend,stdio:'inherit'});
 const context=vm.createContext({});vm.runInContext(fs.readFileSync(path.join(frontend,'coop-world.js'),'utf8')+';this.world=COOP_WORLD',context);
 fs.writeFileSync(path.join(service,'server/world.json'),JSON.stringify(context.world));
 execFileSync(process.execPath,['scripts/build-personal.mjs'],{cwd:service,stdio:'inherit'});

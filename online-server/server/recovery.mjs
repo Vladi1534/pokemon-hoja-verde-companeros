@@ -8,5 +8,5 @@ export function recoverAtCenter(member){
  member.lastCenter=point;
  member.position={...member.position,...point,fx:point.x,fy:point.y+1,fdir:point.dir,
   notice:'Tu equipo se recuperó en el último Centro Pokémon.'};
- delete member.spotted;
+ delete member.spotted;delete member.motion;
 }

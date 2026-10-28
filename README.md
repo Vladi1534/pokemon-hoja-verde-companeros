@@ -1,4 +1,4 @@
-# Pokémon Hoja Verde · Compañeros 2.4.1
+# Pokémon Hoja Verde · Compañeros 2.5.0
 
 Aventura fan de Kanto para navegador, con tu líder siguiéndote y una partida personal que puedes abrir a amigos. Los mapas y diálogos son una adaptación propia, todavía no una reproducción íntegra de Verde Hoja.
 
@@ -17,6 +17,15 @@ Hasta cuatro entrenadores pueden recorrer un mundo. Los encuentros individuales 
 Las medallas y objetos clave pertenecen a cada entrenador. La historia avanza para los participantes que cumplen sus requisitos; un invitado nuevo no recibe automáticamente las medallas del anfitrión. Los árboles cortados pertenecen al mundo y se conservan en la copia local al salir.
 
 ## Cambios de esta versión
+
+- Interfaz móvil de consola portátil: pantalla adaptable, START, SELECT y menús dentro del juego. Controles al costado al girar el teléfono.
+- Recorrido de pasos online para suavizar el movimiento de amigos y sus Pokémon, incluyendo giros.
+- Las decisiones de movimientos y evolución ya no bloquean el inicio de combates; se conservan para resolverlas después.
+- Giovanni, los ocho líderes y el Alto Mando con sprites acordes. Ash en Ruta 1; Jessie, James y Meowth en tres episodios opcionales de historia, con equipos distintos en cooperativo.
+
+Detalle y verificación: [cambios 2.5.0](docs/CAMBIOS-2.5.md).
+
+La versión 2.4.1 incorporó:
 
 - Corregido el bloqueo al recuperarse en un Centro Pokémon: el punto de descanso ya no restaura un contador antiguo de movimiento. Se recuperan también las partidas 2.4 que guardaron ese dato.
 - Ataques y efectos presentados en secuencia, con los PS actualizándose tras cada acción. «Mostrar resultado» permite saltar la presentación; las reglas de velocidad y prioridad siguen a cargo del simulador.
@@ -61,9 +70,9 @@ Consulta [fidelidad y pendientes](docs/FIDELIDAD-FRLG.md), [multijugador](docs/M
 
 ## Desarrollo
 
-`npm test` valida la edición anterior y el motor exacto que se entrega al navegador. `npm run build` genera `dist/index.html`, `personal-engine.js`, avisos legales y `sw.js`. Mantén los archivos juntos si abres la carpeta descargada. GitHub Actions comprueba y publica `dist` en Pages.
+Ejecuta `npm ci`, `npm run build` y `npm test` con Node 24. La compilación genera mapas, sprites embebidos y el motor desde el código fuente con dependencias fijadas. `dist/` contiene `index.html`, `personal-engine.js`, sus avisos legales y `sw.js`; mantén esos archivos juntos para distribuir el juego. Los archivos generados no se versionan. GitHub Actions los reconstruye, comprueba el motor resultante y publica `dist` en Pages.
 
-El código compartido está en `online-server/server/` y el adaptador local en `online-server/browser/local-engine.mjs`. Para reconstruir el motor de navegador: instala las dependencias fijadas de `online-server`, ejecuta allí `node scripts/build-personal.mjs ../personal-engine.js` y vuelve a compilar el cliente. `online-server` incluye pruebas D1 de concurrencia, campaña, transferencia, regalos, aislamiento y paquete Worker.
+El código compartido está en `online-server/server/` y el adaptador local en `online-server/browser/local-engine.mjs`. La compilación raíz actualiza también `online-server/server/world.json` y los archivos de juego de `online-server/public/`, antes de construir el servidor por separado. `online-server` incluye pruebas D1 de concurrencia, campaña, transferencia, regalos, aislamiento y paquete Worker.
 
 ## Créditos
 

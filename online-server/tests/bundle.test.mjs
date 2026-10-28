@@ -14,6 +14,12 @@ try{
  const hostKey='7'.repeat(36),guestKey='6'.repeat(36),profile=newPersonal('Host QA',1),guest=newPersonal('Guest QA',7);
  const hosted=await call({action:'host',key:hostKey,requestId:crypto.randomUUID(),portable:profile},hostKey);assert.match(hosted.invite,/^[A-F0-9]{8}$/);
  const joined=await call({action:'join',key:guestKey,invite:hosted.invite,portable:guest},guestKey);assert.equal(joined.me,guest.trainer.id);assert.equal(joined.trainer.party[0].level,5);
+ const duel=await call({action:'propose',room:hosted.room,requestId:crypto.randomUUID(),kind:'pvp',other:joined.me},hostKey);
+ const battle=await call({action:'respond',room:hosted.room,requestId:crypto.randomUUID(),proposal:duel.proposal.id,accept:true},guestKey);
+ await call({action:'choose',room:hosted.room,requestId:crypto.randomUUID(),battle:battle.battle.id,turn:1,choice:'move 1'},hostKey);
+ const turn=await call({action:'choose',room:hosted.room,requestId:crypto.randomUUID(),battle:battle.battle.id,turn:1,choice:'move 1'},guestKey);
+ assert.equal(turn.battle.turn,2);await call({action:'concede',room:hosted.room,requestId:crypto.randomUUID()},hostKey);
+ console.log('PASS production Worker: two new starters join, consent to PvP, resolve a turn and retain campaign teams');
  const gift=await call({action:'propose',kind:'gift',room:hosted.room,requestId:crypto.randomUUID(),other:joined.me,item:'potion',qty:1},hostKey);
  const accepted=await call({action:'respond',room:hosted.room,requestId:crypto.randomUUID(),proposal:gift.proposal.id,accept:true},guestKey);assert.equal(accepted.trainer.bag.potion,4);
  const left=await call({action:'depart',room:hosted.room,requestId:crypto.randomUUID()},guestKey);assert.equal(left.portable.trainer.bag.potion,4);assert.equal(left.portable.trainer.party[0].uid,guest.trainer.party[0].uid);

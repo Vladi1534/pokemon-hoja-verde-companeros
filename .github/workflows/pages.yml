@@ -21,10 +21,12 @@ jobs:
         with:
           node-version: '24'
           package-manager-cache: false
-      - name: Comprobar el motor
-        run: npm test
+      - name: Instalar dependencias fijadas
+        run: npm ci --no-audit --no-fund
       - name: Construir el juego
         run: npm run build
+      - name: Comprobar el motor que se publica
+        run: npm test
       - name: Preparar Pages
         uses: actions/configure-pages@v5
       - name: Subir el juego compilado

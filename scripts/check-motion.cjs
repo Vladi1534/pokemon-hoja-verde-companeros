@@ -1,0 +1,14 @@
+const assert=require('node:assert/strict'),{receive,sample}=require('../remote-motion.js');
+const p=(x,y,t,dir='right',map='pallet')=>({map,x,y,fx:x-1,fy:y,dir,fdir:dir,t});
+const member={position:p(3,1,1300,'down'),motion:{seq:1,trail:[p(1,0,1000),p(2,0,1100),p(3,0,1200),p(3,1,1300,'down')]}};
+const make=()=>receive(null,member,0,1300);let r=make();
+assert.deepEqual([sample(r,170).x,sample(r,170).y],[1.5,0]);
+assert.deepEqual([sample(r,270).x,sample(r,270).y],[2.5,0]);
+assert.deepEqual([sample(r,370).x,sample(r,370).y],[3,.5]);
+assert.equal(sample(r,370).dir,'down');assert.equal(sample(r,370).moving,true);
+assert.equal(sample(r,700).moving,false);assert.equal(sample(r,700).y,1);
+const a=make(),b=make();for(let t=0;t<360;t+=1000/60)sample(a,t);for(let t=0;t<360;t+=1000/30)sample(b,t);assert.deepEqual(sample(a,360),sample(b,360),'movement cannot depend on refresh rate');
+const last=sample(a,370);receive(a,member,380,1350);const next=sample(a,380);assert(next.y>=last.y,'clock jitter cannot move a walker backward');
+const portal={position:p(10,15,1400,'down','pallet_lab'),motion:{seq:2,trail:[...member.motion.trail,p(10,15,1400,'down','pallet_lab')]}};r=receive(r,portal,500,1400);assert.equal(sample(r,500).map,'pallet_lab');assert.equal(sample(r,500).x,10);
+const old={position:p(4,4,2000)};r=receive(null,old,0,2000);assert.equal(sample(r,0).x,4);r=receive(r,{position:p(5,4,2200)},200,2200);assert(Number.isFinite(sample(r,700).fx));
+console.log('PASS remote movement: buffered steps, corners, follower, stops, frame-rate independence, clock jitter, portals and old-server fallback');

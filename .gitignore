@@ -7,3 +7,15 @@ node_modules/
 Thumbs.db
 .openai/
 *.save.json
+
+# Generated from versioned source and pinned dependencies by npm run build.
+/dist/
+/character-data.js
+/coop-world.js
+/personal-engine.js
+/personal-engine.js.LEGAL.txt
+/online-server/server/world.json
+/online-server/public/play.html
+/online-server/public/personal-engine.js
+/online-server/public/personal-engine.js.LEGAL.txt
+/online-server/public/sw.js

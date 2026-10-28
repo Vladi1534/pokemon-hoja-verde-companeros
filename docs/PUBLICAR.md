@@ -10,16 +10,17 @@ Este paquete contiene el juego actual y un flujo de publicación listo para GitH
 4. Abrir **Actions → Publicar juego en GitHub Pages → Run workflow**, si el primer intento ocurrió antes de habilitar Pages.
 5. Esperar a que los trabajos `build` y `deploy` terminen correctamente. La URL confirmada aparece en el entorno `github-pages` y en **Settings → Pages → Visit site**.
 
-El flujo ejecuta las comprobaciones del motor, genera `dist/index.html` y publica únicamente `dist`. Cada cambio posterior en `main` repite el proceso. No requiere instalar paquetes npm ni configurar claves privadas para el juego individual.
+El flujo instala las dependencias fijadas, genera el motor, los mapas y `dist/index.html`, ejecuta las comprobaciones y publica únicamente `dist`. Cada cambio posterior en `main` repite el proceso. Las personas que juegan no necesitan instalar paquetes ni configurar claves privadas.
 
 ## Comprobación local
 
 ```bash
-node validate.cjs
-node build.cjs
+npm ci
+npm run build
+npm test
 ```
 
-Abrir `dist/index.html` en un navegador. El HTML es independiente y también funciona sin conexión.
+Sirve `dist/` con un servidor HTTP local y abre su URL en un navegador. El HTML necesita `personal-engine.js` a su lado. La versión HTTPS permite jugar sin internet después de cargarla y ver «Disponible sin conexión».
 
 ## Conservar una partida anterior
 
@@ -28,7 +29,7 @@ El guardado pertenece al navegador y a la dirección desde la que se abre el jue
 1. Abrir la versión anterior y exportar la partida JSON desde los ajustes.
 2. Abrir la nueva URL e importar ese JSON.
 
-El código del juego no contiene partidas personales. Publicar la web permite compartir el enlace, pero todavía no permite que varios jugadores compartan una sesión. La propuesta para esa ampliación está en [MULTIPLAYER.md](MULTIPLAYER.md).
+El código del juego no contiene partidas personales. La opción «Abrir a amigos» conecta con el servicio online publicado; el guardado personal se conserva en el navegador. El funcionamiento y los límites están en [MULTIPLAYER.md](MULTIPLAYER.md).
 
 ## Documentación oficial
 

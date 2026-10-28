@@ -51,6 +51,7 @@ applyTownDesign(MAPS);
 this.result={maps:MAPS,spawn:{map:'pallet',x:21,y:14},gyms:GYMS,league:LEAGUE};
 `,c);
 const world=JSON.parse(JSON.stringify(c.result));
+require('./campaign-characters.cjs')(world);
 const encounters=JSON.parse(fs.readFileSync(path.join(root,'campaign-encounters.json'),'utf8'));
 // Intentional early-game variety, kept separate from the imported FRLG tables.
 const encounterOverrides=JSON.parse(fs.readFileSync(path.join(root,'campaign-encounter-overrides.json'),'utf8'));

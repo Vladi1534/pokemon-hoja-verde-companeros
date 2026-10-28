@@ -1,4 +1,4 @@
-# Kanto Compañeros · motor compartido y servicio online 2.4.1
+# Kanto Compañeros · motor compartido y servicio online 2.5.0
 
 Los módulos de `server/` se ejecutan en Cloudflare Workers con D1 y en navegador con `browser/local-engine.mjs`. El bundle `public/personal-engine.js` permite jugar solo sin peticiones al servidor. `/play.html` y GitHub Pages son el mismo cliente.
 
@@ -8,7 +8,7 @@ Los módulos de `server/` se ejecutan en Cloudflare Workers con D1 y en navegado
 
 Node 24 y pnpm según `package.json`; `pnpm install --frozen-lockfile`. `pnpm test` ejecuta las pruebas de criaturas, D1, migración, concurrencia, historia y partida portable. `pnpm build` y `pnpm test:bundle` validan el paquete Worker con workerd.
 
-`node scripts/sync-game.mjs <directorio-del-juego>` sincroniza geometría, recompila el motor del navegador y copia el cliente y su service worker. `node scripts/build-personal.mjs [salida.js]` reconstruye sólo el bundle con el esbuild de Vite instalado.
+Desde la raíz del repositorio, `npm ci && npm run build` genera la geometría y el motor compartido, prepara los sprites y copia el cliente y su service worker a `online-server/public/`. Hazlo antes de compilar este servidor en un checkout nuevo. `node scripts/build-personal.mjs [salida.js]` reconstruye sólo el bundle con el esbuild de Vite instalado.
 
 El binding D1 es `DB`; migraciones en `drizzle/`. Conserva `build.rolldownOptions.output.keepNames = true`: el simulador serializa referencias por nombre de clase.
 

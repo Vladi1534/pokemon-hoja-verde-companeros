@@ -1,0 +1,1051 @@
+{
+  "schemaVersion": 2,
+  "leaders": [
+    {
+      "key": "giovanni",
+      "path": "giovanni.png",
+      "url": "https://raw.githubusercontent.com/rh-hideout/pokeemerald-expansion/f4dc700a130330fd2f9325a17bbb1e2d91dbf091/graphics/object_events/pics/people/giovanni.png",
+      "revision": "f4dc700a130330fd2f9325a17bbb1e2d91dbf091",
+      "sha256": "fa7cc4b067c0dc5271af3832dcb2353edeb8ed51b0a2b279de462265a1ec50d2",
+      "width": 144,
+      "height": 32,
+      "mode": "P",
+      "transparency": 0,
+      "frameWidth": 16,
+      "frameHeight": 32,
+      "layout": "horizontal",
+      "standing": {
+        "down": 0,
+        "up": 1,
+        "left": 2,
+        "right": "mirror-left"
+      },
+      "walking": {
+        "down": [
+          3,
+          4
+        ],
+        "up": [
+          5,
+          6
+        ],
+        "left": [
+          7,
+          8
+        ]
+      },
+      "attribution": "Pokémon original artwork: Nintendo / Game Freak / Creatures. Extracted resources maintained by pret / rh-hideout contributors. Retains upstream credits.",
+      "frameCount": 9,
+      "contentRects": [
+        {
+          "x": 1,
+          "y": 11,
+          "width": 14,
+          "height": 20
+        },
+        {
+          "x": 1,
+          "y": 11,
+          "width": 14,
+          "height": 20
+        },
+        {
+          "x": 2,
+          "y": 11,
+          "width": 12,
+          "height": 20
+        },
+        {
+          "x": 0,
+          "y": 12,
+          "width": 15,
+          "height": 20
+        },
+        {
+          "x": 1,
+          "y": 12,
+          "width": 15,
+          "height": 20
+        },
+        {
+          "x": 1,
+          "y": 12,
+          "width": 14,
+          "height": 20
+        },
+        {
+          "x": 1,
+          "y": 12,
+          "width": 14,
+          "height": 20
+        },
+        {
+          "x": 2,
+          "y": 12,
+          "width": 12,
+          "height": 19
+        },
+        {
+          "x": 2,
+          "y": 12,
+          "width": 12,
+          "height": 19
+        }
+      ],
+      "contentRectConvention": "local to frame, alpha >=1; original PNG unchanged"
+    },
+    {
+      "key": "surge",
+      "path": "lt_surge.png",
+      "url": "https://raw.githubusercontent.com/rh-hideout/pokeemerald-expansion/f4dc700a130330fd2f9325a17bbb1e2d91dbf091/graphics/object_events/pics/people/lt_surge.png",
+      "revision": "f4dc700a130330fd2f9325a17bbb1e2d91dbf091",
+      "sha256": "84a863136b514b01ed6bba2ca418392ebdd2ec1b052d23cb50967cd73ff28573",
+      "width": 48,
+      "height": 32,
+      "mode": "P",
+      "transparency": 0,
+      "frameWidth": 16,
+      "frameHeight": 32,
+      "layout": "horizontal",
+      "standing": {
+        "down": 0,
+        "up": 1,
+        "left": 2,
+        "right": "mirror-left"
+      },
+      "walking": null,
+      "attribution": "Pokémon original artwork: Nintendo / Game Freak / Creatures. Extracted resources maintained by pret / rh-hideout contributors. Retains upstream credits.",
+      "frameCount": 3,
+      "contentRects": [
+        {
+          "x": 1,
+          "y": 11,
+          "width": 14,
+          "height": 20
+        },
+        {
+          "x": 1,
+          "y": 11,
+          "width": 14,
+          "height": 20
+        },
+        {
+          "x": 1,
+          "y": 11,
+          "width": 13,
+          "height": 20
+        }
+      ],
+      "contentRectConvention": "local to frame, alpha >=1; original PNG unchanged"
+    },
+    {
+      "key": "erika",
+      "path": "erika.png",
+      "url": "https://raw.githubusercontent.com/rh-hideout/pokeemerald-expansion/f4dc700a130330fd2f9325a17bbb1e2d91dbf091/graphics/object_events/pics/people/erika.png",
+      "revision": "f4dc700a130330fd2f9325a17bbb1e2d91dbf091",
+      "sha256": "593c9a80d241f5eff8f495406b57cacb587b6f1a646ca8a332678e2e4df51744",
+      "width": 48,
+      "height": 32,
+      "mode": "P",
+      "transparency": 0,
+      "frameWidth": 16,
+      "frameHeight": 32,
+      "layout": "horizontal",
+      "standing": {
+        "down": 0,
+        "up": 1,
+        "left": 2,
+        "right": "mirror-left"
+      },
+      "walking": null,
+      "attribution": "Pokémon original artwork: Nintendo / Game Freak / Creatures. Extracted resources maintained by pret / rh-hideout contributors. Retains upstream credits.",
+      "frameCount": 3,
+      "contentRects": [
+        {
+          "x": 2,
+          "y": 12,
+          "width": 12,
+          "height": 19
+        },
+        {
+          "x": 2,
+          "y": 12,
+          "width": 12,
+          "height": 19
+        },
+        {
+          "x": 2,
+          "y": 12,
+          "width": 12,
+          "height": 19
+        }
+      ],
+      "contentRectConvention": "local to frame, alpha >=1; original PNG unchanged"
+    },
+    {
+      "key": "koga",
+      "path": "koga.png",
+      "url": "https://raw.githubusercontent.com/rh-hideout/pokeemerald-expansion/f4dc700a130330fd2f9325a17bbb1e2d91dbf091/graphics/object_events/pics/people/koga.png",
+      "revision": "f4dc700a130330fd2f9325a17bbb1e2d91dbf091",
+      "sha256": "6b75213fa8df086d93c253088b820df0df1931e251d79591013c2757b9e542d9",
+      "width": 48,
+      "height": 32,
+      "mode": "P",
+      "transparency": 0,
+      "frameWidth": 16,
+      "frameHeight": 32,
+      "layout": "horizontal",
+      "standing": {
+        "down": 0,
+        "up": 1,
+        "left": 2,
+        "right": "mirror-left"
+      },
+      "walking": null,
+      "attribution": "Pokémon original artwork: Nintendo / Game Freak / Creatures. Extracted resources maintained by pret / rh-hideout contributors. Retains upstream credits.",
+      "frameCount": 3,
+      "contentRects": [
+        {
+          "x": 1,
+          "y": 11,
+          "width": 14,
+          "height": 20
+        },
+        {
+          "x": 1,
+          "y": 11,
+          "width": 14,
+          "height": 20
+        },
+        {
+          "x": 1,
+          "y": 11,
+          "width": 14,
+          "height": 20
+        }
+      ],
+      "contentRectConvention": "local to frame, alpha >=1; original PNG unchanged"
+    },
+    {
+      "key": "sabrina",
+      "path": "sabrina.png",
+      "url": "https://raw.githubusercontent.com/rh-hideout/pokeemerald-expansion/f4dc700a130330fd2f9325a17bbb1e2d91dbf091/graphics/object_events/pics/people/sabrina.png",
+      "revision": "f4dc700a130330fd2f9325a17bbb1e2d91dbf091",
+      "sha256": "8a4c54fa32b572647b1098c85b597d327ca4c578ace20221dc8981a786665fbb",
+      "width": 48,
+      "height": 32,
+      "mode": "P",
+      "transparency": 0,
+      "frameWidth": 16,
+      "frameHeight": 32,
+      "layout": "horizontal",
+      "standing": {
+        "down": 0,
+        "up": 1,
+        "left": 2,
+        "right": "mirror-left"
+      },
+      "walking": null,
+      "attribution": "Pokémon original artwork: Nintendo / Game Freak / Creatures. Extracted resources maintained by pret / rh-hideout contributors. Retains upstream credits.",
+      "frameCount": 3,
+      "contentRects": [
+        {
+          "x": 1,
+          "y": 12,
+          "width": 14,
+          "height": 19
+        },
+        {
+          "x": 1,
+          "y": 12,
+          "width": 14,
+          "height": 19
+        },
+        {
+          "x": 2,
+          "y": 12,
+          "width": 12,
+          "height": 19
+        }
+      ],
+      "contentRectConvention": "local to frame, alpha >=1; original PNG unchanged"
+    },
+    {
+      "key": "blaine",
+      "path": "blaine.png",
+      "url": "https://raw.githubusercontent.com/rh-hideout/pokeemerald-expansion/f4dc700a130330fd2f9325a17bbb1e2d91dbf091/graphics/object_events/pics/people/blaine.png",
+      "revision": "f4dc700a130330fd2f9325a17bbb1e2d91dbf091",
+      "sha256": "65acf68645ad1d3b6256fd97e6a73e63042f80eddb9d9571c0bfd2cef61a163a",
+      "width": 48,
+      "height": 32,
+      "mode": "P",
+      "transparency": 0,
+      "frameWidth": 16,
+      "frameHeight": 32,
+      "layout": "horizontal",
+      "standing": {
+        "down": 0,
+        "up": 1,
+        "left": 2,
+        "right": "mirror-left"
+      },
+      "walking": null,
+      "attribution": "Pokémon original artwork: Nintendo / Game Freak / Creatures. Extracted resources maintained by pret / rh-hideout contributors. Retains upstream credits.",
+      "frameCount": 3,
+      "contentRects": [
+        {
+          "x": 1,
+          "y": 11,
+          "width": 14,
+          "height": 20
+        },
+        {
+          "x": 1,
+          "y": 11,
+          "width": 14,
+          "height": 20
+        },
+        {
+          "x": 2,
+          "y": 11,
+          "width": 12,
+          "height": 20
+        }
+      ],
+      "contentRectConvention": "local to frame, alpha >=1; original PNG unchanged"
+    },
+    {
+      "key": "lorelei",
+      "path": "lorelei.png",
+      "url": "https://raw.githubusercontent.com/rh-hideout/pokeemerald-expansion/f4dc700a130330fd2f9325a17bbb1e2d91dbf091/graphics/object_events/pics/people/lorelei.png",
+      "revision": "f4dc700a130330fd2f9325a17bbb1e2d91dbf091",
+      "sha256": "4f2d6bec56c2ae56e894a264fa10bd45e0279681fd7945714088e699dd40b805",
+      "width": 144,
+      "height": 32,
+      "mode": "P",
+      "transparency": 0,
+      "frameWidth": 16,
+      "frameHeight": 32,
+      "layout": "horizontal",
+      "standing": {
+        "down": 0,
+        "up": 1,
+        "left": 2,
+        "right": "mirror-left"
+      },
+      "walking": {
+        "down": [
+          3,
+          4
+        ],
+        "up": [
+          5,
+          6
+        ],
+        "left": [
+          7,
+          8
+        ]
+      },
+      "attribution": "Pokémon original artwork: Nintendo / Game Freak / Creatures. Extracted resources maintained by pret / rh-hideout contributors. Retains upstream credits.",
+      "frameCount": 9,
+      "contentRects": [
+        {
+          "x": 1,
+          "y": 11,
+          "width": 14,
+          "height": 20
+        },
+        {
+          "x": 1,
+          "y": 11,
+          "width": 14,
+          "height": 20
+        },
+        {
+          "x": 1,
+          "y": 11,
+          "width": 15,
+          "height": 20
+        },
+        {
+          "x": 1,
+          "y": 12,
+          "width": 14,
+          "height": 20
+        },
+        {
+          "x": 1,
+          "y": 12,
+          "width": 14,
+          "height": 20
+        },
+        {
+          "x": 1,
+          "y": 12,
+          "width": 14,
+          "height": 20
+        },
+        {
+          "x": 1,
+          "y": 12,
+          "width": 14,
+          "height": 20
+        },
+        {
+          "x": 1,
+          "y": 12,
+          "width": 15,
+          "height": 19
+        },
+        {
+          "x": 1,
+          "y": 12,
+          "width": 15,
+          "height": 19
+        }
+      ],
+      "contentRectConvention": "local to frame, alpha >=1; original PNG unchanged"
+    },
+    {
+      "key": "bruno",
+      "path": "bruno.png",
+      "url": "https://raw.githubusercontent.com/rh-hideout/pokeemerald-expansion/f4dc700a130330fd2f9325a17bbb1e2d91dbf091/graphics/object_events/pics/people/bruno.png",
+      "revision": "f4dc700a130330fd2f9325a17bbb1e2d91dbf091",
+      "sha256": "f85c6faf9f73bcc23cf9dca4fef6fa1f380b9b21ad7d73ee79666c939bf7253b",
+      "width": 48,
+      "height": 32,
+      "mode": "P",
+      "transparency": 0,
+      "frameWidth": 16,
+      "frameHeight": 32,
+      "layout": "horizontal",
+      "standing": {
+        "down": 0,
+        "up": 1,
+        "left": 2,
+        "right": "mirror-left"
+      },
+      "walking": null,
+      "attribution": "Pokémon original artwork: Nintendo / Game Freak / Creatures. Extracted resources maintained by pret / rh-hideout contributors. Retains upstream credits.",
+      "frameCount": 3,
+      "contentRects": [
+        {
+          "x": 1,
+          "y": 11,
+          "width": 14,
+          "height": 20
+        },
+        {
+          "x": 1,
+          "y": 11,
+          "width": 14,
+          "height": 20
+        },
+        {
+          "x": 1,
+          "y": 11,
+          "width": 14,
+          "height": 20
+        }
+      ],
+      "contentRectConvention": "local to frame, alpha >=1; original PNG unchanged"
+    },
+    {
+      "key": "agatha",
+      "path": "agatha.png",
+      "url": "https://raw.githubusercontent.com/rh-hideout/pokeemerald-expansion/f4dc700a130330fd2f9325a17bbb1e2d91dbf091/graphics/object_events/pics/people/agatha.png",
+      "revision": "f4dc700a130330fd2f9325a17bbb1e2d91dbf091",
+      "sha256": "9b5e8d2fa49492989c28bd5582188f1bbc0d615a3caa8949aa388c17ec7e59d2",
+      "width": 48,
+      "height": 32,
+      "mode": "P",
+      "transparency": 0,
+      "frameWidth": 16,
+      "frameHeight": 32,
+      "layout": "horizontal",
+      "standing": {
+        "down": 0,
+        "up": 1,
+        "left": 2,
+        "right": "mirror-left"
+      },
+      "walking": null,
+      "attribution": "Pokémon original artwork: Nintendo / Game Freak / Creatures. Extracted resources maintained by pret / rh-hideout contributors. Retains upstream credits.",
+      "frameCount": 3,
+      "contentRects": [
+        {
+          "x": 1,
+          "y": 12,
+          "width": 14,
+          "height": 19
+        },
+        {
+          "x": 1,
+          "y": 12,
+          "width": 14,
+          "height": 19
+        },
+        {
+          "x": 2,
+          "y": 12,
+          "width": 13,
+          "height": 19
+        }
+      ],
+      "contentRectConvention": "local to frame, alpha >=1; original PNG unchanged"
+    },
+    {
+      "key": "lance",
+      "path": "lance.png",
+      "url": "https://raw.githubusercontent.com/rh-hideout/pokeemerald-expansion/f4dc700a130330fd2f9325a17bbb1e2d91dbf091/graphics/object_events/pics/people/lance.png",
+      "revision": "f4dc700a130330fd2f9325a17bbb1e2d91dbf091",
+      "sha256": "a47a03b01998e1bb0e35f0cf380cd5ba813d40c8782020b760d9ca221be00da2",
+      "width": 48,
+      "height": 32,
+      "mode": "P",
+      "transparency": 0,
+      "frameWidth": 16,
+      "frameHeight": 32,
+      "layout": "horizontal",
+      "standing": {
+        "down": 0,
+        "up": 1,
+        "left": 2,
+        "right": "mirror-left"
+      },
+      "walking": null,
+      "attribution": "Pokémon original artwork: Nintendo / Game Freak / Creatures. Extracted resources maintained by pret / rh-hideout contributors. Retains upstream credits.",
+      "frameCount": 3,
+      "contentRects": [
+        {
+          "x": 0,
+          "y": 11,
+          "width": 16,
+          "height": 20
+        },
+        {
+          "x": 1,
+          "y": 11,
+          "width": 14,
+          "height": 20
+        },
+        {
+          "x": 2,
+          "y": 11,
+          "width": 12,
+          "height": 20
+        }
+      ],
+      "contentRectConvention": "local to frame, alpha >=1; original PNG unchanged"
+    }
+  ],
+  "animeOptional": [
+    {
+      "key": "ash",
+      "path": "ash.png",
+      "url": "https://raw.githubusercontent.com/LucianoNeo/gen1recomp-mods/768f60d9d0f097b9cc65e78099574c296a3f63d2/hgss_sprites/overrides/sprites/ash.png",
+      "revision": "768f60d9d0f097b9cc65e78099574c296a3f63d2",
+      "sha256": "5cc9a891dfbb26a7ab007d22deb224a41cade3d464afa24de80b590cbb46b609",
+      "width": 256,
+      "height": 1536,
+      "mode": "RGBA",
+      "transparency": null,
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "layout": "vertical",
+      "standing": {
+        "down": 0,
+        "up": 1,
+        "left": 2,
+        "right": "mirror-left"
+      },
+      "walking": {
+        "down": [
+          0,
+          3
+        ],
+        "up": [
+          1,
+          4
+        ],
+        "left": [
+          2,
+          5
+        ]
+      },
+      "attribution": "LucianoNeo/gen1recomp-mods HGSS Visual Overhaul community adaptation. Upstream README credits PKMNTrainerRick for an HGSS/DPP Ash pack used for fishing sprites; individual authorship of this current HD walking sheet is not established here. Pokemon characters: Nintendo / Game Freak / Creatures.",
+      "integrationNote": "Metadata adaptation required. Draw full square frame with uniform scaling and per-frame foot pivot, no crop rewriting or deformation. High-density chibi fan adaptation, not official anime graphics or native GBA pixel art.",
+      "frameCount": 6,
+      "contentRects": [
+        {
+          "x": 33,
+          "y": 27,
+          "width": 180,
+          "height": 222
+        },
+        {
+          "x": 31,
+          "y": 31,
+          "width": 183,
+          "height": 222
+        },
+        {
+          "x": 43,
+          "y": 14,
+          "width": 209,
+          "height": 234
+        },
+        {
+          "x": 31,
+          "y": 15,
+          "width": 185,
+          "height": 234
+        },
+        {
+          "x": 35,
+          "y": 12,
+          "width": 179,
+          "height": 240
+        },
+        {
+          "x": 32,
+          "y": 12,
+          "width": 174,
+          "height": 231
+        }
+      ],
+      "visibleContentRects": [
+        {
+          "x": 39,
+          "y": 27,
+          "width": 172,
+          "height": 218
+        },
+        {
+          "x": 39,
+          "y": 35,
+          "width": 174,
+          "height": 216
+        },
+        {
+          "x": 45,
+          "y": 17,
+          "width": 166,
+          "height": 229
+        },
+        {
+          "x": 39,
+          "y": 19,
+          "width": 174,
+          "height": 230
+        },
+        {
+          "x": 39,
+          "y": 20,
+          "width": 174,
+          "height": 230
+        },
+        {
+          "x": 33,
+          "y": 15,
+          "width": 172,
+          "height": 227
+        }
+      ],
+      "contentRectConvention": "local to frame, rectangles x/y/width/height; contentRects alpha>=1; visibleContentRects alpha>=3 matches upstream alpha>0.01; original PNG unchanged",
+      "framePivots": [
+        {
+          "x": 128,
+          "y": 245
+        },
+        {
+          "x": 128,
+          "y": 251
+        },
+        {
+          "x": 128,
+          "y": 246
+        },
+        {
+          "x": 128,
+          "y": 249
+        },
+        {
+          "x": 128,
+          "y": 250
+        },
+        {
+          "x": 128,
+          "y": 242
+        }
+      ],
+      "sourceEvidence": {
+        "url": "https://github.com/LucianoNeo/gen1recomp-mods/blob/768f60d9d0f097b9cc65e78099574c296a3f63d2/hgss_sprites/main.lua",
+        "localReference": "source-layout-reference.lua",
+        "frameDimensionsLines": [
+          501,
+          509
+        ],
+        "directionMappingLines": [
+          5113,
+          5114
+        ],
+        "frameSelectionAndGroundingLines": [
+          5350,
+          5420
+        ],
+        "visibleBottomExtractionLines": [
+          5253,
+          5286
+        ],
+        "sourceWorldTileSize": 16,
+        "sourceDisplaySize": 28,
+        "sourceGroundAnchor": {
+          "xOffset": 8,
+          "yOffset": 12
+        },
+        "sourceAnchorRule": "fixed cell-center X=128; per-frame last row with alpha >0.01 plus one for Y"
+      }
+    },
+    {
+      "key": "jessie",
+      "path": "jessie.png",
+      "url": "https://raw.githubusercontent.com/LucianoNeo/gen1recomp-mods/768f60d9d0f097b9cc65e78099574c296a3f63d2/hgss_sprites/overrides/sprites/jessie.png",
+      "revision": "768f60d9d0f097b9cc65e78099574c296a3f63d2",
+      "sha256": "0571a2bfa5b41a8d8d5c7a7ef62f3900f11954f73075ee461d22dd3dd37b94b8",
+      "width": 256,
+      "height": 1536,
+      "mode": "RGBA",
+      "transparency": null,
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "layout": "vertical",
+      "standing": {
+        "down": 0,
+        "up": 1,
+        "left": 2,
+        "right": "mirror-left"
+      },
+      "walking": {
+        "down": [
+          0,
+          3
+        ],
+        "up": [
+          1,
+          4
+        ],
+        "left": [
+          2,
+          5
+        ]
+      },
+      "attribution": "LucianoNeo/gen1recomp-mods HGSS Visual Overhaul community adaptation. No separate named author found for this current overworld sheet. Pokemon characters: Nintendo / Game Freak / Creatures. Not official anime artwork.",
+      "integrationNote": "Metadata adaptation required. Draw full square frame with uniform scaling and per-frame foot pivot, no crop rewriting or deformation. High-density chibi fan adaptation, not official anime graphics or native GBA pixel art.",
+      "frameCount": 6,
+      "contentRects": [
+        {
+          "x": 35,
+          "y": 0,
+          "width": 185,
+          "height": 250
+        },
+        {
+          "x": 37,
+          "y": 10,
+          "width": 175,
+          "height": 243
+        },
+        {
+          "x": 47,
+          "y": 8,
+          "width": 165,
+          "height": 220
+        },
+        {
+          "x": 35,
+          "y": 0,
+          "width": 185,
+          "height": 250
+        },
+        {
+          "x": 40,
+          "y": 17,
+          "width": 175,
+          "height": 239
+        },
+        {
+          "x": 50,
+          "y": 0,
+          "width": 161,
+          "height": 252
+        }
+      ],
+      "visibleContentRects": [
+        {
+          "x": 37,
+          "y": 2,
+          "width": 182,
+          "height": 247
+        },
+        {
+          "x": 39,
+          "y": 10,
+          "width": 171,
+          "height": 242
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "width": 160,
+          "height": 218
+        },
+        {
+          "x": 36,
+          "y": 2,
+          "width": 182,
+          "height": 247
+        },
+        {
+          "x": 42,
+          "y": 17,
+          "width": 171,
+          "height": 239
+        },
+        {
+          "x": 52,
+          "y": 0,
+          "width": 157,
+          "height": 252
+        }
+      ],
+      "contentRectConvention": "local to frame, rectangles x/y/width/height; contentRects alpha>=1; visibleContentRects alpha>=3 matches upstream alpha>0.01; original PNG unchanged",
+      "framePivots": [
+        {
+          "x": 128,
+          "y": 249
+        },
+        {
+          "x": 128,
+          "y": 252
+        },
+        {
+          "x": 128,
+          "y": 228
+        },
+        {
+          "x": 128,
+          "y": 249
+        },
+        {
+          "x": 128,
+          "y": 256
+        },
+        {
+          "x": 128,
+          "y": 252
+        }
+      ],
+      "sourceEvidence": {
+        "url": "https://github.com/LucianoNeo/gen1recomp-mods/blob/768f60d9d0f097b9cc65e78099574c296a3f63d2/hgss_sprites/main.lua",
+        "localReference": "source-layout-reference.lua",
+        "frameDimensionsLines": [
+          501,
+          509
+        ],
+        "directionMappingLines": [
+          5113,
+          5114
+        ],
+        "frameSelectionAndGroundingLines": [
+          5350,
+          5420
+        ],
+        "visibleBottomExtractionLines": [
+          5253,
+          5286
+        ],
+        "sourceWorldTileSize": 16,
+        "sourceDisplaySize": 32,
+        "sourceGroundAnchor": {
+          "xOffset": 8,
+          "yOffset": 12
+        },
+        "sourceAnchorRule": "fixed cell-center X=128; per-frame last row with alpha >0.01 plus one for Y"
+      }
+    },
+    {
+      "key": "james",
+      "path": "james.png",
+      "url": "https://raw.githubusercontent.com/LucianoNeo/gen1recomp-mods/768f60d9d0f097b9cc65e78099574c296a3f63d2/hgss_sprites/overrides/sprites/james.png",
+      "revision": "768f60d9d0f097b9cc65e78099574c296a3f63d2",
+      "sha256": "53be4a9267d158df2d4e9f21aedafcc2c477b14f834d694cc570e430de122245",
+      "width": 256,
+      "height": 1536,
+      "mode": "RGBA",
+      "transparency": null,
+      "frameWidth": 256,
+      "frameHeight": 256,
+      "layout": "vertical",
+      "standing": {
+        "down": 0,
+        "up": 1,
+        "left": 2,
+        "right": "mirror-left"
+      },
+      "walking": {
+        "down": [
+          0,
+          3
+        ],
+        "up": [
+          1,
+          4
+        ],
+        "left": [
+          2,
+          5
+        ]
+      },
+      "attribution": "LucianoNeo/gen1recomp-mods HGSS Visual Overhaul community adaptation. No separate named author found for this current overworld sheet. Pokemon characters: Nintendo / Game Freak / Creatures. Not official anime artwork.",
+      "integrationNote": "Metadata adaptation required. Draw full square frame with uniform scaling and per-frame foot pivot, no crop rewriting or deformation. High-density chibi fan adaptation, not official anime graphics or native GBA pixel art.",
+      "frameCount": 6,
+      "contentRects": [
+        {
+          "x": 32,
+          "y": 0,
+          "width": 184,
+          "height": 253
+        },
+        {
+          "x": 33,
+          "y": 1,
+          "width": 183,
+          "height": 252
+        },
+        {
+          "x": 54,
+          "y": 22,
+          "width": 159,
+          "height": 228
+        },
+        {
+          "x": 36,
+          "y": 6,
+          "width": 184,
+          "height": 250
+        },
+        {
+          "x": 36,
+          "y": 0,
+          "width": 183,
+          "height": 252
+        },
+        {
+          "x": 49,
+          "y": 3,
+          "width": 155,
+          "height": 247
+        }
+      ],
+      "visibleContentRects": [
+        {
+          "x": 35,
+          "y": 0,
+          "width": 179,
+          "height": 251
+        },
+        {
+          "x": 35,
+          "y": 7,
+          "width": 179,
+          "height": 245
+        },
+        {
+          "x": 56,
+          "y": 22,
+          "width": 156,
+          "height": 228
+        },
+        {
+          "x": 38,
+          "y": 6,
+          "width": 179,
+          "height": 250
+        },
+        {
+          "x": 38,
+          "y": 0,
+          "width": 179,
+          "height": 251
+        },
+        {
+          "x": 50,
+          "y": 3,
+          "width": 153,
+          "height": 245
+        }
+      ],
+      "contentRectConvention": "local to frame, rectangles x/y/width/height; contentRects alpha>=1; visibleContentRects alpha>=3 matches upstream alpha>0.01; original PNG unchanged",
+      "framePivots": [
+        {
+          "x": 128,
+          "y": 251
+        },
+        {
+          "x": 128,
+          "y": 252
+        },
+        {
+          "x": 128,
+          "y": 250
+        },
+        {
+          "x": 128,
+          "y": 256
+        },
+        {
+          "x": 128,
+          "y": 251
+        },
+        {
+          "x": 128,
+          "y": 248
+        }
+      ],
+      "sourceEvidence": {
+        "url": "https://github.com/LucianoNeo/gen1recomp-mods/blob/768f60d9d0f097b9cc65e78099574c296a3f63d2/hgss_sprites/main.lua",
+        "localReference": "source-layout-reference.lua",
+        "frameDimensionsLines": [
+          501,
+          509
+        ],
+        "directionMappingLines": [
+          5113,
+          5114
+        ],
+        "frameSelectionAndGroundingLines": [
+          5350,
+          5420
+        ],
+        "visibleBottomExtractionLines": [
+          5253,
+          5286
+        ],
+        "sourceWorldTileSize": 16,
+        "sourceDisplaySize": 32,
+        "sourceGroundAnchor": {
+          "xOffset": 8,
+          "yOffset": 12
+        },
+        "sourceAnchorRule": "fixed cell-center X=128; per-frame last row with alpha >0.01 plus one for Y"
+      }
+    }
+  ],
+  "sourceCredits": [
+    "CREDITS-rhh.md",
+    "ATTRIBUTION.md"
+  ],
+  "rendererMetadata": "renderer-metadata.json"
+}
