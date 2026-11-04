@@ -33,7 +33,7 @@ await test('rotating trainer detection agrees with the timestamp sent by a delay
 await test('old save on a sealed edge migrates once without losing sequence, party or story',()=>{
  const game=new LocalGame(newPersonal('Migration',7)),s=game.snapshot();s.row.state.worldRevision=3;
  const player=s.row.state.members[0];player.position={...player.position,map:'viridian',x:33,y:14,seq:21};player.progress.scope=true;
- const loaded=new LocalGame(null,s);assert.equal(loaded.member.position.seq,21);assert.equal(loaded.member.position.x,world.maps.viridian.arrival.x);assert(loaded.member.progress.scope);assert.deepEqual(loaded.member.party,player.party);assert.equal(loaded.row.state.worldRevision,4);
+ const loaded=new LocalGame(null,s);assert.equal(loaded.member.position.seq,21);assert.equal(loaded.member.position.x,world.maps.viridian.arrival.x);assert(loaded.member.progress.scope);assert.deepEqual(loaded.member.party,player.party);assert.equal(loaded.row.state.worldRevision,5);
  const portable=structuredClone(profile);portable.trainer.position={map:'route4',x:21,y:31};assert.equal(validatePortable(portable).trainer.position.x,world.maps.route4.arrival.x);
 });
 const mf=new Miniflare({modules:true,script:'export default {fetch(){return new Response("ok")}}',compatibilityDate:'2026-05-15',d1Databases:['DB']});

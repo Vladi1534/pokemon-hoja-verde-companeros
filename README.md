@@ -1,4 +1,4 @@
-# Pokémon Hoja Verde · Compañeros 2.6.0
+# Pokémon Hoja Verde · Compañeros 2.7.0
 
 Aventura fan de Kanto para navegador, con tu líder siguiéndote y una partida personal que puedes abrir a amigos. Los mapas y diálogos son una adaptación propia, todavía no una reproducción íntegra de Verde Hoja.
 
@@ -18,12 +18,13 @@ Las medallas y objetos clave pertenecen a cada entrenador. La historia avanza pa
 
 ## Cambios de esta versión
 
-- Interfaz móvil de consola portátil: pantalla adaptable, START, SELECT y menús dentro del juego. Controles al costado al girar el teléfono.
-- Recorrido de pasos online para suavizar el movimiento de amigos y sus Pokémon, incluyendo giros.
-- Las decisiones de movimientos y evolución ya no bloquean el inicio de combates; se conservan para resolverlas después.
-- Giovanni, los ocho líderes y el Alto Mando con sprites acordes. Ash en Ruta 1; Jessie, James y Meowth en tres episodios opcionales de historia, con equipos distintos en cooperativo.
+- Combate clásico con LUCHA, MOCHILA, POKÉMON y HUIDA; PS numéricos, sexo, estado y experiencia.
+- Sprites completos de frente y espalda para las 159 especies disponibles, con composición adaptada a móvil y escritorio.
+- Casas compactas amuebladas, dormitorio accesible, Centros, tiendas y laboratorios diferenciados. Guardados anteriores migrados de forma segura.
+- Selección musical renovada y 35 efectos suaves por familias de ataque. Descarga inicial para utilizar el audio sin conexión.
+- Corrección del bloqueo del Rocket del Puente Pepita, recuperación de detecciones antiguas y pruebas de la campaña offline hasta el campeón.
 
-Detalle y verificación: [cambios 2.6.0](docs/CAMBIOS-2.5.md).
+Detalle y verificación: [cambios 2.7.0](RELEASE-2.7.md).
 
 La versión 2.4.1 incorporó:
 
@@ -52,7 +53,7 @@ La partida solitaria antigua se convierte sin borrar su original. Sus datos de e
 
 ## Mundo y mecánicas
 
-111 mapas e interiores, diario de 24 hitos, atlas y mapa local; campaña adaptada desde Oak hasta Liga y acceso a Isla Quarta. Ciudades con trazados distintos, puerto navegable, seis interiores del S. S. Anne, vecinos con pistas, objetos ocultos y jardines opcionales con Corte.
+112 mapas e interiores, diario de 24 hitos, atlas y mapa local; campaña adaptada desde Oak hasta Liga y acceso a Isla Quarta. Ciudades con trazados distintos, puerto navegable, seis interiores del S. S. Anne, vecinos con pistas, objetos ocultos y jardines opcionales con Corte.
 
 Los entrenadores normales admiten tres victorias por entrenador, con recompensa reducida en las revanchas. Los gimnasios y jefes de historia se completan una vez; la Liga permite tres recorridos. Ayudar en un desafío ya completado no vuelve a conceder sus recompensas.
 

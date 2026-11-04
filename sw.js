@@ -1,4 +1,4 @@
-const CACHE='kanto-personal-2.6.0';
+const CACHE='kanto-personal-2.7.0';
 const ROOT=new URL('./',self.location).href;
 const ENTRY=new URL('play.html',ROOT).href;
 self.addEventListener('install',event=>event.waitUntil((async()=>{
@@ -7,6 +7,15 @@ self.addEventListener('install',event=>event.waitUntil((async()=>{
  // Pages hosts index.html; the online service hosts the same application at play.html.
  const base=await fetch(ROOT,{cache:'reload'});if(base.ok)await cache.put(ROOT,base);
  for(const name of ['index.html','play.html']){const url=new URL(name,ROOT);try{const r=await fetch(url,{cache:'reload'});if(r.ok&&(r.headers.get('content-type')||'').includes('text/html'))await cache.put(url,r);}catch{}}
+ // Download the complete score once, so a first visit to the League also works offline.
+ try{
+  const url=new URL('audio/manifest.json',ROOT),r=await fetch(url,{cache:'reload'});
+  if(r.ok){await cache.put(url,r.clone());const manifest=await r.json();
+   const files=[...new Set([...Object.values(manifest.music),...Object.values(manifest.sfx)].map(a=>'audio/'+a.file))];
+   const next=async()=>{for(let file;(file=files.shift());){const u=new URL(file,ROOT);try{const a=await fetch(u);if(a.ok)await cache.put(u,a);}catch{}}};
+   await Promise.all(Array.from({length:4},next));
+  }
+ }catch{}
  await self.skipWaiting();
 })()));
 self.addEventListener('activate',event=>event.waitUntil((async()=>{for(const key of await caches.keys())if(key.startsWith('kanto-personal-')&&key!==CACHE)await caches.delete(key);await self.clients.claim();})()));

@@ -35,7 +35,7 @@ try{
  console.log('PASS production Worker bundle: create room, D1, start battle, deserialize separate request, advance turn, persist PP');
  const fixture=async fn=>{const row=await db.prepare('SELECT state FROM rooms WHERE id=?').bind(hosted.room).first();const s=JSON.parse(row.state);fn(s);await db.prepare('UPDATE rooms SET state=? WHERE id=?').bind(JSON.stringify(s),hosted.room).run();};
  const command=(action,args={})=>call({action,room:hosted.room,requestId:crypto.randomUUID(),...args},hostKey);
- await fixture(s=>Object.assign(s.members[0].position,{map:'viridian_center',x:10,y:8,seq:20,seen:Date.now()-5000}));
+ await fixture(s=>Object.assign(s.members[0].position,{map:'viridian_center',x:7,y:5,seq:20,seen:Date.now()-5000}));
  await command('quest',{npc:'viridian_center_nurse'});
  await command('sync',{seq:21,steps:['down']});
  await fixture(s=>{const m=s.members[0];m.lastCenter={...m.lastCenter,seq:20,seen:1};m.party[0].hp=1;newBattle(s,{kind:'coop',players:[m.id],encounter:{kind:'wild',name:'Recovery fixture',team:[[18,100]]}},Date.now());});

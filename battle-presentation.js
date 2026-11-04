@@ -22,11 +22,17 @@ var BattleReplay=(()=>{
   const view=copy(previous),out=[];let messages=[];
   view.ended=false;view.result=null;view.rewarded=false;
   if(view.you){view.you.ready=true;view.you.wait=true;}
-  const push=(actor=null,delay=650,sfx=null)=>out.push({view:copy(view),messages:[...messages],actor,delay,sfx});
+  const push=(actor=null,delay=650,sfx=null,target=null)=>out.push({view:copy(view),messages:[...messages],actor,delay,sfx,target});
   for(const line of freshLines(previous,next)){
    const p=line.split('|'),kind=p[1],id=sideOf(p[2]),text=translate(line);
    if(kind==='turn'){view.turn=Number(p[2]);continue;}
-   if(kind==='move'){messages=[text];push(id,760,'energy');continue;}
+   if(kind==='move'){
+    const moveId=String(p[3]).toLowerCase().replace(/[^a-z]/g,'');
+    const move=typeof MOVES!=='undefined'?Object.values(MOVES).find(m=>m.slug?.replaceAll('-','')===moveId||m.english?.toLowerCase().replace(/[^a-z]/g,'')===moveId):null;
+    const type=move?.type?move.type[0].toUpperCase()+move.type.slice(1):'Normal';
+    const sfx=typeof ClassicBattle!=='undefined'?ClassicBattle.family(p[3],type,move?.category):'normal';
+    messages=[text];push(id,760,sfx,sideOf(p[4]));continue;
+   }
    if(['switch','drag','replace'].includes(kind)){
     const side=view.sides.find(s=>s.id===id),target=next.sides.find(s=>s.id===id)?.active[0];
     if(side&&target)side.active=[copy(target)];condition(view,id,p[4]);
@@ -35,7 +41,7 @@ var BattleReplay=(()=>{
    if(kind==='-damage'||kind==='-heal'){
     condition(view,id,p[3]);if(text)messages.push(text);
     if(!messages.length)messages=[kind==='-damage'?'El Pokémon recibe daño.':'El Pokémon recupera PS.'];
-    push(null,540,kind==='-damage'?'hit':'heal');continue;
+    push(null,540,kind==='-damage'?null:'heal');continue;
    }
    if(kind==='faint'){condition(view,id,'0 fnt');messages.push(text);push(null,700,'faint');continue;}
    if(kind==='-status'||kind==='-curestatus'){
@@ -64,7 +70,8 @@ if(typeof Coop!=='undefined')(()=>{
   step.view.revision='animation-'+(++replay.serial);replay.frame=step.view;if(step.sfx&&typeof Audio!=='undefined')Audio.effect(step.sfx);
   render.call(this,step.view,true);
   const el=$('coopBattle');if(!el){this.cancelPlayback();return;}
-  el.classList.add('playing-turn');el.dataset.phase=step.actor?'attack-'+step.actor:'effect';
+  el.classList.add('playing-turn');el.dataset.phase=step.actor?'attack-'+step.actor:'effect';if(step.sfx)el.dataset.effect=step.sfx;
+  if(step.target&&step.target!==step.actor)el.querySelector(`[data-side="${step.target}"]`)?.classList.add('hurt');
   if(step.actor)el.querySelector(`[data-side="${step.actor}"]`)?.classList.add('attacking');
   el.querySelector('.coop-combat-log').innerHTML=step.messages.map(t=>`<span>${esc(t)}</span>`).join('');
   el.querySelector('.coop-command-area').innerHTML='<p class="coop-resolving" role="status">Resolviendo el turno…</p><button id="coopReplaySkip">Mostrar resultado</button>';

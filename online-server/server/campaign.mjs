@@ -81,7 +81,15 @@ export function interact(s,m,p,n,input={}){const f=s.progress,key=n.data?.key;
  default:if(n.role==='coach')return 'Entrena, revisa tus movimientos y lleva un equipo recuperado. También puedes invitar a un compañero para un combate doble.';return 'Revisa el diario para encontrar tu siguiente objetivo.';
  }
 }
-export function encounter(s,m,p,n){const f=s.progress;let team=n.data?.team,name=n.name,flag=n.id,badge=null,kind='trainer';
+// A single eligibility check is used by sight, dialogue and battle creation.
+export function challengeBlock(s,n){
+ if(!n)return 'Ese entrenador ya no está aquí.';
+ for(const key of n.data?.requires||[])if(!done(s,key))return gate(s,key);
+ if(n.id==='route24_recruiter'&&![0,1,2,3,4].every(i=>done(s,'route24_bridge'+i)))return 'Supera primero a los cinco entrenadores del Puente Pepita. Te esperaré aquí.';
+ if(n.id==='silph_3_giovanni'&&!done(s,'silph_2_rival'))return 'Azul te espera en el departamento de desarrollo.';
+ return '';
+}
+export function encounter(s,m,p,n){const reason=challengeBlock(s,n);if(reason)throw Error(reason);const f=s.progress;let team=n.data?.team,name=n.name,flag=n.id,badge=null,kind='trainer';
  for(const key of n.data?.requires||[])if(!done(s,key))throw Error(gate(s,key));
  if(n.role==='practice')return {name:n.name,team:n.data?.team||[[19,7],[10,7]],flag:n.data?.flag||'training',kind:'practice'};
  if(n.role==='gym'){badge=n.data.gym+1;const requirements={3:'circuit',6:'silph',7:'secret_key'};if(requirements[badge]&&!done(s,requirements[badge]))throw Error(gate(s,requirements[badge]));if(badge===3&&!done(s,'cut_use'))throw Error(gate(s,'cut_use'));if(badge===8&&Array.from({length:7},(_,i)=>done(s,'badge'+(i+1))).some(x=>!x))throw Error('Giovanni requiere las otras siete medallas.');team=world.gyms[badge-1].team;flag='badge'+badge;}

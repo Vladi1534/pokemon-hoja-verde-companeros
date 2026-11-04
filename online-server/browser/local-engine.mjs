@@ -1,10 +1,11 @@
+export {challengeBlock} from '../server/campaign.mjs';
 export {previewNavigation,visibleTrainer,trainerFacing} from '../server/navigation.mjs';
 import {pureAction,view,spawn,battleFor} from '../server/service.mjs';
 import {validatePortable,portable,newPersonal,legacyPersonal} from '../server/portable.mjs';
 import {migrateTownPositions} from '../server/exploration.mjs';
 import {recoverAtCenter} from '../server/recovery.mjs';
 export {newPersonal,legacyPersonal,validatePortable};
-export const version='2.6.0';
+export const version='2.7.0';
 // randomUUID is restricted to secure browser contexts; preview still uses cryptographic randomness.
 if(!crypto.randomUUID)crypto.randomUUID=()=>{const b=crypto.getRandomValues(new Uint8Array(16));b[6]=(b[6]&15)|64;b[8]=(b[8]&63)|128;const s=Array.from(b,n=>n.toString(16).padStart(2,'0')).join('');return s.slice(0,8)+'-'+s.slice(8,12)+'-'+s.slice(12,16)+'-'+s.slice(16,20)+'-'+s.slice(20);};
 // The browser and Worker execute the same campaign, encounters and battle simulator.
@@ -17,7 +18,7 @@ export class LocalGame {
    this.row=row;m.departed=false;row.state.open=true;
   }else{
    const value=validatePortable(profile),m=value.trainer;m.position.seen=Date.now()-2000;
-   this.row={id:'local',invite:'',revision:0,state:{schema:2,worldRevision:4,personal:true,hostId:m.id,open:true,sharedGates:value.world.gates,progress:{},members:[m],battle:null,proposal:null,actions:[]}};
+   this.row={id:'local',invite:'',revision:0,state:{schema:2,worldRevision:5,personal:true,hostId:m.id,open:true,sharedGates:value.world.gates,progress:{},members:[m],battle:null,proposal:null,actions:[]}};
   }
  }
  get member(){return this.row.state.members[0]}

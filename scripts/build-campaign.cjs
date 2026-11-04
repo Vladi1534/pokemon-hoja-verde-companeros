@@ -63,6 +63,7 @@ world.maps.viridian.npcs.find(n=>n.id==='viridian_resident').data.lines.push('Al
 world.maps.viridian.portals=world.maps.viridian.portals.filter(p=>p.to!=='reserve');delete world.maps.reserve;
 
 require('./map-polish.cjs')(world);
+require('./interior-design.cjs')(world);
 
 // The online renderer only uses our static geometry; all interactions are server owned.
 fs.writeFileSync(path.join(root,'coop-world.js'),'const COOP_WORLD='+JSON.stringify(world)+';\n');

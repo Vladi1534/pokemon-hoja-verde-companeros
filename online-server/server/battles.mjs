@@ -1,5 +1,5 @@
 import {Battle, Dex} from '@pkmn/sim';
-import {createMon,initializeMember,toSet,heal,stats,gainXP,gainEV,species,move,addMon,catchRoll,items,useItem} from './creatures.mjs';
+import {createMon,initializeMember,toSet,heal,stats,gainXP,gainEV,species,threshold,move,addMon,catchRoll,items,useItem} from './creatures.mjs';
 import {victory,campaignFor,world,encounter} from './campaign.mjs';
 if(!Dex.formats.get('gen3companerosmulti').exists)Dex.formats.extend([
  {name:'[Gen 3] Companeros Multi',mod:'gen3',gameType:'multi',ruleset:['Cancel Mod','Max Team Size = 6','Max Move Count = 4']},
@@ -36,9 +36,14 @@ export function refreshBattle(state,b,now){
   if(!st.temporary){persistTeams(state,b);if(owner){victory(state,st);st.rewarded=true;if(!['wild','ghost'].includes(st.encounter.kind))for(const id of st.rewardOwners||Object.values(st.owners)){const m=state.members.find(m=>m.id===id);m.money+=Math.floor(st.encounter.team.at(-1)[1]*30*(st.encounter.rematch?1/3:1));}}else if(st.encounter.kind==='league')for(const id of Object.values(st.owners))campaignFor(state,state.members.find(m=>m.id===id)).league=0;}
   else if(st.encounter.kind==='practice'&&owner){for(const id of Object.values(st.owners))campaignFor(state,state.members.find(m=>m.id===id)).progress[st.encounter.flag||'training']=true;st.rewarded=true;}
  }
- st.common={id:st.id,kind:st.kind,encounter:st.encounter.kind,title:st.encounter.name,temporary:st.temporary,revision:st.revision,turn:b.turn,ended:b.ended,result:st.result,winner:st.winner,rewarded:st.rewarded,deadline:st.deadline,log:publicEvents(b.log).map(e=>e.line),events:publicEvents(b.log),sides:b.sides.map(s=>({id:s.id,trainer:st.owners[s.id]?state.members.find(m=>m.id===st.owners[s.id]).name:s.name,owner:st.owners[s.id]||null,ready:s.isChoiceDone(),active:s.active.filter(Boolean).map(p=>({id:p.species.num,name:p.name,level:p.level,hp:Math.ceil(100*p.hp/p.maxhp),status:p.status,fainted:p.fainted}))}))};
- st.views={};for(const [side,id]of Object.entries(st.owners)){const s=b.getSide(side),r=s.activeRequest;st.views[id]={side,ready:s.isChoiceDone(),forceSwitch:!!r?.forceSwitch,wait:!!r?.wait,moves:(r?.active?.[0]?.moves||[]).map(m=>({...m,type:b.dex.moves.get(m.id).type})),trapped:!!r?.active?.[0]?.trapped,team:s.pokemon.map(p=>({uid:p.set.campaignUid,id:p.species.num,name:p.name,active:p.isActive,fainted:p.fainted,hp:p.hp,maxHp:p.maxhp,status:p.status,pp:p.moveSlots.map(m=>({id:m.id,pp:m.pp,maxpp:m.maxpp}))}))};}
+ st.common={id:st.id,kind:st.kind,encounter:st.encounter.kind,title:st.encounter.name,temporary:st.temporary,revision:st.revision,turn:b.turn,ended:b.ended,result:st.result,winner:st.winner,rewarded:st.rewarded,deadline:st.deadline,log:publicEvents(b.log).map(e=>e.line),events:publicEvents(b.log),sides:b.sides.map(s=>({id:s.id,trainer:st.owners[s.id]?state.members.find(m=>m.id===st.owners[s.id]).name:s.name,owner:st.owners[s.id]||null,ready:s.isChoiceDone(),active:s.active.filter(Boolean).map(p=>({id:p.species.num,name:p.name,level:p.level,gender:p.gender,hp:Math.ceil(100*p.hp/p.maxhp),status:p.status,fainted:p.fainted}))}))};
+ st.views={};for(const [side,id]of Object.entries(st.owners)){const s=b.getSide(side),r=s.activeRequest;st.views[id]={side,ready:s.isChoiceDone(),forceSwitch:!!r?.forceSwitch,wait:!!r?.wait,moves:(r?.active?.[0]?.moves||[]).map(m=>({...m,type:b.dex.moves.get(m.id).type})),trapped:!!r?.active?.[0]?.trapped,team:s.pokemon.map(p=>({ ...battleProgress(state,st,id,p),uid:p.set.campaignUid,id:p.species.num,name:p.name,active:p.isActive,fainted:p.fainted,hp:p.hp,maxHp:p.maxhp,status:p.status,pp:p.moveSlots.map(m=>({id:m.id,pp:m.pp,maxpp:m.maxpp}))}))};}
  st.serialized=JSON.stringify(b.toJSON());
+}
+function battleProgress(state,st,id,p){
+ const m=state.members.find(m=>m.id===id)?.party.find(m=>m.uid===p.set.campaignUid);
+ if(!m)return {};
+ return {level:m.level,gender:m.gender,xp:m.xp,levelXp:threshold(m.species,m.level),nextXp:m.level<100?threshold(m.species,m.level+1):null,xpEarned:st.ended?st.xp[m.uid]||0:0};
 }
 export const resume=state=>Battle.fromJSON(state.battle.serialized);
 export function computerChoices(state,b){for(let pass=0;pass<16&&!b.ended;pass++){let acted=false;for(const s of b.sides){if(state.battle.owners[s.id]||s.isChoiceDone())continue;const active=s.active[0],moves=s.activeRequest?.active?.[0]?.moves;let choice='default';if(moves&&active){const foes=s.foes().filter(p=>!p.fainted);const scored=moves.map((slot,i)=>{const m=b.dex.moves.get(slot.id),t=foes[0];let score=m.basePower||0;if(m.damage)score=60;if(t){if(!b.dex.getImmunity(m.type,t))score=0;else score*=2**b.dex.getEffectiveness(m.type,t);if(active.hasType(m.type))score*=1.5;}if(m.category==='Status')score=m.heal&&active.hp<active.maxhp/2?150:!t?.status&&m.status?30:5;return {i,score:slot.pp&&!slot.disabled?score:-1};}).sort((a,b)=>b.score-a.score);if(scored[0]?.score>=0){const idx=scored[0].i;choice='move '+(idx+1);if(b.gameType==='multi'&&['normal','any','adjacentFoe'].includes(moves[idx].target))choice+=' '+(foes[0]?.getLocOf?active.getLocOf(foes[0]):1);}}const ok=b.choose(s.id,choice)||b.choose(s.id,'default');acted=ok||acted;if(b.ended)break;}if(!acted)break;}}
@@ -51,3 +56,17 @@ export function battleItem(state,member,input,now){const {st,b,s}=ready(state,me
 }
 export function timeout(state,now){const st=state.battle;if(!st||st.ended||now<st.deadline)return false;const b=resume(state);if(st.kind==='pvp'){const missing=b.sides.filter(s=>!s.isChoiceDone());if(missing.length===1)b.win(missing[0].foe);else b.tie();}else{const turn=b.turn;for(const s of b.sides){if(b.turn!==turn||b.ended)break;if(!s.isChoiceDone())b.choose(s.id,'default');}computerChoices(state,b);}st.deadline=now+90000;refreshBattle(state,b,now);return true;}
 export function concede(state,member,now){const st=state.battle;if(!st||st.ended)return;const side=Object.keys(st.owners).find(s=>st.owners[s]===member.id);if(!side)throw Error('Solo un participante puede retirarse.');const b=resume(state);if(st.encounter.kind==='wild')st.result='escaped';b.win(b.getSide(side).foe);refreshBattle(state,b,now);}
+
+// Wild escape uses Gen 3 speed/attempt odds; a failed attempt consumes the turn.
+export function flee(state,member,input,now,random=()=>crypto.getRandomValues(new Uint8Array(1))[0]){
+ const {st,b,s}=ready(state,member,input);
+ if(st.encounter.kind!=='wild')throw Error('¡No puedes huir de un combate contra un entrenador!');
+ if(s.activeRequest?.forceSwitch)throw Error('Elige primero un Pokémon capaz de continuar.');
+ if(s.activeRequest?.active?.[0]?.trapped)throw Error('Tu Pokémon está atrapado y no puede huir.');
+ const mon=s.active[0],foe=s.foe.active[0],speed=mon.getStat('spe'),enemySpeed=foe.getStat('spe');
+ st.escapeAttempts=(st.escapeAttempts||0)+1;
+ const chance=Math.floor(speed*128/Math.max(1,enemySpeed))+30*st.escapeAttempts;
+ if(speed>=enemySpeed||mon.hasAbility('runaway')||chance>255||random()<chance){st.result='escaped';b.add('message','¡Escapaste sin problemas!');b.win(s.foe);refreshBattle(state,b,now);return;}
+ b.add('message','¡No pudiste escapar!');s.choice.actions.push({choice:'pass'});computerChoices(state,b);
+ if(b.sides.every(q=>q.isChoiceDone()))b.commitChoices();st.deadline=now+90000;refreshBattle(state,b,now);
+}

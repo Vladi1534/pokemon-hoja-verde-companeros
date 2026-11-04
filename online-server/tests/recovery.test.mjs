@@ -1,9 +1,11 @@
 import assert from 'node:assert/strict';
 import {LocalGame,newPersonal} from '../browser/local-engine.mjs';
+import {world} from '../server/campaign.mjs';
 import {newBattle} from '../server/battles.mjs';
 
+const nurse=world.maps.viridian_center.npcs.find(n=>n.role==='heal');
 const game=new LocalGame(newPersonal('Recovery QA',1));
-Object.assign(game.member.position,{map:'viridian_center',x:10,y:8,dir:'up',seq:10,seen:Date.now()-5000});
+Object.assign(game.member.position,{map:'viridian_center',x:nurse.x,y:nurse.y+1,dir:'up',seq:10,seen:Date.now()-5000});
 game.dispatch({action:'quest',npc:'viridian_center_nurse',requestId:crypto.randomUUID()});
 game.dispatch({action:'sync',seq:11,steps:['down','down']});
 assert.equal(game.member.position.seq,11);
@@ -15,11 +17,11 @@ const battle=game.state().battle;
 const lost=game.dispatch({action:'choose',battle:battle.id,turn:battle.turn,choice:'default',requestId:crypto.randomUUID()});
 assert.equal(lost.battle.result,'defeat');
 assert.equal(game.member.position.map,'viridian_center');
-assert.equal(game.member.position.y,8);
+assert.equal(game.member.position.y,nurse.y+1);
 assert.equal(game.member.position.seq,11,'returning to a Center must not rewind movement acknowledgements');
 assert(game.member.party.every(m=>m.hp>0));
 game.dispatch({action:'sync',seq:12,steps:['down']});
-assert.equal(game.member.position.y,9);
+assert.equal(game.member.position.y,nurse.y+2);
 assert.equal(game.member.position.seq,12);
 const reloaded=new LocalGame(null,JSON.parse(JSON.stringify(game.snapshot())));
 reloaded.member.position.seen=Date.now()-5000;

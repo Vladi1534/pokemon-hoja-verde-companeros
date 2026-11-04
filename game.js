@@ -17,7 +17,7 @@ const Game={
  this.anim={elapsed:0,duration:(Input.shift||this.settings.run)?.105:.17,from,to:{x:nx,y:ny},ffrom:{x:f.px,y:f.py},fto:{x:from.x,y:from.y}};const fx=from.x-f.x,fy=from.y-f.y;if(fx||fy)f.dir=Math.abs(fx)>Math.abs(fy)?(fx>0?'right':'left'):(fy>0?'down':'up');f.x=from.x;f.y=from.y;this.player.x=nx;this.player.y=ny;},
  stepEnd(){this.steps++;if(this.repel>0){this.repel--;if(this.repel===0)UI.toast('El repelente se ha agotado.')}const m=this.map,p=this.player;
  const portal=m.portals.find(q=>p.x>=q.x&&p.x<q.x+q.w&&p.y>=q.y&&p.y<q.y+q.h);if(portal){const blocked=Story.gate(portal.gate);if(blocked){this.say('EL CAMINO CONTINÚA',blocked);return}if(portal.badge&&!this.badges.includes(portal.badge)){this.say('GUARDIA',`Antes de continuar necesitas la medalla ${GYMS[portal.badge-1].badge}. Desafía a ${GYMS[portal.badge-1].name} en el gimnasio de esta ciudad.`);return}if(portal.rocket&&!this.flags.celadon_rocket){this.say('GUARDIA','El Team Rocket bloquea el camino. Habla con el recluta que vigila el sendero al norte de Azulona.');return}if(portal.champion&&!this.flags.champion){this.say('RESERVA DE KANTO','La reserva se abre cuando entres en el Salón de la Fama. ¡Te esperamos después de la Liga!');return}const dest=MAPS[portal.to],x=portal.tx??21,y=portal.ty??(portal.entry==='south'?dest.h-3:3);this.enter(portal.to,x,y,p.dir);return}
- const door=m.doors.find(d=>d.x===p.x&&d.y===p.y);if(door){this.enter(door.to,10,15,'up');return}
+ const door=m.doors.find(d=>d.x===p.x&&d.y===p.y);if(door){this.enter(door.to,door.tx??10,door.ty??15,'up');return}
  if(this.encounterGrace>0){this.encounterGrace--;return}const tile=m.grid[p.y][p.x];if(this.repel===0&&(tile===4||(m.kind==='cave'&&tile===6))&&Math.random()<(baseAbility(this.lead)===1?.065:baseAbility(this.lead)===35?.2:.13)){this.wild()}
  if(this.steps%30===0&&this.mode==='world')this.save(false)
  },
@@ -27,7 +27,7 @@ const Game={
  let n=m.npcs.find(n=>n.x===x&&n.y===y);if(!n&&m.inside&&m.grid[y]?.[x]===7)n=m.npcs.find(n=>n.x===x&&n.y===y+dy);if(n){this.talk(n);return}
  const item=m.items.find(i=>i.x===x&&i.y===y&&!this.flags[i.id]);if(item){this.flags[item.id]=true;this.inventory[item.key]=(this.inventory[item.key]||0)+item.qty;Audio.effect('win');this.say('¡HAS ENCONTRADO UN OBJETO!',`${item.qty} × ${ITEMS[item.key].name}. Lo guardaste en tu mochila.`,()=>this.save(false));UI.refresh();return}
  const sign=m.signs.find(s=>s.x===x&&s.y===y);if(sign){this.say('CARTEL',sign.text);return}
- const door=m.doors.find(d=>d.x===x&&d.y===y);if(door){this.enter(door.to,10,15,'up');return}
+ const door=m.doors.find(d=>d.x===x&&d.y===y);if(door){this.enter(door.to,door.tx??10,door.ty??15,'up');return}
  if(this.lead&&this.lead.hp>0&&this.follower.x===x&&this.follower.y===y){this.pet();return}
  if(m.grid[y]?.[x]===3){if(this.flags.rod){this.say('CAÑA DE PESCAR','Lanzas el anzuelo… ¡Un Pokémon ha picado!',()=>this.wild(true));return}this.say('AGUA CRISTALINA',this.flags.surf?'Puedes caminar sobre el agua con Surf.':'El pescador de Ciudad Carmín tiene una caña para ti.');return}
  if(this.lead&&this.lead.hp>0&&Math.abs(p.x-this.follower.x)+Math.abs(p.y-this.follower.y)===1){this.pet();return}UI.toast('Acércate a una persona, una puerta o tu compañero y mira hacia ella.')},
