@@ -7,7 +7,7 @@ import path from 'node:path';
 const require=createRequire(import.meta.url),{Miniflare}=createRequire(require.resolve('wrangler/package.json'))('miniflare');
 const mf=new Miniflare({modules:[{type:'ESModule',path:path.resolve('dist/server/index.js')},...fs.readdirSync('dist/server',{recursive:true}).filter(p=>/\.m?js$/.test(p)&&p!=='index.js').map(p=>({type:'ESModule',path:path.resolve('dist/server',p)}))],modulesRoot:path.resolve('dist/server'),compatibilityDate:'2026-05-15',compatibilityFlags:['nodejs_compat'],d1Databases:['DB']});
 try{
- const db=await mf.getD1Database('DB');for(const sql of fs.readFileSync('drizzle/0000_graceful_snowbird.sql','utf8').split('--> statement-breakpoint'))await db.prepare(sql).run();
+ const db=await mf.getD1Database('DB');for(const f of fs.readdirSync('drizzle').filter(f=>f.endsWith('.sql')).sort())for(const sql of fs.readFileSync('drizzle/'+f,'utf8').split('--> statement-breakpoint'))if(sql.trim())await db.prepare(sql).run();
  const token='f'.repeat(36),call=async (input,key=token)=>{const r=await mf.dispatchFetch('https://test.local/api/coop',{method:'POST',headers:{Authorization:'Bearer '+key},body:JSON.stringify(input)});const data=await r.json();assert.equal(r.status,200,JSON.stringify(data));return data};
  const a=await call({action:'create',key:token,name:'Bundle QA',starter:4});await call({action:'sync',room:a.room,seq:1,steps:['right','right']});let state=await call({action:'propose',room:a.room,requestId:crypto.randomUUID(),kind:'coop',npc:'guide'});assert.equal(state.battle.turn,1);
  state=await call({action:'choose',room:a.room,requestId:crypto.randomUUID(),battle:state.battle.id,turn:1,choice:'move 1'});assert.equal(state.battle.turn,2);assert.equal(state.battle.you.team[0].pp[0].pp,34);
@@ -24,6 +24,14 @@ try{
  const accepted=await call({action:'respond',room:hosted.room,requestId:crypto.randomUUID(),proposal:gift.proposal.id,accept:true},guestKey);assert.equal(accepted.trainer.bag.potion,4);
  const left=await call({action:'depart',room:hosted.room,requestId:crypto.randomUUID()},guestKey);assert.equal(left.portable.trainer.bag.potion,4);assert.equal(left.portable.trainer.party[0].uid,guest.trainer.party[0].uid);
  console.log('PASS production Worker portable journey: host, join, accept gift, leave with identity and inventory');
+ const friendHost=await call({action:'social_sync',name:'Host QA',starter:1,room:hosted.room},hostKey),friendGuest=await call({action:'social_sync',name:'Guest QA',starter:7},guestKey);
+ await call({action:'social_request',code:friendGuest.code},hostKey);
+ const friends=await call({action:'social_reply',code:friendHost.code,accept:true},guestKey);assert.equal(friends.friends[0].online,true);
+ await call({action:'social_invite',code:friendGuest.code,room:hosted.room},hostKey);
+ const invited=await call({action:'social_sync',name:'Guest QA',starter:7},guestKey);assert.equal(invited.invitations.length,1);
+ const acceptedWorld=await call({action:'social_invite_reply',invitation:invited.invitations[0].id,accept:true},guestKey);assert.equal(acceptedWorld.invite,hosted.invite);
+ console.log('PASS production Worker social journey: persistent friends, presence, invitation and acceptance through HTTP');
+
  console.log('PASS production Worker bundle: create room, D1, start battle, deserialize separate request, advance turn, persist PP');
  const fixture=async fn=>{const row=await db.prepare('SELECT state FROM rooms WHERE id=?').bind(hosted.room).first();const s=JSON.parse(row.state);fn(s);await db.prepare('UPDATE rooms SET state=? WHERE id=?').bind(JSON.stringify(s),hosted.room).run();};
  const command=(action,args={})=>call({action,room:hosted.room,requestId:crypto.randomUUID(),...args},hostKey);

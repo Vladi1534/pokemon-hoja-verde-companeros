@@ -9,9 +9,10 @@ export function explore(state,member,position,id){
  return `${item.hidden?'¡Encontraste un objeto oculto! ':''}${target.qty} × ${items[target.key].name}. Lo guardaste en tu mochila.`;
 }
 export function migrateTownPositions(state){
- if((state.worldRevision||0)>=3)return false;
- for(const member of state.members){const map=world.maps[member.position.map];if(map?.worldRevision===3){const {x,y}=map.arrival;Object.assign(member.position,{x,y,fx:x,fy:y+1,notice:'La ciudad se ha renovado. Tu equipo y progreso se conservan; apareces en una zona segura.'});delete member.spotted;}
-  const c=world.maps[member.lastCenter?.map];if(c?.worldRevision===3){const b=c.buildings.find(b=>b.kind==='center');member.lastCenter={map:c.id,x:b?b.door.x:c.arrival.x,y:b?b.door.y+1:c.arrival.y};}
+ const previous=state.worldRevision||0;if(previous>=4)return false;
+ const blocked=(map,p)=>!map||map.grid[p.y]?.[p.x]===undefined||[2,3,7,10].includes(map.grid[p.y][p.x])||[...map.npcs,...map.signs].some(n=>n.x===p.x&&n.y===p.y);
+ for(const member of state.members){const map=world.maps[member.position.map];if(map?.arrival&&(previous<3||blocked(map,member.position))){const {x,y}=map.arrival;Object.assign(member.position,{x,y,fx:x,fy:y+1,notice:'El camino se ha renovado. Tu equipo y progreso se conservan; apareces en una zona segura.'});delete member.spotted;delete member.motion;member.travelGrace=3;}
+  const c=world.maps[member.lastCenter?.map];if(c?.arrival&&(previous<3||blocked(c,member.lastCenter))){const b=c.buildings.find(b=>b.kind==='center');member.lastCenter={map:c.id,x:b?b.door.x:c.arrival.x,y:b?b.door.y+1:c.arrival.y};}
  }
- state.proposal=null;state.worldRevision=3;return true;
+ state.proposal=null;state.worldRevision=4;return true;
 }

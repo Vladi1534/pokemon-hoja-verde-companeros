@@ -1,7 +1,7 @@
 /* Shared campaign renderer and online transport; Personal selects local or remote execution. */
 const Coop={
  active:false,state:null,queue:[],flight:null,seq:0,polling:false,remotes:{},lastGood:0,requestBusy:false,dismissed:null,originalMaps:{},
- endpoint:location.hostname==='terminal.local'||location.hostname==='kanto-companeros-online.cloudyspoon35.chatgpt.site'?'/api/coop':'https://kanto-companeros-online.cloudyspoon35.chatgpt.site/api/coop',
+ endpoint:['terminal.local','kanto-companeros-online.cloudyspoon35.chatgpt.site','kanto-companeros-online.v-jimenez-moroni.chatgpt.site'].includes(location.hostname)?'/api/coop':'https://kanto-companeros-online.v-jimenez-moroni.chatgpt.site/api/coop',
  key(){return Array.from(crypto.getRandomValues(new Uint8Array(18)),n=>n.toString(16).padStart(2,'0')).join('')},
  saved(){try{return JSON.parse(localStorage.getItem('KANTO_COOP_TRAINERS_V1')||'[]')}catch{return[]}},
  remember(){const all=this.saved().filter(s=>s.key!==this.session.key);all.unshift(this.session);try{localStorage.setItem('KANTO_COOP_TRAINERS_V1',JSON.stringify(all.slice(0,12)));sessionStorage.setItem('KANTO_COOP_ACTIVE',this.session.key)}catch{}},

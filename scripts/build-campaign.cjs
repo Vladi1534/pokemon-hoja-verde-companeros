@@ -47,6 +47,7 @@ const nursery=house(MAPS.fourisland,'fourisland_daycare',28,9,8,5,'GUARDERÍA','
 link('vermilion','down','oneisland','badge7');link('oneisland','up','ember','national');link('oneisland','right','fourisland','rainbow');trainer('ember','rocket',10,25,'Rocket de Monte Ascuas',[[104,37],[105,37]],'rocket');storyNpc('ember','ruby',38,12,'Rubí del volcán','scientist');
 // Fix floors and exits after NPC relocation. All coordinates are validated by the server.
 for(const m of Object.values(MAPS))for(const n of m.npcs){n.homeX=n.x;n.homeY=n.y;m.grid[n.y][n.x]=m.inside?9:m.kind==='cave'?6:0;}
+MAPS.viridian.portals=MAPS.viridian.portals.filter(p=>p.to!=='reserve');delete MAPS.reserve;
 applyTownDesign(MAPS);
 this.result={maps:MAPS,spawn:{map:'pallet',x:21,y:14},gyms:GYMS,league:LEAGUE};
 `,c);
@@ -60,6 +61,8 @@ for(const [id,table]of Object.entries(encounters)){const m=world.maps[id];if(!m)
 world.maps.viridian.npcs.find(n=>n.id==='viridian_resident').data.lines.push('Al oeste, en Ruta 22, viven Nidoran hembra y macho. Al norte, en Ruta 2, a veces se deja ver un Abra.');
 // The invented reserve is not part of the canonical campaign.
 world.maps.viridian.portals=world.maps.viridian.portals.filter(p=>p.to!=='reserve');delete world.maps.reserve;
+
+require('./map-polish.cjs')(world);
 
 // The online renderer only uses our static geometry; all interactions are server owned.
 fs.writeFileSync(path.join(root,'coop-world.js'),'const COOP_WORLD='+JSON.stringify(world)+';\n');

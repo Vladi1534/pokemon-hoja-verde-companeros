@@ -1,4 +1,4 @@
-# Pokémon Hoja Verde · Compañeros 2.5.0
+# Pokémon Hoja Verde · Compañeros 2.6.0
 
 Aventura fan de Kanto para navegador, con tu líder siguiéndote y una partida personal que puedes abrir a amigos. Los mapas y diálogos son una adaptación propia, todavía no una reproducción íntegra de Verde Hoja.
 
@@ -23,7 +23,7 @@ Las medallas y objetos clave pertenecen a cada entrenador. La historia avanza pa
 - Las decisiones de movimientos y evolución ya no bloquean el inicio de combates; se conservan para resolverlas después.
 - Giovanni, los ocho líderes y el Alto Mando con sprites acordes. Ash en Ruta 1; Jessie, James y Meowth en tres episodios opcionales de historia, con equipos distintos en cooperativo.
 
-Detalle y verificación: [cambios 2.5.0](docs/CAMBIOS-2.5.md).
+Detalle y verificación: [cambios 2.6.0](docs/CAMBIOS-2.5.md).
 
 La versión 2.4.1 incorporó:
 
