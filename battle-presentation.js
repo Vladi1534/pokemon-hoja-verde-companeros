@@ -3,8 +3,8 @@ var BattleReplay=(()=>{
  const copy=value=>JSON.parse(JSON.stringify(value));
  const sideOf=actor=>/^p[1-4]/.exec(actor||'')?.[0];
  function freshLines(previous,next){
-  const cursor=previous.events?.at(-1)?.seq;
-  if(Number.isInteger(cursor)&&next.events)return next.events.filter(e=>e.seq>cursor).map(e=>e.line);
+  const events=next.you?.events||next.events,cursor=(previous.you?.events||previous.events)?.at(-1)?.seq;
+  if(Number.isInteger(cursor)&&events)return events.filter(e=>e.seq>cursor).map(e=>e.line);
   const old=previous.log||[],current=next.log||[];
   for(let overlap=Math.min(old.length,current.length);overlap>0;overlap--)
    if(old.slice(-overlap).every((line,i)=>line===current[i]))return current.slice(overlap);
@@ -15,7 +15,7 @@ var BattleReplay=(()=>{
   const match=/^(\d+)(?:\/(\d+))?(?:\s+(\w+))?/.exec(value||'');if(!match)return;
   mon.hp=match[2]?Math.ceil(100*Number(match[1])/Number(match[2])):0;
   mon.fainted=mon.hp===0;mon.status=['psn','tox','brn','par','slp','frz'].includes(match[3])?match[3]:'';
-  if(view.you?.side===sideId){const own=view.you.team.find(p=>p.active);if(own){own.hp=Math.round(mon.hp*own.maxHp/100);own.fainted=mon.fainted;own.status=mon.status;}}
+  if(view.you?.side===sideId){const own=view.you.team.find(p=>p.active);if(own){own.hp=view.you.events&&match[2]?Number(match[1]):Math.round(mon.hp*own.maxHp/100);own.fainted=mon.fainted;own.status=mon.status;}}
  }
  function frames(previous,next,translate){
   if(!previous||previous.id!==next.id||next.revision<=previous.revision)return [];

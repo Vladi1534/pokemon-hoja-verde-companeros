@@ -13,10 +13,10 @@ module.exports=function applyCharacters(world){
   if(![0,1,4,6,9,10].includes(m.grid[y]?.[x])||m.npcs.some(n=>n.x===x&&n.y===y))throw Error('Occupied character cell: '+id);
   m.npcs.push({id,x,y,homeX:x,homeY:y,dir:'down',name,role,look,data});return id;
  };
- add('route1','ash',23,28,'Ash Ketchum','practice','ash',{
-  anime:true,team:[[25,7],[16,6]],flag:'anime_ash_training',
-  quote:'¡Soy Ash, de Pueblo Paleta! Pikachu y yo estamos entrenando para nuestro próximo viaje. ¿Practicamos? Tu equipo quedará como estaba al terminar.',
-  after:'¡Buen combate! Confía en tu compañero y observa los tipos de tus rivales. Nos volveremos a encontrar por Kanto.'
+ add('route1','ash',23,28,'Ash Ketchum','trainer','ash',{
+  anime:true,team:[[25,7],[16,6]],sight:0,maxWins:3,
+  quote:'¡Soy Ash, de Pueblo Paleta! Pikachu y yo estamos entrenando para nuestro próximo viaje. ¡Te reto a un combate! Cuida a tus Pokémon: esta vez lucharemos de verdad.',
+  after:'¡Buen combate! Confía en tu compañero y observa los tipos de tus rivales. Podemos disputar hasta dos revanchas; después seguiré mi viaje por Kanto.'
  });
  const episodes=[
   {map:'moon_b2',x:13,y:12,requires:['badge1'],level:14,jessie:23,james:109,title:'Rocket: los fósiles del Moon',quote:'Jessie: ¡Esos fósiles nos darán la recompensa que merecemos! James, vigila la salida. Meowth, deja de contar las monedas antes de tiempo.',after:'James: Ni fósiles ni recompensa… Jessie insiste en que el próximo plan sí funcionará.'},

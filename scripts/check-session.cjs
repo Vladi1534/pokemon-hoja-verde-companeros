@@ -63,8 +63,10 @@ for(const file of ['coop.js','personal-client.js'])vm.runInContext(fs.readFileSy
  assert(enemyMove>=0&&damage>enemyMove,'damage is shown after its own attacker, never on the first snapshot');
  assert.equal(JSON.stringify({before,after}),saved,'presentation cannot mutate battle authority');
  assert.equal(Replay.frames(after,after,()=>'' ).length,0);
- const repeated={...after,revision:after.revision+1,events:[...after.events,{seq:after.events.at(-1).seq+1,line:'|move|p1a: Charmander|Growl|p2a: Rattata'}]};
+ const repeatEvent={seq:after.events.at(-1).seq+1,line:'|move|p1a: Charmander|Growl|p2a: Rattata'};
+ const repeated={...after,revision:after.revision+1,events:[...after.events,repeatEvent],you:{...after.you,events:[...after.you.events,repeatEvent]}};
  assert.equal(Replay.freshLines(after,repeated).length,1,'identical moves on later turns remain distinct events');
+ const legacyBefore=structuredClone(after),legacyNext=structuredClone(repeated);delete legacyBefore.you.events;delete legacyNext.you.events;assert.equal(Replay.freshLines(legacyBefore,legacyNext).length,1);
  console.log('PASS actual simulator replay: action order, delayed HP, repeated moves and immutable snapshots');
 
  vm.runInContext(`Personal.mode='solo';Coop.dismissed=null;Coop.state.members=[];

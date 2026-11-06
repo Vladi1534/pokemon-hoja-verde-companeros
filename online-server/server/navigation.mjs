@@ -11,7 +11,7 @@ export function visibleTrainer(nav,now){
  return map.npcs.find(n=>{
   if(n.role!=='trainer'||done(state,n.id)||challengeBlock(state,n))return false;
   const [dx,dy]=dirs[trainerFacing(n,now)];
-  for(let i=1;i<=(n.data.sight||4);i++){
+  for(let i=1;i<=(n.data.sight??4);i++){
    const x=n.x+dx*i,y=n.y+dy*i;
    if(p.x===x&&p.y===y)return true;
    if(!walkable(p.map,x,y,state))return false;

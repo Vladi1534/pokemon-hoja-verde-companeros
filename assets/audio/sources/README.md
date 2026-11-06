@@ -1,1 +1,0 @@
-Three reproducible, sample-free audio generators and the CC0 northivanastan score. Run from any directory with Python 3 and NumPy installed. WAV outputs go to ../sources/ and ../sfx/. Final Ogg conversion settings are recorded in manifest.json.

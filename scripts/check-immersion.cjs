@@ -1,0 +1,12 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const {direction,pocket,canUse}=require('../immersion.js');
+assert.equal(direction({x:3,y:3},{x:4,y:3}),'right');assert.equal(direction({x:3,y:3},{x:3,y:2}),'up');
+assert.equal(pocket({rate:2}),'balls');assert.equal(pocket({heal:20}),'medicine');assert.equal(pocket({sourceItemId:82}),'items');
+assert(!canUse({heal:20},{hp:0,maxHp:20}));assert(!canUse({heal:20},{hp:20,maxHp:20}));assert(canUse({heal:20},{hp:1,maxHp:20}));assert(canUse({revive:true},{hp:0,maxHp:20}));assert(!canUse({status:['psn']},{hp:10,maxHp:20,status:'par'}));
+const npc={id:'friend',role:'talk',x:3,y:3,dir:'down',data:{}};
+const context=vm.createContext({console,KANTO_RULES:{abilities:{5:{slug:'sturdy',name:'Robustez'}}},Game:{mapId:'home',map:{npcs:[npc]},mode:'world',time:0,player:{x:4,y:3},say(){},talk(){context.Game.mode='dialog';}},Story:{update(){}},UI:{opened:false},Coop:{requestBusy:false,logText:()=>''}});
+vm.runInContext(fs.readFileSync('immersion.js','utf8'),context);
+context.Game.talk(npc);assert.equal(npc.dir,'right');context.Game.time=5;context.Story.update(.1);assert.equal(npc.dir,'right','NPC keeps eye contact for the whole dialogue');context.Game.mode='world';context.Story.update(.1);assert.equal(npc.dir,'down','original orientation returns after the dialogue');context.Game.time=9;context.Story.update(.1);assert(['up','right','left','down'].includes(npc.dir));
+context.Game.talk(npc);context.Game.mapId='route1';context.Story.update(.1);assert.equal(context.Immersion.focus,null,'map transitions release conversation focus');
+assert.match(context.Coop.logText('|-ability|p1a: Geodude|Sturdy'),/Robustez/);
+console.log('PASS NPC eye contact, restoration, map transitions, bag eligibility and readable abilities');

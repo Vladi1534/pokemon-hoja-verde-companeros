@@ -1,0 +1,2687 @@
+[
+  {
+    "key": "none",
+    "ncgr": 793,
+    "nclr": 794
+  },
+  {
+    "key": "master_ball",
+    "ncgr": 2,
+    "nclr": 3
+  },
+  {
+    "key": "ultra_ball",
+    "ncgr": 4,
+    "nclr": 5
+  },
+  {
+    "key": "great_ball",
+    "ncgr": 6,
+    "nclr": 7
+  },
+  {
+    "key": "poke_ball",
+    "ncgr": 8,
+    "nclr": 9
+  },
+  {
+    "key": "safari_ball",
+    "ncgr": 10,
+    "nclr": 11
+  },
+  {
+    "key": "net_ball",
+    "ncgr": 12,
+    "nclr": 13
+  },
+  {
+    "key": "dive_ball",
+    "ncgr": 14,
+    "nclr": 15
+  },
+  {
+    "key": "nest_ball",
+    "ncgr": 16,
+    "nclr": 17
+  },
+  {
+    "key": "repeat_ball",
+    "ncgr": 18,
+    "nclr": 19
+  },
+  {
+    "key": "timer_ball",
+    "ncgr": 20,
+    "nclr": 19
+  },
+  {
+    "key": "luxury_ball",
+    "ncgr": 21,
+    "nclr": 22
+  },
+  {
+    "key": "premier_ball",
+    "ncgr": 23,
+    "nclr": 22
+  },
+  {
+    "key": "dusk_ball",
+    "ncgr": 663,
+    "nclr": 664
+  },
+  {
+    "key": "heal_ball",
+    "ncgr": 665,
+    "nclr": 666
+  },
+  {
+    "key": "quick_ball",
+    "ncgr": 667,
+    "nclr": 668
+  },
+  {
+    "key": "cherish_ball",
+    "ncgr": 669,
+    "nclr": 670
+  },
+  {
+    "key": "potion",
+    "ncgr": 24,
+    "nclr": 25
+  },
+  {
+    "key": "antidote",
+    "ncgr": 26,
+    "nclr": 27
+  },
+  {
+    "key": "burn_heal",
+    "ncgr": 30,
+    "nclr": 28
+  },
+  {
+    "key": "ice_heal",
+    "ncgr": 30,
+    "nclr": 29
+  },
+  {
+    "key": "awakening",
+    "ncgr": 30,
+    "nclr": 31
+  },
+  {
+    "key": "parlyz_heal",
+    "ncgr": 30,
+    "nclr": 32
+  },
+  {
+    "key": "full_restore",
+    "ncgr": 33,
+    "nclr": 34
+  },
+  {
+    "key": "max_potion",
+    "ncgr": 33,
+    "nclr": 35
+  },
+  {
+    "key": "hyper_potion",
+    "ncgr": 24,
+    "nclr": 36
+  },
+  {
+    "key": "super_potion",
+    "ncgr": 24,
+    "nclr": 37
+  },
+  {
+    "key": "full_heal",
+    "ncgr": 38,
+    "nclr": 39
+  },
+  {
+    "key": "revive",
+    "ncgr": 40,
+    "nclr": 42
+  },
+  {
+    "key": "max_revive",
+    "ncgr": 41,
+    "nclr": 42
+  },
+  {
+    "key": "fresh_water",
+    "ncgr": 43,
+    "nclr": 44
+  },
+  {
+    "key": "soda_pop",
+    "ncgr": 45,
+    "nclr": 46
+  },
+  {
+    "key": "lemonade",
+    "ncgr": 47,
+    "nclr": 48
+  },
+  {
+    "key": "moomoo_milk",
+    "ncgr": 49,
+    "nclr": 50
+  },
+  {
+    "key": "energypowder",
+    "ncgr": 51,
+    "nclr": 52
+  },
+  {
+    "key": "energy_root",
+    "ncgr": 53,
+    "nclr": 54
+  },
+  {
+    "key": "heal_powder",
+    "ncgr": 51,
+    "nclr": 55
+  },
+  {
+    "key": "revival_herb",
+    "ncgr": 56,
+    "nclr": 57
+  },
+  {
+    "key": "ether",
+    "ncgr": 58,
+    "nclr": 59
+  },
+  {
+    "key": "max_ether",
+    "ncgr": 58,
+    "nclr": 60
+  },
+  {
+    "key": "elixir",
+    "ncgr": 58,
+    "nclr": 61
+  },
+  {
+    "key": "max_elixir",
+    "ncgr": 58,
+    "nclr": 62
+  },
+  {
+    "key": "lava_cookie",
+    "ncgr": 63,
+    "nclr": 64
+  },
+  {
+    "key": "berry_juice",
+    "ncgr": 71,
+    "nclr": 72
+  },
+  {
+    "key": "sacred_ash",
+    "ncgr": 73,
+    "nclr": 74
+  },
+  {
+    "key": "hp_up",
+    "ncgr": 83,
+    "nclr": 84
+  },
+  {
+    "key": "protein",
+    "ncgr": 85,
+    "nclr": 86
+  },
+  {
+    "key": "iron",
+    "ncgr": 85,
+    "nclr": 87
+  },
+  {
+    "key": "carbos",
+    "ncgr": 85,
+    "nclr": 88
+  },
+  {
+    "key": "calcium",
+    "ncgr": 85,
+    "nclr": 89
+  },
+  {
+    "key": "rare_candy",
+    "ncgr": 90,
+    "nclr": 91
+  },
+  {
+    "key": "pp_up",
+    "ncgr": 92,
+    "nclr": 93
+  },
+  {
+    "key": "zinc",
+    "ncgr": 85,
+    "nclr": 94
+  },
+  {
+    "key": "pp_max",
+    "ncgr": 95,
+    "nclr": 96
+  },
+  {
+    "key": "old_gateau",
+    "ncgr": 466,
+    "nclr": 467
+  },
+  {
+    "key": "guard_spec_",
+    "ncgr": 100,
+    "nclr": 97
+  },
+  {
+    "key": "dire_hit",
+    "ncgr": 100,
+    "nclr": 98
+  },
+  {
+    "key": "x_attack",
+    "ncgr": 100,
+    "nclr": 99
+  },
+  {
+    "key": "x_defense",
+    "ncgr": 100,
+    "nclr": 101
+  },
+  {
+    "key": "x_speed",
+    "ncgr": 100,
+    "nclr": 102
+  },
+  {
+    "key": "x_accuracy",
+    "ncgr": 100,
+    "nclr": 103
+  },
+  {
+    "key": "x_special",
+    "ncgr": 100,
+    "nclr": 104
+  },
+  {
+    "key": "x_sp__def",
+    "ncgr": 100,
+    "nclr": 469
+  },
+  {
+    "key": "poke_doll",
+    "ncgr": 105,
+    "nclr": 106
+  },
+  {
+    "key": "fluffy_tail",
+    "ncgr": 107,
+    "nclr": 108
+  },
+  {
+    "key": "blue_flute",
+    "ncgr": 65,
+    "nclr": 66
+  },
+  {
+    "key": "yellow_flute",
+    "ncgr": 65,
+    "nclr": 67
+  },
+  {
+    "key": "red_flute",
+    "ncgr": 65,
+    "nclr": 68
+  },
+  {
+    "key": "black_flute",
+    "ncgr": 65,
+    "nclr": 69
+  },
+  {
+    "key": "white_flute",
+    "ncgr": 65,
+    "nclr": 70
+  },
+  {
+    "key": "shoal_salt",
+    "ncgr": 51,
+    "nclr": 75
+  },
+  {
+    "key": "shoal_shell",
+    "ncgr": 76,
+    "nclr": 77
+  },
+  {
+    "key": "red_shard",
+    "ncgr": 78,
+    "nclr": 79
+  },
+  {
+    "key": "blue_shard",
+    "ncgr": 78,
+    "nclr": 80
+  },
+  {
+    "key": "yellow_shard",
+    "ncgr": 78,
+    "nclr": 81
+  },
+  {
+    "key": "green_shard",
+    "ncgr": 78,
+    "nclr": 82
+  },
+  {
+    "key": "super_repel",
+    "ncgr": 109,
+    "nclr": 110
+  },
+  {
+    "key": "max_repel",
+    "ncgr": 109,
+    "nclr": 111
+  },
+  {
+    "key": "escape_rope",
+    "ncgr": 112,
+    "nclr": 113
+  },
+  {
+    "key": "repel",
+    "ncgr": 109,
+    "nclr": 114
+  },
+  {
+    "key": "sun_stone",
+    "ncgr": 115,
+    "nclr": 116
+  },
+  {
+    "key": "moon_stone",
+    "ncgr": 117,
+    "nclr": 118
+  },
+  {
+    "key": "fire_stone",
+    "ncgr": 119,
+    "nclr": 120
+  },
+  {
+    "key": "thunderstone",
+    "ncgr": 121,
+    "nclr": 122
+  },
+  {
+    "key": "water_stone",
+    "ncgr": 123,
+    "nclr": 124
+  },
+  {
+    "key": "leaf_stone",
+    "ncgr": 125,
+    "nclr": 126
+  },
+  {
+    "key": "tinymushroom",
+    "ncgr": 127,
+    "nclr": 129
+  },
+  {
+    "key": "big_mushroom",
+    "ncgr": 128,
+    "nclr": 129
+  },
+  {
+    "key": "pearl",
+    "ncgr": 130,
+    "nclr": 131
+  },
+  {
+    "key": "big_pearl",
+    "ncgr": 132,
+    "nclr": 131
+  },
+  {
+    "key": "stardust",
+    "ncgr": 133,
+    "nclr": 134
+  },
+  {
+    "key": "star_piece",
+    "ncgr": 135,
+    "nclr": 134
+  },
+  {
+    "key": "nugget",
+    "ncgr": 136,
+    "nclr": 137
+  },
+  {
+    "key": "heart_scale",
+    "ncgr": 138,
+    "nclr": 139
+  },
+  {
+    "key": "honey",
+    "ncgr": 470,
+    "nclr": 471
+  },
+  {
+    "key": "growth_mulch",
+    "ncgr": 472,
+    "nclr": 473
+  },
+  {
+    "key": "damp_mulch",
+    "ncgr": 474,
+    "nclr": 475
+  },
+  {
+    "key": "stable_mulch",
+    "ncgr": 476,
+    "nclr": 477
+  },
+  {
+    "key": "gooey_mulch",
+    "ncgr": 478,
+    "nclr": 479
+  },
+  {
+    "key": "root_fossil",
+    "ncgr": 392,
+    "nclr": 393
+  },
+  {
+    "key": "claw_fossil",
+    "ncgr": 394,
+    "nclr": 393
+  },
+  {
+    "key": "helix_fossil",
+    "ncgr": 431,
+    "nclr": 432
+  },
+  {
+    "key": "dome_fossil",
+    "ncgr": 433,
+    "nclr": 432
+  },
+  {
+    "key": "old_amber",
+    "ncgr": 425,
+    "nclr": 426
+  },
+  {
+    "key": "armor_fossil",
+    "ncgr": 617,
+    "nclr": 618
+  },
+  {
+    "key": "skull_fossil",
+    "ncgr": 615,
+    "nclr": 616
+  },
+  {
+    "key": "rare_bone",
+    "ncgr": 337,
+    "nclr": 338
+  },
+  {
+    "key": "shiny_stone",
+    "ncgr": 480,
+    "nclr": 481
+  },
+  {
+    "key": "dusk_stone",
+    "ncgr": 482,
+    "nclr": 483
+  },
+  {
+    "key": "dawn_stone",
+    "ncgr": 484,
+    "nclr": 485
+  },
+  {
+    "key": "oval_stone",
+    "ncgr": 486,
+    "nclr": 487
+  },
+  {
+    "key": "odd_keystone",
+    "ncgr": 488,
+    "nclr": 489
+  },
+  {
+    "key": "griseous_orb",
+    "ncgr": 699,
+    "nclr": 700
+  },
+  {
+    "key": "unused_113",
+    "ncgr": 793,
+    "nclr": 794
+  },
+  {
+    "key": "unused_114",
+    "ncgr": 793,
+    "nclr": 794
+  },
+  {
+    "key": "unused_115",
+    "ncgr": 793,
+    "nclr": 794
+  },
+  {
+    "key": "unused_116",
+    "ncgr": 793,
+    "nclr": 794
+  },
+  {
+    "key": "unused_117",
+    "ncgr": 793,
+    "nclr": 794
+  },
+  {
+    "key": "unused_118",
+    "ncgr": 793,
+    "nclr": 794
+  },
+  {
+    "key": "unused_119",
+    "ncgr": 793,
+    "nclr": 794
+  },
+  {
+    "key": "unused_120",
+    "ncgr": 793,
+    "nclr": 794
+  },
+  {
+    "key": "unused_121",
+    "ncgr": 793,
+    "nclr": 794
+  },
+  {
+    "key": "unused_122",
+    "ncgr": 793,
+    "nclr": 794
+  },
+  {
+    "key": "unused_123",
+    "ncgr": 793,
+    "nclr": 794
+  },
+  {
+    "key": "unused_124",
+    "ncgr": 793,
+    "nclr": 794
+  },
+  {
+    "key": "unused_125",
+    "ncgr": 793,
+    "nclr": 794
+  },
+  {
+    "key": "unused_126",
+    "ncgr": 793,
+    "nclr": 794
+  },
+  {
+    "key": "unused_127",
+    "ncgr": 793,
+    "nclr": 794
+  },
+  {
+    "key": "unused_128",
+    "ncgr": 793,
+    "nclr": 794
+  },
+  {
+    "key": "unused_129",
+    "ncgr": 793,
+    "nclr": 794
+  },
+  {
+    "key": "unused_130",
+    "ncgr": 793,
+    "nclr": 794
+  },
+  {
+    "key": "unused_131",
+    "ncgr": 793,
+    "nclr": 794
+  },
+  {
+    "key": "unused_132",
+    "ncgr": 793,
+    "nclr": 794
+  },
+  {
+    "key": "unused_133",
+    "ncgr": 793,
+    "nclr": 794
+  },
+  {
+    "key": "unused_134",
+    "ncgr": 793,
+    "nclr": 794
+  },
+  {
+    "key": "adamant_orb",
+    "ncgr": 648,
+    "nclr": 649
+  },
+  {
+    "key": "lustrous_orb",
+    "ncgr": 646,
+    "nclr": 647
+  },
+  {
+    "key": "grass_mail",
+    "ncgr": 140,
+    "nclr": 141
+  },
+  {
+    "key": "flame_mail",
+    "ncgr": 142,
+    "nclr": 143
+  },
+  {
+    "key": "bubble_mail",
+    "ncgr": 144,
+    "nclr": 145
+  },
+  {
+    "key": "bloom_mail",
+    "ncgr": 146,
+    "nclr": 147
+  },
+  {
+    "key": "tunnel_mail",
+    "ncgr": 148,
+    "nclr": 149
+  },
+  {
+    "key": "steel_mail",
+    "ncgr": 150,
+    "nclr": 151
+  },
+  {
+    "key": "heart_mail",
+    "ncgr": 152,
+    "nclr": 153
+  },
+  {
+    "key": "snow_mail",
+    "ncgr": 154,
+    "nclr": 155
+  },
+  {
+    "key": "space_mail",
+    "ncgr": 156,
+    "nclr": 157
+  },
+  {
+    "key": "air_mail",
+    "ncgr": 158,
+    "nclr": 159
+  },
+  {
+    "key": "mosaic_mail",
+    "ncgr": 160,
+    "nclr": 161
+  },
+  {
+    "key": "brick_mail",
+    "ncgr": 162,
+    "nclr": 163
+  },
+  {
+    "key": "cheri_berry",
+    "ncgr": 164,
+    "nclr": 165
+  },
+  {
+    "key": "chesto_berry",
+    "ncgr": 166,
+    "nclr": 167
+  },
+  {
+    "key": "pecha_berry",
+    "ncgr": 168,
+    "nclr": 169
+  },
+  {
+    "key": "rawst_berry",
+    "ncgr": 170,
+    "nclr": 171
+  },
+  {
+    "key": "aspear_berry",
+    "ncgr": 172,
+    "nclr": 173
+  },
+  {
+    "key": "leppa_berry",
+    "ncgr": 174,
+    "nclr": 175
+  },
+  {
+    "key": "oran_berry",
+    "ncgr": 176,
+    "nclr": 177
+  },
+  {
+    "key": "persim_berry",
+    "ncgr": 178,
+    "nclr": 179
+  },
+  {
+    "key": "lum_berry",
+    "ncgr": 180,
+    "nclr": 181
+  },
+  {
+    "key": "sitrus_berry",
+    "ncgr": 182,
+    "nclr": 183
+  },
+  {
+    "key": "figy_berry",
+    "ncgr": 184,
+    "nclr": 185
+  },
+  {
+    "key": "wiki_berry",
+    "ncgr": 186,
+    "nclr": 187
+  },
+  {
+    "key": "mago_berry",
+    "ncgr": 188,
+    "nclr": 189
+  },
+  {
+    "key": "aguav_berry",
+    "ncgr": 190,
+    "nclr": 191
+  },
+  {
+    "key": "iapapa_berry",
+    "ncgr": 192,
+    "nclr": 193
+  },
+  {
+    "key": "razz_berry",
+    "ncgr": 194,
+    "nclr": 195
+  },
+  {
+    "key": "bluk_berry",
+    "ncgr": 196,
+    "nclr": 197
+  },
+  {
+    "key": "nanab_berry",
+    "ncgr": 198,
+    "nclr": 199
+  },
+  {
+    "key": "wepear_berry",
+    "ncgr": 200,
+    "nclr": 201
+  },
+  {
+    "key": "pinap_berry",
+    "ncgr": 202,
+    "nclr": 203
+  },
+  {
+    "key": "pomeg_berry",
+    "ncgr": 204,
+    "nclr": 205
+  },
+  {
+    "key": "kelpsy_berry",
+    "ncgr": 206,
+    "nclr": 207
+  },
+  {
+    "key": "qualot_berry",
+    "ncgr": 208,
+    "nclr": 209
+  },
+  {
+    "key": "hondew_berry",
+    "ncgr": 210,
+    "nclr": 211
+  },
+  {
+    "key": "grepa_berry",
+    "ncgr": 212,
+    "nclr": 213
+  },
+  {
+    "key": "tamato_berry",
+    "ncgr": 214,
+    "nclr": 215
+  },
+  {
+    "key": "cornn_berry",
+    "ncgr": 216,
+    "nclr": 217
+  },
+  {
+    "key": "magost_berry",
+    "ncgr": 218,
+    "nclr": 219
+  },
+  {
+    "key": "rabuta_berry",
+    "ncgr": 220,
+    "nclr": 221
+  },
+  {
+    "key": "nomel_berry",
+    "ncgr": 222,
+    "nclr": 223
+  },
+  {
+    "key": "spelon_berry",
+    "ncgr": 224,
+    "nclr": 225
+  },
+  {
+    "key": "pamtre_berry",
+    "ncgr": 226,
+    "nclr": 227
+  },
+  {
+    "key": "watmel_berry",
+    "ncgr": 228,
+    "nclr": 229
+  },
+  {
+    "key": "durin_berry",
+    "ncgr": 230,
+    "nclr": 231
+  },
+  {
+    "key": "belue_berry",
+    "ncgr": 232,
+    "nclr": 233
+  },
+  {
+    "key": "occa_berry",
+    "ncgr": 554,
+    "nclr": 555
+  },
+  {
+    "key": "passho_berry",
+    "ncgr": 556,
+    "nclr": 557
+  },
+  {
+    "key": "wacan_berry",
+    "ncgr": 558,
+    "nclr": 559
+  },
+  {
+    "key": "rindo_berry",
+    "ncgr": 560,
+    "nclr": 561
+  },
+  {
+    "key": "yache_berry",
+    "ncgr": 562,
+    "nclr": 563
+  },
+  {
+    "key": "chople_berry",
+    "ncgr": 564,
+    "nclr": 565
+  },
+  {
+    "key": "kebia_berry",
+    "ncgr": 566,
+    "nclr": 567
+  },
+  {
+    "key": "shuca_berry",
+    "ncgr": 568,
+    "nclr": 569
+  },
+  {
+    "key": "coba_berry",
+    "ncgr": 570,
+    "nclr": 571
+  },
+  {
+    "key": "payapa_berry",
+    "ncgr": 572,
+    "nclr": 573
+  },
+  {
+    "key": "tanga_berry",
+    "ncgr": 574,
+    "nclr": 575
+  },
+  {
+    "key": "charti_berry",
+    "ncgr": 576,
+    "nclr": 577
+  },
+  {
+    "key": "kasib_berry",
+    "ncgr": 578,
+    "nclr": 579
+  },
+  {
+    "key": "haban_berry",
+    "ncgr": 580,
+    "nclr": 581
+  },
+  {
+    "key": "colbur_berry",
+    "ncgr": 582,
+    "nclr": 583
+  },
+  {
+    "key": "babiri_berry",
+    "ncgr": 584,
+    "nclr": 585
+  },
+  {
+    "key": "chilan_berry",
+    "ncgr": 586,
+    "nclr": 587
+  },
+  {
+    "key": "liechi_berry",
+    "ncgr": 234,
+    "nclr": 235
+  },
+  {
+    "key": "ganlon_berry",
+    "ncgr": 236,
+    "nclr": 237
+  },
+  {
+    "key": "salac_berry",
+    "ncgr": 238,
+    "nclr": 239
+  },
+  {
+    "key": "petaya_berry",
+    "ncgr": 240,
+    "nclr": 241
+  },
+  {
+    "key": "apicot_berry",
+    "ncgr": 242,
+    "nclr": 243
+  },
+  {
+    "key": "lansat_berry",
+    "ncgr": 244,
+    "nclr": 245
+  },
+  {
+    "key": "starf_berry",
+    "ncgr": 246,
+    "nclr": 247
+  },
+  {
+    "key": "enigma_berry",
+    "ncgr": 248,
+    "nclr": 249
+  },
+  {
+    "key": "micle_berry",
+    "ncgr": 588,
+    "nclr": 589
+  },
+  {
+    "key": "custap_berry",
+    "ncgr": 590,
+    "nclr": 591
+  },
+  {
+    "key": "jaboca_berry",
+    "ncgr": 592,
+    "nclr": 593
+  },
+  {
+    "key": "rowap_berry",
+    "ncgr": 594,
+    "nclr": 595
+  },
+  {
+    "key": "brightpowder",
+    "ncgr": 250,
+    "nclr": 251
+  },
+  {
+    "key": "white_herb",
+    "ncgr": 252,
+    "nclr": 253
+  },
+  {
+    "key": "macho_brace",
+    "ncgr": 254,
+    "nclr": 255
+  },
+  {
+    "key": "exp__share",
+    "ncgr": 256,
+    "nclr": 257
+  },
+  {
+    "key": "quick_claw",
+    "ncgr": 258,
+    "nclr": 259
+  },
+  {
+    "key": "soothe_bell",
+    "ncgr": 260,
+    "nclr": 261
+  },
+  {
+    "key": "mental_herb",
+    "ncgr": 252,
+    "nclr": 262
+  },
+  {
+    "key": "choice_band",
+    "ncgr": 263,
+    "nclr": 264
+  },
+  {
+    "key": "kings_rock",
+    "ncgr": 265,
+    "nclr": 266
+  },
+  {
+    "key": "silverpowder",
+    "ncgr": 267,
+    "nclr": 268
+  },
+  {
+    "key": "amulet_coin",
+    "ncgr": 269,
+    "nclr": 270
+  },
+  {
+    "key": "cleanse_tag",
+    "ncgr": 271,
+    "nclr": 272
+  },
+  {
+    "key": "soul_dew",
+    "ncgr": 273,
+    "nclr": 274
+  },
+  {
+    "key": "deepseatooth",
+    "ncgr": 275,
+    "nclr": 276
+  },
+  {
+    "key": "deepseascale",
+    "ncgr": 277,
+    "nclr": 278
+  },
+  {
+    "key": "smoke_ball",
+    "ncgr": 279,
+    "nclr": 280
+  },
+  {
+    "key": "everstone",
+    "ncgr": 281,
+    "nclr": 282
+  },
+  {
+    "key": "focus_band",
+    "ncgr": 283,
+    "nclr": 284
+  },
+  {
+    "key": "lucky_egg",
+    "ncgr": 285,
+    "nclr": 286
+  },
+  {
+    "key": "scope_lens",
+    "ncgr": 287,
+    "nclr": 288
+  },
+  {
+    "key": "metal_coat",
+    "ncgr": 289,
+    "nclr": 290
+  },
+  {
+    "key": "leftovers",
+    "ncgr": 291,
+    "nclr": 292
+  },
+  {
+    "key": "dragon_scale",
+    "ncgr": 293,
+    "nclr": 294
+  },
+  {
+    "key": "light_ball",
+    "ncgr": 295,
+    "nclr": 296
+  },
+  {
+    "key": "soft_sand",
+    "ncgr": 297,
+    "nclr": 298
+  },
+  {
+    "key": "hard_stone",
+    "ncgr": 299,
+    "nclr": 300
+  },
+  {
+    "key": "miracle_seed",
+    "ncgr": 301,
+    "nclr": 302
+  },
+  {
+    "key": "blackglasses",
+    "ncgr": 303,
+    "nclr": 304
+  },
+  {
+    "key": "black_belt",
+    "ncgr": 305,
+    "nclr": 304
+  },
+  {
+    "key": "magnet",
+    "ncgr": 306,
+    "nclr": 307
+  },
+  {
+    "key": "mystic_water",
+    "ncgr": 308,
+    "nclr": 309
+  },
+  {
+    "key": "sharp_beak",
+    "ncgr": 310,
+    "nclr": 311
+  },
+  {
+    "key": "poison_barb",
+    "ncgr": 312,
+    "nclr": 313
+  },
+  {
+    "key": "nevermeltice",
+    "ncgr": 314,
+    "nclr": 315
+  },
+  {
+    "key": "spell_tag",
+    "ncgr": 316,
+    "nclr": 317
+  },
+  {
+    "key": "twistedspoon",
+    "ncgr": 318,
+    "nclr": 319
+  },
+  {
+    "key": "charcoal",
+    "ncgr": 320,
+    "nclr": 321
+  },
+  {
+    "key": "dragon_fang",
+    "ncgr": 322,
+    "nclr": 323
+  },
+  {
+    "key": "silk_scarf",
+    "ncgr": 324,
+    "nclr": 325
+  },
+  {
+    "key": "upgrade",
+    "ncgr": 326,
+    "nclr": 327
+  },
+  {
+    "key": "shell_bell",
+    "ncgr": 328,
+    "nclr": 77
+  },
+  {
+    "key": "sea_incense",
+    "ncgr": 329,
+    "nclr": 330
+  },
+  {
+    "key": "lax_incense",
+    "ncgr": 331,
+    "nclr": 332
+  },
+  {
+    "key": "lucky_punch",
+    "ncgr": 333,
+    "nclr": 334
+  },
+  {
+    "key": "metal_powder",
+    "ncgr": 335,
+    "nclr": 336
+  },
+  {
+    "key": "thick_club",
+    "ncgr": 337,
+    "nclr": 338
+  },
+  {
+    "key": "stick",
+    "ncgr": 339,
+    "nclr": 340
+  },
+  {
+    "key": "red_scarf",
+    "ncgr": 341,
+    "nclr": 342
+  },
+  {
+    "key": "blue_scarf",
+    "ncgr": 341,
+    "nclr": 343
+  },
+  {
+    "key": "pink_scarf",
+    "ncgr": 341,
+    "nclr": 344
+  },
+  {
+    "key": "green_scarf",
+    "ncgr": 341,
+    "nclr": 345
+  },
+  {
+    "key": "yellow_scarf",
+    "ncgr": 341,
+    "nclr": 346
+  },
+  {
+    "key": "wide_lens",
+    "ncgr": 490,
+    "nclr": 491
+  },
+  {
+    "key": "muscle_band",
+    "ncgr": 492,
+    "nclr": 493
+  },
+  {
+    "key": "wise_glasses",
+    "ncgr": 494,
+    "nclr": 495
+  },
+  {
+    "key": "expert_belt",
+    "ncgr": 496,
+    "nclr": 497
+  },
+  {
+    "key": "light_clay",
+    "ncgr": 611,
+    "nclr": 612
+  },
+  {
+    "key": "life_orb",
+    "ncgr": 498,
+    "nclr": 499
+  },
+  {
+    "key": "power_herb",
+    "ncgr": 500,
+    "nclr": 501
+  },
+  {
+    "key": "toxic_orb",
+    "ncgr": 502,
+    "nclr": 503
+  },
+  {
+    "key": "flame_orb",
+    "ncgr": 504,
+    "nclr": 505
+  },
+  {
+    "key": "quick_powder",
+    "ncgr": 335,
+    "nclr": 658
+  },
+  {
+    "key": "focus_sash",
+    "ncgr": 659,
+    "nclr": 660
+  },
+  {
+    "key": "zoom_lens",
+    "ncgr": 506,
+    "nclr": 507
+  },
+  {
+    "key": "metronome",
+    "ncgr": 508,
+    "nclr": 509
+  },
+  {
+    "key": "iron_ball",
+    "ncgr": 613,
+    "nclr": 614
+  },
+  {
+    "key": "lagging_tail",
+    "ncgr": 650,
+    "nclr": 651
+  },
+  {
+    "key": "destiny_knot",
+    "ncgr": 654,
+    "nclr": 655
+  },
+  {
+    "key": "black_sludge",
+    "ncgr": 510,
+    "nclr": 511
+  },
+  {
+    "key": "icy_rock",
+    "ncgr": 636,
+    "nclr": 637
+  },
+  {
+    "key": "smooth_rock",
+    "ncgr": 638,
+    "nclr": 639
+  },
+  {
+    "key": "heat_rock",
+    "ncgr": 640,
+    "nclr": 641
+  },
+  {
+    "key": "damp_rock",
+    "ncgr": 642,
+    "nclr": 643
+  },
+  {
+    "key": "grip_claw",
+    "ncgr": 652,
+    "nclr": 653
+  },
+  {
+    "key": "choice_scarf",
+    "ncgr": 512,
+    "nclr": 513
+  },
+  {
+    "key": "sticky_barb",
+    "ncgr": 514,
+    "nclr": 515
+  },
+  {
+    "key": "power_bracer",
+    "ncgr": 683,
+    "nclr": 684
+  },
+  {
+    "key": "power_belt",
+    "ncgr": 691,
+    "nclr": 692
+  },
+  {
+    "key": "power_lens",
+    "ncgr": 693,
+    "nclr": 694
+  },
+  {
+    "key": "power_band",
+    "ncgr": 685,
+    "nclr": 686
+  },
+  {
+    "key": "power_anklet",
+    "ncgr": 687,
+    "nclr": 688
+  },
+  {
+    "key": "power_weight",
+    "ncgr": 689,
+    "nclr": 690
+  },
+  {
+    "key": "shed_shell",
+    "ncgr": 516,
+    "nclr": 517
+  },
+  {
+    "key": "big_root",
+    "ncgr": 518,
+    "nclr": 519
+  },
+  {
+    "key": "choice_specs",
+    "ncgr": 520,
+    "nclr": 521
+  },
+  {
+    "key": "flame_plate",
+    "ncgr": 619,
+    "nclr": 620
+  },
+  {
+    "key": "splash_plate",
+    "ncgr": 619,
+    "nclr": 621
+  },
+  {
+    "key": "zap_plate",
+    "ncgr": 619,
+    "nclr": 622
+  },
+  {
+    "key": "meadow_plate",
+    "ncgr": 619,
+    "nclr": 623
+  },
+  {
+    "key": "icicle_plate",
+    "ncgr": 619,
+    "nclr": 624
+  },
+  {
+    "key": "fist_plate",
+    "ncgr": 619,
+    "nclr": 625
+  },
+  {
+    "key": "toxic_plate",
+    "ncgr": 619,
+    "nclr": 626
+  },
+  {
+    "key": "earth_plate",
+    "ncgr": 619,
+    "nclr": 627
+  },
+  {
+    "key": "sky_plate",
+    "ncgr": 619,
+    "nclr": 628
+  },
+  {
+    "key": "mind_plate",
+    "ncgr": 619,
+    "nclr": 629
+  },
+  {
+    "key": "insect_plate",
+    "ncgr": 619,
+    "nclr": 630
+  },
+  {
+    "key": "stone_plate",
+    "ncgr": 619,
+    "nclr": 631
+  },
+  {
+    "key": "spooky_plate",
+    "ncgr": 619,
+    "nclr": 632
+  },
+  {
+    "key": "draco_plate",
+    "ncgr": 619,
+    "nclr": 633
+  },
+  {
+    "key": "dread_plate",
+    "ncgr": 619,
+    "nclr": 634
+  },
+  {
+    "key": "iron_plate",
+    "ncgr": 619,
+    "nclr": 635
+  },
+  {
+    "key": "odd_incense",
+    "ncgr": 522,
+    "nclr": 523
+  },
+  {
+    "key": "rock_incense",
+    "ncgr": 524,
+    "nclr": 525
+  },
+  {
+    "key": "full_incense",
+    "ncgr": 526,
+    "nclr": 527
+  },
+  {
+    "key": "wave_incense",
+    "ncgr": 528,
+    "nclr": 529
+  },
+  {
+    "key": "rose_incense",
+    "ncgr": 530,
+    "nclr": 531
+  },
+  {
+    "key": "luck_incense",
+    "ncgr": 532,
+    "nclr": 533
+  },
+  {
+    "key": "pure_incense",
+    "ncgr": 534,
+    "nclr": 535
+  },
+  {
+    "key": "protector",
+    "ncgr": 695,
+    "nclr": 696
+  },
+  {
+    "key": "electirizer",
+    "ncgr": 536,
+    "nclr": 537
+  },
+  {
+    "key": "magmarizer",
+    "ncgr": 538,
+    "nclr": 539
+  },
+  {
+    "key": "dubious_disc",
+    "ncgr": 540,
+    "nclr": 541
+  },
+  {
+    "key": "reaper_cloth",
+    "ncgr": 542,
+    "nclr": 543
+  },
+  {
+    "key": "razor_claw",
+    "ncgr": 544,
+    "nclr": 545
+  },
+  {
+    "key": "razor_fang",
+    "ncgr": 546,
+    "nclr": 547
+  },
+  {
+    "key": "tm01",
+    "ncgr": 397,
+    "nclr": 398
+  },
+  {
+    "key": "tm02",
+    "ncgr": 397,
+    "nclr": 399
+  },
+  {
+    "key": "tm03",
+    "ncgr": 397,
+    "nclr": 400
+  },
+  {
+    "key": "tm04",
+    "ncgr": 397,
+    "nclr": 401
+  },
+  {
+    "key": "tm05",
+    "ncgr": 397,
+    "nclr": 402
+  },
+  {
+    "key": "tm06",
+    "ncgr": 397,
+    "nclr": 403
+  },
+  {
+    "key": "tm07",
+    "ncgr": 397,
+    "nclr": 404
+  },
+  {
+    "key": "tm08",
+    "ncgr": 397,
+    "nclr": 398
+  },
+  {
+    "key": "tm09",
+    "ncgr": 397,
+    "nclr": 405
+  },
+  {
+    "key": "tm10",
+    "ncgr": 397,
+    "nclr": 402
+  },
+  {
+    "key": "tm11",
+    "ncgr": 397,
+    "nclr": 406
+  },
+  {
+    "key": "tm12",
+    "ncgr": 397,
+    "nclr": 407
+  },
+  {
+    "key": "tm13",
+    "ncgr": 397,
+    "nclr": 404
+  },
+  {
+    "key": "tm14",
+    "ncgr": 397,
+    "nclr": 404
+  },
+  {
+    "key": "tm15",
+    "ncgr": 397,
+    "nclr": 402
+  },
+  {
+    "key": "tm16",
+    "ncgr": 397,
+    "nclr": 401
+  },
+  {
+    "key": "tm17",
+    "ncgr": 397,
+    "nclr": 402
+  },
+  {
+    "key": "tm18",
+    "ncgr": 397,
+    "nclr": 400
+  },
+  {
+    "key": "tm19",
+    "ncgr": 397,
+    "nclr": 405
+  },
+  {
+    "key": "tm20",
+    "ncgr": 397,
+    "nclr": 402
+  },
+  {
+    "key": "tm21",
+    "ncgr": 397,
+    "nclr": 402
+  },
+  {
+    "key": "tm22",
+    "ncgr": 397,
+    "nclr": 405
+  },
+  {
+    "key": "tm23",
+    "ncgr": 397,
+    "nclr": 408
+  },
+  {
+    "key": "tm24",
+    "ncgr": 397,
+    "nclr": 409
+  },
+  {
+    "key": "tm25",
+    "ncgr": 397,
+    "nclr": 409
+  },
+  {
+    "key": "tm26",
+    "ncgr": 397,
+    "nclr": 410
+  },
+  {
+    "key": "tm27",
+    "ncgr": 397,
+    "nclr": 402
+  },
+  {
+    "key": "tm28",
+    "ncgr": 397,
+    "nclr": 410
+  },
+  {
+    "key": "tm29",
+    "ncgr": 397,
+    "nclr": 401
+  },
+  {
+    "key": "tm30",
+    "ncgr": 397,
+    "nclr": 411
+  },
+  {
+    "key": "tm31",
+    "ncgr": 397,
+    "nclr": 398
+  },
+  {
+    "key": "tm32",
+    "ncgr": 397,
+    "nclr": 402
+  },
+  {
+    "key": "tm33",
+    "ncgr": 397,
+    "nclr": 401
+  },
+  {
+    "key": "tm34",
+    "ncgr": 397,
+    "nclr": 409
+  },
+  {
+    "key": "tm35",
+    "ncgr": 397,
+    "nclr": 406
+  },
+  {
+    "key": "tm36",
+    "ncgr": 397,
+    "nclr": 403
+  },
+  {
+    "key": "tm37",
+    "ncgr": 397,
+    "nclr": 412
+  },
+  {
+    "key": "tm38",
+    "ncgr": 397,
+    "nclr": 406
+  },
+  {
+    "key": "tm39",
+    "ncgr": 397,
+    "nclr": 412
+  },
+  {
+    "key": "tm40",
+    "ncgr": 397,
+    "nclr": 413
+  },
+  {
+    "key": "tm41",
+    "ncgr": 397,
+    "nclr": 407
+  },
+  {
+    "key": "tm42",
+    "ncgr": 397,
+    "nclr": 402
+  },
+  {
+    "key": "tm43",
+    "ncgr": 397,
+    "nclr": 402
+  },
+  {
+    "key": "tm44",
+    "ncgr": 397,
+    "nclr": 401
+  },
+  {
+    "key": "tm45",
+    "ncgr": 397,
+    "nclr": 402
+  },
+  {
+    "key": "tm46",
+    "ncgr": 397,
+    "nclr": 407
+  },
+  {
+    "key": "tm47",
+    "ncgr": 397,
+    "nclr": 408
+  },
+  {
+    "key": "tm48",
+    "ncgr": 397,
+    "nclr": 401
+  },
+  {
+    "key": "tm49",
+    "ncgr": 397,
+    "nclr": 407
+  },
+  {
+    "key": "tm50",
+    "ncgr": 397,
+    "nclr": 406
+  },
+  {
+    "key": "tm51",
+    "ncgr": 397,
+    "nclr": 413
+  },
+  {
+    "key": "tm52",
+    "ncgr": 397,
+    "nclr": 398
+  },
+  {
+    "key": "tm53",
+    "ncgr": 397,
+    "nclr": 405
+  },
+  {
+    "key": "tm54",
+    "ncgr": 397,
+    "nclr": 402
+  },
+  {
+    "key": "tm55",
+    "ncgr": 397,
+    "nclr": 400
+  },
+  {
+    "key": "tm56",
+    "ncgr": 397,
+    "nclr": 407
+  },
+  {
+    "key": "tm57",
+    "ncgr": 397,
+    "nclr": 409
+  },
+  {
+    "key": "tm58",
+    "ncgr": 397,
+    "nclr": 402
+  },
+  {
+    "key": "tm59",
+    "ncgr": 397,
+    "nclr": 399
+  },
+  {
+    "key": "tm60",
+    "ncgr": 397,
+    "nclr": 398
+  },
+  {
+    "key": "tm61",
+    "ncgr": 397,
+    "nclr": 406
+  },
+  {
+    "key": "tm62",
+    "ncgr": 397,
+    "nclr": 610
+  },
+  {
+    "key": "tm63",
+    "ncgr": 397,
+    "nclr": 407
+  },
+  {
+    "key": "tm64",
+    "ncgr": 397,
+    "nclr": 402
+  },
+  {
+    "key": "tm65",
+    "ncgr": 397,
+    "nclr": 411
+  },
+  {
+    "key": "tm66",
+    "ncgr": 397,
+    "nclr": 407
+  },
+  {
+    "key": "tm67",
+    "ncgr": 397,
+    "nclr": 402
+  },
+  {
+    "key": "tm68",
+    "ncgr": 397,
+    "nclr": 402
+  },
+  {
+    "key": "tm69",
+    "ncgr": 397,
+    "nclr": 412
+  },
+  {
+    "key": "tm70",
+    "ncgr": 397,
+    "nclr": 402
+  },
+  {
+    "key": "tm71",
+    "ncgr": 397,
+    "nclr": 412
+  },
+  {
+    "key": "tm72",
+    "ncgr": 397,
+    "nclr": 404
+  },
+  {
+    "key": "tm73",
+    "ncgr": 397,
+    "nclr": 409
+  },
+  {
+    "key": "tm74",
+    "ncgr": 397,
+    "nclr": 408
+  },
+  {
+    "key": "tm75",
+    "ncgr": 397,
+    "nclr": 402
+  },
+  {
+    "key": "tm76",
+    "ncgr": 397,
+    "nclr": 412
+  },
+  {
+    "key": "tm77",
+    "ncgr": 397,
+    "nclr": 402
+  },
+  {
+    "key": "tm78",
+    "ncgr": 397,
+    "nclr": 402
+  },
+  {
+    "key": "tm79",
+    "ncgr": 397,
+    "nclr": 407
+  },
+  {
+    "key": "tm80",
+    "ncgr": 397,
+    "nclr": 412
+  },
+  {
+    "key": "tm81",
+    "ncgr": 397,
+    "nclr": 610
+  },
+  {
+    "key": "tm82",
+    "ncgr": 397,
+    "nclr": 402
+  },
+  {
+    "key": "tm83",
+    "ncgr": 397,
+    "nclr": 402
+  },
+  {
+    "key": "tm84",
+    "ncgr": 397,
+    "nclr": 403
+  },
+  {
+    "key": "tm85",
+    "ncgr": 397,
+    "nclr": 401
+  },
+  {
+    "key": "tm86",
+    "ncgr": 397,
+    "nclr": 405
+  },
+  {
+    "key": "tm87",
+    "ncgr": 397,
+    "nclr": 402
+  },
+  {
+    "key": "tm88",
+    "ncgr": 397,
+    "nclr": 413
+  },
+  {
+    "key": "tm89",
+    "ncgr": 397,
+    "nclr": 610
+  },
+  {
+    "key": "tm90",
+    "ncgr": 397,
+    "nclr": 402
+  },
+  {
+    "key": "tm91",
+    "ncgr": 397,
+    "nclr": 408
+  },
+  {
+    "key": "tm92",
+    "ncgr": 397,
+    "nclr": 401
+  },
+  {
+    "key": "hm01",
+    "ncgr": 414,
+    "nclr": 402
+  },
+  {
+    "key": "hm02",
+    "ncgr": 414,
+    "nclr": 413
+  },
+  {
+    "key": "hm03",
+    "ncgr": 414,
+    "nclr": 400
+  },
+  {
+    "key": "hm04",
+    "ncgr": 414,
+    "nclr": 402
+  },
+  {
+    "key": "hm05",
+    "ncgr": 414,
+    "nclr": 400
+  },
+  {
+    "key": "hm06",
+    "ncgr": 414,
+    "nclr": 398
+  },
+  {
+    "key": "hm07",
+    "ncgr": 414,
+    "nclr": 400
+  },
+  {
+    "key": "hm08",
+    "ncgr": 414,
+    "nclr": 402
+  },
+  {
+    "key": "explorer_kit",
+    "ncgr": 793,
+    "nclr": 794
+  },
+  {
+    "key": "loot_sack",
+    "ncgr": 550,
+    "nclr": 551
+  },
+  {
+    "key": "rule_book",
+    "ncgr": 552,
+    "nclr": 553
+  },
+  {
+    "key": "poke_radar",
+    "ncgr": 697,
+    "nclr": 698
+  },
+  {
+    "key": "point_card",
+    "ncgr": 681,
+    "nclr": 682
+  },
+  {
+    "key": "journal",
+    "ncgr": 606,
+    "nclr": 607
+  },
+  {
+    "key": "seal_case",
+    "ncgr": 671,
+    "nclr": 672
+  },
+  {
+    "key": "fashion_case",
+    "ncgr": 675,
+    "nclr": 676
+  },
+  {
+    "key": "seal_bag",
+    "ncgr": 673,
+    "nclr": 674
+  },
+  {
+    "key": "pal_pad",
+    "ncgr": 661,
+    "nclr": 662
+  },
+  {
+    "key": "works_key",
+    "ncgr": 644,
+    "nclr": 645
+  },
+  {
+    "key": "old_charm",
+    "ncgr": 604,
+    "nclr": 605
+  },
+  {
+    "key": "galactic_key",
+    "ncgr": 656,
+    "nclr": 657
+  },
+  {
+    "key": "red_chain",
+    "ncgr": 679,
+    "nclr": 680
+  },
+  {
+    "key": "town_map",
+    "ncgr": 439,
+    "nclr": 440
+  },
+  {
+    "key": "vs__seeker",
+    "ncgr": 441,
+    "nclr": 442
+  },
+  {
+    "key": "coin_case",
+    "ncgr": 349,
+    "nclr": 350
+  },
+  {
+    "key": "old_rod",
+    "ncgr": 353,
+    "nclr": 354
+  },
+  {
+    "key": "good_rod",
+    "ncgr": 355,
+    "nclr": 356
+  },
+  {
+    "key": "super_rod",
+    "ncgr": 357,
+    "nclr": 358
+  },
+  {
+    "key": "sprayduck",
+    "ncgr": 363,
+    "nclr": 364
+  },
+  {
+    "key": "poffin_case",
+    "ncgr": 373,
+    "nclr": 374
+  },
+  {
+    "key": "bicycle",
+    "ncgr": 437,
+    "nclr": 438
+  },
+  {
+    "key": "suite_key",
+    "ncgr": 429,
+    "nclr": 430
+  },
+  {
+    "key": "oaks_letter",
+    "ncgr": 375,
+    "nclr": 64
+  },
+  {
+    "key": "lunar_wing",
+    "ncgr": 602,
+    "nclr": 603
+  },
+  {
+    "key": "member_card",
+    "ncgr": 608,
+    "nclr": 609
+  },
+  {
+    "key": "azure_flute",
+    "ncgr": 677,
+    "nclr": 678
+  },
+  {
+    "key": "s_s__ticket",
+    "ncgr": 359,
+    "nclr": 360
+  },
+  {
+    "key": "contest_pass",
+    "ncgr": 361,
+    "nclr": 362
+  },
+  {
+    "key": "magma_stone",
+    "ncgr": 596,
+    "nclr": 597
+  },
+  {
+    "key": "parcel",
+    "ncgr": 415,
+    "nclr": 416
+  },
+  {
+    "key": "coupon_1",
+    "ncgr": 417,
+    "nclr": 418
+  },
+  {
+    "key": "coupon_2",
+    "ncgr": 419,
+    "nclr": 420
+  },
+  {
+    "key": "coupon_3",
+    "ncgr": 421,
+    "nclr": 422
+  },
+  {
+    "key": "storage_key",
+    "ncgr": 598,
+    "nclr": 599
+  },
+  {
+    "key": "secretpotion",
+    "ncgr": 600,
+    "nclr": 601
+  },
+  {
+    "key": "vs__recorder",
+    "ncgr": 701,
+    "nclr": 702
+  },
+  {
+    "key": "gracidea",
+    "ncgr": 703,
+    "nclr": 704
+  },
+  {
+    "key": "secret_key",
+    "ncgr": 705,
+    "nclr": 706
+  },
+  {
+    "key": "apricorn_box",
+    "ncgr": 709,
+    "nclr": 710
+  },
+  {
+    "key": "unown_report",
+    "ncgr": 759,
+    "nclr": 760
+  },
+  {
+    "key": "berry_pots",
+    "ncgr": 711,
+    "nclr": 712
+  },
+  {
+    "key": "dowsing_mchn",
+    "ncgr": 747,
+    "nclr": 748
+  },
+  {
+    "key": "blue_card",
+    "ncgr": 761,
+    "nclr": 762
+  },
+  {
+    "key": "slowpoketail",
+    "ncgr": 763,
+    "nclr": 764
+  },
+  {
+    "key": "clear_bell",
+    "ncgr": 765,
+    "nclr": 766
+  },
+  {
+    "key": "card_key",
+    "ncgr": 767,
+    "nclr": 768
+  },
+  {
+    "key": "basement_key",
+    "ncgr": 769,
+    "nclr": 770
+  },
+  {
+    "key": "squirtbottle",
+    "ncgr": 713,
+    "nclr": 714
+  },
+  {
+    "key": "red_scale",
+    "ncgr": 771,
+    "nclr": 772
+  },
+  {
+    "key": "lost_item",
+    "ncgr": 773,
+    "nclr": 774
+  },
+  {
+    "key": "pass",
+    "ncgr": 775,
+    "nclr": 776
+  },
+  {
+    "key": "machine_part",
+    "ncgr": 777,
+    "nclr": 778
+  },
+  {
+    "key": "silver_wing",
+    "ncgr": 779,
+    "nclr": 780
+  },
+  {
+    "key": "rainbow_wing",
+    "ncgr": 781,
+    "nclr": 782
+  },
+  {
+    "key": "mystery_egg",
+    "ncgr": 783,
+    "nclr": 784
+  },
+  {
+    "key": "red_apricorn",
+    "ncgr": 733,
+    "nclr": 734
+  },
+  {
+    "key": "ylw_apricorn",
+    "ncgr": 737,
+    "nclr": 738
+  },
+  {
+    "key": "blu_apricorn",
+    "ncgr": 735,
+    "nclr": 736
+  },
+  {
+    "key": "grn_apricorn",
+    "ncgr": 739,
+    "nclr": 740
+  },
+  {
+    "key": "pnk_apricorn",
+    "ncgr": 741,
+    "nclr": 742
+  },
+  {
+    "key": "wht_apricorn",
+    "ncgr": 743,
+    "nclr": 744
+  },
+  {
+    "key": "blk_apricorn",
+    "ncgr": 745,
+    "nclr": 746
+  },
+  {
+    "key": "fast_ball",
+    "ncgr": 723,
+    "nclr": 724
+  },
+  {
+    "key": "level_ball",
+    "ncgr": 717,
+    "nclr": 718
+  },
+  {
+    "key": "lure_ball",
+    "ncgr": 715,
+    "nclr": 716
+  },
+  {
+    "key": "heavy_ball",
+    "ncgr": 721,
+    "nclr": 722
+  },
+  {
+    "key": "love_ball",
+    "ncgr": 727,
+    "nclr": 728
+  },
+  {
+    "key": "friend_ball",
+    "ncgr": 725,
+    "nclr": 726
+  },
+  {
+    "key": "moon_ball",
+    "ncgr": 719,
+    "nclr": 720
+  },
+  {
+    "key": "sport_ball",
+    "ncgr": 731,
+    "nclr": 732
+  },
+  {
+    "key": "park_ball",
+    "ncgr": 729,
+    "nclr": 730
+  },
+  {
+    "key": "photo_album",
+    "ncgr": 606,
+    "nclr": 607
+  },
+  {
+    "key": "gb_sounds",
+    "ncgr": 785,
+    "nclr": 786
+  },
+  {
+    "key": "tidal_bell",
+    "ncgr": 787,
+    "nclr": 788
+  },
+  {
+    "key": "ragecandybar",
+    "ncgr": 749,
+    "nclr": 750
+  },
+  {
+    "key": "data_card_01",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_02",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_03",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_04",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_05",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_06",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_07",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_08",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_09",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_10",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_11",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_12",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_13",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_14",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_15",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_16",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_17",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_18",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_19",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_20",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_21",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_22",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_23",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_24",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_25",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_26",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "data_card_27",
+    "ncgr": 789,
+    "nclr": 790
+  },
+  {
+    "key": "jade_orb",
+    "ncgr": 755,
+    "nclr": 756
+  },
+  {
+    "key": "lock_capsule",
+    "ncgr": 791,
+    "nclr": 792
+  },
+  {
+    "key": "red_orb",
+    "ncgr": 751,
+    "nclr": 752
+  },
+  {
+    "key": "blue_orb",
+    "ncgr": 753,
+    "nclr": 754
+  },
+  {
+    "key": "enigma_stone",
+    "ncgr": 757,
+    "nclr": 758
+  }
+]

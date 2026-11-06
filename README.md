@@ -1,4 +1,4 @@
-# Pokémon Hoja Verde · Compañeros 2.7.0
+# Pokémon Hoja Verde · Compañeros 2.8.0
 
 Aventura fan de Kanto para navegador, con tu líder siguiéndote y una partida personal que puedes abrir a amigos. Los mapas y diálogos son una adaptación propia, todavía no una reproducción íntegra de Verde Hoja.
 
@@ -18,13 +18,14 @@ Las medallas y objetos clave pertenecen a cada entrenador. La historia avanza pa
 
 ## Cambios de esta versión
 
-- Combate clásico con LUCHA, MOCHILA, POKÉMON y HUIDA; PS numéricos, sexo, estado y experiencia.
-- Sprites completos de frente y espalda para las 159 especies disponibles, con composición adaptada a móvil y escritorio.
-- Casas compactas amuebladas, dormitorio accesible, Centros, tiendas y laboratorios diferenciados. Guardados anteriores migrados de forma segura.
-- Selección musical renovada y 35 efectos suaves por familias de ataque. Descarga inicial para utilizar el audio sin conexión.
-- Corrección del bloqueo del Rocket del Puente Pepita, recuperación de detecciones antiguas y pruebas de la campaña offline hasta el campeón.
+- Música y efectos originales de HeartGold, con temas por ciudad, ruta, escenario y rival; bucles originales, niveles moderados y efectos sin superponerse entre acciones.
+- Menú de entrenador, mochila por bolsillos y ficha de equipo dentro de la pantalla. Objetivo desplegable bajo la ubicación y carcasa móvil azul.
+- Ash es un combate de campaña con experiencia, EV, dinero y consecuencias al perder; admite una victoria inicial y dos revanchas.
+- NPC que miran al jugador al hablar y recuperan después su orientación. Los personajes de conversación miran alrededor cuando están libres.
+- Robustez resiste a 1 PS desde vida completa. Se conserva el motor Gen3, con esta excepción explícita solicitada; 55 habilidades disponibles verificadas y descritas en las fichas.
+- La curación por objeto muestra los PS recuperados antes de la respuesta rival. Reglas y guardados compartidos entre modo personal y online.
 
-Detalle y verificación: [cambios 2.7.0](RELEASE-2.7.md).
+Detalle y verificación: [cambios 2.8.0](RELEASE-2.8.md). Historial: [2.7.0](RELEASE-2.7.md).
 
 La versión 2.4.1 incorporó:
 

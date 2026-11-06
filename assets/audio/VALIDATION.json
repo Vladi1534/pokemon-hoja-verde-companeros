@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "musicSceneKeys": 37,
+  "sfxKeys": 35,
+  "uniqueFiles": 66,
+  "rawSequences": 65,
+  "rawClippedSamples": 0,
+  "largestMusicPeakDbFS": -2.5,
+  "largestSfxPeakDbFS": -11.0,
+  "totalBytes": 12204385,
+  "musicBytes": 9892695,
+  "sfxBytes": 2311690,
+  "largestFileBytes": 725035,
+  "uniqueMusicFiles": 33,
+  "uniqueSfxFiles": 33
+}

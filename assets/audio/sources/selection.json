@@ -1,0 +1,177 @@
+{
+  "music": {
+    "town": [
+      1039,
+      "Ciudad Azafrán"
+    ],
+    "route": [
+      1048,
+      "Ruta 1"
+    ],
+    "forest": [
+      1083,
+      "Bosque Verde"
+    ],
+    "cave": [
+      1082,
+      "Túnel Roca"
+    ],
+    "wild": [
+      1125,
+      "Combate contra Pokémon salvaje · Kanto"
+    ],
+    "trainer": [
+      1126,
+      "Combate contra entrenador · Kanto"
+    ],
+    "leader": [
+      1127,
+      "Combate contra líder de gimnasio · Kanto"
+    ],
+    "rocket": [
+      1120,
+      "Combate contra el Team Rocket"
+    ],
+    "champion": [
+      1124,
+      "Combate contra Lance / Rojo"
+    ],
+    "center": [
+      1063,
+      "Centro Pokémon"
+    ],
+    "coast": [
+      1038,
+      "Ciudad Carmín"
+    ],
+    "victory": [
+      1128,
+      "Victoria contra entrenador"
+    ],
+    "fanfare": [
+      1189,
+      "Medalla obtenida"
+    ],
+    "heal": [
+      1183,
+      "Descanso y recuperación"
+    ],
+    "capture": [
+      1187,
+      "Pokémon capturado"
+    ],
+    "loss": [
+      1796,
+      "Pokémon debilitado"
+    ],
+    "title": [
+      1005,
+      "Título HeartGold"
+    ],
+    "cycling": [
+      1013,
+      "Bicicleta"
+    ],
+    "giovanni": [
+      1120,
+      "Combate contra el Team Rocket"
+    ],
+    "pallet": [
+      1046,
+      "Pueblo Paleta"
+    ],
+    "viridian": [
+      1045,
+      "Ciudad Verde"
+    ],
+    "pewter": [
+      1044,
+      "Ciudad Plateada"
+    ],
+    "cerulean": [
+      1040,
+      "Ciudad Celeste"
+    ],
+    "lavender": [
+      1041,
+      "Pueblo Lavanda"
+    ],
+    "celadon": [
+      1042,
+      "Ciudad Azulona"
+    ],
+    "fuchsia": [
+      1043,
+      "Ciudad Fucsia"
+    ],
+    "cinnabar": [
+      1047,
+      "Isla Canela"
+    ],
+    "route3": [
+      1051,
+      "Ruta 3"
+    ],
+    "route24": [
+      1061,
+      "Ruta 24"
+    ],
+    "gym": [
+      1065,
+      "Gimnasio Pokémon"
+    ],
+    "lab": [
+      1103,
+      "Laboratorio del Profesor Oak"
+    ],
+    "league": [
+      1085,
+      "Liga Pokémon"
+    ],
+    "victoryWild": [
+      1129,
+      "Victoria contra Pokémon salvaje"
+    ],
+    "victoryLeader": [
+      1131,
+      "Victoria contra líder"
+    ]
+  },
+  "sfx": {
+    "normal": 1790,
+    "fighting": 1905,
+    "scratch": 1908,
+    "bite": 1934,
+    "water": 1941,
+    "fire": 1937,
+    "grass": 1955,
+    "electric": 1968,
+    "psychic": 1985,
+    "ice": 1946,
+    "rock": 1972,
+    "ground": 1973,
+    "wind": 1914,
+    "poison": 1929,
+    "ghost": 1994,
+    "dragon": 1965,
+    "steel": 2038,
+    "bug": 1963,
+    "dark": 2016,
+    "status": 1928,
+    "heal": 1516,
+    "faint": 1796,
+    "menu": 1500,
+    "confirm": 1501,
+    "cancel": 2368,
+    "denied": 1536,
+    "item": 1185,
+    "alert": 1389,
+    "portal": 1539,
+    "capture": 1801,
+    "escape": 1791,
+    "hit": 1790,
+    "energy": 1985,
+    "critical": 1788,
+    "levelup": 1184
+  }
+}

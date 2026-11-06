@@ -84,6 +84,7 @@ export function interact(s,m,p,n,input={}){const f=s.progress,key=n.data?.key;
 // A single eligibility check is used by sight, dialogue and battle creation.
 export function challengeBlock(s,n){
  if(!n)return 'Ese entrenador ya no está aquí.';
+ if(n.data?.maxWins&&(s.progress['wins_'+n.id]??Number(!!s.progress[n.id]))>=n.data.maxWins)return '¡Ya disputamos nuestros tres combates! Gracias por entrenar conmigo. Sigue tu aventura: nos espera todo Kanto.';
  for(const key of n.data?.requires||[])if(!done(s,key))return gate(s,key);
  if(n.id==='route24_recruiter'&&![0,1,2,3,4].every(i=>done(s,'route24_bridge'+i)))return 'Supera primero a los cinco entrenadores del Puente Pepita. Te esperaré aquí.';
  if(n.id==='silph_3_giovanni'&&!done(s,'silph_2_rival'))return 'Azul te espera en el departamento de desarrollo.';

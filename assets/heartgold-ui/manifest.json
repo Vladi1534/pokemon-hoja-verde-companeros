@@ -1,0 +1,540 @@
+{
+  "sourceFilename": "heartgold.nds",
+  "romSha256": "9e0f7a1a4a18d9015936678722ce081d08b6a5d882fd648e89b624307f8f9e19",
+  "romHeaderTitle": "POKEMON HG",
+  "romGameCode": "IPKS",
+  "romBytes": 134217728,
+  "archives": {
+    "a/0/1/5": "b89055de4660655f9f8ef9bc890e68d4f7ac808e0b7c1ac0c2eea3c6fd40686f",
+    "a/0/1/8": "abaa10233234c73bff7568be751482083d64b2b4e195b266e4b3db0c8b8b5704",
+    "a/0/4/9": "3dc0e59c5c7157ce4a9124a0bb001aa92790df052b0f6b4887b6b69afae8efbc"
+  },
+  "sources": {
+    "bag": {
+      "archive": "a/0/1/5",
+      "ncgr": 2,
+      "nclr": 3,
+      "ncer": 1,
+      "cell": 0
+    },
+    "bagFemale": {
+      "archive": "a/0/1/5",
+      "ncgr": 33,
+      "nclr": 34,
+      "ncer": 32,
+      "cell": 0
+    },
+    "pockets.medicine": {
+      "archive": "a/0/1/5",
+      "ncgr": 51,
+      "nclr": 47,
+      "ncer": 49,
+      "cell": 0
+    },
+    "pockets.items": {
+      "archive": "a/0/1/5",
+      "ncgr": 51,
+      "nclr": 47,
+      "ncer": 49,
+      "cell": 1
+    },
+    "pockets.balls": {
+      "archive": "a/0/1/5",
+      "ncgr": 51,
+      "nclr": 47,
+      "ncer": 49,
+      "cell": 2
+    },
+    "pockets.machines": {
+      "archive": "a/0/1/5",
+      "ncgr": 51,
+      "nclr": 47,
+      "ncer": 49,
+      "cell": 3
+    },
+    "pockets.berries": {
+      "archive": "a/0/1/5",
+      "ncgr": 51,
+      "nclr": 47,
+      "ncer": 49,
+      "cell": 4
+    },
+    "pockets.mail": {
+      "archive": "a/0/1/5",
+      "ncgr": 51,
+      "nclr": 47,
+      "ncer": 49,
+      "cell": 5
+    },
+    "pockets.battle": {
+      "archive": "a/0/1/5",
+      "ncgr": 51,
+      "nclr": 47,
+      "ncer": 49,
+      "cell": 6
+    },
+    "pockets.key": {
+      "archive": "a/0/1/5",
+      "ncgr": 51,
+      "nclr": 47,
+      "ncer": 49,
+      "cell": 7
+    },
+    "arrows.left": {
+      "archive": "a/0/1/5",
+      "ncgr": 51,
+      "nclr": 47,
+      "ncer": 49,
+      "cell": 12
+    },
+    "arrows.right": {
+      "archive": "a/0/1/5",
+      "ncgr": 51,
+      "nclr": 47,
+      "ncer": 49,
+      "cell": 13
+    },
+    "arrows.up": {
+      "archive": "a/0/1/5",
+      "ncgr": 51,
+      "nclr": 47,
+      "ncer": 49,
+      "cell": 25
+    },
+    "arrows.down": {
+      "archive": "a/0/1/5",
+      "ncgr": 51,
+      "nclr": 47,
+      "ncer": 49,
+      "cell": 27
+    },
+    "frames.tab": {
+      "archive": "a/0/1/5",
+      "ncgr": 51,
+      "nclr": 47,
+      "ncer": 49,
+      "cell": 8
+    },
+    "frames.item": {
+      "archive": "a/0/1/5",
+      "ncgr": 51,
+      "nclr": 47,
+      "ncer": 49,
+      "cell": 10
+    },
+    "frames.selection": {
+      "archive": "a/0/1/5",
+      "ncgr": 51,
+      "nclr": 47,
+      "ncer": 49,
+      "cell": 11
+    },
+    "frames.button": {
+      "archive": "a/0/1/5",
+      "ncgr": 51,
+      "nclr": 47,
+      "ncer": 49,
+      "cell": 17
+    },
+    "items.ball": {
+      "archive": "a/0/1/8",
+      "ncgr": 8,
+      "nclr": 9
+    },
+    "items.superball": {
+      "archive": "a/0/1/8",
+      "ncgr": 6,
+      "nclr": 7
+    },
+    "items.ultraball": {
+      "archive": "a/0/1/8",
+      "ncgr": 4,
+      "nclr": 5
+    },
+    "items.masterball": {
+      "archive": "a/0/1/8",
+      "ncgr": 2,
+      "nclr": 3
+    },
+    "items.potion": {
+      "archive": "a/0/1/8",
+      "ncgr": 24,
+      "nclr": 25
+    },
+    "items.superpotion": {
+      "archive": "a/0/1/8",
+      "ncgr": 24,
+      "nclr": 37
+    },
+    "items.hyperpotion": {
+      "archive": "a/0/1/8",
+      "ncgr": 24,
+      "nclr": 36
+    },
+    "items.antidote": {
+      "archive": "a/0/1/8",
+      "ncgr": 26,
+      "nclr": 27
+    },
+    "items.fullheal": {
+      "archive": "a/0/1/8",
+      "ncgr": 38,
+      "nclr": 39
+    },
+    "items.revive": {
+      "archive": "a/0/1/8",
+      "ncgr": 40,
+      "nclr": 42
+    },
+    "items.firestone": {
+      "archive": "a/0/1/8",
+      "ncgr": 119,
+      "nclr": 120
+    },
+    "items.waterstone": {
+      "archive": "a/0/1/8",
+      "ncgr": 123,
+      "nclr": 124
+    },
+    "items.thunderstone": {
+      "archive": "a/0/1/8",
+      "ncgr": 121,
+      "nclr": 122
+    },
+    "items.leafstone": {
+      "archive": "a/0/1/8",
+      "ncgr": 125,
+      "nclr": 126
+    },
+    "items.moonstone": {
+      "archive": "a/0/1/8",
+      "ncgr": 117,
+      "nclr": 118
+    },
+    "items.repel": {
+      "archive": "a/0/1/8",
+      "ncgr": 109,
+      "nclr": 114
+    },
+    "items.rareCandy": {
+      "archive": "a/0/1/8",
+      "ncgr": 90,
+      "nclr": 91
+    },
+    "items.ether": {
+      "archive": "a/0/1/8",
+      "ncgr": 58,
+      "nclr": 59
+    },
+    "items.oldrod": {
+      "archive": "a/0/1/8",
+      "ncgr": 353,
+      "nclr": 354
+    },
+    "items.goodrod": {
+      "archive": "a/0/1/8",
+      "ncgr": 355,
+      "nclr": 356
+    },
+    "items.superrod": {
+      "archive": "a/0/1/8",
+      "ncgr": 357,
+      "nclr": 358
+    },
+    "items.bicycle": {
+      "archive": "a/0/1/8",
+      "ncgr": 437,
+      "nclr": 438
+    },
+    "items.map": {
+      "archive": "a/0/1/8",
+      "ncgr": 439,
+      "nclr": 440
+    },
+    "items.card_key": {
+      "archive": "a/0/1/8",
+      "ncgr": 767,
+      "nclr": 768
+    },
+    "items.hm01": {
+      "archive": "a/0/1/8",
+      "ncgr": 414,
+      "nclr": 402
+    },
+    "items.hm02": {
+      "archive": "a/0/1/8",
+      "ncgr": 414,
+      "nclr": 413
+    },
+    "items.hm03": {
+      "archive": "a/0/1/8",
+      "ncgr": 414,
+      "nclr": 400
+    },
+    "items.hm04": {
+      "archive": "a/0/1/8",
+      "ncgr": 414,
+      "nclr": 402
+    },
+    "items.hm05": {
+      "archive": "a/0/1/8",
+      "ncgr": 414,
+      "nclr": 400
+    },
+    "items.hm06": {
+      "archive": "a/0/1/8",
+      "ncgr": 414,
+      "nclr": 398
+    },
+    "items.tm01": {
+      "archive": "a/0/1/8",
+      "ncgr": 397,
+      "nclr": 398
+    },
+    "portraits.ethan": {
+      "archive": "a/0/4/9",
+      "ncgr": 44,
+      "nclr": 0,
+      "nscr": 54,
+      "crop": [
+        186,
+        52,
+        222,
+        117
+      ]
+    },
+    "portraits.lyra": {
+      "archive": "a/0/4/9",
+      "ncgr": 44,
+      "nclr": 0,
+      "nscr": 55,
+      "crop": [
+        186,
+        52,
+        221,
+        117
+      ]
+    }
+  },
+  "dimensions": {
+    "bag": [
+      64,
+      64
+    ],
+    "bagFemale": [
+      64,
+      64
+    ],
+    "pockets.medicine": [
+      32,
+      32
+    ],
+    "pockets.items": [
+      32,
+      32
+    ],
+    "pockets.balls": [
+      32,
+      32
+    ],
+    "pockets.machines": [
+      32,
+      32
+    ],
+    "pockets.berries": [
+      32,
+      32
+    ],
+    "pockets.mail": [
+      32,
+      32
+    ],
+    "pockets.battle": [
+      32,
+      32
+    ],
+    "pockets.key": [
+      32,
+      32
+    ],
+    "arrows.left": [
+      32,
+      32
+    ],
+    "arrows.right": [
+      32,
+      32
+    ],
+    "arrows.up": [
+      32,
+      24
+    ],
+    "arrows.down": [
+      32,
+      24
+    ],
+    "frames.tab": [
+      32,
+      32
+    ],
+    "frames.item": [
+      128,
+      48
+    ],
+    "frames.selection": [
+      128,
+      48
+    ],
+    "frames.button": [
+      64,
+      32
+    ],
+    "items.ball": [
+      32,
+      32
+    ],
+    "items.superball": [
+      32,
+      32
+    ],
+    "items.ultraball": [
+      32,
+      32
+    ],
+    "items.masterball": [
+      32,
+      32
+    ],
+    "items.potion": [
+      32,
+      32
+    ],
+    "items.superpotion": [
+      32,
+      32
+    ],
+    "items.hyperpotion": [
+      32,
+      32
+    ],
+    "items.antidote": [
+      32,
+      32
+    ],
+    "items.fullheal": [
+      32,
+      32
+    ],
+    "items.revive": [
+      32,
+      32
+    ],
+    "items.firestone": [
+      32,
+      32
+    ],
+    "items.waterstone": [
+      32,
+      32
+    ],
+    "items.thunderstone": [
+      32,
+      32
+    ],
+    "items.leafstone": [
+      32,
+      32
+    ],
+    "items.moonstone": [
+      32,
+      32
+    ],
+    "items.repel": [
+      32,
+      32
+    ],
+    "items.rareCandy": [
+      32,
+      32
+    ],
+    "items.ether": [
+      32,
+      32
+    ],
+    "items.oldrod": [
+      32,
+      32
+    ],
+    "items.goodrod": [
+      32,
+      32
+    ],
+    "items.superrod": [
+      32,
+      32
+    ],
+    "items.bicycle": [
+      32,
+      32
+    ],
+    "items.map": [
+      32,
+      32
+    ],
+    "items.card_key": [
+      32,
+      32
+    ],
+    "items.hm01": [
+      32,
+      32
+    ],
+    "items.hm02": [
+      32,
+      32
+    ],
+    "items.hm03": [
+      32,
+      32
+    ],
+    "items.hm04": [
+      32,
+      32
+    ],
+    "items.hm05": [
+      32,
+      32
+    ],
+    "items.hm06": [
+      32,
+      32
+    ],
+    "items.tm01": [
+      32,
+      32
+    ],
+    "portraits.ethan": [
+      36,
+      65
+    ],
+    "portraits.lyra": [
+      35,
+      65
+    ]
+  },
+  "aliases": {
+    "pokeball": "ball",
+    "greatball": "superball",
+    "rare_candy": "rareCandy",
+    "cut": "hm01",
+    "fly": "hm02",
+    "surf": "hm03",
+    "surf_lesson": "hm03",
+    "strength": "hm04",
+    "flash": "hm05",
+    "rocksmash": "hm06",
+    "rod": "oldrod",
+    "cardkey": "card_key"
+  },
+  "note": "Only decoded graphics; no executable ROM or story scripts included. flash is a retained application alias to HM05, not an assertion that HG HM05 teaches Flash."
+}
