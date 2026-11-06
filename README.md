@@ -1,4 +1,4 @@
-# Pokémon Hoja Verde · Compañeros 3.0.0
+# Pokémon Hoja Verde · Compañeros 3.0.1
 
 Aventura fan de Kanto para navegador, con tu líder siguiéndote y una partida personal que puedes abrir a amigos. La geometría procede de 425 mapas originales de Verde Hoja; la campaña y sus eventos siguen adaptados al motor web compartido. El arte de HeartGold se integra progresivamente sin cambiar esas coordenadas.
 
@@ -17,6 +17,16 @@ Hasta cuatro entrenadores pueden recorrer un mundo. Los encuentros individuales 
 Las medallas y objetos clave pertenecen a cada entrenador. La historia avanza para los participantes que cumplen sus requisitos; un invitado nuevo no recibe automáticamente las medallas del anfitrión. Los árboles cortados pertenecen al mundo y se conservan en la copia local al salir.
 
 ## Cambios de esta versión
+
+- Árboles de Corte con texturas visibles y paso libre tras despejarlos.
+- Fachadas completas, puertas alineadas y vegetación nativa conservada. Las fachadas sin correspondencia exacta mantienen su arte original.
+- Movimiento unificado con el motor nativo: cruces de rutas, saltos y barreras abiertas sin rechazos del navegador por una cuadrícula antigua.
+- Entradas y salidas corregidas, incluso al cargar partidas guardadas sobre una flecha de salida. Las placas y otros objetos invisibles de interacción ya no generan paredes.
+- Auditoría automática de 425 mapas, 1.018 transiciones utilizables, 784 contactos entre bordes y 107 obstáculos removibles.
+
+Detalle y límites: [correcciones 3.0.1](RELEASE-3.0.1.md).
+
+## Novedades de 3.0.0
 
 - Experiencia y EV tras cada rival debilitado, con mensaje, barra y nivel durante el combate. Repartir Exp. se obtiene al entregar el paquete de Oak y se equipa desde la mochila.
 - Fichas con efecto de las 25 naturalezas, filas de características en verde/rojo y recomendaciones orientativas según especie y movimientos, contrastadas con Pokéxperto.

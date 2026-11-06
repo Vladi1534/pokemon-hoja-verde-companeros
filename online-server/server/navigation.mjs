@@ -1,12 +1,16 @@
 import {world,gate,done,challengeBlock} from './campaign.mjs';
 import {nativeCell} from './native-state.mjs';
 const dirs={up:[0,-1],down:[0,1],left:[-1,0],right:[1,0]};
-export function walkable(map,x,y,state){const m=world.maps[map],t=state&&m?.native?nativeCell(m,x,y,state).grid:m?.grid[y]?.[x];return t!==undefined&&![2,3,7,10].includes(t)&&(!state||!(m.blockers||[]).some(b=>b.x===x&&b.y===y&&!state.progress[b.id]&&!state.sharedGates?.[b.id]))&&!m.npcs.some(n=>n.x===x&&n.y===y&&!(state&&n.hideWhen&&done(state,n.hideWhen)))&&!m.signs.some(n=>n.x===x&&n.y===y);}
+export function walkable(map,x,y,state){const m=world.maps[map],t=state&&m?.native?nativeCell(m,x,y,state).grid:m?.grid[y]?.[x];return t!==undefined&&![2,3,7,10].includes(t)&&(!state||!(m.blockers||[]).some(b=>b.x===x&&b.y===y&&!state.progress[b.id]&&!state.sharedGates?.[b.id]))&&!m.npcs.some(n=>!n.staticObject&&n.x===x&&n.y===y&&!(state&&n.hideWhen&&done(state,n.hideWhen)))&&!m.signs.some(n=>n.x===x&&n.y===y);}
 export function nativeStep(p,dir,state={progress:{}}){
  const m=world.maps[p.map],[dx,dy]=dirs[dir];let x=p.x+dx,y=p.y+dy;
  const transition=m.nativeConnections?.find(c=>c.dir===dir&&c.x===p.x&&c.y===p.y)&&(x<0||y<0||x>=m.w||y>=m.h)?m.nativeConnections.find(c=>c.dir===dir&&c.x===p.x&&c.y===p.y):null;
  const moving={...p,dir};delete moving.notice;
- const arrive=d=>{const reason=gate(state,d.gate);if(reason)return {...moving,notice:reason};const dest=world.maps[d.to],nextDir=dest.inside&&!m.inside?'up':!dest.inside&&m.inside?'down':dir;const next={...moving,map:d.to,x:d.tx,y:d.ty,dir:nextDir,fx:d.tx,fy:d.ty,fdir:nextDir};if(dest.dynamicExit)next.returnWarp={to:p.map,tx:p.x,ty:p.y};else delete next.returnWarp;return next;};
+ const arrive=d=>{const reason=gate(state,d.gate);if(reason)return {...moving,notice:reason};const dest=world.maps[d.to],nextDir=d.arrivalDir||(dest.inside&&!m.inside?'up':!dest.inside&&m.inside?'down':dir);const next={...moving,map:d.to,x:d.tx,y:d.ty,dir:nextDir,fx:d.tx,fy:d.ty,fdir:nextDir};if(dest.dynamicExit)next.returnWarp={to:p.map,tx:p.x,ty:p.y};else delete next.returnWarp;return next;};
+ // Arrow warps also activate from their current tile. This handles old saves
+ // and side approaches without requiring a step backwards first.
+ const standing=m.portals.find(w=>w.x===p.x&&w.y===p.y&&w.dir===dir&&m.native.behavior[p.y]?.[p.x]>=98&&m.native.behavior[p.y]?.[p.x]<=101);
+ if(standing)return arrive(standing);
  if(transition)return arrive(transition);
  if(m.dynamicWarps?.some(w=>w.x===x&&w.y===y)){const d=m.dynamicExit;return arrive(p.returnWarp||{to:d.map,tx:d.x,ty:d.y});}
  let warp=[...m.doors,...m.portals].find(w=>w.x===x&&w.y===y&&(!w.dir||w.dir===dir));
@@ -15,7 +19,7 @@ export function nativeStep(p,dir,state={progress:{}}){
  const t=nativeCell(m,x,y,state).grid;
  if(t===undefined||[2,7,10].includes(t)||t===3&&!done(state,'surf'))return t===3?{...moving,notice:gate(state,'surf')}:moving;
  if(m.blockers.some(b=>b.x===x&&b.y===y&&!state.progress[b.id]&&!state.sharedGates?.[b.id]))return moving;
- if(m.npcs.some(n=>n.x===x&&n.y===y&&!(n.hideWhen&&done(state,n.hideWhen))))return moving;
+ if(m.npcs.some(n=>!n.staticObject&&n.x===x&&n.y===y&&!(n.hideWhen&&done(state,n.hideWhen))))return moving;
  if(warp)return arrive(warp);
  return {...moving,x,y,fx:p.x,fy:p.y,fdir:dir};
 }

@@ -35,11 +35,24 @@ const MotionClient={
  Game.move=function(dir){
   if(!Coop.active)return move.call(this,dir);
   if(MotionClient.wait||Coop.queue.length>=4)return;
-  const before=Coop.queue.length,clock=MotionClient.clock();move.call(this,dir);
+  const before=Coop.queue.length,clock=MotionClient.clock();let predicted;
+  if(this.map.native&&MotionClient.nav){
+   if(this.busy||Coop.offline||Coop.requestBusy||Coop.state?.trainer.spotted||Personal.changing||Personal.pending())return;
+   const previous=this.player.dir;predicted=PersonalEngine.previewNavigation(MotionClient.nav,dir,clock);this.player.dir=dir;
+   if(!predicted.moved&&previous===dir&&(!predicted.position.notice||Coop.flight||Coop.queue.length))return;
+   // Native steps, jumps, changed tiles and edge transitions have exactly the
+   // same rules as the server. The legacy grid must never veto this request.
+   Coop.queue.push(dir);
+   if(predicted.moved&&predicted.position.map===this.mapId){
+    const from={x:this.player.x,y:this.player.y},to={x:predicted.position.x,y:predicted.position.y},f=this.follower;
+    this.anim={elapsed:0,duration:(Input.shift||this.settings.run)?.105:.17,from,to,ffrom:{x:f.px,y:f.py},fto:{...from}};
+    const fx=from.x-f.x,fy=from.y-f.y;if(fx||fy)f.dir=Math.abs(fx)>Math.abs(fy)?(fx>0?'right':'left'):(fy>0?'down':'up');f.x=from.x;f.y=from.y;Object.assign(this.player,to);
+   }
+  }else move.call(this,dir);
   if(Coop.queue.length>before){
    Coop.moveTimes ||= [];Coop.moveSerials ||= [];Coop.moveTimes.push(clock);Coop.moveSerials.push(++MotionClient.serial);
    if(MotionClient.nav){
-    MotionClient.nav=PersonalEngine.previewNavigation(MotionClient.nav,dir,clock);
+    MotionClient.nav=predicted||PersonalEngine.previewNavigation(MotionClient.nav,dir,clock);
     const event=MotionClient.nav.event;
     if(event){MotionClient.wait={...event,serial:MotionClient.serial,finished:!Game.anim};if(!Game.anim)MotionClient.finish();}
    }

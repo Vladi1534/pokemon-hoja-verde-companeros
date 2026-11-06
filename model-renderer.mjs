@@ -28,6 +28,7 @@ export async function load(key){
 }
 const vector=a=>new THREE.Vector3(...a);
 export function frame(key,meta={}){
+ if(meta.environment)return fallbackFrame(meta);
  if(failed)return fallbackFrame(meta);
  if(frames.has(key))return frames.get(key);
  const model=models.get(key);if(!model){load(key);return fallbackFrame(meta);}const r=engine();if(!r)return fallbackFrame(meta);
@@ -66,3 +67,4 @@ export function room(key,placements,{width,height,player,origin=[0,0],zoom=1.4,m
  if(r.domElement.width!==width||r.domElement.height!==height)r.setSize(width,height,false);r.render(roomScene,camera);return r.domElement;
 }
 export const status=()=>({webgl:!!renderer&&!failed,failed,loaded:models.size,cached:frames.size});
+export const preview=meta=>fallbackFrame(meta);

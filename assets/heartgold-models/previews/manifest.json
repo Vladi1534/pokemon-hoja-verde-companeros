@@ -639,5 +639,21 @@
     "sin": 0.6691306063588582,
     "cos": 0.7431448254773942,
     "distance": 2000
+  },
+  "poke-mart-compact": {
+    "image": "model-previews/poke-mart-compact.png",
+    "width": 768,
+    "height": 771,
+    "anchorX": 285.25714285714287,
+    "anchorY": 772.659737848961,
+    "scale": 10.971428571428572,
+    "center": [
+      1.0,
+      26.775390625,
+      -7.0
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
   }
 }

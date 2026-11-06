@@ -1,4 +1,4 @@
-const CACHE='kanto-personal-3.0.0';
+const CACHE='kanto-personal-3.0.1';
 const ROOT=new URL('./',self.location).href;
 const ENTRY=new URL('play.html',ROOT).href;
 self.addEventListener('install',event=>event.waitUntil((async()=>{

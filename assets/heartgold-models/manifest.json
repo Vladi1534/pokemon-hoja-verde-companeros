@@ -2438,6 +2438,38 @@
         0
       ],
       "environment": true
+    },
+    {
+      "key": "poke-mart-compact",
+      "file": "models/poke-mart-compact.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 39,
+      "sourceModel": "fs",
+      "bytes": 30668,
+      "sha256": "aba304857c4d095a996101ff65003944f341a09512764a0f99e352b14dd7b331",
+      "texturesEmbedded": 2,
+      "bounds": {
+        "min": [
+          -32,
+          2,
+          -29
+        ],
+        "max": [
+          34,
+          51.55078,
+          15
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        -8.0,
+        0,
+        16.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json",
+      "adaptation": "Complete main body; detached sign, post and shadow omitted to match FRLG four-cell storefront."
     }
   ],
   "museumInterior": {
@@ -2451,7 +2483,7 @@
     "complete": "models/museum-interior-complete.glb",
     "props": "museum-props.json"
   },
-  "note": "HG Lavender tower is the later radio tower; no claim that this is FRLG Pokémon Tower. Celadon mansion is not Cinnabar Pokémon Mansion.",
+  "note": "HG Lavender tower is the later radio tower; no claim that this is FRLG Pok\u00e9mon Tower. Celadon mansion is not Cinnabar Pok\u00e9mon Mansion.",
   "doorAnchors": "door-anchors.json",
   "museumCollision": "museum-collision.json"
 }

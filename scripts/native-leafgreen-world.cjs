@@ -17,7 +17,16 @@ module.exports=function nativeLeafGreen(world){
    if(w.dynamic||!w.destinationId)continue;
    if(!w.arrival){const dst=source[w.destinationId],at=dst.warps[w.destinationWarp];if(!dst.sourceName.startsWith('PokemonLeague_')||!at)continue;w.arrival={x:at.x,y:at.y-2};}
    if(!w.activeWarpBehaviorByDefault&&!n.sourceName.startsWith('PokemonLeague_')&&n.sourceName!=='MtEmber_Exterior')continue;
-   const d={x:w.x,y:w.y,w:1,h:1,to:ids[w.destinationId],tx:w.arrival.x,ty:w.arrival.y,nativeWarp:w.index,dir:w.entryDirection||null,gate:null};
+   const dst=source[w.destinationId],at=dst.warps[w.destinationWarp],arrival={...w.arrival};let arrivalDir;
+   // GBA doorway animations finish one step inside the room, not stranded on
+   // its outward arrow. Keep stairs on their actual landing tile.
+   if(at&&arrival.x===at.x&&arrival.y===at.y&&[96,98,99,100,101].includes(at.sourceCell?.behavior)){
+    const contact=at.preferredContact;
+    if(contact&&!contact.requiresSurf&&!dst.warps.some(other=>other.x===contact.x&&other.y===contact.y)){
+     arrival.x=contact.x;arrival.y=contact.y;arrivalDir=contact.side;
+    }
+   }
+   const d={x:w.x,y:w.y,w:1,h:1,to:ids[w.destinationId],tx:arrival.x,ty:arrival.y,nativeWarp:w.index,dir:w.entryDirection||null,gate:null,...(arrivalDir?{arrivalDir}:{})};
    m.grid[w.y][w.x]=8;
    if(w.trigger==='approach')m.doors.push(d);else m.portals.push(d);
   }
@@ -51,6 +60,7 @@ module.exports=function nativeLeafGreen(world){
  const looks=s=>/NURSE/.test(s)?'nurse':/CLERK/.test(s)?'clerk':/SCIENTIST/.test(s)?'scientist':/LASS|WOMAN|GIRL/.test(s)?'lass':/HIKER/.test(s)?'hiker':/ROCKET/.test(s)?'rocket':/BUG_CATCHER/.test(s)?'bug':/YOUNGSTER|BOY/.test(s)?'youngster':'gentleman';
  for(const n of Object.values(source)){const m=maps[ids[n.id]];
   for(const obj of n.events.objects){const sym=obj.symbols||{},g=sym.graphics_id||'',id=m.id+'_native_'+obj.localId;
+   if(obj.x<0||obj.y<0||obj.x>=m.w||obj.y>=m.h)continue; // connected-map scenery copies
    if(used.has(n.id+':objects:'+obj.index))continue;
    if(/CUT_TREE|BREAKABLE_ROCK|PUSHABLE_BOULDER/.test(g)){m.blockers.push({id,x:obj.x,y:obj.y,kind:/TREE/.test(g)?'cutTree':'boulder',gate:/TREE/.test(g)?'cut_use':'strength_use'});continue;}
    const battle=trainerObjects.find(t=>t.nativeMapId===n.id&&t.eventIndex===obj.index),trainer=battle&&trainers[battle.initialTrainerId];
@@ -60,7 +70,7 @@ module.exports=function nativeLeafGreen(world){
    const role=/NURSE/.test(g)?'heal':/CLERK/.test(g)&&/Mart|DepartmentStore/.test(n.sourceName)?'shop':'talk';
    m.npcs.push({id,x:obj.x,y:obj.y,homeX:obj.x,homeY:obj.y,dir:'down',look:looks(g),name:role==='heal'?'Enfermera Joy':role==='shop'?'Dependiente':'Habitante de Kanto',role,data:{lines:[dialogues.find(d=>d.nativeMapId===n.id&&d.eventIndex===obj.index)?.textSpanish||'Explora '+m.name+'. Consulta el Pokégear para seguir tu objetivo y la Pokédex para buscar Pokémon.']},nativeIndex:obj.index});
   }
-  if(/PokemonCenter_1F/.test(n.sourceName)&&!m.npcs.some(n=>n.role==='pc')){const p=safe(m,m.w-3,3);m.npcs.push({id:m.id+'_pc',...p,homeX:p.x,homeY:p.y,name:'PC de Bill',role:'pc',look:'pc',dir:'down',data:{},staticObject:true});}
+  if(/PokemonCenter_1F/.test(n.sourceName)&&!m.npcs.some(n=>n.role==='pc')){const cells=n.behavior.flatMap((r,y)=>r.flatMap((v,x)=>v===131?[{x,y}]:[])),p=cells[0];if(p)m.npcs.push({id:m.id+'_pc',...p,homeX:p.x,homeY:p.y,name:'PC de Bill',role:'pc',look:'pc',dir:'down',data:{},staticObject:true});}
  }
  // Four additional League rooms retain their native stairs and opponent positions.
  for(const [round,name,look]of [[1,'PokemonLeague_BrunosRoom','bruno'],[2,'PokemonLeague_AgathasRoom','agatha'],[3,'PokemonLeague_LancesRoom','lance'],[4,'PokemonLeague_ChampionsRoom','blue']]){
@@ -92,17 +102,8 @@ module.exports=function nativeLeafGreen(world){
   for(const d of [...m.doors,...m.portals]){const target=maps[d.to];if(!target?.inside)continue;
    const original=Object.values(old).flatMap(m=>m.buildings).find(b=>alias[b.id]===d.to);
    const kind=original?.kind||(/PokemonCenter/.test(target.native.name)?'center':/Mart/.test(target.native.name)?'shop':/Gym/.test(target.native.name)?'gym':/House/.test(target.native.name)?'home':null);if(!kind)continue;
-   let left=d.x,right=d.x,top=d.y;const solid=(x,y)=>n.collision[y]?.[x]===1;
-   while(left>0&&solid(left-1,d.y))left--;while(right<m.w-1&&solid(right+1,d.y))right++;
-   while(top>0&&Array.from({length:right-left+1},(_,i)=>solid(left+i,top-1)).some(Boolean)&&d.y-top<8)top--;
-   let width=right-left+1;
-   if(kind==='shop'){left=d.x-2;right=d.x+1;top=d.y-3;}
-   else if(kind==='center'){left=d.x-2;right=d.x+2;top=d.y-4;}
-   else if(kind==='gym'){const row=n.blocks[d.y-2];left=d.x;right=d.x;while(left>0&&((row[left-1]&1023)>=313&&(row[left-1]&1023)<=350))left--;while(right<m.w-1&&((row[right+1]&1023)>=313&&(row[right+1]&1023)<=350))right++;top=d.y-4;}
-   else if(d.to==='pewter_museum'){if(d.x!==17)continue;left=12;right=27;top=0;}
-   else if(['home','lab'].includes(kind))top=Math.max(0,top-1);
-   width=right-left+1;if(width<3||width>24)continue;
-   m.buildings.push({id:d.to,x:left,y:top,w:width,h:d.y-top+1,door:{x:d.x,y:d.y},kind,label:target.name,native:true});
+   const footprint=require('./native-facades.cjs')(n,d,kind);
+   m.buildings.push({id:d.to,...(footprint||{x:d.x,y:d.y,w:1,h:1,nativeFacade:false}),door:{x:d.x,y:d.y},kind,label:target.name,native:true});
   }
  }
  for(const [name,id]of Object.entries(alias))if(name!==id)maps[name]={...maps[id],id:name,aliasOf:id};
