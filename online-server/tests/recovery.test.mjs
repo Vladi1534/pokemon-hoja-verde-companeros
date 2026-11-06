@@ -29,6 +29,6 @@ reloaded.dispatch({action:'sync',seq:13,steps:Array(8).fill('down')});
 assert.equal(reloaded.member.position.map,'viridian');
 reloaded.dispatch({action:'sync',seq:14,steps:['down']});
 assert.equal(reloaded.member.position.seq,14);
-assert.equal(reloaded.member.position.y,8);
+assert.equal(reloaded.member.position.y,world.maps.viridian.doors.find(d=>d.to==='viridian_center').y+2);
 assert(!('seq' in reloaded.portable().trainer.lastCenter));
 console.log('PASS heal, walk, lose, return to Center, reload, exit and keep moving with a legacy checkpoint');

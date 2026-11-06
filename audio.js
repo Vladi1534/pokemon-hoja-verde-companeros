@@ -34,6 +34,7 @@ const Soundtrack={
   if(Game.mode==='coop-battle'&&battle){
    if(battle.ended)return ['victory','pvp'].includes(battle.result)?(battle.encounter==='wild'?'victoryWild':battle.encounter==='gym'||battle.encounter==='league'?'victoryLeader':'victory'):battle.result==='captured'?'capture':battle.result==='defeat'?'loss':'route';
    if(battle.encounter==='wild')return 'wild';
+   if(/ash/i.test(battle.title))return 'ash';
    if(/giovanni/i.test(battle.title))return 'giovanni';
    if(/rocket|jessie|james/i.test(battle.title))return 'rocket';
    if(battle.encounter==='league'||/lorelei|bruno|agatha|lance|azul/i.test(battle.title))return 'champion';

@@ -43,7 +43,7 @@ export function frame(key,meta={}){
  r.setSize(w,h,false);r.render(scene,camera);
  const image=document.createElement('canvas');image.width=w;image.height=h;image.getContext('2d').drawImage(r.domElement,0,0);
  const anchor=vector(meta.doorNative||meta.anchor||[0,box.min.y,box.max.z]).project(camera);
- const value={image,anchorX:(anchor.x+1)/2*w,anchorY:(1-anchor.y)/2*h,bounds:box};frames.set(key,value);return value;
+ const value={image,nativePixelsPerUnit:w/(camera.right-camera.left),anchorX:(anchor.x+1)/2*w,anchorY:(1-anchor.y)/2*h,bounds:box};frames.set(key,value);return value;
 }
 export function room(key,placements,{width,height,player,origin=[0,0],zoom=1.4,meta={}}){
  const options={width,height,player,origin,zoom,meta};if(failed)return fallbackRoom(placements,options);

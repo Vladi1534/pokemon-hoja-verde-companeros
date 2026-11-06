@@ -1,0 +1,6168 @@
+{
+  "image": "environment-atlas.png",
+  "width": 512,
+  "height": 512,
+  "pixelTransformation": "Lossless packing only; source pixels not rescaled, repainted or filtered",
+  "textures": [
+    {
+      "key": "kanto/allpeak_pgs",
+      "file": "textures/kanto/allpeak_pgs.png",
+      "sourceTextureName": "allpeak_pgs",
+      "width": 16,
+      "height": 16,
+      "sha256": "95100290d383d5c6449909cf3165d7084add66d49db1bf8fde71621e8c11682d",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_09c",
+          "material": "allpeak_p",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_10c",
+          "material": "allpeak_p",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        2,
+        2,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "kanto/allpeakgs",
+      "file": "textures/kanto/allpeakgs.png",
+      "sourceTextureName": "allpeakgs",
+      "width": 32,
+      "height": 32,
+      "sha256": "ea783296383c7efeeb9b76e455cd798524f654a8821be436baa82b4ffe75e6bf",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_09c",
+          "material": "allpeak",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_10c",
+          "material": "allpeak",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        22,
+        2,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "kanto/beach01",
+      "file": "textures/kanto/beach01.png",
+      "sourceTextureName": "beach01",
+      "width": 32,
+      "height": 32,
+      "sha256": "485c886518b83279b26d1fd72dc0a85dc4c7f35d423720fcc9999e45f61442bb",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_12c",
+          "material": "lambert81",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "map32_13c",
+          "material": "beach01",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "map32_14c",
+          "material": "beach01",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        58,
+        2,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "kanto/cliff01gs",
+      "file": "textures/kanto/cliff01gs.png",
+      "sourceTextureName": "cliff01gs",
+      "width": 32,
+      "height": 32,
+      "sha256": "52e14a045b619c841d6adc05cd39e007ff83abc2cc1de6a7bc2dd1e1a2e58258",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_14c",
+          "material": "cliff01",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        94,
+        2,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "kanto/egrass",
+      "file": "textures/kanto/egrass.png",
+      "sourceTextureName": "egrass",
+      "width": 16,
+      "height": 16,
+      "sha256": "5ae6777098f35831f3e5b513495e429782ca6b044b2f9043fa11269ba8c46917",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_09c",
+          "material": "egrass",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "map32_10c",
+          "material": "egrass",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "map32_12c",
+          "material": "egrass",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        130,
+        2,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "kanto/egrass_ri",
+      "file": "textures/kanto/egrass_ri.png",
+      "sourceTextureName": "egrass_ri",
+      "width": 16,
+      "height": 16,
+      "sha256": "a258517e4f93d9dcb90983034dcfbdba93c1da970af1ba4f4dc51a473f500e87",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_09c",
+          "material": "egrass_ri",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_10c",
+          "material": "egrass_ri",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_12c",
+          "material": "egrass_ri",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        150,
+        2,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "kanto/egrass_ro",
+      "file": "textures/kanto/egrass_ro.png",
+      "sourceTextureName": "egrass_ro",
+      "width": 16,
+      "height": 16,
+      "sha256": "3226d98f8cab0f4ccd62bef6472cc548be8de5f1b40a1fc18d9a2b651c3eef5d",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_09c",
+          "material": "egrass_ro",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_10c",
+          "material": "egrass_ro",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_12c",
+          "material": "egrass_ro",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        170,
+        2,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "kanto/egrass_u",
+      "file": "textures/kanto/egrass_u.png",
+      "sourceTextureName": "egrass_u",
+      "width": 16,
+      "height": 16,
+      "sha256": "afc7487c0a81dfaf43f0f8b97d2379f7a02b39c352f28d667d470de9431d0d7e",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_09c",
+          "material": "egrass_u",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_10c",
+          "material": "egrass_u",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_12c",
+          "material": "egrass_u",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        190,
+        2,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "kanto/egrass_v",
+      "file": "textures/kanto/egrass_v.png",
+      "sourceTextureName": "egrass_v",
+      "width": 16,
+      "height": 16,
+      "sha256": "cfbafb5d946fe1a7d629ac5c36733ed9b2a5313c1a37464fc6d0806b7284a26b",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_09c",
+          "material": "egrass_v",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_10c",
+          "material": "egrass_v",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_12c",
+          "material": "egrass_v",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        210,
+        2,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "kanto/flower01",
+      "file": "textures/kanto/flower01.png",
+      "sourceTextureName": "flower01",
+      "width": 16,
+      "height": 16,
+      "sha256": "40ef375fe038159eacf545d78500e4927c232e2a06d2748c30ae4742d824a871",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_09c",
+          "material": "flower01",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_10c",
+          "material": "flower01",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        230,
+        2,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "kanto/flower02",
+      "file": "textures/kanto/flower02.png",
+      "sourceTextureName": "flower02",
+      "width": 16,
+      "height": 16,
+      "sha256": "d9369f6412e49ce106a976f862208aa689e0c18d93157ee07995c8b09634e332",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_09c",
+          "material": "flower02",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_10c",
+          "material": "flower02",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        250,
+        2,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "kanto/flower03",
+      "file": "textures/kanto/flower03.png",
+      "sourceTextureName": "flower03",
+      "width": 16,
+      "height": 16,
+      "sha256": "bcf538cc3a9a281e26f8b30b2c99e722da6eb45b261878d47ab8aca6b7764327",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_09c",
+          "material": "flower03",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "map32_10c",
+          "material": "flower03",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        270,
+        2,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "kanto/grass01_a",
+      "file": "textures/kanto/grass01_a.png",
+      "sourceTextureName": "grass01_a",
+      "width": 16,
+      "height": 16,
+      "sha256": "7e1d782b85fb3edd21cf0ff21c52085c272087dac03fd3e40b26c8bf16a0a297",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_09c",
+          "material": "grass01_a",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_10c",
+          "material": "grass01_a",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        290,
+        2,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "kanto/grass01gs",
+      "file": "textures/kanto/grass01gs.png",
+      "sourceTextureName": "grass01gs",
+      "width": 32,
+      "height": 32,
+      "sha256": "a6ea2910d9535c6d70209d82f3728b0d93c8f5255ec7f05698c738e35a8d3782",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_09c",
+          "material": "grass01",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "map32_10c",
+          "material": "grass01",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "map32_12c",
+          "material": "grass01",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        310,
+        2,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "kanto/pond_line",
+      "file": "textures/kanto/pond_line.png",
+      "sourceTextureName": "pond_line",
+      "width": 16,
+      "height": 16,
+      "sha256": "ae5fac2ee33f09f79c11cf7fe415ffea4aa2dd414793e5c186d6030c7a64735b",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_12c",
+          "material": "pond_line",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_14c",
+          "material": "pond_line",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        346,
+        2,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "kanto/road01",
+      "file": "textures/kanto/road01.png",
+      "sourceTextureName": "road01",
+      "width": 32,
+      "height": 32,
+      "sha256": "c47f86b43468708b7cb52d77cf0a5647309c2a0351b0e67f943f9c9c83fcdb57",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_09c",
+          "material": "road01",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "map32_10c",
+          "material": "road01",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        366,
+        2,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "kanto/road01_r",
+      "file": "textures/kanto/road01_r.png",
+      "sourceTextureName": "road01_r",
+      "width": 32,
+      "height": 32,
+      "sha256": "c0363bd428cc0de0631825909d14a3af157be0d044178783f9c02e9284b9dbad",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_09c",
+          "material": "road01_r",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "map32_10c",
+          "material": "road01_r",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        402,
+        2,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "kanto/road01_sub",
+      "file": "textures/kanto/road01_sub.png",
+      "sourceTextureName": "road01_sub",
+      "width": 16,
+      "height": 16,
+      "sha256": "26a33e697e172edc42448a78ae82b4e19781a57b0991b31980eabe91c34c7dd1",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_09c",
+          "material": "road01_sub",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_10c",
+          "material": "road01_sub",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        438,
+        2,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "kanto/sea_line02",
+      "file": "textures/kanto/sea_line02.png",
+      "sourceTextureName": "sea_line02",
+      "width": 16,
+      "height": 32,
+      "sha256": "50dd7c59e9be9a0cff7db7a41e6d0150d3cc132f029a5b6efc4050fc73449820",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_12c",
+          "material": "sea_line02",
+          "alphaMode": "BLEND"
+        },
+        {
+          "model": "map32_14c",
+          "material": "sea_line02",
+          "alphaMode": "BLEND"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        458,
+        2,
+        16,
+        32
+      ]
+    },
+    {
+      "key": "kanto/sea_on",
+      "file": "textures/kanto/sea_on.png",
+      "sourceTextureName": "sea_on",
+      "width": 32,
+      "height": 32,
+      "sha256": "4b861bc09a4af8205806a6c94c20e0194788765f949c5985a38f78826628c97d",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_12c",
+          "material": "sea_on",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_13c",
+          "material": "sea_on",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_14c",
+          "material": "sea_on",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        478,
+        2,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "kanto/sea_rock",
+      "file": "textures/kanto/sea_rock.png",
+      "sourceTextureName": "sea_rock",
+      "width": 32,
+      "height": 32,
+      "sha256": "f5cb7599e3ad81ef4591b322f5e958e10de65ba2c85e3c39d7dda59332e7ca75",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_12c",
+          "material": "sea_rock",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_13c",
+          "material": "sea_rock",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_14c",
+          "material": "sea_rock",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        2,
+        38,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "kanto/sea_rock_m",
+      "file": "textures/kanto/sea_rock_m.png",
+      "sourceTextureName": "sea_rock_m",
+      "width": 16,
+      "height": 16,
+      "sha256": "9c808e25b28df23e2aa1cb1ad156050afdddd52eb5f777bd0038bd099a780378",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_12c",
+          "material": "sea_rock_m",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_13c",
+          "material": "sea_rock_m",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_14c",
+          "material": "sea_rock_m",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        38,
+        38,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "kanto/sea_un",
+      "file": "textures/kanto/sea_un.png",
+      "sourceTextureName": "sea_un",
+      "width": 32,
+      "height": 32,
+      "sha256": "06bf3f9aae643c03ded8fb7243368b1ebc310a88fb5790720fc29d18aedc370f",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_12c",
+          "material": "sea_un",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "map32_13c",
+          "material": "sea_un",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "map32_14c",
+          "material": "sea_un",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        58,
+        38,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "kanto/slope",
+      "file": "textures/kanto/slope.png",
+      "sourceTextureName": "slope",
+      "width": 32,
+      "height": 32,
+      "sha256": "75d4f5eaa54b0796ceebb0b693f5ccf05d68c4575f30f69a828a2ec6eec52abe",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_09c",
+          "material": "slope",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "map32_10c",
+          "material": "slope",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        94,
+        38,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "kanto/swave_p",
+      "file": "textures/kanto/swave_p.png",
+      "sourceTextureName": "swave_p",
+      "width": 32,
+      "height": 32,
+      "sha256": "9459e3f3badca40cda385892614b7d67d46f894a382766d9089b2762aada6ecf",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_12c",
+          "material": "swave_p",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_13c",
+          "material": "swave_p",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_14c",
+          "material": "swave_p",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        130,
+        38,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "kanto/swave_un",
+      "file": "textures/kanto/swave_un.png",
+      "sourceTextureName": "swave_un",
+      "width": 16,
+      "height": 16,
+      "sha256": "0c21fcbb2f41d680847e7dfee3a8e1206879146b8639d16c099931b8fe7f7f0a",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_12c",
+          "material": "swave_un",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "map32_13c",
+          "material": "swave_un",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "map32_14c",
+          "material": "swave_un",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        166,
+        38,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "kanto/tree01_re",
+      "file": "textures/kanto/tree01_re.png",
+      "sourceTextureName": "tree01_re",
+      "width": 64,
+      "height": 64,
+      "sha256": "5ebae1704325af335d1fd3c6e9c0028f7c6d44d7affe9ed2820d5cb11d6f8e62",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_09c",
+          "material": "tree01_re",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_10c",
+          "material": "tree01_re",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_12c",
+          "material": "tree01_re",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        186,
+        38,
+        64,
+        64
+      ]
+    },
+    {
+      "key": "kanto/tree01_un",
+      "file": "textures/kanto/tree01_un.png",
+      "sourceTextureName": "tree01_un",
+      "width": 32,
+      "height": 32,
+      "sha256": "828723bc1185cccef17ecb12ebd7581d25a2d005fee113e1cb6396b922500609",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_09c",
+          "material": "tree01_un",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "map32_10c",
+          "material": "tree01_un",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "map32_12c",
+          "material": "tree01_un",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        254,
+        38,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "kanto/tree01gs",
+      "file": "textures/kanto/tree01gs.png",
+      "sourceTextureName": "tree01gs",
+      "width": 64,
+      "height": 64,
+      "sha256": "887802b9a0470f2f83ec202e87fc48c3c67cae43fd0e8acdc86313432d48f14b",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_09c",
+          "material": "tree01",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_10c",
+          "material": "tree01",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "map32_12c",
+          "material": "tree01",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        290,
+        38,
+        64,
+        64
+      ]
+    },
+    {
+      "key": "kanto/wall01_d",
+      "file": "textures/kanto/wall01_d.png",
+      "sourceTextureName": "wall01_d",
+      "width": 32,
+      "height": 32,
+      "sha256": "1a43fd31b84af99233a2e5367b9a7b91a1affa6af2435d7e86bcc9a02f00dc8d",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_09c",
+          "material": "wall01_d",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "map32_14c",
+          "material": "wall01_d",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        358,
+        38,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "kanto/wall01_g",
+      "file": "textures/kanto/wall01_g.png",
+      "sourceTextureName": "wall01_g",
+      "width": 32,
+      "height": 32,
+      "sha256": "9a56721f37a535d8060230cd239d981b16434a06a89982dc1a25856322380186",
+      "sourceArea": 18,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 18
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 17
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "map32_09c",
+          "material": "wall01_g",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "map32_10c",
+          "material": "wall01_g",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        394,
+        38,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "forest/allpeak_pgs",
+      "file": "textures/forest/allpeak_pgs.png",
+      "sourceTextureName": "allpeak_pgs",
+      "width": 16,
+      "height": 16,
+      "sha256": "95100290d383d5c6449909cf3165d7084add66d49db1bf8fde71621e8c11682d",
+      "sourceArea": 103,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 103
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 101
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun4601_00_01c",
+          "material": "allpeak_p",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        430,
+        38,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "forest/allpeakgs",
+      "file": "textures/forest/allpeakgs.png",
+      "sourceTextureName": "allpeakgs",
+      "width": 32,
+      "height": 32,
+      "sha256": "ea783296383c7efeeb9b76e455cd798524f654a8821be436baa82b4ffe75e6bf",
+      "sourceArea": 103,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 103
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 101
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun4601_00_01c",
+          "material": "allpeak",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        450,
+        38,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "forest/dtf_f01",
+      "file": "textures/forest/dtf_f01.png",
+      "sourceTextureName": "dtf_f01",
+      "width": 32,
+      "height": 32,
+      "sha256": "8e0962a599c7c34acb79786a687d0a2c7ec3a42e380cd0d495891146b9246fe9",
+      "sourceArea": 103,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 103
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 101
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun4601_00_00c",
+          "material": "dtf_f01",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_00_01c",
+          "material": "dtf_f01",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_00_02c",
+          "material": "dtf_f01",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_00c",
+          "material": "dtf_f01",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_01c",
+          "material": "dtf_f01",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_02c",
+          "material": "dtf_f01",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        2,
+        106,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "forest/dtf_f02",
+      "file": "textures/forest/dtf_f02.png",
+      "sourceTextureName": "dtf_f02",
+      "width": 16,
+      "height": 16,
+      "sha256": "fee50f20613052f1e44e4c747141ad69c16da0fe931e5f175ded9f574ee88505",
+      "sourceArea": 103,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 103
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 101
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun4601_00_00c",
+          "material": "q",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_00c",
+          "material": "dtf_f02",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_01c",
+          "material": "dtf_f02",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_02c",
+          "material": "dtf_f02",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        38,
+        106,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "forest/dtf_f03",
+      "file": "textures/forest/dtf_f03.png",
+      "sourceTextureName": "dtf_f03",
+      "width": 32,
+      "height": 32,
+      "sha256": "ac826c753d1cecfb4f9c2b5a868f5a208b1331533fff3673a3367dd071e32162",
+      "sourceArea": 103,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 103
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 101
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun4601_00_00c",
+          "material": "dtf_f03",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_00_01c",
+          "material": "dtf_f03",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_00_02c",
+          "material": "dtf_f03",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_00c",
+          "material": "dtf_f03",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_01c",
+          "material": "dtf_f03",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_02c",
+          "material": "dtf_f03",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        58,
+        106,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "forest/dtf_f04",
+      "file": "textures/forest/dtf_f04.png",
+      "sourceTextureName": "dtf_f04",
+      "width": 32,
+      "height": 32,
+      "sha256": "607ab7bed959abc73dfacf94cd4eed72ded8f70dfacaf9212d65d743b604733b",
+      "sourceArea": 103,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 103
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 101
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun4601_00_00c",
+          "material": "dtf_f04",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_00_01c",
+          "material": "dtf_f04",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_00_02c",
+          "material": "dtf_f04",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_00c",
+          "material": "dtf_f04",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_01c",
+          "material": "dtf_f04",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_02c",
+          "material": "dtf_f04",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        94,
+        106,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "forest/dtf_f05",
+      "file": "textures/forest/dtf_f05.png",
+      "sourceTextureName": "dtf_f05",
+      "width": 32,
+      "height": 32,
+      "sha256": "228049ade65905981bddd942294b3490a4e44c11640a4e4c2f243e16c15d7568",
+      "sourceArea": 103,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 103
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 101
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun4601_00_00c",
+          "material": "dtf_f05",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_00_01c",
+          "material": "dtf_f05",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_00_02c",
+          "material": "dtf_f05",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_00c",
+          "material": "dtf_f05",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_01c",
+          "material": "dtf_f05",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_02c",
+          "material": "dtf_f05",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        130,
+        106,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "forest/dtf_f06",
+      "file": "textures/forest/dtf_f06.png",
+      "sourceTextureName": "dtf_f06",
+      "width": 32,
+      "height": 32,
+      "sha256": "b1753e15cb16390d13897d14b4505f9ae79cfd5dd38a18b521ad9fee4610c608",
+      "sourceArea": 103,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 103
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 101
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun4601_00_00c",
+          "material": "dtf_f06",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_00_01c",
+          "material": "dtf_f06",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_00_02c",
+          "material": "dtf_f06",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_00c",
+          "material": "dtf_f06",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_01c",
+          "material": "dtf_f06",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_02c",
+          "material": "dtf_f06",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        166,
+        106,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "forest/dtf_f07",
+      "file": "textures/forest/dtf_f07.png",
+      "sourceTextureName": "dtf_f07",
+      "width": 16,
+      "height": 16,
+      "sha256": "dea43fa37c33d0a3e620844579ddc2d464549dc6ca7da089be6e198cb14e16ee",
+      "sourceArea": 103,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 103
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 101
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun4601_00_01c",
+          "material": "dtf_f07",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_00_02c",
+          "material": "dtf_f07",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_00c",
+          "material": "dtf_f07",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_01c",
+          "material": "dtf_f07",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_02c",
+          "material": "dtf_f07",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        202,
+        106,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "forest/dtf_f08",
+      "file": "textures/forest/dtf_f08.png",
+      "sourceTextureName": "dtf_f08",
+      "width": 16,
+      "height": 16,
+      "sha256": "6b467514075f7a20e29f36d37367960f4623b6086ad1192ecb109c2258dfaaea",
+      "sourceArea": 103,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 103
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 101
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun4601_00_00c",
+          "material": "dtf_f08",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_00_01c",
+          "material": "dtf_f08",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_00_02c",
+          "material": "dtf_f08",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_00c",
+          "material": "dtf_f08",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_01c",
+          "material": "dtf_f08",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_02c",
+          "material": "dtf_f08",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        222,
+        106,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "forest/dtf_f09",
+      "file": "textures/forest/dtf_f09.png",
+      "sourceTextureName": "dtf_f09",
+      "width": 64,
+      "height": 64,
+      "sha256": "8f7ae53c4530826bcc34f3ce60b1b4cbdcc80d7c1325df27a581f4b3f722b831",
+      "sourceArea": 103,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 103
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 101
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun4601_00_00c",
+          "material": "dtf_f09",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_00_01c",
+          "material": "dtf_f09",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_00_02c",
+          "material": "dtf_f09",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_00c",
+          "material": "dtf_f09",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_01c",
+          "material": "dtf_f09",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_02c",
+          "material": "dtf_f09",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        242,
+        106,
+        64,
+        64
+      ]
+    },
+    {
+      "key": "forest/dtf_f10",
+      "file": "textures/forest/dtf_f10.png",
+      "sourceTextureName": "dtf_f10",
+      "width": 64,
+      "height": 64,
+      "sha256": "d6aeefcce2e1e09a647749b39603b22b88c3fb967627f4945f4104defbd6b709",
+      "sourceArea": 103,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 103
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 101
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun4601_00_00c",
+          "material": "dtf_f10",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_00_01c",
+          "material": "dtf_f10",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_00_02c",
+          "material": "dtf_f10",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_00c",
+          "material": "dtf_f10",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_01c",
+          "material": "dtf_f10",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_02c",
+          "material": "dtf_f10",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        310,
+        106,
+        64,
+        64
+      ]
+    },
+    {
+      "key": "forest/egrass",
+      "file": "textures/forest/egrass.png",
+      "sourceTextureName": "egrass",
+      "width": 16,
+      "height": 16,
+      "sha256": "5ae6777098f35831f3e5b513495e429782ca6b044b2f9043fa11269ba8c46917",
+      "sourceArea": 103,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 103
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 101
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun4601_00_00c",
+          "material": "egrass",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_00_01c",
+          "material": "egrass",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_00_02c",
+          "material": "egrass",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_00c",
+          "material": "egrass",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_01c",
+          "material": "egrass",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_02c",
+          "material": "egrass",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        378,
+        106,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "forest/egrass_ri",
+      "file": "textures/forest/egrass_ri.png",
+      "sourceTextureName": "egrass_ri",
+      "width": 16,
+      "height": 16,
+      "sha256": "f199414ac2f305e310ea8202bce7512eae11b1190c850b142cbe0b0ffaa16f97",
+      "sourceArea": 103,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 103
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 101
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun4601_00_00c",
+          "material": "egrass_ri",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_00_01c",
+          "material": "egrass_ri",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_00_02c",
+          "material": "egrass_ri",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_00c",
+          "material": "egrass_ri",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_01c",
+          "material": "egrass_ri",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_02c",
+          "material": "egrass_ri",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        398,
+        106,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "forest/egrass_ro",
+      "file": "textures/forest/egrass_ro.png",
+      "sourceTextureName": "egrass_ro",
+      "width": 16,
+      "height": 16,
+      "sha256": "26e7ad8c81bd8f4aea3d80397faff2e9c320b0045ddd2836bfd050d5f5b37532",
+      "sourceArea": 103,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 103
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 101
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun4601_00_00c",
+          "material": "egrass_ro",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_00_01c",
+          "material": "egrass_ro",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_00_02c",
+          "material": "egrass_ro",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_00c",
+          "material": "egrass_ro",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_01c",
+          "material": "egrass_ro",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_02c",
+          "material": "egrass_ro",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        418,
+        106,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "forest/egrass_u",
+      "file": "textures/forest/egrass_u.png",
+      "sourceTextureName": "egrass_u",
+      "width": 16,
+      "height": 16,
+      "sha256": "56c70db9b878d6439f40ad2e53db26112cee40107a9c96ffa0d75766963cbf18",
+      "sourceArea": 103,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 103
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 101
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun4601_00_00c",
+          "material": "egrass_u",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_00_01c",
+          "material": "egrass_u",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_00_02c",
+          "material": "egrass_u",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_00c",
+          "material": "egrass_u",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_01c",
+          "material": "egrass_u",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_02c",
+          "material": "egrass_u",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        438,
+        106,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "forest/egrass_v",
+      "file": "textures/forest/egrass_v.png",
+      "sourceTextureName": "egrass_v",
+      "width": 16,
+      "height": 16,
+      "sha256": "a427fe766642edf97bf8e883f6830a999cdd55e5291cf14c6754eb3f04f0f858",
+      "sourceArea": 103,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 103
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 101
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun4601_00_00c",
+          "material": "egrass_v",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_00_01c",
+          "material": "egrass_v",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_00_02c",
+          "material": "egrass_v",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_00c",
+          "material": "egrass_v",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_01c",
+          "material": "egrass_v",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_02c",
+          "material": "egrass_v",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        458,
+        106,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "forest/flower01",
+      "file": "textures/forest/flower01.png",
+      "sourceTextureName": "flower01",
+      "width": 16,
+      "height": 16,
+      "sha256": "40ef375fe038159eacf545d78500e4927c232e2a06d2748c30ae4742d824a871",
+      "sourceArea": 103,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 103
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 101
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun4601_00_01c",
+          "material": "flower01",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_00_02c",
+          "material": "flower01",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_00c",
+          "material": "flower01",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_01c",
+          "material": "flower01",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_02c",
+          "material": "flower01",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        478,
+        106,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "forest/flower02",
+      "file": "textures/forest/flower02.png",
+      "sourceTextureName": "flower02",
+      "width": 16,
+      "height": 16,
+      "sha256": "d9369f6412e49ce106a976f862208aa689e0c18d93157ee07995c8b09634e332",
+      "sourceArea": 103,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 103
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 101
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun4601_00_01c",
+          "material": "flower02",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_00_02c",
+          "material": "flower02",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_00c",
+          "material": "flower02",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_01c",
+          "material": "flower02",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun4601_01_02c",
+          "material": "flower02",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        2,
+        174,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "forest/slope",
+      "file": "textures/forest/slope.png",
+      "sourceTextureName": "slope",
+      "width": 32,
+      "height": 32,
+      "sha256": "75d4f5eaa54b0796ceebb0b693f5ccf05d68c4575f30f69a828a2ec6eec52abe",
+      "sourceArea": 103,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 103
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 101
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun4601_00_01c",
+          "material": "slope",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_00_02c",
+          "material": "slope",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_00c",
+          "material": "slope",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_01c",
+          "material": "slope",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun4601_01_02c",
+          "material": "slope",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        22,
+        174,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "cave/chole_out",
+      "file": "textures/cave/chole_out.png",
+      "sourceTextureName": "chole_out",
+      "width": 32,
+      "height": 32,
+      "sha256": "351136c51b9acac5bceabab8886f85358a0136898d3bc4fa4d8b174bb5b1bbe9",
+      "sourceArea": 70,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 70
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 68
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0201_00_00c",
+          "material": "chole_out",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        58,
+        174,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "cave/d_ro",
+      "file": "textures/cave/d_ro.png",
+      "sourceTextureName": "d_ro",
+      "width": 8,
+      "height": 8,
+      "sha256": "879535d8a4e233a5f3cca01aaab92be4723fd9b0a65f231e0d00f16c9fde4ba9",
+      "sourceArea": 70,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 70
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 68
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0201_00_00c",
+          "material": "d_ro",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        94,
+        174,
+        8,
+        8
+      ]
+    },
+    {
+      "key": "cave/d_rock01s",
+      "file": "textures/cave/d_rock01s.png",
+      "sourceTextureName": "d_rock01s",
+      "width": 32,
+      "height": 32,
+      "sha256": "2fb1fcb0a79dc307c14b607e3ac9a012c6e3e417cab9f533a69284dbdde65b6d",
+      "sourceArea": 70,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 70
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 68
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0201_00_00c",
+          "material": "drock01s",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        106,
+        174,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "cave/dallpeak",
+      "file": "textures/cave/dallpeak.png",
+      "sourceTextureName": "dallpeak",
+      "width": 32,
+      "height": 32,
+      "sha256": "8eea1ef9a61fc74a19376ed1cb13efc6aed6bb4d3042d20b115ec34f516377ef",
+      "sourceArea": 70,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 70
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 68
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0201_00_00c",
+          "material": "dallpeak",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        142,
+        174,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "cave/dallpeak_p",
+      "file": "textures/cave/dallpeak_p.png",
+      "sourceTextureName": "dallpeak_p",
+      "width": 16,
+      "height": 16,
+      "sha256": "60e83b671f9e54be9273128070810ff14af57c0323f121d97600469b1d365bd9",
+      "sourceArea": 70,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 70
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 68
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0201_00_00c",
+          "material": "dallpeak_p",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        178,
+        174,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "cave/dcliff01",
+      "file": "textures/cave/dcliff01.png",
+      "sourceTextureName": "dcliff01",
+      "width": 32,
+      "height": 32,
+      "sha256": "2b7f266c1e98940e082cdc999c527cb6544fee50a84a990b9f19e1a41195f052",
+      "sourceArea": 70,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 70
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 68
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0201_00_00c",
+          "material": "dcliff01",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        198,
+        174,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "cave/dcliff01_r",
+      "file": "textures/cave/dcliff01_r.png",
+      "sourceTextureName": "dcliff01_r",
+      "width": 32,
+      "height": 32,
+      "sha256": "a3ef0845c8078ee75caa5e5861d68a0dab4c53068e4abba083a5ef395ede1f17",
+      "sourceArea": 70,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 70
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 68
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0201_00_00c",
+          "material": "dcliff01_r",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        234,
+        174,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "cave/droad01",
+      "file": "textures/cave/droad01.png",
+      "sourceTextureName": "droad01",
+      "width": 32,
+      "height": 32,
+      "sha256": "f58418a385027b9ba503bc0a0908daca00c8a46fb567f599e385a935b33414a5",
+      "sourceArea": 70,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 70
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 68
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0201_00_00c",
+          "material": "droad01",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        270,
+        174,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "cave/droad01_r",
+      "file": "textures/cave/droad01_r.png",
+      "sourceTextureName": "droad01_r",
+      "width": 32,
+      "height": 32,
+      "sha256": "2890175ce461d3af590ddb03f46a9890cc50c9801bed343e504ad63448482bb4",
+      "sourceArea": 70,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 70
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 68
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0201_00_00c",
+          "material": "droad01_r",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        306,
+        174,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "cave/droad01_r2",
+      "file": "textures/cave/droad01_r2.png",
+      "sourceTextureName": "droad01_r2",
+      "width": 16,
+      "height": 16,
+      "sha256": "cad764d5254888daa106331aab2ab998aefbb618111b3bc547b5689c41521c0d",
+      "sourceArea": 70,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 70
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 68
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0201_00_00c",
+          "material": "droad01_r2",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        342,
+        174,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "cave/droad01_sub",
+      "file": "textures/cave/droad01_sub.png",
+      "sourceTextureName": "droad01_sub",
+      "width": 16,
+      "height": 16,
+      "sha256": "57af92391b491b1cfb3c22ca4f8774160a3bd4ee77933d6a29538427887b1680",
+      "sourceArea": 70,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 70
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 68
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0201_00_00c",
+          "material": "droad01_sub",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        362,
+        174,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "cave/droad01_sub2",
+      "file": "textures/cave/droad01_sub2.png",
+      "sourceTextureName": "droad01_sub2",
+      "width": 32,
+      "height": 32,
+      "sha256": "eb0a9b5ff94f175a02b51f07c582d44a57e57ecb459387341d0c8ea277c0005a",
+      "sourceArea": 70,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 70
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 68
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0201_00_00c",
+          "material": "droad01_sub2",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        382,
+        174,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "cave/dwall_e",
+      "file": "textures/cave/dwall_e.png",
+      "sourceTextureName": "dwall_e",
+      "width": 32,
+      "height": 16,
+      "sha256": "68a5650b1484426345d934491b74850b37837f8bb8a8bdc301329bff9f5bbf88",
+      "sourceArea": 70,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 70
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 68
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0201_00_00c",
+          "material": "dwall01_e",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        418,
+        174,
+        32,
+        16
+      ]
+    },
+    {
+      "key": "cave/dwall_es",
+      "file": "textures/cave/dwall_es.png",
+      "sourceTextureName": "dwall_es",
+      "width": 16,
+      "height": 16,
+      "sha256": "cdfa82a31a29a37878b128b71015490386ebbee588a30edc16040dd19273a54c",
+      "sourceArea": 70,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 70
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 68
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0201_00_00c",
+          "material": "dwall_es",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        454,
+        174,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "cave/dwall_n",
+      "file": "textures/cave/dwall_n.png",
+      "sourceTextureName": "dwall_n",
+      "width": 32,
+      "height": 16,
+      "sha256": "4ac7544764bdc94acb489117abec712bf4b3108e7766aa66c7dcf5a18086658a",
+      "sourceArea": 70,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 70
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 68
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0201_00_00c",
+          "material": "dwall01_n",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        474,
+        174,
+        32,
+        16
+      ]
+    },
+    {
+      "key": "cave/dwall_ne",
+      "file": "textures/cave/dwall_ne.png",
+      "sourceTextureName": "dwall_ne",
+      "width": 16,
+      "height": 16,
+      "sha256": "a17f43d4d493cb3eac82f2a56e2ed6a2d83d0bad42dc86fe986cc4862ac88cb6",
+      "sourceArea": 70,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 70
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 68
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0201_00_00c",
+          "material": "dwall_ne",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        2,
+        210,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "cave/dwall_s",
+      "file": "textures/cave/dwall_s.png",
+      "sourceTextureName": "dwall_s",
+      "width": 32,
+      "height": 16,
+      "sha256": "d0b639d9b107dd4ad6fb03f58f4c046113be8949dbc8d156b5e57e6f25f82ceb",
+      "sourceArea": 70,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 70
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 68
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0201_00_00c",
+          "material": "dwall01_s",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        22,
+        210,
+        32,
+        16
+      ]
+    },
+    {
+      "key": "cave/dwall_sw",
+      "file": "textures/cave/dwall_sw.png",
+      "sourceTextureName": "dwall_sw",
+      "width": 16,
+      "height": 16,
+      "sha256": "185226e09f2f6c5135b5c95331b52b41990621cd4d8b5d116af19980c8fa1e47",
+      "sourceArea": 70,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 70
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 68
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0201_00_00c",
+          "material": "dwall_sw",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        58,
+        210,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "cave/dwall_w",
+      "file": "textures/cave/dwall_w.png",
+      "sourceTextureName": "dwall_w",
+      "width": 32,
+      "height": 16,
+      "sha256": "6cb6d9da9a0f3422bd8aaa2e0556ca5915be4a65fd1c089803d5f493920f6ece",
+      "sourceArea": 70,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 70
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 68
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0201_00_00c",
+          "material": "dwall01_w",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        78,
+        210,
+        32,
+        16
+      ]
+    },
+    {
+      "key": "cave/dwall_wn",
+      "file": "textures/cave/dwall_wn.png",
+      "sourceTextureName": "dwall_wn",
+      "width": 16,
+      "height": 16,
+      "sha256": "6f6331900647b5e04521c952d987b07b47e82027b8f3a1fc8b55ca8237eaf665",
+      "sourceArea": 70,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 70
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 68
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0201_00_00c",
+          "material": "dwall_wn",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        114,
+        210,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "cave/light",
+      "file": "textures/cave/light.png",
+      "sourceTextureName": "light",
+      "width": 16,
+      "height": 16,
+      "sha256": "f9019f3d9101ce6d5e251e6787ad6c57c8084b8141c4096e250cccf93b624056",
+      "sourceArea": 70,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 70
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 68
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0201_00_00c",
+          "material": "d_light",
+          "alphaMode": "BLEND"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        134,
+        210,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "rock-tunnel/chole_out",
+      "file": "textures/rock-tunnel/chole_out.png",
+      "sourceTextureName": "chole_out",
+      "width": 32,
+      "height": 32,
+      "sha256": "351136c51b9acac5bceabab8886f85358a0136898d3bc4fa4d8b174bb5b1bbe9",
+      "sourceArea": 83,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 83
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 81
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0501_00_01c",
+          "material": "chole_out",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun0501_01_00c",
+          "material": "chole_out",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        154,
+        210,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "rock-tunnel/d_ro",
+      "file": "textures/rock-tunnel/d_ro.png",
+      "sourceTextureName": "d_ro",
+      "width": 8,
+      "height": 8,
+      "sha256": "879535d8a4e233a5f3cca01aaab92be4723fd9b0a65f231e0d00f16c9fde4ba9",
+      "sourceArea": 83,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 83
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 81
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0501_00_00c",
+          "material": "d_ro",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_00_01c",
+          "material": "d_ro",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_01_00c",
+          "material": "d_ro",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_01_01c",
+          "material": "d_ro",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        190,
+        210,
+        8,
+        8
+      ]
+    },
+    {
+      "key": "rock-tunnel/d_rock01",
+      "file": "textures/rock-tunnel/d_rock01.png",
+      "sourceTextureName": "d_rock01",
+      "width": 32,
+      "height": 32,
+      "sha256": "5560efe790fdc58a2f2fb320b69c86ead4cb8fb1a60d56ac74c7ebc6a36b7bc6",
+      "sourceArea": 83,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 83
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 81
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0501_00_00c",
+          "material": "drock01",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun0501_00_01c",
+          "material": "drock01",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun0501_01_00c",
+          "material": "drock01",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        202,
+        210,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "rock-tunnel/d_rock01s",
+      "file": "textures/rock-tunnel/d_rock01s.png",
+      "sourceTextureName": "d_rock01s",
+      "width": 32,
+      "height": 32,
+      "sha256": "2fb1fcb0a79dc307c14b607e3ac9a012c6e3e417cab9f533a69284dbdde65b6d",
+      "sourceArea": 83,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 83
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 81
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0501_00_00c",
+          "material": "drock01s",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun0501_01_00c",
+          "material": "drock01s",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        238,
+        210,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "rock-tunnel/d_stairhole",
+      "file": "textures/rock-tunnel/d_stairhole.png",
+      "sourceTextureName": "d_stairhole",
+      "width": 32,
+      "height": 32,
+      "sha256": "7378fbb6f529892f46877cdaa69b8f655968dee55d62b0660faf9e43ae5b8d61",
+      "sourceArea": 83,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 83
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 81
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0501_00_00c",
+          "material": "d_stairhole",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun0501_00_01c",
+          "material": "d_stairhole",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun0501_01_00c",
+          "material": "d_stairhole",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        274,
+        210,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "rock-tunnel/dcliff01",
+      "file": "textures/rock-tunnel/dcliff01.png",
+      "sourceTextureName": "dcliff01",
+      "width": 32,
+      "height": 32,
+      "sha256": "2b7f266c1e98940e082cdc999c527cb6544fee50a84a990b9f19e1a41195f052",
+      "sourceArea": 83,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 83
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 81
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0501_00_00c",
+          "material": "dcliff01",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_00_01c",
+          "material": "dcliff01",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_01_00c",
+          "material": "dcliff01",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        310,
+        210,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "rock-tunnel/dcliff01_r",
+      "file": "textures/rock-tunnel/dcliff01_r.png",
+      "sourceTextureName": "dcliff01_r",
+      "width": 32,
+      "height": 32,
+      "sha256": "a3ef0845c8078ee75caa5e5861d68a0dab4c53068e4abba083a5ef395ede1f17",
+      "sourceArea": 83,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 83
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 81
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0501_00_00c",
+          "material": "dcliff01_r",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_00_01c",
+          "material": "dcliff01_r",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_01_00c",
+          "material": "dcliff01_r",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_01_01c",
+          "material": "dcliff01_r",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        346,
+        210,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "rock-tunnel/droad01",
+      "file": "textures/rock-tunnel/droad01.png",
+      "sourceTextureName": "droad01",
+      "width": 32,
+      "height": 32,
+      "sha256": "f58418a385027b9ba503bc0a0908daca00c8a46fb567f599e385a935b33414a5",
+      "sourceArea": 83,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 83
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 81
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0501_00_00c",
+          "material": "droad01",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_00_01c",
+          "material": "droad01",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_01_00c",
+          "material": "droad01",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_01_01c",
+          "material": "droad01",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        382,
+        210,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "rock-tunnel/droad01_r",
+      "file": "textures/rock-tunnel/droad01_r.png",
+      "sourceTextureName": "droad01_r",
+      "width": 32,
+      "height": 32,
+      "sha256": "2890175ce461d3af590ddb03f46a9890cc50c9801bed343e504ad63448482bb4",
+      "sourceArea": 83,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 83
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 81
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0501_00_00c",
+          "material": "droad01_r",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_00_01c",
+          "material": "droad01_r",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_01_00c",
+          "material": "droad01_r",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_01_01c",
+          "material": "droad01_r",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        418,
+        210,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "rock-tunnel/droad01_r2",
+      "file": "textures/rock-tunnel/droad01_r2.png",
+      "sourceTextureName": "droad01_r2",
+      "width": 16,
+      "height": 16,
+      "sha256": "cad764d5254888daa106331aab2ab998aefbb618111b3bc547b5689c41521c0d",
+      "sourceArea": 83,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 83
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 81
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0501_00_00c",
+          "material": "droad01_r2",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_00_01c",
+          "material": "droad01_r2",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_01_00c",
+          "material": "droad01_r2",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        454,
+        210,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "rock-tunnel/droad01_sub",
+      "file": "textures/rock-tunnel/droad01_sub.png",
+      "sourceTextureName": "droad01_sub",
+      "width": 16,
+      "height": 16,
+      "sha256": "57af92391b491b1cfb3c22ca4f8774160a3bd4ee77933d6a29538427887b1680",
+      "sourceArea": 83,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 83
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 81
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0501_00_00c",
+          "material": "droad01_sub",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun0501_00_01c",
+          "material": "droad01_sub",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun0501_01_00c",
+          "material": "droad01_sub",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        474,
+        210,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "rock-tunnel/droad01_sub2",
+      "file": "textures/rock-tunnel/droad01_sub2.png",
+      "sourceTextureName": "droad01_sub2",
+      "width": 32,
+      "height": 32,
+      "sha256": "eb0a9b5ff94f175a02b51f07c582d44a57e57ecb459387341d0c8ea277c0005a",
+      "sourceArea": 83,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 83
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 81
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0501_00_00c",
+          "material": "droad01_sub2",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun0501_01_01c",
+          "material": "droad01_sub2",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        2,
+        246,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "rock-tunnel/dslope",
+      "file": "textures/rock-tunnel/dslope.png",
+      "sourceTextureName": "dslope",
+      "width": 32,
+      "height": 32,
+      "sha256": "1268a2e772c255d415524da4096707d31afb4012e86c7fcd19092b741495c4c3",
+      "sourceArea": 83,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 83
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 81
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0501_00_00c",
+          "material": "dslope",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_00_01c",
+          "material": "dslope",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_01_00c",
+          "material": "dslope",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        38,
+        246,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "rock-tunnel/dwall_e",
+      "file": "textures/rock-tunnel/dwall_e.png",
+      "sourceTextureName": "dwall_e",
+      "width": 32,
+      "height": 16,
+      "sha256": "68a5650b1484426345d934491b74850b37837f8bb8a8bdc301329bff9f5bbf88",
+      "sourceArea": 83,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 83
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 81
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0501_00_00c",
+          "material": "dwall01_e",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_00_01c",
+          "material": "dwall01_e",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_01_00c",
+          "material": "dwall01_e",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_01_01c",
+          "material": "dwall01_e",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        74,
+        246,
+        32,
+        16
+      ]
+    },
+    {
+      "key": "rock-tunnel/dwall_es",
+      "file": "textures/rock-tunnel/dwall_es.png",
+      "sourceTextureName": "dwall_es",
+      "width": 16,
+      "height": 16,
+      "sha256": "cdfa82a31a29a37878b128b71015490386ebbee588a30edc16040dd19273a54c",
+      "sourceArea": 83,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 83
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 81
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0501_00_00c",
+          "material": "dwall_es",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_00_01c",
+          "material": "dwall_es",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_01_00c",
+          "material": "dwall_es",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_01_01c",
+          "material": "dwall_es",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        110,
+        246,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "rock-tunnel/dwall_n",
+      "file": "textures/rock-tunnel/dwall_n.png",
+      "sourceTextureName": "dwall_n",
+      "width": 32,
+      "height": 16,
+      "sha256": "4ac7544764bdc94acb489117abec712bf4b3108e7766aa66c7dcf5a18086658a",
+      "sourceArea": 83,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 83
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 81
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0501_00_00c",
+          "material": "dwall01_n",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_00_01c",
+          "material": "dwall01_n",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_01_00c",
+          "material": "dwall01_n",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        130,
+        246,
+        32,
+        16
+      ]
+    },
+    {
+      "key": "rock-tunnel/dwall_ne",
+      "file": "textures/rock-tunnel/dwall_ne.png",
+      "sourceTextureName": "dwall_ne",
+      "width": 16,
+      "height": 16,
+      "sha256": "a17f43d4d493cb3eac82f2a56e2ed6a2d83d0bad42dc86fe986cc4862ac88cb6",
+      "sourceArea": 83,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 83
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 81
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0501_00_00c",
+          "material": "dwall_ne",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_00_01c",
+          "material": "dwall_ne",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_01_00c",
+          "material": "dwall_ne",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        166,
+        246,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "rock-tunnel/dwall_s",
+      "file": "textures/rock-tunnel/dwall_s.png",
+      "sourceTextureName": "dwall_s",
+      "width": 32,
+      "height": 16,
+      "sha256": "d0b639d9b107dd4ad6fb03f58f4c046113be8949dbc8d156b5e57e6f25f82ceb",
+      "sourceArea": 83,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 83
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 81
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0501_00_00c",
+          "material": "dwall01_s",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_00_01c",
+          "material": "dwall01_s",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_01_00c",
+          "material": "dwall01_s",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_01_01c",
+          "material": "dwall01_s",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        186,
+        246,
+        32,
+        16
+      ]
+    },
+    {
+      "key": "rock-tunnel/dwall_sw",
+      "file": "textures/rock-tunnel/dwall_sw.png",
+      "sourceTextureName": "dwall_sw",
+      "width": 16,
+      "height": 16,
+      "sha256": "185226e09f2f6c5135b5c95331b52b41990621cd4d8b5d116af19980c8fa1e47",
+      "sourceArea": 83,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 83
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 81
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0501_00_00c",
+          "material": "dwall_sw",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_00_01c",
+          "material": "dwall_sw",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_01_00c",
+          "material": "dwall_sw",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        222,
+        246,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "rock-tunnel/dwall_w",
+      "file": "textures/rock-tunnel/dwall_w.png",
+      "sourceTextureName": "dwall_w",
+      "width": 32,
+      "height": 16,
+      "sha256": "6cb6d9da9a0f3422bd8aaa2e0556ca5915be4a65fd1c089803d5f493920f6ece",
+      "sourceArea": 83,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 83
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 81
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0501_00_00c",
+          "material": "dwall01_w",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_00_01c",
+          "material": "dwall01_w",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_01_00c",
+          "material": "dwall01_w",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        242,
+        246,
+        32,
+        16
+      ]
+    },
+    {
+      "key": "rock-tunnel/dwall_wn",
+      "file": "textures/rock-tunnel/dwall_wn.png",
+      "sourceTextureName": "dwall_wn",
+      "width": 16,
+      "height": 16,
+      "sha256": "6f6331900647b5e04521c952d987b07b47e82027b8f3a1fc8b55ca8237eaf665",
+      "sourceArea": 83,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 83
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 81
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0501_00_00c",
+          "material": "dwall_wn",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_00_01c",
+          "material": "dwall_wn",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun0501_01_00c",
+          "material": "dwall_wn",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        278,
+        246,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "rock-tunnel/light",
+      "file": "textures/rock-tunnel/light.png",
+      "sourceTextureName": "light",
+      "width": 16,
+      "height": 16,
+      "sha256": "f9019f3d9101ce6d5e251e6787ad6c57c8084b8141c4096e250cccf93b624056",
+      "sourceArea": 83,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 83
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 81
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun0501_00_01c",
+          "material": "d_light",
+          "alphaMode": "BLEND"
+        },
+        {
+          "model": "m_dun0501_01_00c",
+          "material": "d_light",
+          "alphaMode": "BLEND"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        298,
+        246,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "ilex/allpeak_pgs",
+      "file": "textures/ilex/allpeak_pgs.png",
+      "sourceTextureName": "allpeak_pgs",
+      "width": 16,
+      "height": 16,
+      "sha256": "95100290d383d5c6449909cf3165d7084add66d49db1bf8fde71621e8c11682d",
+      "sourceArea": 74,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 74
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 72
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun3601_01_01c",
+          "material": "allpeak_p",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        318,
+        246,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "ilex/allpeakgs",
+      "file": "textures/ilex/allpeakgs.png",
+      "sourceTextureName": "allpeakgs",
+      "width": 32,
+      "height": 32,
+      "sha256": "ea783296383c7efeeb9b76e455cd798524f654a8821be436baa82b4ffe75e6bf",
+      "sourceArea": 74,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 74
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 72
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun3601_01_00c",
+          "material": "allpeak",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_01_01c",
+          "material": "allpeak",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        338,
+        246,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "ilex/d05pond_line",
+      "file": "textures/ilex/d05pond_line.png",
+      "sourceTextureName": "d05pond_line",
+      "width": 16,
+      "height": 16,
+      "sha256": "8593509bfe8a116b05890310f0292b813f9b6cb7c203a5db2f674eff3e37fe9d",
+      "sourceArea": 74,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 74
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 72
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun3601_00_00c",
+          "material": "pond_line",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_00_01c",
+          "material": "pond_line",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        374,
+        246,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "ilex/d05tree01",
+      "file": "textures/ilex/d05tree01.png",
+      "sourceTextureName": "d05tree01",
+      "width": 64,
+      "height": 64,
+      "sha256": "bcb179f7a2c4e3e908fc6566bda010629f3159c82076d266911dc89875708f61",
+      "sourceArea": 74,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 74
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 72
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun3601_00_00c",
+          "material": "tree01",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_00_01c",
+          "material": "tree01",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_00_02c",
+          "material": "tree01",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_01_00c",
+          "material": "tree01",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_01_01c",
+          "material": "tree01",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_01_02c",
+          "material": "tree01",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        394,
+        246,
+        64,
+        64
+      ]
+    },
+    {
+      "key": "ilex/d05tree01_re",
+      "file": "textures/ilex/d05tree01_re.png",
+      "sourceTextureName": "d05tree01_re",
+      "width": 64,
+      "height": 64,
+      "sha256": "2b40666c7125991dd8e3fe56c4abba371a6c82c5b20c8b59f3eb7e0be8f9b689",
+      "sourceArea": 74,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 74
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 72
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun3601_00_00c",
+          "material": "tree01_re",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_00_01c",
+          "material": "tree01_re",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_00_02c",
+          "material": "tree01_re",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_01_00c",
+          "material": "tree01_re",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_01_01c",
+          "material": "tree01_re",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_01_02c",
+          "material": "tree01_re",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        2,
+        314,
+        64,
+        64
+      ]
+    },
+    {
+      "key": "ilex/d05tree01_un",
+      "file": "textures/ilex/d05tree01_un.png",
+      "sourceTextureName": "d05tree01_un",
+      "width": 32,
+      "height": 32,
+      "sha256": "354e47b5e6013b2ffe181441f835e9c2d3370bc07fec95d82985266abe844dcf",
+      "sourceArea": 74,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 74
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 72
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun3601_00_00c",
+          "material": "tree01_un",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_00_01c",
+          "material": "tree01_un",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_00_02c",
+          "material": "tree01_un",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_01_00c",
+          "material": "tree01_un",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_01_01c",
+          "material": "tree01_un",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_01_02c",
+          "material": "tree01_un",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        70,
+        314,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "ilex/flower01",
+      "file": "textures/ilex/flower01.png",
+      "sourceTextureName": "flower01",
+      "width": 16,
+      "height": 16,
+      "sha256": "40ef375fe038159eacf545d78500e4927c232e2a06d2748c30ae4742d824a871",
+      "sourceArea": 74,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 74
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 72
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun3601_00_00c",
+          "material": "flower01",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_00_02c",
+          "material": "flower01",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_01_00c",
+          "material": "flower01",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_01_01c",
+          "material": "flower01",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        106,
+        314,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "ilex/flower02",
+      "file": "textures/ilex/flower02.png",
+      "sourceTextureName": "flower02",
+      "width": 16,
+      "height": 16,
+      "sha256": "d9369f6412e49ce106a976f862208aa689e0c18d93157ee07995c8b09634e332",
+      "sourceArea": 74,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 74
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 72
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun3601_00_00c",
+          "material": "flower02",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_00_02c",
+          "material": "flower02",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_01_00c",
+          "material": "flower02",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        126,
+        314,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "ilex/flower03",
+      "file": "textures/ilex/flower03.png",
+      "sourceTextureName": "flower03",
+      "width": 16,
+      "height": 16,
+      "sha256": "bcf538cc3a9a281e26f8b30b2c99e722da6eb45b261878d47ab8aca6b7764327",
+      "sourceArea": 74,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 74
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 72
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun3601_00_00c",
+          "material": "flower03",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun3601_00_01c",
+          "material": "flower03",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun3601_00_02c",
+          "material": "flower03",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun3601_01_01c",
+          "material": "flower03",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun3601_01_02c",
+          "material": "flower03",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        146,
+        314,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "ilex/grass01_a",
+      "file": "textures/ilex/grass01_a.png",
+      "sourceTextureName": "grass01_a",
+      "width": 16,
+      "height": 16,
+      "sha256": "7e1d782b85fb3edd21cf0ff21c52085c272087dac03fd3e40b26c8bf16a0a297",
+      "sourceArea": 74,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 74
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 72
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun3601_00_00c",
+          "material": "grass01_a",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_00_01c",
+          "material": "grass01_a",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_00_02c",
+          "material": "grass01_a",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_01_00c",
+          "material": "grass01_a",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_01_01c",
+          "material": "grass01_a",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_01_02c",
+          "material": "grass01_a",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        166,
+        314,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "ilex/grass01gs",
+      "file": "textures/ilex/grass01gs.png",
+      "sourceTextureName": "grass01gs",
+      "width": 32,
+      "height": 32,
+      "sha256": "a6ea2910d9535c6d70209d82f3728b0d93c8f5255ec7f05698c738e35a8d3782",
+      "sourceArea": 74,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 74
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 72
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun3601_00_00c",
+          "material": "grass01",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun3601_00_01c",
+          "material": "grass01",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun3601_00_02c",
+          "material": "grass01",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun3601_01_00c",
+          "material": "grass01",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun3601_01_01c",
+          "material": "grass01",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun3601_01_02c",
+          "material": "grass01",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        186,
+        314,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "ilex/pond_edge",
+      "file": "textures/ilex/pond_edge.png",
+      "sourceTextureName": "pond_edge",
+      "width": 16,
+      "height": 16,
+      "sha256": "c89ca6b25f8038d9584e23aefad5c7a474816256002ef87d830c66b82d7aa54f",
+      "sourceArea": 74,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 74
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 72
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun3601_00_00c",
+          "material": "pond_edge",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun3601_00_01c",
+          "material": "pond_edge",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        222,
+        314,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "ilex/pond_on",
+      "file": "textures/ilex/pond_on.png",
+      "sourceTextureName": "pond_on",
+      "width": 32,
+      "height": 32,
+      "sha256": "f817b8d451199a9c4a86a9ecd3dad4643f0159cc74317dcbb13afa521e755c69",
+      "sourceArea": 74,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 74
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 72
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun3601_00_00c",
+          "material": "pond_on",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun3601_00_01c",
+          "material": "pond_on",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        242,
+        314,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "ilex/pond_un",
+      "file": "textures/ilex/pond_un.png",
+      "sourceTextureName": "pond_un",
+      "width": 16,
+      "height": 16,
+      "sha256": "0aa1e9bd9a6ce7cd36114ed5111dd79aa335fd0a7b477c65fd230fac51ccd151",
+      "sourceArea": 74,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 74
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 72
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun3601_00_00c",
+          "material": "pond_un",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun3601_00_01c",
+          "material": "pond_un",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        278,
+        314,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "ilex/road01",
+      "file": "textures/ilex/road01.png",
+      "sourceTextureName": "road01",
+      "width": 32,
+      "height": 32,
+      "sha256": "c47f86b43468708b7cb52d77cf0a5647309c2a0351b0e67f943f9c9c83fcdb57",
+      "sourceArea": 74,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 74
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 72
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun3601_00_00c",
+          "material": "road01",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        298,
+        314,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "ilex/road01_r",
+      "file": "textures/ilex/road01_r.png",
+      "sourceTextureName": "road01_r",
+      "width": 32,
+      "height": 32,
+      "sha256": "c0363bd428cc0de0631825909d14a3af157be0d044178783f9c02e9284b9dbad",
+      "sourceArea": 74,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 74
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 72
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun3601_00_00c",
+          "material": "road01_r",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        334,
+        314,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "ilex/ubmf_r01",
+      "file": "textures/ilex/ubmf_r01.png",
+      "sourceTextureName": "ubmf_r01",
+      "width": 32,
+      "height": 32,
+      "sha256": "15c52375cac8f4f9ea0e3ce64dc92e4add86e3626a182015f20d41fed1313276",
+      "sourceArea": 74,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 74
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 72
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun3601_00_02c",
+          "material": "ubmf_r01",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun3601_01_02c",
+          "material": "ubmf_r01",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        370,
+        314,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "union/chole_light",
+      "file": "textures/union/chole_light.png",
+      "sourceTextureName": "chole_light",
+      "width": 32,
+      "height": 32,
+      "sha256": "b29bd48666ecfc60269f45abfbf616c9aa10c9fd756926fb4a71c41ceaec6f09",
+      "sourceArea": 87,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 87
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 85
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun2501_00_00c",
+          "material": "chole_light",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun2501_00_01c",
+          "material": "chole_light",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun2501_00_02c",
+          "material": "chole_light",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        406,
+        314,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "union/chole_out",
+      "file": "textures/union/chole_out.png",
+      "sourceTextureName": "chole_out",
+      "width": 32,
+      "height": 32,
+      "sha256": "351136c51b9acac5bceabab8886f85358a0136898d3bc4fa4d8b174bb5b1bbe9",
+      "sourceArea": 87,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 87
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 85
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun2501_00_00c",
+          "material": "chole_out",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun2501_00_01c",
+          "material": "chole_out",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun2501_00_02c",
+          "material": "chole_out",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        442,
+        314,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "union/d_level01",
+      "file": "textures/union/d_level01.png",
+      "sourceTextureName": "d_level01",
+      "width": 64,
+      "height": 64,
+      "sha256": "f4b9293db6a084bf96a77ea43bbb840191f3259128d299378df6e2b788b017db",
+      "sourceArea": 87,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 87
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 85
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun2501_00_00c",
+          "material": "d_level01",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_02c",
+          "material": "d_level01",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        2,
+        382,
+        64,
+        64
+      ]
+    },
+    {
+      "key": "union/d_ro",
+      "file": "textures/union/d_ro.png",
+      "sourceTextureName": "d_ro",
+      "width": 8,
+      "height": 8,
+      "sha256": "879535d8a4e233a5f3cca01aaab92be4723fd9b0a65f231e0d00f16c9fde4ba9",
+      "sourceArea": 87,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 87
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 85
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun2501_00_00c",
+          "material": "d_ro",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_01c",
+          "material": "d_ro",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_02c",
+          "material": "d_ro",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        70,
+        382,
+        8,
+        8
+      ]
+    },
+    {
+      "key": "union/d_rock01",
+      "file": "textures/union/d_rock01.png",
+      "sourceTextureName": "d_rock01",
+      "width": 32,
+      "height": 32,
+      "sha256": "5560efe790fdc58a2f2fb320b69c86ead4cb8fb1a60d56ac74c7ebc6a36b7bc6",
+      "sourceArea": 87,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 87
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 85
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun2501_00_01c",
+          "material": "drock01",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun2501_00_02c",
+          "material": "drock01",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        82,
+        382,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "union/d_rock01s",
+      "file": "textures/union/d_rock01s.png",
+      "sourceTextureName": "d_rock01s",
+      "width": 32,
+      "height": 32,
+      "sha256": "2fb1fcb0a79dc307c14b607e3ac9a012c6e3e417cab9f533a69284dbdde65b6d",
+      "sourceArea": 87,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 87
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 85
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun2501_00_00c",
+          "material": "drock01s",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun2501_00_01c",
+          "material": "drock01s",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun2501_00_02c",
+          "material": "drock01s",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        118,
+        382,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "union/dcliff01",
+      "file": "textures/union/dcliff01.png",
+      "sourceTextureName": "dcliff01",
+      "width": 32,
+      "height": 32,
+      "sha256": "2b7f266c1e98940e082cdc999c527cb6544fee50a84a990b9f19e1a41195f052",
+      "sourceArea": 87,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 87
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 85
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun2501_00_00c",
+          "material": "dcliff01",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_01c",
+          "material": "dcliff01",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_02c",
+          "material": "dcliff01",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        154,
+        382,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "union/dcliff01_r",
+      "file": "textures/union/dcliff01_r.png",
+      "sourceTextureName": "dcliff01_r",
+      "width": 32,
+      "height": 32,
+      "sha256": "a3ef0845c8078ee75caa5e5861d68a0dab4c53068e4abba083a5ef395ede1f17",
+      "sourceArea": 87,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 87
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 85
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun2501_00_00c",
+          "material": "dcliff01_r",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_01c",
+          "material": "dcliff01_r",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_02c",
+          "material": "dcliff01_r",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        190,
+        382,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "union/dpond_line",
+      "file": "textures/union/dpond_line.png",
+      "sourceTextureName": "dpond_line",
+      "width": 16,
+      "height": 16,
+      "sha256": "1a3fd4fbc020b56385fecdff45c7d45b9300dc907fe4a46de950d39cb73095a6",
+      "sourceArea": 87,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 87
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 85
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun2501_00_01c",
+          "material": "dpond_line",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun2501_00_02c",
+          "material": "dpond_line",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        226,
+        382,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "union/driver",
+      "file": "textures/union/driver.png",
+      "sourceTextureName": "driver",
+      "width": 32,
+      "height": 32,
+      "sha256": "ec5331559924ffe5df8bf90e851483d714177941b99ae797d458534080da1f65",
+      "sourceArea": 87,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 87
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 85
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun2501_00_01c",
+          "material": "river",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_02c",
+          "material": "river",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        246,
+        382,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "union/driver_r",
+      "file": "textures/union/driver_r.png",
+      "sourceTextureName": "driver_r",
+      "width": 16,
+      "height": 16,
+      "sha256": "d59f3a8609a7b1bc2cca37c7715fb980ede388aec8e1dbd5778ff4ded6ea0ac0",
+      "sourceArea": 87,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 87
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 85
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun2501_00_01c",
+          "material": "river_r",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_02c",
+          "material": "river_r",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        282,
+        382,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "union/droad01",
+      "file": "textures/union/droad01.png",
+      "sourceTextureName": "droad01",
+      "width": 32,
+      "height": 32,
+      "sha256": "f58418a385027b9ba503bc0a0908daca00c8a46fb567f599e385a935b33414a5",
+      "sourceArea": 87,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 87
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 85
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun2501_00_00c",
+          "material": "droad01",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_01c",
+          "material": "droad01",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_02c",
+          "material": "droad01",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        302,
+        382,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "union/droad01_r",
+      "file": "textures/union/droad01_r.png",
+      "sourceTextureName": "droad01_r",
+      "width": 32,
+      "height": 32,
+      "sha256": "2890175ce461d3af590ddb03f46a9890cc50c9801bed343e504ad63448482bb4",
+      "sourceArea": 87,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 87
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 85
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun2501_00_00c",
+          "material": "droad01_r",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_01c",
+          "material": "droad01_r",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_02c",
+          "material": "droad01_r",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        338,
+        382,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "union/droad01_r2",
+      "file": "textures/union/droad01_r2.png",
+      "sourceTextureName": "droad01_r2",
+      "width": 16,
+      "height": 16,
+      "sha256": "cad764d5254888daa106331aab2ab998aefbb618111b3bc547b5689c41521c0d",
+      "sourceArea": 87,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 87
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 85
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun2501_00_00c",
+          "material": "droad01_r2",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_01c",
+          "material": "droad01_r2",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_02c",
+          "material": "droad01_r2",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        374,
+        382,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "union/droad01_sub2",
+      "file": "textures/union/droad01_sub2.png",
+      "sourceTextureName": "droad01_sub2",
+      "width": 32,
+      "height": 32,
+      "sha256": "eb0a9b5ff94f175a02b51f07c582d44a57e57ecb459387341d0c8ea277c0005a",
+      "sourceArea": 87,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 87
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 85
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun2501_00_00c",
+          "material": "droad01_sub2",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun2501_00_01c",
+          "material": "droad01_sub2",
+          "alphaMode": "MASK"
+        },
+        {
+          "model": "m_dun2501_00_02c",
+          "material": "droad01_sub2",
+          "alphaMode": "MASK"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        394,
+        382,
+        32,
+        32
+      ]
+    },
+    {
+      "key": "union/dwall_e",
+      "file": "textures/union/dwall_e.png",
+      "sourceTextureName": "dwall_e",
+      "width": 32,
+      "height": 16,
+      "sha256": "68a5650b1484426345d934491b74850b37837f8bb8a8bdc301329bff9f5bbf88",
+      "sourceArea": 87,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 87
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 85
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun2501_00_00c",
+          "material": "d_level__e",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_01c",
+          "material": "dwall01_e",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_02c",
+          "material": "dwall01_e",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        430,
+        382,
+        32,
+        16
+      ]
+    },
+    {
+      "key": "union/dwall_es",
+      "file": "textures/union/dwall_es.png",
+      "sourceTextureName": "dwall_es",
+      "width": 16,
+      "height": 16,
+      "sha256": "cdfa82a31a29a37878b128b71015490386ebbee588a30edc16040dd19273a54c",
+      "sourceArea": 87,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 87
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 85
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun2501_00_00c",
+          "material": "dwall_es",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_01c",
+          "material": "dwall_es",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_02c",
+          "material": "dwall_es",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        466,
+        382,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "union/dwall_n",
+      "file": "textures/union/dwall_n.png",
+      "sourceTextureName": "dwall_n",
+      "width": 32,
+      "height": 16,
+      "sha256": "4ac7544764bdc94acb489117abec712bf4b3108e7766aa66c7dcf5a18086658a",
+      "sourceArea": 87,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 87
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 85
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun2501_00_00c",
+          "material": "dwall01_n",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_01c",
+          "material": "dwall01_n",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_02c",
+          "material": "dwall01_n",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        2,
+        450,
+        32,
+        16
+      ]
+    },
+    {
+      "key": "union/dwall_ne",
+      "file": "textures/union/dwall_ne.png",
+      "sourceTextureName": "dwall_ne",
+      "width": 16,
+      "height": 16,
+      "sha256": "a17f43d4d493cb3eac82f2a56e2ed6a2d83d0bad42dc86fe986cc4862ac88cb6",
+      "sourceArea": 87,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 87
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 85
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun2501_00_00c",
+          "material": "dwall_ne",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_01c",
+          "material": "dwall_ne",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_02c",
+          "material": "dwall_ne",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        38,
+        450,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "union/dwall_s",
+      "file": "textures/union/dwall_s.png",
+      "sourceTextureName": "dwall_s",
+      "width": 32,
+      "height": 16,
+      "sha256": "d0b639d9b107dd4ad6fb03f58f4c046113be8949dbc8d156b5e57e6f25f82ceb",
+      "sourceArea": 87,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 87
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 85
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun2501_00_00c",
+          "material": "dwall01_s",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_01c",
+          "material": "dwall01_s",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_02c",
+          "material": "dwall01_s",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        58,
+        450,
+        32,
+        16
+      ]
+    },
+    {
+      "key": "union/dwall_sw",
+      "file": "textures/union/dwall_sw.png",
+      "sourceTextureName": "dwall_sw",
+      "width": 16,
+      "height": 16,
+      "sha256": "185226e09f2f6c5135b5c95331b52b41990621cd4d8b5d116af19980c8fa1e47",
+      "sourceArea": 87,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 87
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 85
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun2501_00_00c",
+          "material": "dwall_r_dwall_sw",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_01c",
+          "material": "dwall_r_dwall_sw",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_02c",
+          "material": "dwall_r_dwall_sw",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        94,
+        450,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "union/dwall_w",
+      "file": "textures/union/dwall_w.png",
+      "sourceTextureName": "dwall_w",
+      "width": 32,
+      "height": 16,
+      "sha256": "6cb6d9da9a0f3422bd8aaa2e0556ca5915be4a65fd1c089803d5f493920f6ece",
+      "sourceArea": 87,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 87
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 85
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun2501_00_00c",
+          "material": "dwall01_w",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_01c",
+          "material": "dwall01_w",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_02c",
+          "material": "dwall01_w",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        114,
+        450,
+        32,
+        16
+      ]
+    },
+    {
+      "key": "union/dwall_wn",
+      "file": "textures/union/dwall_wn.png",
+      "sourceTextureName": "dwall_wn",
+      "width": 16,
+      "height": 16,
+      "sha256": "6f6331900647b5e04521c952d987b07b47e82027b8f3a1fc8b55ca8237eaf665",
+      "sourceArea": 87,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 87
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 85
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun2501_00_00c",
+          "material": "dwall_wn",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_01c",
+          "material": "dwall_r_dwall_wn",
+          "alphaMode": "OPAQUE"
+        },
+        {
+          "model": "m_dun2501_00_02c",
+          "material": "dwall_r_dwall_wn",
+          "alphaMode": "OPAQUE"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": false,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        150,
+        450,
+        16,
+        16
+      ]
+    },
+    {
+      "key": "union/light",
+      "file": "textures/union/light.png",
+      "sourceTextureName": "light",
+      "width": 16,
+      "height": 16,
+      "sha256": "f9019f3d9101ce6d5e251e6787ad6c57c8084b8141c4096e250cccf93b624056",
+      "sourceArea": 87,
+      "sourceTextureArchives": [
+        {
+          "archive": "a/0/4/4",
+          "member": 87
+        },
+        {
+          "archive": "a/0/7/0",
+          "member": 85
+        }
+      ],
+      "paletteBinding": "Confirmed by source model material (no palette-name guessing)",
+      "materials": [
+        {
+          "model": "m_dun2501_00_00c",
+          "material": "d_light",
+          "alphaMode": "BLEND"
+        },
+        {
+          "model": "m_dun2501_00_01c",
+          "material": "d_light",
+          "alphaMode": "BLEND"
+        },
+        {
+          "model": "m_dun2501_00_02c",
+          "material": "d_light",
+          "alphaMode": "BLEND"
+        }
+      ],
+      "unitsPerTile": 16,
+      "alpha": true,
+      "sampling": "nearest; preserve native UVs / repeat; never smooth",
+      "atlasRect": [
+        170,
+        450,
+        16,
+        16
+      ]
+    }
+  ]
+}

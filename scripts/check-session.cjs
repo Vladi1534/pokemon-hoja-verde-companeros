@@ -22,7 +22,7 @@ for(const file of ['coop.js','personal-client.js'])vm.runInContext(fs.readFileSy
  await vm.runInContext(`(async()=>{
   const profile=PersonalEngine.newPersonal('Client QA',1);
   const game=new PersonalEngine.LocalGame(profile);
-  Object.assign(game.member.position,{map:'viridian_center',x:10,y:8,seq:10,seen:Date.now()-5000});
+  Object.assign(game.member.position,{map:'viridian_center',x:7,y:4,seq:10,seen:Date.now()-5000});
   Personal.engine=game;Personal.mode='solo';Personal.record={format:'kanto-player',version:1,key:'1'.repeat(36),portable:profile};
   Coop.active=true;Coop.session={room:'local',key:Personal.record.key};Coop.state=game.state();
   Coop.apply=function(data){this.state=data;this.offline=false;};
@@ -39,7 +39,7 @@ for(const file of ['coop.js','personal-client.js'])vm.runInContext(fs.readFileSy
  })()`,context);
  assert.equal(context.resynced.seq,10);assert.equal(context.resynced.flight,null);
  assert.equal(context.resynced.queued,0);assert.equal(context.resynced.anim,null);
- assert.equal(context.moved.seq,11);assert.equal(context.moved.y,9);
+ assert.equal(context.moved.seq,11);assert.equal(context.moved.y,5);
  assert.equal(context.hostPayload.action,'host');assert.equal(context.hostPayload.portable.trainer.position.seq,11);
  assert.equal(context.connected.mode,'online');assert.equal(context.connected.pending,null);
  assert.equal(context.connected.id,context.connected.original);assert(context.invited);
@@ -50,7 +50,7 @@ for(const file of ['coop.js','personal-client.js'])vm.runInContext(fs.readFileSy
   // No Guard makes the presentation fixture deterministic even against a Hustle Rattata.
   mon.species=68;mon.abilitySlot=1;
   mon.level=50;mon.xp=117360;mon.moves=[{id:45,pp:40}];
-  const game=new PersonalEngine.LocalGame(profile);game.dispatch({action:'sync',seq:1,steps:['right','right']});
+  Object.assign(profile.trainer.position,${JSON.stringify({...require('../online-server/server/world.json').storyAnchors.guide,y:require('../online-server/server/world.json').storyAnchors.guide.y+1})});const game=new PersonalEngine.LocalGame(profile);
   const before=game.dispatch({action:'propose',kind:'coop',npc:'guide',requestId:crypto.randomUUID()}).battle;
   const after=game.dispatch({action:'choose',battle:before.id,turn:1,choice:'move 1',requestId:crypto.randomUUID()}).battle;
   return {before,after};

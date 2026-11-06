@@ -3,6 +3,7 @@ const vm = require('vm');
 const assert = require('assert/strict');
 const path = require('path');
 const root = path.resolve(__dirname, '..');
+const guide=require('../online-server/server/world.json').storyAnchors.guide;
 const context = vm.createContext({crypto, structuredClone, TextEncoder, TextDecoder, setTimeout, clearTimeout, console});
 vm.runInContext(fs.readFileSync(path.join(root, 'personal-engine.js'), 'utf8'), context, {timeout: 15000});
 
@@ -10,12 +11,13 @@ const result = vm.runInContext(`
   const profile = PersonalEngine.newPersonal('Offline QA', 4);
   // This tests serialization, not battle balance. A healthy level-50 practice
   // team using Growl keeps both sides alive even if the opponent lands a critical hit.
+  Object.assign(profile.trainer.position, ${JSON.stringify(guide)}, {y:${guide.y+1}});
   const mon = profile.trainer.party[0];
   mon.level = 50;
   mon.xp = 117360;
   mon.moves = [{id: 45, pp: 40}];
   const game = new PersonalEngine.LocalGame(profile);
-  game.dispatch({action: 'sync', seq: 1, steps: ['right', 'right']});
+  game.dispatch({action: 'sync', seq: 1, steps: []});
   let state = game.dispatch({action: 'propose', kind: 'coop', npc: 'guide', requestId: crypto.randomUUID()});
   state = game.dispatch({action: 'choose', battle: state.battle.id, turn: 1, choice: 'move 1', requestId: crypto.randomUUID()});
   const firstTurn = state.battle.turn;
@@ -29,7 +31,7 @@ const result = vm.runInContext(`
     pp: next.battle.you.moves[0].pp, id: reloaded.member.id, original: profile.trainer.id});
 `, context);
 
-assert.equal(result.version, '2.9.0');
+assert.equal(result.version, '3.0.0');
 assert.equal(result.firstTurn, 2);
 assert.equal(result.firstPP, 39);
 assert.equal(result.resumedPP, result.firstPP);

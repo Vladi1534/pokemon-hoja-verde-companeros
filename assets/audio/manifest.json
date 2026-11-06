@@ -902,6 +902,13 @@
       "processing": "Original SSEQ events and SBNK/SWAR samples rendered at 32000 Hz. Mixer attenuated before PCM conversion; constant mastering gain; no tempo or pitch change. Intro and one complete steady-state loop; 5 ms bridge before loop entry. Ogg Vorbis quality 0 stereo.",
       "peakDbFS": -3.2,
       "title": "Ciudad Azafrán"
+    },
+    "ash": {
+      "file": "music/ash.ogg",
+      "duration": 69.130406,
+      "loop": true,
+      "loopStart": 13.430125,
+      "loopEnd": 69.13040625
     }
   },
   "sfx": {

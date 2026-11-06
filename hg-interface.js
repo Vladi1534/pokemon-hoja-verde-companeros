@@ -30,14 +30,14 @@ const HGInterface={
   if(UI.opened&&UI.kind==='start')return UI.close(true);
   const t=Coop.state.trainer,b=Coop.state.battle,active=Game.mode==='coop-battle'&&!b?.ended,pending=t.party.reduce((n,p)=>n+p.pending.length,0);
   UI.open('start',UI.top('Menú del entrenador',Personal.mode==='online'?'ONLINE · MUNDO COMPARTIDO':'MI AVENTURA · 1 JUGADOR')+`<div class="hg-menu-grid">${[
-   ['team','◉','Pokémon',pending?'Decisiones pendientes':t.party.length+(t.party.length===1?' compañero':' compañeros')],['bag',this.image('pockets','items'),'Mochila','Objetos y MO'],['trainer','▤','Entrenador','Tu tarjeta y medallas'],['map',this.image('items','map'),'Pokégear','Mapa y objetivos'],['friends','♧','Amigos','Invitar y conectar'],['settings','⚙','Opciones','Sonido y partida']
+   ['team','◉','Pokémon',pending?'Decisiones pendientes':t.party.length+(t.party.length===1?' compañero':' compañeros')],['bag',this.image('pockets','items'),'Mochila','Objetos y MO'],['dex','▣','Pokédex','Hábitats y horarios'],['trainer','▤','Entrenador','Tu tarjeta y medallas'],['map',this.image('items','map'),'Pokégear','Mapa y objetivos'],['friends','♧','Amigos','Invitar y conectar'],['settings','⚙','Opciones','Sonido y partida']
   ].map(([key,icon,label,sub])=>`<button data-hg-menu="${key}"><span class="hg-menu-icon" aria-hidden="true">${icon}</span><span><b>${label}</b><small ${key==='friends'?'id="friendsCount"':''}>${sub}</small></span></button>`).join('')}</div><div class="hg-menu-footer"><span>₽ ${t.money.toLocaleString('es-CL')}</span><button id="hgSave">Guardar</button><button data-action="close">Volver al juego</button></div>`);
   Friends.refresh();$('hgSave').onclick=async()=>{if(await Personal.save())UI.close(true);};
   document.querySelectorAll('[data-hg-menu]').forEach(el=>el.onclick=()=>{
    const key=el.dataset.hgMenu;
    if(key==='team')return active?Handheld.switches(b):this.team();
    if(key==='bag')return active&&b.temporary?UI.toast('En duelos y prácticas no se consumen objetos.'):this.bag(active?b:null);
-   if(key==='trainer')return this.trainer();if(key==='map')return Handheld.map();if(key==='friends')return Handheld.social();if(key==='settings')return Handheld.settings();
+   if(key==='dex')return this.dex();if(key==='trainer')return this.trainer();if(key==='map')return Handheld.map();if(key==='friends')return Handheld.social();if(key==='settings')return Handheld.settings();
   });
  },
  entries(){

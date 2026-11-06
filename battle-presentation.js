@@ -26,6 +26,12 @@ var BattleReplay=(()=>{
   for(const line of freshLines(previous,next)){
    const p=line.split('|'),kind=p[1],id=sideOf(p[2]),text=translate(line);
    if(kind==='turn'){view.turn=Number(p[2]);continue;}
+   if(kind==='exp'){
+    const mon=view.you?.team.find(m=>m.uid===p[3]);
+    if(mon){mon.xp=+p[6];mon.level=+p[7];mon.levelXp=+p[8];mon.nextXp=p[9]?+p[9]:null;mon.hp=+p[10];mon.maxHp=+p[11];mon.xpEarned=(mon.xpEarned||0)+Number(p[5]);}
+    messages=[`${p[4]} ganó ${p[5]} puntos de experiencia.`];push(null,950);continue;
+   }
+
    if(kind==='move'){
     const moveId=String(p[3]).toLowerCase().replace(/[^a-z]/g,'');
     const move=typeof MOVES!=='undefined'?Object.values(MOVES).find(m=>m.slug?.replaceAll('-','')===moveId||m.english?.toLowerCase().replace(/[^a-z]/g,'')===moveId):null;

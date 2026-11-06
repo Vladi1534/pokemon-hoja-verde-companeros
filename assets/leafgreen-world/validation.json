@@ -1,0 +1,207 @@
+{
+  "mapCount": 425,
+  "tileCount": 233741,
+  "blockDataMatchesReference": 425,
+  "eventCounts": {
+    "objects": 1648,
+    "warps": 1294,
+    "coordinates": 228,
+    "background": 702,
+    "scripts": 325
+  },
+  "connectionCount": 116,
+  "tilesetPairCount": 60,
+  "issues": [],
+  "dynamicWarps": [
+    {
+      "map": "frlg_00_00",
+      "warp": 0,
+      "destination": {
+        "bank": 127,
+        "number": 127,
+        "id": null
+      },
+      "destinationWarp": 127
+    },
+    {
+      "map": "frlg_00_00",
+      "warp": 1,
+      "destination": {
+        "bank": 127,
+        "number": 127,
+        "id": null
+      },
+      "destinationWarp": 127
+    },
+    {
+      "map": "frlg_00_01",
+      "warp": 0,
+      "destination": {
+        "bank": 127,
+        "number": 127,
+        "id": null
+      },
+      "destinationWarp": 127
+    },
+    {
+      "map": "frlg_00_01",
+      "warp": 1,
+      "destination": {
+        "bank": 127,
+        "number": 127,
+        "id": null
+      },
+      "destinationWarp": 127
+    },
+    {
+      "map": "frlg_00_02",
+      "warp": 0,
+      "destination": {
+        "bank": 127,
+        "number": 127,
+        "id": null
+      },
+      "destinationWarp": 127
+    },
+    {
+      "map": "frlg_00_02",
+      "warp": 1,
+      "destination": {
+        "bank": 127,
+        "number": 127,
+        "id": null
+      },
+      "destinationWarp": 127
+    },
+    {
+      "map": "frlg_00_02",
+      "warp": 2,
+      "destination": {
+        "bank": 127,
+        "number": 127,
+        "id": null
+      },
+      "destinationWarp": 127
+    },
+    {
+      "map": "frlg_00_02",
+      "warp": 3,
+      "destination": {
+        "bank": 127,
+        "number": 127,
+        "id": null
+      },
+      "destinationWarp": 127
+    },
+    {
+      "map": "frlg_00_03",
+      "warp": 0,
+      "destination": {
+        "bank": 127,
+        "number": 127,
+        "id": null
+      },
+      "destinationWarp": 127
+    },
+    {
+      "map": "frlg_00_03",
+      "warp": 1,
+      "destination": {
+        "bank": 127,
+        "number": 127,
+        "id": null
+      },
+      "destinationWarp": 127
+    },
+    {
+      "map": "frlg_00_03",
+      "warp": 2,
+      "destination": {
+        "bank": 127,
+        "number": 127,
+        "id": null
+      },
+      "destinationWarp": 127
+    },
+    {
+      "map": "frlg_00_03",
+      "warp": 3,
+      "destination": {
+        "bank": 127,
+        "number": 127,
+        "id": null
+      },
+      "destinationWarp": 127
+    },
+    {
+      "map": "frlg_00_04",
+      "warp": 0,
+      "destination": {
+        "bank": 127,
+        "number": 127,
+        "id": null
+      },
+      "destinationWarp": 127
+    },
+    {
+      "map": "frlg_01_46",
+      "warp": 0,
+      "destination": {
+        "bank": 127,
+        "number": 127,
+        "id": null
+      },
+      "destinationWarp": 127
+    },
+    {
+      "map": "frlg_01_46",
+      "warp": 1,
+      "destination": {
+        "bank": 127,
+        "number": 127,
+        "id": null
+      },
+      "destinationWarp": 127
+    },
+    {
+      "map": "frlg_01_58",
+      "warp": 0,
+      "destination": {
+        "bank": 127,
+        "number": 127,
+        "id": null
+      },
+      "destinationWarp": 127
+    },
+    {
+      "map": "frlg_02_11",
+      "warp": 0,
+      "destination": {
+        "bank": 127,
+        "number": 127,
+        "id": null
+      },
+      "destinationWarp": 127
+    },
+    {
+      "map": "frlg_10_06",
+      "warp": 0,
+      "destination": {
+        "bank": 127,
+        "number": 127,
+        "id": null
+      },
+      "destinationWarp": 127
+    },
+    {
+      "map": "frlg_10_06",
+      "warp": 1,
+      "destination": {
+        "bank": 127,
+        "number": 127,
+        "id": null
+      },
+      "destinationWarp": 127
+    }
+  ]
+}

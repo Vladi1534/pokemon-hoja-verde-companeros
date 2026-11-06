@@ -1667,6 +1667,777 @@
       },
       "unitsPerTile": 16,
       "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "route-sign",
+      "file": "models/route-sign.glb",
+      "bounds": {
+        "min": [
+          -12.0,
+          1.0,
+          -3.0
+        ],
+        "max": [
+          12.0,
+          40.375,
+          4.0
+        ]
+      },
+      "bytes": 9104,
+      "sha256": "9add86b33bf6045f0795a54e608100a5ae1a80d5972ba08e9b27e9b567e4b47e",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 32,
+      "sourceSha256": "44107a5cc498add2b092b355517bc3fe85af35470b626ab2e6494c308789afad",
+      "sourceModel": "board_d",
+      "unitsPerTile": 16,
+      "axis": "Y up; +X east; +Z south; native origin retained",
+      "anchor": [
+        0,
+        0,
+        0
+      ],
+      "doorNative": [
+        0,
+        0,
+        0
+      ],
+      "environment": true
+    },
+    {
+      "key": "forest-gate",
+      "file": "models/forest-gate.glb",
+      "bounds": {
+        "min": [
+          -60.0,
+          1.1015625,
+          -44.0
+        ],
+        "max": [
+          60.0,
+          81.50390625,
+          52.0
+        ]
+      },
+      "bytes": 32272,
+      "sha256": "c9f2752f42aa02a5fe9c3665c4f8ba67e52f998a47b846a58575557ff799763b",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 36,
+      "sourceSha256": "1977d7c2cda2f08a59d2c89b20bc48ea4ab9affe76794fe8896cbc91970c0084",
+      "sourceModel": "gate_b",
+      "unitsPerTile": 16,
+      "axis": "Y up; +X east; +Z south; native origin retained",
+      "anchor": [
+        0,
+        0,
+        0
+      ],
+      "doorNative": [
+        0,
+        0,
+        0
+      ],
+      "environment": true
+    },
+    {
+      "key": "cave-ladder-up",
+      "file": "models/cave-ladder-up.glb",
+      "bounds": {
+        "min": [
+          -32.0,
+          0.0,
+          -24.0
+        ],
+        "max": [
+          32.0,
+          55.42578125,
+          8.0
+        ]
+      },
+      "bytes": 5456,
+      "sha256": "d74238758ed04677dd8bfab882b29a912f5cc26b4221def2e9e131f9b82fc389",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 69,
+      "sourceSha256": "fe2a271aeba8bd4e98d3f20407d2ad7e04afa0bf0699cabaeceafeb3a51992dc",
+      "sourceModel": "dun_stairup",
+      "unitsPerTile": 16,
+      "axis": "Y up; +X east; +Z south; native origin retained",
+      "anchor": [
+        0,
+        0,
+        0
+      ],
+      "doorNative": [
+        0,
+        0,
+        0
+      ],
+      "environment": true
+    },
+    {
+      "key": "cave-ladder-down",
+      "file": "models/cave-ladder-down.glb",
+      "bounds": {
+        "min": [
+          -32.0,
+          -19.98828125,
+          -8.0
+        ],
+        "max": [
+          32.0,
+          21.42578125,
+          -5.01171875
+        ]
+      },
+      "bytes": 5308,
+      "sha256": "765c6700971ccf4ac563683f4bf1c05599333d52c03ba2ff77a5261367320254",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 70,
+      "sourceSha256": "05195c91062903e9064951bc7249f18956bc86a470e6e2456c6db3e18a12d310",
+      "sourceModel": "dun_stairdw",
+      "unitsPerTile": 16,
+      "axis": "Y up; +X east; +Z south; native origin retained",
+      "anchor": [
+        0,
+        0,
+        0
+      ],
+      "doorNative": [
+        0,
+        0,
+        0
+      ],
+      "environment": true
+    },
+    {
+      "key": "ilex-shrine",
+      "file": "models/ilex-shrine.glb",
+      "bounds": {
+        "min": [
+          -17.5,
+          1.69921875,
+          -14.400390625
+        ],
+        "max": [
+          21.349609375,
+          57.0,
+          23.19921875
+        ]
+      },
+      "bytes": 18612,
+      "sha256": "3dae7c24db783aebdb29d4b1ccdfffb582ffc35c58d721c02ace8f7837d203ef",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 71,
+      "sourceSha256": "e5d956776f844e446193f8d42177988b9528da8261375a9a4bda54fbde3e01d6",
+      "sourceModel": "uba_hokora",
+      "unitsPerTile": 16,
+      "axis": "Y up; +X east; +Z south; native origin retained",
+      "anchor": [
+        0,
+        0,
+        0
+      ],
+      "doorNative": [
+        0,
+        0,
+        0
+      ],
+      "environment": true
+    },
+    {
+      "key": "forest-branch",
+      "file": "models/forest-branch.glb",
+      "bounds": {
+        "min": [
+          -16.0,
+          3.0,
+          -18.0
+        ],
+        "max": [
+          16.0,
+          3.0,
+          18.0
+        ]
+      },
+      "bytes": 4436,
+      "sha256": "1cc527952dab267f2f2a4c31e7e8a7475dc16e33e35043d333f75d563623059e",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 72,
+      "sourceSha256": "be7305cd4c282c184be95393c4f2aec83d8792af3e0c78d019b3948cb75ebe6b",
+      "sourceModel": "uba_eda",
+      "unitsPerTile": 16,
+      "axis": "Y up; +X east; +Z south; native origin retained",
+      "anchor": [
+        0,
+        0,
+        0
+      ],
+      "doorNative": [
+        0,
+        0,
+        0
+      ],
+      "environment": true
+    },
+    {
+      "key": "forest-tree",
+      "file": "models/forest-tree.glb",
+      "bounds": {
+        "min": [
+          -32.0,
+          0.0,
+          -40.765625
+        ],
+        "max": [
+          32.0,
+          49.34375,
+          0.0
+        ]
+      },
+      "bytes": 4936,
+      "sha256": "f0754d8b961771af8e9e28f91aa69fccb6603bd39f5dc631e44ee1999f96a304",
+      "unitsPerTile": 16,
+      "axis": "Y up; +X east; +Z south",
+      "anchor": [
+        0,
+        0,
+        0
+      ],
+      "nativeSource": {
+        "unitsPerTile": 16,
+        "sourceModel": "m_dun4601_00_00c",
+        "sourceMaterial": "dtf_f09",
+        "sourceFirstTriangle": 0,
+        "sourceTriangleCount": 2,
+        "sourceOriginRemoved": [
+          176.0,
+          32.0,
+          26.0
+        ],
+        "cropAxis": null,
+        "cropMaximum": null,
+        "collision": "Original FRLG collision, independent"
+      },
+      "sourceArea": "forest",
+      "sourceLandArchive": "a/0/6/5",
+      "sourceLandMembers": [
+        622
+      ],
+      "doorNative": [
+        0,
+        0,
+        0
+      ],
+      "environment": true
+    },
+    {
+      "key": "forest-canopy-strip",
+      "file": "models/forest-canopy-strip.glb",
+      "bounds": {
+        "min": [
+          -64.0,
+          0.0,
+          -40.765625
+        ],
+        "max": [
+          64.0,
+          49.34375,
+          0.0
+        ]
+      },
+      "bytes": 6232,
+      "sha256": "715d95a6ee4568f3f10c5286717e71997546b90040a2567248b234c5e0ede3ca",
+      "unitsPerTile": 16,
+      "axis": "Y up; +X east; +Z south",
+      "anchor": [
+        0,
+        0,
+        0
+      ],
+      "nativeSource": {
+        "unitsPerTile": 16,
+        "sourceModel": "m_dun4601_00_00c",
+        "sourceMaterial": "dtf_f10",
+        "sourceFirstTriangle": 0,
+        "sourceTriangleCount": 2,
+        "sourceOriginRemoved": [
+          192.0,
+          32.0,
+          -231.0
+        ],
+        "cropAxis": null,
+        "cropMaximum": null,
+        "collision": "Original FRLG collision, independent"
+      },
+      "sourceArea": "forest",
+      "sourceLandArchive": "a/0/6/5",
+      "sourceLandMembers": [
+        622
+      ],
+      "doorNative": [
+        0,
+        0,
+        0
+      ],
+      "environment": true
+    },
+    {
+      "key": "kanto-tree",
+      "file": "models/kanto-tree.glb",
+      "bounds": {
+        "min": [
+          -32.0,
+          0.0,
+          -40.765625
+        ],
+        "max": [
+          32.0,
+          49.34375,
+          0.0
+        ]
+      },
+      "bytes": 4804,
+      "sha256": "e579a28a27ebf2ea17a9cfb39d4d1c2ad44b9e81045584d4bc568f7ac0433976",
+      "unitsPerTile": 16,
+      "axis": "Y up; +X east; +Z south",
+      "anchor": [
+        0,
+        0,
+        0
+      ],
+      "nativeSource": {
+        "unitsPerTile": 16,
+        "sourceModel": "map32_09c",
+        "sourceMaterial": "tree01",
+        "sourceFirstTriangle": 0,
+        "sourceTriangleCount": 2,
+        "sourceOriginRemoved": [
+          -208.0,
+          48.0,
+          -70.0
+        ],
+        "cropAxis": null,
+        "cropMaximum": null,
+        "collision": "Original FRLG collision, independent"
+      },
+      "sourceArea": "kanto",
+      "sourceLandArchive": "a/0/6/5",
+      "sourceLandMembers": [
+        199
+      ],
+      "doorNative": [
+        0,
+        0,
+        0
+      ],
+      "environment": true
+    },
+    {
+      "key": "kanto-tree-edge",
+      "file": "models/kanto-tree-edge.glb",
+      "bounds": {
+        "min": [
+          -16.0,
+          0.0,
+          -40.765625
+        ],
+        "max": [
+          16.0,
+          49.34375,
+          0.0
+        ]
+      },
+      "bytes": 6028,
+      "sha256": "5351ac7fa904e16e6226629e7c0328adffcf70ed83868028f86dd278b1f41d6a",
+      "unitsPerTile": 16,
+      "axis": "Y up; +X east; +Z south",
+      "anchor": [
+        0,
+        0,
+        0
+      ],
+      "nativeSource": {
+        "unitsPerTile": 16,
+        "sourceModel": "map32_09c",
+        "sourceMaterial": "tree01_re",
+        "sourceFirstTriangle": 0,
+        "sourceTriangleCount": 2,
+        "sourceOriginRemoved": [
+          -176.0,
+          48.0,
+          -199.0
+        ],
+        "cropAxis": null,
+        "cropMaximum": null,
+        "collision": "Original FRLG collision, independent"
+      },
+      "sourceArea": "kanto",
+      "sourceLandArchive": "a/0/6/5",
+      "sourceLandMembers": [
+        199
+      ],
+      "doorNative": [
+        0,
+        0,
+        0
+      ],
+      "environment": true
+    },
+    {
+      "key": "ilex-tree",
+      "file": "models/ilex-tree.glb",
+      "bounds": {
+        "min": [
+          -32.0,
+          0.0,
+          -40.765625
+        ],
+        "max": [
+          32.0,
+          49.34375,
+          0.0
+        ]
+      },
+      "bytes": 4984,
+      "sha256": "2cffd6821cc93afcf9d500169710ad8e70a53a2da16ea4db49c75a54a29d59dc",
+      "unitsPerTile": 16,
+      "axis": "Y up; +X east; +Z south",
+      "anchor": [
+        0,
+        0,
+        0
+      ],
+      "nativeSource": {
+        "unitsPerTile": 16,
+        "sourceModel": "m_dun3601_00_00c",
+        "sourceMaterial": "tree01",
+        "sourceFirstTriangle": 0,
+        "sourceTriangleCount": 2,
+        "sourceOriginRemoved": [
+          240.0,
+          0.0,
+          -70.0
+        ],
+        "cropAxis": null,
+        "cropMaximum": null,
+        "collision": "Original FRLG collision, independent"
+      },
+      "sourceArea": "ilex",
+      "sourceLandArchive": "a/0/6/5",
+      "sourceLandMembers": [
+        504
+      ],
+      "doorNative": [
+        0,
+        0,
+        0
+      ],
+      "environment": true
+    },
+    {
+      "key": "cave-stalagmite",
+      "file": "models/cave-stalagmite.glb",
+      "bounds": {
+        "min": [
+          -8.0,
+          0.0,
+          -22.546875
+        ],
+        "max": [
+          8.0,
+          21.109375,
+          0.0
+        ]
+      },
+      "bytes": 3460,
+      "sha256": "73f6043e815c35f22256c6264c2bc4886bd05a425e21c632863b95b405fb7e5a",
+      "unitsPerTile": 16,
+      "axis": "Y up; +X east; +Z south",
+      "anchor": [
+        0,
+        0,
+        0
+      ],
+      "nativeSource": {
+        "unitsPerTile": 16,
+        "sourceModel": "m_dun0201_00_00c",
+        "sourceMaterial": "drock01s",
+        "sourceFirstTriangle": 0,
+        "sourceTriangleCount": 2,
+        "sourceOriginRemoved": [
+          -88.0,
+          18.484375,
+          129.71875
+        ],
+        "cropAxis": null,
+        "cropMaximum": null,
+        "collision": "Original FRLG collision, independent"
+      },
+      "sourceArea": "cave",
+      "sourceLandArchive": "a/0/6/5",
+      "sourceLandMembers": [
+        389
+      ],
+      "doorNative": [
+        0,
+        0,
+        0
+      ],
+      "environment": true
+    },
+    {
+      "key": "sea-rock",
+      "file": "models/sea-rock.glb",
+      "bounds": {
+        "min": [
+          -16.0,
+          0.0,
+          -22.625
+        ],
+        "max": [
+          16.0,
+          22.625,
+          0.0
+        ]
+      },
+      "bytes": 3672,
+      "sha256": "d4bc90248028ed03d7e291315f69cc15af29089649fd50ecfb338ed236b319c0",
+      "unitsPerTile": 16,
+      "axis": "Y up; +X east; +Z south",
+      "anchor": [
+        0,
+        0,
+        0
+      ],
+      "nativeSource": {
+        "unitsPerTile": 16,
+        "sourceModel": "map32_12c",
+        "sourceMaterial": "sea_rock",
+        "sourceFirstTriangle": 0,
+        "sourceTriangleCount": 2,
+        "sourceOriginRemoved": [
+          240.0,
+          8.6875,
+          -4.6875
+        ],
+        "cropAxis": null,
+        "cropMaximum": null,
+        "collision": "Original FRLG collision, independent"
+      },
+      "sourceArea": "kanto",
+      "sourceLandArchive": "a/0/6/5",
+      "sourceLandMembers": [
+        202
+      ],
+      "doorNative": [
+        0,
+        0,
+        0
+      ],
+      "environment": true
+    },
+    {
+      "key": "cave-wall-n",
+      "file": "models/cave-wall-n.glb",
+      "bounds": {
+        "min": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max": [
+          16.0,
+          16.0,
+          16.0
+        ]
+      },
+      "bytes": 3020,
+      "sha256": "f11fb85c7c43be9c1a1e586582726522c20450753e5f1d34163f2280f5befcf9",
+      "unitsPerTile": 16,
+      "axis": "Y up; +X east; +Z south",
+      "anchor": [
+        0,
+        0,
+        0
+      ],
+      "nativeSource": {
+        "unitsPerTile": 16,
+        "sourceModel": "m_dun0201_00_00c",
+        "sourceMaterial": "dwall01_n",
+        "sourceFirstTriangle": 12,
+        "sourceTriangleCount": 6,
+        "sourceOriginRemoved": [
+          48.0,
+          32.0,
+          -64.0
+        ],
+        "cropAxis": null,
+        "cropMaximum": null,
+        "collision": "Original FRLG collision, independent"
+      },
+      "sourceArea": "cave",
+      "sourceLandArchive": "a/0/6/5",
+      "sourceLandMembers": [
+        389
+      ],
+      "doorNative": [
+        0,
+        0,
+        0
+      ],
+      "environment": true
+    },
+    {
+      "key": "cave-wall-e",
+      "file": "models/cave-wall-e.glb",
+      "bounds": {
+        "min": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max": [
+          16.0,
+          16.0,
+          16.0
+        ]
+      },
+      "bytes": 3740,
+      "sha256": "c9cdfdd7e0f26573ecedcd7c23b5351aca12669eeab1141aeef3068bd37f15e4",
+      "unitsPerTile": 16,
+      "axis": "Y up; +X east; +Z south",
+      "anchor": [
+        0,
+        0,
+        0
+      ],
+      "nativeSource": {
+        "unitsPerTile": 16,
+        "sourceModel": "m_dun0201_00_00c",
+        "sourceMaterial": "dwall01_e",
+        "sourceFirstTriangle": 0,
+        "sourceTriangleCount": 6,
+        "sourceOriginRemoved": [
+          -32.0,
+          16.0,
+          16.0
+        ],
+        "cropAxis": 2,
+        "cropMaximum": 32.0,
+        "collision": "Original FRLG collision, independent"
+      },
+      "sourceArea": "cave",
+      "sourceLandArchive": "a/0/6/5",
+      "sourceLandMembers": [
+        389
+      ],
+      "doorNative": [
+        0,
+        0,
+        0
+      ],
+      "environment": true
+    },
+    {
+      "key": "cave-wall-s",
+      "file": "models/cave-wall-s.glb",
+      "bounds": {
+        "min": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max": [
+          16.0,
+          16.0,
+          16.0
+        ]
+      },
+      "bytes": 3036,
+      "sha256": "a71115493eba647fc174c2dfb82f6836bed6fd6091bdb4e930bdcf52801cf104",
+      "unitsPerTile": 16,
+      "axis": "Y up; +X east; +Z south",
+      "anchor": [
+        0,
+        0,
+        0
+      ],
+      "nativeSource": {
+        "unitsPerTile": 16,
+        "sourceModel": "m_dun0201_00_00c",
+        "sourceMaterial": "dwall01_s",
+        "sourceFirstTriangle": 48,
+        "sourceTriangleCount": 6,
+        "sourceOriginRemoved": [
+          128.0,
+          16.0,
+          128.0
+        ],
+        "cropAxis": null,
+        "cropMaximum": null,
+        "collision": "Original FRLG collision, independent"
+      },
+      "sourceArea": "cave",
+      "sourceLandArchive": "a/0/6/5",
+      "sourceLandMembers": [
+        389
+      ],
+      "doorNative": [
+        0,
+        0,
+        0
+      ],
+      "environment": true
+    },
+    {
+      "key": "cave-wall-w",
+      "file": "models/cave-wall-w.glb",
+      "bounds": {
+        "min": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max": [
+          16.0,
+          16.0,
+          16.0
+        ]
+      },
+      "bytes": 2956,
+      "sha256": "15d45bee6a9be25c008ba02bc375524e9a298ed471f2dbb24d4604d05fa7a6ae",
+      "unitsPerTile": 16,
+      "axis": "Y up; +X east; +Z south",
+      "anchor": [
+        0,
+        0,
+        0
+      ],
+      "nativeSource": {
+        "unitsPerTile": 16,
+        "sourceModel": "m_dun0201_00_00c",
+        "sourceMaterial": "dwall01_w",
+        "sourceFirstTriangle": 0,
+        "sourceTriangleCount": 6,
+        "sourceOriginRemoved": [
+          48.0,
+          16.0,
+          32.0
+        ],
+        "cropAxis": null,
+        "cropMaximum": null,
+        "collision": "Original FRLG collision, independent"
+      },
+      "sourceArea": "cave",
+      "sourceLandArchive": "a/0/6/5",
+      "sourceLandMembers": [
+        389
+      ],
+      "doorNative": [
+        0,
+        0,
+        0
+      ],
+      "environment": true
     }
   ],
   "museumInterior": {
@@ -1680,7 +2451,7 @@
     "complete": "models/museum-interior-complete.glb",
     "props": "museum-props.json"
   },
-  "note": "HG Lavender tower is the later radio tower; no claim that this is FRLG Pok\u00e9mon Tower. Celadon mansion is not Cinnabar Pok\u00e9mon Mansion.",
+  "note": "HG Lavender tower is the later radio tower; no claim that this is FRLG Pokémon Tower. Celadon mansion is not Cinnabar Pokémon Mansion.",
   "doorAnchors": "door-anchors.json",
   "museumCollision": "museum-collision.json"
 }

@@ -48,7 +48,7 @@ test('HG eggs hatch at level 1, use real gender thresholds, and warmth accelerat
  const profile=newPersonal('Crianza HG',1).trainer;profile.party=[createMon(126,20),egg];walked(profile,10);assert.equal(egg.eggSteps,5080);
 });
 test('museum entrance, exhibits and migration use the original collision map',()=>{
- const m=world.maps.pewter_museum;assert.equal(m.hgRoom.model,'museum-interior-complete');assert.equal(m.grid[19][10],8);assert.equal(m.grid[18][10],9);assert.equal(m.grid[9][10],7);assert(m.npcs.length>=7);
- const g=new LocalGame(newPersonal('Museo HG',1));const saved=g.snapshot();saved.row.state.worldRevision=5;Object.assign(saved.row.state.members[0].position,{map:m.id,x:20,y:17});const reload=new LocalGame(null,saved);assert.equal(reload.member.position.x,10);assert.equal(reload.member.position.y,18);
+ const m=world.maps.pewter_museum;assert.equal(m.native.name,'PewterCity_Museum_1F');assert(m.portals.length>=2);assert(m.npcs.length>=7);
+ const g=new LocalGame(newPersonal('Museo HG',1));const saved=g.snapshot();saved.row.state.worldRevision=5;Object.assign(saved.row.state.members[0].position,{map:m.id,x:20,y:17});const reload=new LocalGame(null,saved);assert.equal(reload.member.position.x,m.arrival.x);assert.equal(reload.member.position.y,m.arrival.y);
 });
 console.log(JSON.stringify({passed,failed:0}));

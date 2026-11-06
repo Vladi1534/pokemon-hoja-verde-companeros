@@ -1,0 +1,82 @@
+{
+  "unitsPerTile": 16,
+  "atlas": "environment-atlas.json",
+  "rule": "Select art using original FRLG metatile/behavior metadata. Never infer or replace collision, elevation, encounter tables, event coordinates or warps from this catalog.",
+  "regions": {
+    "kanto": {
+      "floor": "kanto/grass01gs",
+      "path": "kanto/road01",
+      "pathEdge": "kanto/road01_r",
+      "tall_grass": "kanto/egrass",
+      "water": "kanto/sea_un",
+      "waterHighlight": "kanto/sea_on",
+      "waterFoam": "kanto/sea_line02",
+      "shore": "kanto/swave_un",
+      "ledge": "kanto/allpeak_pgs",
+      "cliffTop": "kanto/cliff01gs",
+      "cliffFace": "kanto/wall01_g",
+      "treeModel": "kanto-tree",
+      "treeEdgeModel": "kanto-tree-edge"
+    },
+    "forest": {
+      "floor": "forest/dtf_f07",
+      "path": "forest/dtf_f02",
+      "pathEdge": "forest/dtf_f01",
+      "tall_grass": "forest/egrass",
+      "canopyFloor": "forest/dtf_f03",
+      "canopyBase": "forest/dtf_f04",
+      "canopyFace": "forest/dtf_f05",
+      "ledge": "forest/allpeak_pgs",
+      "treeModel": "forest-tree",
+      "canopyStripModel": "forest-canopy-strip",
+      "branchModel": "forest-branch"
+    },
+    "cave": {
+      "floor": "cave/droad01",
+      "floorPlain": "cave/droad01_r2",
+      "floorEdge": "cave/droad01_r",
+      "floorDetail": "cave/droad01_sub2",
+      "cliffTop": "cave/dcliff01",
+      "cliffEdge": "cave/dcliff01_r",
+      "water": "union/driver",
+      "waterEdge": "union/driver_r",
+      "ledge": "cave/dallpeak_p",
+      "wallTexture": {"north": "cave/dwall_n", "east": "cave/dwall_e", "south": "cave/dwall_s", "west": "cave/dwall_w"},
+      "wallModel": {"north": "cave-wall-n", "east": "cave-wall-e", "south": "cave-wall-s", "west": "cave-wall-w"},
+      "wallCorner": {"ne": "cave/dwall_ne", "se": "cave/dwall_es", "sw": "cave/dwall_sw", "nw": "cave/dwall_wn"},
+      "stairHole": "rock-tunnel/d_stairhole",
+      "ladderUpModel": "cave-ladder-up",
+      "ladderDownModel": "cave-ladder-down",
+      "stalagmiteModel": "cave-stalagmite"
+    },
+    "pond": {
+      "floor": "ilex/pond_un",
+      "water": "ilex/pond_on",
+      "waterEdge": "ilex/pond_edge"
+    }
+  },
+  "sharedGrassEdges": {"innerCorner": "forest/egrass_ri", "outerCorner": "forest/egrass_ro", "horizontal": "forest/egrass_u", "vertical": "forest/egrass_v"},
+  "behaviorHints": {
+    "MB_TALL_GRASS": "tall_grass",
+    "MB_CAVE": "cave.floor",
+    "MB_JUMP_SOUTH": "ledge; preserve the original one-way jump direction",
+    "MB_LADDER": "warp ladder art only; the FRLG warp remains authoritative"
+  },
+  "sampling": {
+    "minFilter": "nearest",
+    "magFilter": "nearest",
+    "colorSpace": "sRGB",
+    "tilePixelSize": 16,
+    "groundNativeUnitsPerTexel": 1,
+    "groundPatternRule": "A 32x32 ground texture spans 2x2 logical tiles. Crop using mapX/mapY modulo the texture width/height; do not squash the entire image into every 16x16 tile.",
+    "atlasRule": "Draw only the atlasRect; the two-pixel gutters are transparent. Repeating UV shaders must use individual texture files or explicit atlas-rect wrapping.",
+    "spriteRule": "Trees and rocks use native model UVs and their model dimensions. Texture dimensions alone do not define collision or visible footprint."
+  },
+  "limits": [
+    "This is a semantic art kit, not a drop-in one-to-one mapping for every FRLG metatile ID.",
+    "Map-specific decorations, furniture, roofs and warp tiles without an audited substitution must retain their original FRLG layer art.",
+    "Do not replace every solid obstacle with a tree: buildings, signs, ledges, shelves and water barriers have different meanings.",
+    "Do not paint whole opaque ground tiles above interactive actors or events. Keep FRLG under/over layer ordering.",
+    "Water frames are static source textures; this kit does not port the original runtime animation timing."
+  ]
+}

@@ -6,7 +6,7 @@ import {createMon,heal} from '../server/creatures.mjs';
 import {newBattle,flee} from '../server/battles.mjs';
 let count=0;const test=(name,fn)=>{fn();count++;console.log('PASS '+name);};
 const directions={up:[0,-1],down:[0,1],left:[-1,0],right:[1,0]};
-function beside(game,map,id){const n=world.maps[map].npcs.find(n=>n.id===id);assert(n,id);const [dir,[dx,dy]]=Object.entries(directions).find(([,d])=>walkable(map,n.x-d[0],n.y-d[1]));game.member.position={...game.member.position,map,x:n.x-dx,y:n.y-dy,dir,seen:Date.now()-5000};return n;}
+function beside(game,map,id){map=world.storyAnchors[id]?.map||map;const n=world.maps[map].npcs.find(n=>n.id===id);assert(n,id);const [dir,[dx,dy]]=Object.entries(directions).find(([,d])=>walkable(map,n.x-d[0],n.y-d[1],{progress:game.member.progress,league:game.member.league}));game.member.position={...game.member.position,map,x:n.x-dx,y:n.y-dy,dir,seen:Date.now()-5000};return n;}
 const act=(g,action,args={})=>g.dispatch({action,requestId:crypto.randomUUID(),...args});
 
 test('Rocket recruiter never spots an ineligible trainer and rejected dialogue releases an old lock',()=>{
@@ -46,9 +46,9 @@ test('2.6 rooms migrate out-of-bounds positions while retaining identity, party 
 let game=new LocalGame(newPersonal('Liga Offline QA',7));
 game.member.party=Array.from({length:6},()=>createMon(150,100,game.member.id,{moves:[94,53,57,85].map(id=>({id,pp:15}))}));
 let victories=0;
-function accessible(target){const progress=game.member.progress,ctx={progress},queue=['pallet'],seen=new Set();for(let i=0;i<queue.length;i++){const id=queue[i];if(seen.has(id))continue;seen.add(id);const m=world.maps[id];for(const p of m.portals)if(!gate(ctx,p.gate))queue.push(p.to);for(const d of m.doors){if(d.to==='ssanne'&&!done(ctx,'bill')||d.to==='silph_1'&&!done(ctx,'flute')||d.to==='cinnabar_gym'&&!done(ctx,'secret_key'))continue;queue.push(d.to);}}assert(seen.has(target),'Story destination is gated: '+target);}
-function talk(map,id,args={}){accessible(map);beside(game,map,id);return act(game,'quest',{npc:id,...args});}
-function win(map,id,rest=true){accessible(map);beside(game,map,id);if(rest)game.member.party.forEach(heal);let state=act(game,'propose',{kind:'coop',npc:id});assert(state.battle&&!state.battle.ended,id);
+function accessible(target){const progress=game.member.progress,ctx={progress,league:game.member.league},queue=['pallet'],seen=new Set();for(let i=0;i<queue.length;i++){const id=queue[i];if(seen.has(id))continue;seen.add(id);const m=world.maps[id];for(const p of [...m.portals,...m.nativeConnections])if(!gate(ctx,p.gate))queue.push(p.to);for(const d of m.doors){if(d.to==='ssanne'&&!done(ctx,'bill')||d.to==='silph_1'&&!done(ctx,'flute')||d.to==='cinnabar_gym'&&!done(ctx,'secret_key'))continue;queue.push(d.to);}}assert(seen.has(target),'Story destination is gated: '+target);}
+function talk(map,id,args={}){map=world.storyAnchors[id]?.map||map;accessible(map);beside(game,map,id);return act(game,'quest',{npc:id,...args});}
+function win(map,id,rest=true){map=world.storyAnchors[id]?.map||map;accessible(map);beside(game,map,id);if(rest)game.member.party.forEach(heal);let state=act(game,'propose',{kind:'coop',npc:id});assert(state.battle&&!state.battle.ended,id);
  for(let turn=0;turn<200&&!state.battle.ended;turn++){
   const b=state.battle,r=b.you;state=act(game,'choose',{battle:b.id,turn:b.turn,forceSwitch:r.forceSwitch,choice:'default'});
  }
@@ -62,10 +62,10 @@ test('offline Pallet, Moon, five trainers, Bill and SS Anne persist through relo
  win('cerulean_gym','cerulean_gym_leader');win('ssanne','ssanne_rival');talk('ssanne_cabin','ssanne_cabin_captain');talk('vermilion_gym','vermilion_gym_switch1');talk('vermilion_gym','vermilion_gym_switch2');win('vermilion_gym','vermilion_gym_leader');
 });
 test('offline Rocket, Fuji, Silph, Safari and Mansion unlock eight individual badges',()=>{
- talk('casino','casino_poster');win('rocket_b1','rocket_b1_key');win('rocket_b2','rocket_b2_giovanni');talk('rocket_b2','rocket_b2_scope');win('celadon_gym','celadon_gym_leader');win('tower_2','tower_2_ghost');win('tower_3','tower_3_rocket');talk('tower_3','tower_3_fuji');talk('celadon_house','celadon_house_tea');talk('silph_2','silph_2_card_key');win('silph_2','silph_2_rival');win('silph_3','silph_3_giovanni');talk('silph_3','silph_3_president');win('saffron_gym','saffron_gym_leader');win('route12','route12_snorlax');talk('safari','safari_teeth');talk('fuchsia_house','fuchsia_house_warden');talk('safari_hut','safari_hut_surf');win('fuchsia_gym','fuchsia_gym_leader');talk('mansion_1','mansion_1_statue1');talk('mansion_1','mansion_1_statue2');win('mansion_2','mansion_2_scientist');talk('mansion_2','mansion_2_secret_key');win('cinnabar_gym','cinnabar_gym_leader');win('viridian_gym','viridian_gym_leader');assert(done({progress:game.member.progress},'league_access'));
+ win('casino','casino_native_11');talk('casino','casino_poster');win('rocket_b1','rocket_b1_key');win('rocket_b2','rocket_b2_giovanni');talk('rocket_b2','rocket_b2_scope');win('celadon_gym','celadon_gym_leader');win('tower_2','tower_2_ghost');win('tower_3','tower_3_rocket');talk('tower_3','tower_3_fuji');talk('celadon_house','celadon_house_tea');talk('silph_2','silph_2_card_key');win('silph_2','silph_2_rival');win('silph_3','silph_3_giovanni');talk('silph_3','silph_3_president');win('saffron_gym','saffron_gym_leader');win('route12','route12_snorlax');talk('safari','safari_teeth');talk('fuchsia_house','fuchsia_house_warden');talk('safari_hut','safari_hut_surf');win('fuchsia_gym','fuchsia_gym_leader');talk('mansion_1','mansion_1_statue1');talk('mansion_1','mansion_1_statue2');win('mansion_2','mansion_2_scientist');talk('mansion_2','mansion_2_secret_key');win('cinnabar_gym','cinnabar_gym_leader');win('viridian_gym','viridian_gym_leader');assert(done({progress:game.member.progress},'league_access'));
 });
 test('offline Elite Four and champion finish and survive a full local save reload',()=>{
- game.member.party.forEach(heal);for(let i=0;i<5;i++)win('indigo_arena','indigo_arena_league',false);
+ game.member.party.forEach(heal);for(let i=0;i<5;i++){const m=Object.values(world.maps).find(m=>m.npcs.some(n=>n.role==='league'&&n.data.round===i)),n=m.npcs.find(n=>n.role==='league');win(m.id,n.id,false);}
  assert(game.member.progress.champion);assert.equal(game.member.league,0);assert.equal(game.state().journal.badges.filter(b=>b.won).length,8);assert.equal(game.member.progress.league_clears,1);
  assert(!game.row.state.progress.champion,'personal progression is not stored in the shared world');
 });

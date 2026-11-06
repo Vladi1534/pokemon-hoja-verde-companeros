@@ -1,0 +1,753 @@
+{
+  "finding": "Old placement clamps both sides of an asymmetric native model around a centered synthetic door, shrinking the whole facade. Poke-Mart source door lies at x=-8 relative to an asymmetric model, and its large sign extends right.",
+  "fix": "Retain original FRLG door position. Scale once from native units (16 per tile), using image pixels per native unit from the render camera. Do not use left/right remaining footprint width as the global scaling limit.",
+  "formula": "drawScale=(canvasTilePixels/16)/frame.nativePixelsPerUnit; drawX=doorFootX-frame.anchorX*drawScale; drawY=doorFootY-frame.anchorY*drawScale;",
+  "gpuMetadata": "nativePixelsPerUnit = renderedImageWidth/(camera.right-camera.left)",
+  "cpuMetadata": "nativePixelsPerUnit = preview.scale; pass this through fallbackFrame()",
+  "collision": "Preserve original FRLG walkability and door warps. Do not expand collision from facade image alpha, shadows, signs, or roof bounds.",
+  "plotConflict": "If a facade wall really exceeds the FRLG reserved plot, adapt the architecture (wing length/side depth) while keeping door and player scale. HG original architecture is not always footprint-compatible with FRLG. A universal uniform-scale rule cannot simultaneously guarantee exact FRLG footprints and full HG native dimensions.",
+  "assets": [
+    {
+      "key": "museum-exterior",
+      "nativeBounds": {
+        "min": [
+          -91,
+          1,
+          -62.7890625
+        ],
+        "max": [
+          160,
+          96.515625,
+          65
+        ]
+      },
+      "nativeDimensionsTiles": [
+        15.6875,
+        5.9697265625,
+        7.98681640625
+      ],
+      "doorNative": [
+        0.0,
+        0,
+        48.0
+      ],
+      "nativeUnitsPerTile": 16,
+      "canvasTilePixels": 32,
+      "sourcePixelsPerNativeUnit": 3.011764705882353,
+      "naturalImageScale": 0.6640625,
+      "naturalImageWidthPixels": 510.0,
+      "naturalImageHeightPixels": 321.40625,
+      "naturalBodyWidthPixels": 502,
+      "originalOriginPreserved": true
+    },
+    {
+      "key": "pewter-gym",
+      "nativeBounds": {
+        "min": [
+          -55.669921875,
+          1,
+          -41.392578125
+        ],
+        "max": [
+          61.84375,
+          61.52734375,
+          34.38671875
+        ]
+      },
+      "nativeDimensionsTiles": [
+        7.3446044921875,
+        3.782958984375,
+        4.7362060546875
+      ],
+      "doorNative": [
+        0.0,
+        0,
+        24.0
+      ],
+      "nativeUnitsPerTile": 16,
+      "canvasTilePixels": 32,
+      "sourcePixelsPerNativeUnit": 6.3202764606606125,
+      "naturalImageScale": 0.3164418538411458,
+      "naturalImageWidthPixels": 243.02734375,
+      "naturalImageHeightPixels": 199.674809773763,
+      "naturalBodyWidthPixels": 235.02734375,
+      "originalOriginPreserved": true
+    },
+    {
+      "key": "pokemon-center",
+      "nativeBounds": {
+        "min": [
+          -42,
+          1.5,
+          -32
+        ],
+        "max": [
+          48,
+          60,
+          36.98828125
+        ]
+      },
+      "nativeDimensionsTiles": [
+        5.625,
+        3.65625,
+        4.311767578125
+      ],
+      "doorNative": [
+        0.0,
+        0,
+        23.0
+      ],
+      "nativeUnitsPerTile": 16,
+      "canvasTilePixels": 32,
+      "sourcePixelsPerNativeUnit": 8.170212765957446,
+      "naturalImageScale": 0.24479166666666669,
+      "naturalImageWidthPixels": 188.0,
+      "naturalImageHeightPixels": 187.51041666666669,
+      "naturalBodyWidthPixels": 180,
+      "originalOriginPreserved": true,
+      "exampleOldReservedWidthTiles": 5,
+      "exampleOldDoorCentered": true,
+      "exampleOldImageWidthPixels": 150.4,
+      "naturalOverOldSizeRatio": 1.25
+    },
+    {
+      "key": "poke-mart",
+      "nativeBounds": {
+        "min": [
+          -34,
+          1.5,
+          -29
+        ],
+        "max": [
+          58.129886627197266,
+          76,
+          22
+        ]
+      },
+      "nativeDimensionsTiles": [
+        5.758117914199829,
+        4.65625,
+        3.1875
+      ],
+      "doorNative": [
+        -8.0,
+        0,
+        16.0
+      ],
+      "nativeUnitsPerTile": 16,
+      "canvasTilePixels": 32,
+      "sourcePixelsPerNativeUnit": 7.989190739175551,
+      "naturalImageScale": 0.25033824642499286,
+      "naturalImageWidthPixels": 192.25977325439453,
+      "naturalImageHeightPixels": 187.00267007946968,
+      "naturalBodyWidthPixels": 184.25977325439453,
+      "originalOriginPreserved": true,
+      "exampleOldReservedWidthTiles": 5,
+      "exampleOldDoorCentered": true,
+      "exampleOldImageWidthPixels": 112.87837556896503,
+      "naturalOverOldSizeRatio": 1.7032471656799317
+    },
+    {
+      "key": "oak-laboratory",
+      "nativeBounds": {
+        "min": [
+          -54,
+          1,
+          -34
+        ],
+        "max": [
+          62,
+          81,
+          36
+        ]
+      },
+      "nativeDimensionsTiles": [
+        7.25,
+        5.0,
+        4.375
+      ],
+      "doorNative": [
+        0.0,
+        0,
+        24.0
+      ],
+      "nativeUnitsPerTile": 16,
+      "canvasTilePixels": 32,
+      "sourcePixelsPerNativeUnit": 6.4,
+      "naturalImageScale": 0.3125,
+      "naturalImageWidthPixels": 240.0,
+      "naturalImageHeightPixels": 220.625,
+      "naturalBodyWidthPixels": 232,
+      "originalOriginPreserved": true
+    },
+    {
+      "key": "pokemon-league",
+      "nativeBounds": {
+        "min": [
+          -92,
+          3,
+          -85.54296875
+        ],
+        "max": [
+          108,
+          123,
+          96.45703125
+        ]
+      },
+      "nativeDimensionsTiles": [
+        12.5,
+        7.5,
+        11.375
+      ],
+      "doorNative": [
+        0.0,
+        0,
+        60.0
+      ],
+      "nativeUnitsPerTile": 16,
+      "canvasTilePixels": 32,
+      "sourcePixelsPerNativeUnit": 3.764705882352941,
+      "naturalImageScale": 0.53125,
+      "naturalImageWidthPixels": 408.0,
+      "naturalImageHeightPixels": 430.3125,
+      "naturalBodyWidthPixels": 400,
+      "originalOriginPreserved": true
+    },
+    {
+      "key": "silph-company",
+      "nativeBounds": {
+        "min": [
+          -88,
+          1,
+          -66
+        ],
+        "max": [
+          96,
+          166.4921875,
+          73
+        ]
+      },
+      "nativeDimensionsTiles": [
+        11.5,
+        10.34326171875,
+        8.6875
+      ],
+      "doorNative": [
+        -8.0,
+        0,
+        50.0
+      ],
+      "nativeUnitsPerTile": 16,
+      "canvasTilePixels": 32,
+      "sourcePixelsPerNativeUnit": 4.085106382978723,
+      "naturalImageScale": 0.48958333333333337,
+      "naturalImageWidthPixels": 376.0,
+      "naturalImageHeightPixels": 440.1354166666667,
+      "naturalBodyWidthPixels": 368,
+      "originalOriginPreserved": true
+    },
+    {
+      "key": "celadon-casino",
+      "nativeBounds": {
+        "min": [
+          -59.578125,
+          2,
+          -29.92578125
+        ],
+        "max": [
+          70.60546875,
+          73.18359375,
+          40.9609375
+        ]
+      },
+      "nativeDimensionsTiles": [
+        8.136474609375,
+        4.448974609375,
+        4.430419921875
+      ],
+      "doorNative": [
+        0.0,
+        0,
+        29.0
+      ],
+      "nativeUnitsPerTile": 16,
+      "canvasTilePixels": 32,
+      "sourcePixelsPerNativeUnit": 5.7235014992285524,
+      "naturalImageScale": 0.3494364420572917,
+      "naturalImageWidthPixels": 268.3671875,
+      "naturalImageHeightPixels": 208.96299235026044,
+      "naturalBodyWidthPixels": 260.3671875,
+      "originalOriginPreserved": true
+    },
+    {
+      "key": "red-house",
+      "nativeBounds": {
+        "min": [
+          -46,
+          1,
+          -38
+        ],
+        "max": [
+          50,
+          90.01953125,
+          36
+        ]
+      },
+      "nativeDimensionsTiles": [
+        6.0,
+        5.563720703125,
+        4.625
+      ],
+      "doorNative": [
+        -16.0,
+        0,
+        24.0
+      ],
+      "nativeUnitsPerTile": 16,
+      "canvasTilePixels": 32,
+      "sourcePixelsPerNativeUnit": 7.68,
+      "naturalImageScale": 0.2604166666666667,
+      "naturalImageWidthPixels": 200.0,
+      "naturalImageHeightPixels": 239.58333333333334,
+      "naturalBodyWidthPixels": 192,
+      "originalOriginPreserved": true,
+      "exampleOldReservedWidthTiles": 5,
+      "exampleOldDoorCentered": true,
+      "exampleOldImageWidthPixels": 117.64705882352942,
+      "naturalOverOldSizeRatio": 1.7
+    },
+    {
+      "key": "blue-house",
+      "nativeBounds": {
+        "min": [
+          -46,
+          1,
+          -38
+        ],
+        "max": [
+          50,
+          90.01953125,
+          36
+        ]
+      },
+      "nativeDimensionsTiles": [
+        6.0,
+        5.563720703125,
+        4.625
+      ],
+      "doorNative": [
+        -16.0,
+        0,
+        24.0
+      ],
+      "nativeUnitsPerTile": 16,
+      "canvasTilePixels": 32,
+      "sourcePixelsPerNativeUnit": 7.68,
+      "naturalImageScale": 0.2604166666666667,
+      "naturalImageWidthPixels": 200.0,
+      "naturalImageHeightPixels": 239.58333333333334,
+      "naturalBodyWidthPixels": 192,
+      "originalOriginPreserved": true,
+      "exampleOldReservedWidthTiles": 5,
+      "exampleOldDoorCentered": true,
+      "exampleOldImageWidthPixels": 117.64705882352942,
+      "naturalOverOldSizeRatio": 1.7
+    },
+    {
+      "key": "pewter-house",
+      "nativeBounds": {
+        "min": [
+          -33,
+          1,
+          -26
+        ],
+        "max": [
+          40,
+          64,
+          32
+        ]
+      },
+      "nativeDimensionsTiles": [
+        4.5625,
+        3.9375,
+        3.625
+      ],
+      "doorNative": [
+        -8.0,
+        0,
+        16.0
+      ],
+      "nativeUnitsPerTile": 16,
+      "canvasTilePixels": 32,
+      "sourcePixelsPerNativeUnit": 9.974025974025974,
+      "naturalImageScale": 0.20052083333333334,
+      "naturalImageWidthPixels": 154.0,
+      "naturalImageHeightPixels": 179.265625,
+      "naturalBodyWidthPixels": 146,
+      "originalOriginPreserved": true
+    },
+    {
+      "key": "viridian-house",
+      "nativeBounds": {
+        "min": [
+          -34,
+          1,
+          -26
+        ],
+        "max": [
+          40,
+          66.5,
+          28
+        ]
+      },
+      "nativeDimensionsTiles": [
+        4.625,
+        4.09375,
+        3.375
+      ],
+      "doorNative": [
+        -8.0,
+        0,
+        16.0
+      ],
+      "nativeUnitsPerTile": 16,
+      "canvasTilePixels": 32,
+      "sourcePixelsPerNativeUnit": 9.846153846153847,
+      "naturalImageScale": 0.203125,
+      "naturalImageWidthPixels": 156.0,
+      "naturalImageHeightPixels": 177.734375,
+      "naturalBodyWidthPixels": 148,
+      "originalOriginPreserved": true
+    },
+    {
+      "key": "cerulean-house",
+      "nativeBounds": {
+        "min": [
+          -30.953125,
+          1,
+          -28
+        ],
+        "max": [
+          35,
+          50.46484375,
+          24
+        ]
+      },
+      "nativeDimensionsTiles": [
+        4.1220703125,
+        3.091552734375,
+        3.25
+      ],
+      "doorNative": [
+        -8.0,
+        0,
+        16.0
+      ],
+      "nativeUnitsPerTile": 16,
+      "canvasTilePixels": 32,
+      "sourcePixelsPerNativeUnit": 10.978780433325888,
+      "naturalImageScale": 0.18216959635416666,
+      "naturalImageWidthPixels": 139.90625,
+      "naturalImageHeightPixels": 151.20076497395831,
+      "naturalBodyWidthPixels": 131.90625,
+      "originalOriginPreserved": true
+    },
+    {
+      "key": "vermilion-house",
+      "nativeBounds": {
+        "min": [
+          -32,
+          1,
+          -26
+        ],
+        "max": [
+          40,
+          48.484375,
+          32
+        ]
+      },
+      "nativeDimensionsTiles": [
+        4.5,
+        2.9677734375,
+        3.625
+      ],
+      "doorNative": [
+        -8.0,
+        0,
+        19.0
+      ],
+      "nativeUnitsPerTile": 16,
+      "canvasTilePixels": 32,
+      "sourcePixelsPerNativeUnit": 10.105263157894736,
+      "naturalImageScale": 0.19791666666666669,
+      "naturalImageWidthPixels": 152.0,
+      "naturalImageHeightPixels": 156.35416666666669,
+      "naturalBodyWidthPixels": 144,
+      "originalOriginPreserved": true
+    },
+    {
+      "key": "celadon-department-store",
+      "nativeBounds": {
+        "min": [
+          -59.93359375,
+          2,
+          -44.76953125
+        ],
+        "max": [
+          70.60546875,
+          113.6328125,
+          40.9609375
+        ]
+      },
+      "nativeDimensionsTiles": [
+        8.15869140625,
+        6.97705078125,
+        5.358154296875
+      ],
+      "doorNative": [
+        0.0,
+        0,
+        32.0
+      ],
+      "nativeUnitsPerTile": 16,
+      "canvasTilePixels": 32,
+      "sourcePixelsPerNativeUnit": 5.708379304337727,
+      "naturalImageScale": 0.3503621419270833,
+      "naturalImageWidthPixels": 269.078125,
+      "naturalImageHeightPixels": 288.69840494791663,
+      "naturalBodyWidthPixels": 261.078125,
+      "originalOriginPreserved": true
+    },
+    {
+      "key": "bills-house",
+      "nativeBounds": {
+        "min": [
+          -35,
+          1,
+          -26
+        ],
+        "max": [
+          40,
+          72,
+          32
+        ]
+      },
+      "nativeDimensionsTiles": [
+        4.6875,
+        4.4375,
+        3.625
+      ],
+      "doorNative": [
+        -8.0,
+        0,
+        16.0
+      ],
+      "nativeUnitsPerTile": 16,
+      "canvasTilePixels": 32,
+      "sourcePixelsPerNativeUnit": 9.721518987341772,
+      "naturalImageScale": 0.20572916666666666,
+      "naturalImageWidthPixels": 158.0,
+      "naturalImageHeightPixels": 191.328125,
+      "naturalBodyWidthPixels": 150,
+      "originalOriginPreserved": true
+    },
+    {
+      "key": "fuchsia-gym",
+      "nativeBounds": {
+        "min": [
+          -55.669921875,
+          1,
+          -41.392578125
+        ],
+        "max": [
+          61.84375,
+          61.52734375,
+          34.38671875
+        ]
+      },
+      "nativeDimensionsTiles": [
+        7.3446044921875,
+        3.782958984375,
+        4.7362060546875
+      ],
+      "doorNative": [
+        0.0,
+        0,
+        24.0
+      ],
+      "nativeUnitsPerTile": 16,
+      "canvasTilePixels": 32,
+      "sourcePixelsPerNativeUnit": 6.3202764606606125,
+      "naturalImageScale": 0.3164418538411458,
+      "naturalImageWidthPixels": 243.02734375,
+      "naturalImageHeightPixels": 199.674809773763,
+      "naturalBodyWidthPixels": 235.02734375,
+      "originalOriginPreserved": true
+    },
+    {
+      "key": "celadon-gym",
+      "nativeBounds": {
+        "min": [
+          -55.669921875,
+          1,
+          -41.392578125
+        ],
+        "max": [
+          61.84375,
+          61.52734375,
+          34.38671875
+        ]
+      },
+      "nativeDimensionsTiles": [
+        7.3446044921875,
+        3.782958984375,
+        4.7362060546875
+      ],
+      "doorNative": [
+        0.0,
+        0,
+        24.0
+      ],
+      "nativeUnitsPerTile": 16,
+      "canvasTilePixels": 32,
+      "sourcePixelsPerNativeUnit": 6.3202764606606125,
+      "naturalImageScale": 0.3164418538411458,
+      "naturalImageWidthPixels": 243.02734375,
+      "naturalImageHeightPixels": 199.674809773763,
+      "naturalBodyWidthPixels": 235.02734375,
+      "originalOriginPreserved": true
+    },
+    {
+      "key": "viridian-gym",
+      "nativeBounds": {
+        "min": [
+          -55.669921875,
+          1,
+          -41.392578125
+        ],
+        "max": [
+          61.84375,
+          61.52734375,
+          34.38671875
+        ]
+      },
+      "nativeDimensionsTiles": [
+        7.3446044921875,
+        3.782958984375,
+        4.7362060546875
+      ],
+      "doorNative": [
+        0.0,
+        0,
+        16.0
+      ],
+      "nativeUnitsPerTile": 16,
+      "canvasTilePixels": 32,
+      "sourcePixelsPerNativeUnit": 6.3202764606606125,
+      "naturalImageScale": 0.3164418538411458,
+      "naturalImageWidthPixels": 243.02734375,
+      "naturalImageHeightPixels": 199.674809773763,
+      "naturalBodyWidthPixels": 235.02734375,
+      "originalOriginPreserved": true
+    },
+    {
+      "key": "cerulean-gym",
+      "nativeBounds": {
+        "min": [
+          -55.669921875,
+          1,
+          -41.392578125
+        ],
+        "max": [
+          61.84375,
+          61.52734375,
+          34.38671875
+        ]
+      },
+      "nativeDimensionsTiles": [
+        7.3446044921875,
+        3.782958984375,
+        4.7362060546875
+      ],
+      "doorNative": [
+        0.0,
+        0,
+        24.0
+      ],
+      "nativeUnitsPerTile": 16,
+      "canvasTilePixels": 32,
+      "sourcePixelsPerNativeUnit": 6.3202764606606125,
+      "naturalImageScale": 0.3164418538411458,
+      "naturalImageWidthPixels": 243.02734375,
+      "naturalImageHeightPixels": 199.674809773763,
+      "naturalBodyWidthPixels": 235.02734375,
+      "originalOriginPreserved": true
+    },
+    {
+      "key": "vermilion-gym",
+      "nativeBounds": {
+        "min": [
+          -55.669921875,
+          1,
+          -41.392578125
+        ],
+        "max": [
+          61.84375,
+          61.52734375,
+          34.38671875
+        ]
+      },
+      "nativeDimensionsTiles": [
+        7.3446044921875,
+        3.782958984375,
+        4.7362060546875
+      ],
+      "doorNative": [
+        0.0,
+        0,
+        24.0
+      ],
+      "nativeUnitsPerTile": 16,
+      "canvasTilePixels": 32,
+      "sourcePixelsPerNativeUnit": 6.3202764606606125,
+      "naturalImageScale": 0.3164418538411458,
+      "naturalImageWidthPixels": 243.02734375,
+      "naturalImageHeightPixels": 199.674809773763,
+      "naturalBodyWidthPixels": 235.02734375,
+      "originalOriginPreserved": true
+    },
+    {
+      "key": "saffron-gym",
+      "nativeBounds": {
+        "min": [
+          -55.669921875,
+          1,
+          -41.392578125
+        ],
+        "max": [
+          61.84375,
+          61.52734375,
+          34.38671875
+        ]
+      },
+      "nativeDimensionsTiles": [
+        7.3446044921875,
+        3.782958984375,
+        4.7362060546875
+      ],
+      "doorNative": [
+        0.0,
+        0,
+        24.0
+      ],
+      "nativeUnitsPerTile": 16,
+      "canvasTilePixels": 32,
+      "sourcePixelsPerNativeUnit": 6.3202764606606125,
+      "naturalImageScale": 0.3164418538411458,
+      "naturalImageWidthPixels": 243.02734375,
+      "naturalImageHeightPixels": 199.674809773763,
+      "naturalBodyWidthPixels": 235.02734375,
+      "originalOriginPreserved": true
+    }
+  ]
+}

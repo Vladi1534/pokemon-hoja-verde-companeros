@@ -1,0 +1,241 @@
+{
+  "legacyMaps": 112,
+  "mappedLegacyMaps": 112,
+  "uniqueNativeMapMatches": 110,
+  "kantoMaps": 256,
+  "doorAnchors": 203,
+  "semantics": {
+    "obstacle": 111298,
+    "floor": 75215,
+    "warp": 1397,
+    "tall_grass": 5369,
+    "ledge": 1042,
+    "water": 39005,
+    "forced_movement": 235,
+    "ice": 180
+  },
+  "warpsWithoutAdjacentTraversableCell": [
+    {
+      "map": "frlg_01_05",
+      "warp": 3,
+      "cell": {
+        "x": 20,
+        "y": 0,
+        "metatile": 652,
+        "collision": 1,
+        "elevation": 0,
+        "behavior": 0,
+        "behaviorName": "MB_NORMAL",
+        "terrain": 0,
+        "encounterType": 0,
+        "layerType": 0,
+        "surf": false
+      }
+    },
+    {
+      "map": "frlg_01_05",
+      "warp": 4,
+      "cell": {
+        "x": 3,
+        "y": 20,
+        "metatile": 648,
+        "collision": 1,
+        "elevation": 0,
+        "behavior": 0,
+        "behaviorName": "MB_NORMAL",
+        "terrain": 0,
+        "encounterType": 0,
+        "layerType": 0,
+        "surf": false
+      }
+    },
+    {
+      "map": "frlg_01_75",
+      "warp": 0,
+      "cell": {
+        "x": 6,
+        "y": 12,
+        "metatile": 675,
+        "collision": 1,
+        "elevation": 0,
+        "behavior": 0,
+        "behaviorName": "MB_NORMAL",
+        "terrain": 0,
+        "encounterType": 0,
+        "layerType": 0,
+        "surf": false
+      }
+    },
+    {
+      "map": "frlg_01_76",
+      "warp": 0,
+      "cell": {
+        "x": 6,
+        "y": 12,
+        "metatile": 825,
+        "collision": 1,
+        "elevation": 0,
+        "behavior": 0,
+        "behaviorName": "MB_NORMAL",
+        "terrain": 0,
+        "encounterType": 0,
+        "layerType": 1,
+        "surf": false
+      }
+    },
+    {
+      "map": "frlg_01_77",
+      "warp": 0,
+      "cell": {
+        "x": 6,
+        "y": 12,
+        "metatile": 828,
+        "collision": 1,
+        "elevation": 0,
+        "behavior": 0,
+        "behaviorName": "MB_NORMAL",
+        "terrain": 0,
+        "encounterType": 0,
+        "layerType": 1,
+        "surf": false
+      }
+    },
+    {
+      "map": "frlg_02_02",
+      "warp": 2,
+      "cell": {
+        "x": 13,
+        "y": 5,
+        "metatile": 768,
+        "collision": 1,
+        "elevation": 0,
+        "behavior": 0,
+        "behaviorName": "MB_NORMAL",
+        "terrain": 0,
+        "encounterType": 0,
+        "layerType": 1,
+        "surf": false
+      }
+    },
+    {
+      "map": "frlg_02_03",
+      "warp": 2,
+      "cell": {
+        "x": 13,
+        "y": 5,
+        "metatile": 768,
+        "collision": 1,
+        "elevation": 0,
+        "behavior": 0,
+        "behaviorName": "MB_NORMAL",
+        "terrain": 0,
+        "encounterType": 0,
+        "layerType": 1,
+        "surf": false
+      }
+    },
+    {
+      "map": "frlg_02_04",
+      "warp": 2,
+      "cell": {
+        "x": 13,
+        "y": 5,
+        "metatile": 768,
+        "collision": 1,
+        "elevation": 0,
+        "behavior": 0,
+        "behaviorName": "MB_NORMAL",
+        "terrain": 0,
+        "encounterType": 0,
+        "layerType": 1,
+        "surf": false
+      }
+    },
+    {
+      "map": "frlg_02_05",
+      "warp": 2,
+      "cell": {
+        "x": 13,
+        "y": 5,
+        "metatile": 768,
+        "collision": 1,
+        "elevation": 0,
+        "behavior": 0,
+        "behaviorName": "MB_NORMAL",
+        "terrain": 0,
+        "encounterType": 0,
+        "layerType": 1,
+        "surf": false
+      }
+    },
+    {
+      "map": "frlg_02_06",
+      "warp": 2,
+      "cell": {
+        "x": 13,
+        "y": 5,
+        "metatile": 768,
+        "collision": 1,
+        "elevation": 0,
+        "behavior": 0,
+        "behaviorName": "MB_NORMAL",
+        "terrain": 0,
+        "encounterType": 0,
+        "layerType": 1,
+        "surf": false
+      }
+    },
+    {
+      "map": "frlg_02_07",
+      "warp": 2,
+      "cell": {
+        "x": 13,
+        "y": 5,
+        "metatile": 768,
+        "collision": 1,
+        "elevation": 0,
+        "behavior": 0,
+        "behaviorName": "MB_NORMAL",
+        "terrain": 0,
+        "encounterType": 0,
+        "layerType": 1,
+        "surf": false
+      }
+    },
+    {
+      "map": "frlg_02_08",
+      "warp": 2,
+      "cell": {
+        "x": 13,
+        "y": 5,
+        "metatile": 768,
+        "collision": 1,
+        "elevation": 0,
+        "behavior": 0,
+        "behaviorName": "MB_NORMAL",
+        "terrain": 0,
+        "encounterType": 0,
+        "layerType": 1,
+        "surf": false
+      }
+    },
+    {
+      "map": "frlg_02_34",
+      "warp": 1,
+      "cell": {
+        "x": 25,
+        "y": 5,
+        "metatile": 657,
+        "collision": 1,
+        "elevation": 0,
+        "behavior": 8,
+        "behaviorName": "MB_CAVE",
+        "terrain": 0,
+        "encounterType": 1,
+        "layerType": 1,
+        "surf": false
+      }
+    }
+  ],
+  "note": "Static contacts ignore NPCs/flags/puzzles; resolve these in story state, never overwrite native collision."
+}

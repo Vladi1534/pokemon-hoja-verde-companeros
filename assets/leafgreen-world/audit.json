@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checks": {
+    "allNativeMaps": true,
+    "allMapGeometryMatchesDecomp": true,
+    "staticWarpIndicesAndMapCoordinatesValid": true,
+    "allCollisionAndElevationCellsMatchPackedSource": true,
+    "allArrivalContactsInsideWalkableCells": true,
+    "allNativeTrainerObjectsResolve": true,
+    "allRealTrainerPartiesMatchDecomp": true,
+    "allPickupsMatchDecomp": true,
+    "noRomFileIncluded": true,
+    "allStoryAnchorsInBounds": true,
+    "allCorrespondencesCovered": true
+  },
+  "nativeMapCount": 425,
+  "kantoMapCount": 256,
+  "dynamicWarps": 19,
+  "blockedOrInactiveWarpContacts": 13
+}

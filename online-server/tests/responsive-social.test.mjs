@@ -10,18 +10,18 @@ import {navigationState,previewNavigation,visibleTrainer,trainerFacing} from '..
 const require=createRequire(import.meta.url),{Miniflare}=createRequire(require.resolve('wrangler/package.json'))('miniflare');
 let passed=0;const test=async(name,fn)=>{await fn();console.log('PASS '+name);passed++;};
 const now=Date.now(),profile=newPersonal('Navigation QA',1),m=profile.trainer;
-const state={schema:2,worldRevision:4,personal:true,sharedGates:{},members:[m],progress:{},actions:[]};
-m.position={...m.position,map:'route4',x:6,y:11,seq:0,seen:now-3000};
+const state={schema:2,worldRevision:7,personal:true,sharedGates:{},members:[m],progress:{},actions:[]};
+const grass=world.maps.route4;let initial;for(let y=1;y<grass.h-1&&!initial;y++)for(let x=1;x<grass.w-2;x++)if(grass.native.encounter[y][x+1]&&![2,3,7,10,8].includes(grass.grid[y][x])&&![2,3,7,10,8].includes(grass.grid[y][x+1])&&!grass.npcs.some(n=>Math.abs(n.x-x)+Math.abs(n.y-y)<6)){initial={map:'route4',x,y,seq:0,seen:now-3000};break;}m.position={...m.position,...initial};
 await test('predicted wild encounter stops authoritative movement on exactly the same grass tile',()=>{
  let nav;for(let steps=0;steps<1000;steps++){m.steps=steps;nav=previewNavigation(navigationState({progress:{}},m),'right',now);if(nav.event?.kind==='wild')break;}
  assert.equal(nav.event.kind,'wild');pureAction(state,m,{action:'sync',seq:1,steps:['right','right','right'],times:[now,now,now]},now+1400);
- assert.equal(m.position.x,7);assert.equal(m.steps,nav.steps);assert(Object.values(state.battles).some(b=>!b.ended));
+ assert.equal(m.position.x,initial.x+1);assert.equal(m.steps,nav.steps);assert(Object.values(state.battles).some(b=>!b.ended));
 });
 await test('Mt Moon portal is a packet barrier; no later step or cave encounter can follow it',()=>{
- state.battles={};state.battle=null;m.progress={fossils:true};m.steps=0;m.position={map:'moon',x:42,y:18,dir:'right',seq:2,seen:now-3000};
- const nav=previewNavigation(navigationState({progress:m.progress},m),'right',now);assert.equal(nav.event.kind,'portal');
- pureAction(state,m,{action:'sync',seq:3,steps:['right','right','right'],times:[now,now,now]},now+1000);
- assert.equal(m.position.map,'route4');assert.equal(m.position.x,2);assert.equal(m.travelGrace,2);assert(!Object.values(state.battles).some(b=>!b.ended));assert.equal(m.steps,1);
+ state.battles={};state.battle=null;m.progress={fossils:true};m.steps=0;const exit=world.maps.moon.portals.find(p=>p.to==='route4');m.position={map:'moon',x:exit.x,y:exit.y-1,dir:'down',seq:2,seen:now-3000};
+ const nav=previewNavigation(navigationState({progress:m.progress},m),'down',now);assert.equal(nav.event.kind,'portal');
+ pureAction(state,m,{action:'sync',seq:3,steps:['down','down','down'],times:[now,now,now]},now+1000);
+ assert.equal(m.position.map,'route4');assert.equal(m.position.x,exit.tx);assert.equal(m.travelGrace,2);assert(!Object.values(state.battles).some(b=>!b.ended));assert.equal(m.steps,1);
 });
 await test('rotating trainer detection agrees with the timestamp sent by a delayed client',()=>{
  const n=world.maps.route3.npcs.find(n=>n.role==='trainer');let timestamp=now;
@@ -33,8 +33,8 @@ await test('rotating trainer detection agrees with the timestamp sent by a delay
 await test('old save on a sealed edge migrates once without losing sequence, party or story',()=>{
  const game=new LocalGame(newPersonal('Migration',7)),s=game.snapshot();s.row.state.worldRevision=3;
  const player=s.row.state.members[0];player.position={...player.position,map:'viridian',x:33,y:14,seq:21};player.progress.scope=true;
- const loaded=new LocalGame(null,s);assert.equal(loaded.member.position.seq,21);assert.equal(loaded.member.position.x,world.maps.viridian.arrival.x);assert(loaded.member.progress.scope);assert.deepEqual(loaded.member.party,player.party);assert.equal(loaded.row.state.worldRevision,6);
- const portable=structuredClone(profile);portable.trainer.position={map:'route4',x:21,y:31};assert.equal(validatePortable(portable).trainer.position.x,world.maps.route4.arrival.x);
+ const loaded=new LocalGame(null,s);assert.equal(loaded.member.position.seq,21);assert.equal(loaded.member.position.x,world.maps.viridian.arrival.x);assert(loaded.member.progress.scope);assert.deepEqual(loaded.member.party,player.party);assert.equal(loaded.row.state.worldRevision,7);
+ const portable=structuredClone(profile);portable.worldRevision=3;portable.trainer.position={map:'route4',x:21,y:31};assert.equal(validatePortable(portable).trainer.position.x,world.maps.route4.arrival.x);
 });
 const mf=new Miniflare({modules:true,script:'export default {fetch(){return new Response("ok")}}',compatibilityDate:'2026-05-15',d1Databases:['DB']});
 try{

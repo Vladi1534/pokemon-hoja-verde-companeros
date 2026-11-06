@@ -1,0 +1,1796 @@
+{
+  "maps": [
+    {
+      "legacyId": "pallet",
+      "legacyName": "Pueblo Paleta",
+      "nativeId": "frlg_03_00",
+      "nativeName": "PalletTown",
+      "status": "story_equivalent",
+      "legacySize": [
+        32,
+        28
+      ],
+      "nativeSize": [
+        24,
+        20
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "route1",
+      "legacyName": "Ruta 1",
+      "nativeId": "frlg_03_19",
+      "nativeName": "Route1",
+      "status": "story_equivalent",
+      "legacySize": [
+        44,
+        34
+      ],
+      "nativeSize": [
+        24,
+        40
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "viridian",
+      "legacyName": "Ciudad Verde",
+      "nativeId": "frlg_03_01",
+      "nativeName": "ViridianCity",
+      "status": "story_equivalent",
+      "legacySize": [
+        34,
+        28
+      ],
+      "nativeSize": [
+        48,
+        40
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "forest",
+      "legacyName": "Bosque Verde",
+      "nativeId": "frlg_01_00",
+      "nativeName": "ViridianForest",
+      "status": "story_equivalent",
+      "legacySize": [
+        44,
+        34
+      ],
+      "nativeSize": [
+        54,
+        69
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "pewter",
+      "legacyName": "Ciudad Plateada",
+      "nativeId": "frlg_03_02",
+      "nativeName": "PewterCity",
+      "status": "story_equivalent",
+      "legacySize": [
+        34,
+        27
+      ],
+      "nativeSize": [
+        48,
+        40
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "route3",
+      "legacyName": "Ruta 3",
+      "nativeId": "frlg_03_21",
+      "nativeName": "Route3",
+      "status": "story_equivalent",
+      "legacySize": [
+        44,
+        34
+      ],
+      "nativeSize": [
+        84,
+        20
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "moon",
+      "legacyName": "Monte Moon",
+      "nativeId": "frlg_01_01",
+      "nativeName": "MtMoon_1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        44,
+        34
+      ],
+      "nativeSize": [
+        48,
+        40
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "cerulean",
+      "legacyName": "Ciudad Celeste",
+      "nativeId": "frlg_03_03",
+      "nativeName": "CeruleanCity",
+      "status": "story_equivalent",
+      "legacySize": [
+        36,
+        28
+      ],
+      "nativeSize": [
+        48,
+        40
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "route24",
+      "legacyName": "Puente Pepita",
+      "nativeId": "frlg_03_43",
+      "nativeName": "Route24",
+      "status": "story_equivalent",
+      "legacySize": [
+        44,
+        34
+      ],
+      "nativeSize": [
+        24,
+        40
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "cape",
+      "legacyName": "Cabo Celeste",
+      "nativeId": "frlg_03_44",
+      "nativeName": "Route25",
+      "status": "story_equivalent",
+      "legacySize": [
+        30,
+        24
+      ],
+      "nativeSize": [
+        72,
+        20
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "route6",
+      "legacyName": "Ruta 6 · Paso subterráneo",
+      "nativeId": "frlg_03_24",
+      "nativeName": "Route6",
+      "status": "story_equivalent",
+      "legacySize": [
+        44,
+        34
+      ],
+      "nativeSize": [
+        24,
+        40
+      ],
+      "note": "El mapa actual mezcla Ruta6 y Paso Subterráneo. Restaurar también los tres mapas UndergroundPath_NorthEntrance/NorthSouthTunnel/SouthEntrance."
+    },
+    {
+      "legacyId": "vermilion",
+      "legacyName": "Ciudad Carmín",
+      "nativeId": "frlg_03_05",
+      "nativeName": "VermilionCity",
+      "status": "story_equivalent",
+      "legacySize": [
+        36,
+        33
+      ],
+      "nativeSize": [
+        48,
+        40
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "route9",
+      "legacyName": "Ruta 9",
+      "nativeId": "frlg_03_27",
+      "nativeName": "Route9",
+      "status": "story_equivalent",
+      "legacySize": [
+        44,
+        34
+      ],
+      "nativeSize": [
+        72,
+        20
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "rocktunnel",
+      "legacyName": "Túnel Roca",
+      "nativeId": "frlg_01_81",
+      "nativeName": "RockTunnel_1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        44,
+        34
+      ],
+      "nativeSize": [
+        48,
+        40
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "lavender",
+      "legacyName": "Pueblo Lavanda",
+      "nativeId": "frlg_03_04",
+      "nativeName": "LavenderTown",
+      "status": "story_equivalent",
+      "legacySize": [
+        30,
+        26
+      ],
+      "nativeSize": [
+        24,
+        20
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "route8",
+      "legacyName": "Ruta 8 · Subterráneo",
+      "nativeId": "frlg_03_26",
+      "nativeName": "Route8",
+      "status": "story_equivalent",
+      "legacySize": [
+        44,
+        34
+      ],
+      "nativeSize": [
+        72,
+        20
+      ],
+      "note": "Separar Ruta8 del Paso Subterráneo oeste-este y sus dos entradas."
+    },
+    {
+      "legacyId": "celadon",
+      "legacyName": "Ciudad Azulona",
+      "nativeId": "frlg_03_06",
+      "nativeName": "CeladonCity",
+      "status": "story_equivalent",
+      "legacySize": [
+        38,
+        30
+      ],
+      "nativeSize": [
+        60,
+        40
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "saffron",
+      "legacyName": "Ciudad Azafrán",
+      "nativeId": "frlg_03_10",
+      "nativeName": "SaffronCity",
+      "status": "story_equivalent",
+      "legacySize": [
+        36,
+        30
+      ],
+      "nativeSize": [
+        66,
+        55
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "route12",
+      "legacyName": "Ruta 12",
+      "nativeId": "frlg_03_30",
+      "nativeName": "Route12",
+      "status": "story_equivalent",
+      "legacySize": [
+        44,
+        34
+      ],
+      "nativeSize": [
+        24,
+        120
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "fuchsia",
+      "legacyName": "Ciudad Fucsia",
+      "nativeId": "frlg_03_07",
+      "nativeName": "FuchsiaCity",
+      "status": "story_equivalent",
+      "legacySize": [
+        36,
+        29
+      ],
+      "nativeSize": [
+        48,
+        40
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "safari",
+      "legacyName": "Zona Safari",
+      "nativeId": "frlg_01_63",
+      "nativeName": "SafariZone_Center",
+      "status": "story_equivalent",
+      "legacySize": [
+        44,
+        34
+      ],
+      "nativeSize": [
+        51,
+        36
+      ],
+      "note": "La Dentadura de Oro se encuentra enSafariZone_West, no enCenter. AñadirEast/North/West y acceso."
+    },
+    {
+      "legacyId": "sea20",
+      "legacyName": "Ruta Marítima 20",
+      "nativeId": "frlg_03_38",
+      "nativeName": "Route20",
+      "status": "story_equivalent",
+      "legacySize": [
+        44,
+        34
+      ],
+      "nativeSize": [
+        120,
+        20
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "cinnabar",
+      "legacyName": "Isla Canela",
+      "nativeId": "frlg_03_08",
+      "nativeName": "CinnabarIsland",
+      "status": "story_equivalent",
+      "legacySize": [
+        34,
+        28
+      ],
+      "nativeSize": [
+        24,
+        20
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "victory",
+      "legacyName": "Calle Victoria",
+      "nativeId": "frlg_01_39",
+      "nativeName": "VictoryRoad_1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        44,
+        34
+      ],
+      "nativeSize": [
+        48,
+        22
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "indigo",
+      "legacyName": "Meseta Añil",
+      "nativeId": "frlg_03_09",
+      "nativeName": "IndigoPlateau_Exterior",
+      "status": "story_equivalent",
+      "legacySize": [
+        30,
+        26
+      ],
+      "nativeSize": [
+        24,
+        20
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "pallet_home",
+      "legacyName": "TU CASA",
+      "nativeId": "frlg_04_00",
+      "nativeName": "PalletTown_PlayersHouse_1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        13,
+        11
+      ],
+      "nativeSize": [
+        13,
+        10
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "pallet_rival",
+      "legacyName": "CASA DE AZUL",
+      "nativeId": "frlg_04_02",
+      "nativeName": "PalletTown_RivalsHouse",
+      "status": "story_equivalent",
+      "legacySize": [
+        13,
+        11
+      ],
+      "nativeSize": [
+        13,
+        10
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "pallet_lab",
+      "legacyName": "LABORATORIO OAK",
+      "nativeId": "frlg_04_03",
+      "nativeName": "PalletTown_ProfessorOaksLab",
+      "status": "story_equivalent",
+      "legacySize": [
+        17,
+        12
+      ],
+      "nativeSize": [
+        13,
+        14
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "viridian_center",
+      "legacyName": "CENTRO POKÉMON",
+      "nativeId": "frlg_05_04",
+      "nativeName": "ViridianCity_PokemonCenter_1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        15,
+        12
+      ],
+      "nativeSize": [
+        15,
+        10
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "viridian_shop",
+      "legacyName": "TIENDA POKÉMON",
+      "nativeId": "frlg_05_03",
+      "nativeName": "ViridianCity_Mart",
+      "status": "story_equivalent",
+      "legacySize": [
+        11,
+        11
+      ],
+      "nativeSize": [
+        11,
+        9
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "viridian_house",
+      "legacyName": "CASA",
+      "nativeId": "frlg_05_00",
+      "nativeName": "ViridianCity_House",
+      "status": "story_equivalent",
+      "legacySize": [
+        13,
+        11
+      ],
+      "nativeSize": [
+        11,
+        9
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "viridian_gym",
+      "legacyName": "GIMNASIO",
+      "nativeId": "frlg_05_01",
+      "nativeName": "ViridianCity_Gym",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        20,
+        24
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "pewter_center",
+      "legacyName": "CENTRO POKÉMON",
+      "nativeId": "frlg_06_05",
+      "nativeName": "PewterCity_PokemonCenter_1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        15,
+        12
+      ],
+      "nativeSize": [
+        15,
+        10
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "pewter_shop",
+      "legacyName": "TIENDA POKÉMON",
+      "nativeId": "frlg_06_03",
+      "nativeName": "PewterCity_Mart",
+      "status": "story_equivalent",
+      "legacySize": [
+        11,
+        11
+      ],
+      "nativeSize": [
+        11,
+        9
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "pewter_house",
+      "legacyName": "CASA",
+      "nativeId": "frlg_06_04",
+      "nativeName": "PewterCity_House1",
+      "status": "story_equivalent",
+      "legacySize": [
+        13,
+        11
+      ],
+      "nativeSize": [
+        11,
+        9
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "pewter_gym",
+      "legacyName": "GIMNASIO",
+      "nativeId": "frlg_06_02",
+      "nativeName": "PewterCity_Gym",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        13,
+        16
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "cerulean_center",
+      "legacyName": "CENTRO POKÉMON",
+      "nativeId": "frlg_07_03",
+      "nativeName": "CeruleanCity_PokemonCenter_1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        15,
+        12
+      ],
+      "nativeSize": [
+        15,
+        10
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "cerulean_shop",
+      "legacyName": "TIENDA POKÉMON",
+      "nativeId": "frlg_07_07",
+      "nativeName": "CeruleanCity_Mart",
+      "status": "story_equivalent",
+      "legacySize": [
+        11,
+        11
+      ],
+      "nativeSize": [
+        11,
+        9
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "cerulean_house",
+      "legacyName": "CASA",
+      "nativeId": "frlg_07_01",
+      "nativeName": "CeruleanCity_House2",
+      "status": "story_equivalent",
+      "legacySize": [
+        13,
+        11
+      ],
+      "nativeSize": [
+        10,
+        9
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "cerulean_gym",
+      "legacyName": "GIMNASIO",
+      "nativeId": "frlg_07_05",
+      "nativeName": "CeruleanCity_Gym",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        17,
+        20
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "bill_home",
+      "legacyName": "CASA DE BILL",
+      "nativeId": "frlg_30_00",
+      "nativeName": "Route25_SeaCottage",
+      "status": "story_equivalent",
+      "legacySize": [
+        17,
+        12
+      ],
+      "nativeSize": [
+        15,
+        11
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "vermilion_center",
+      "legacyName": "CENTRO POKÉMON",
+      "nativeId": "frlg_09_01",
+      "nativeName": "VermilionCity_PokemonCenter_1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        15,
+        12
+      ],
+      "nativeSize": [
+        15,
+        10
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "vermilion_shop",
+      "legacyName": "TIENDA POKÉMON",
+      "nativeId": "frlg_09_05",
+      "nativeName": "VermilionCity_Mart",
+      "status": "story_equivalent",
+      "legacySize": [
+        11,
+        11
+      ],
+      "nativeSize": [
+        11,
+        9
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "vermilion_house",
+      "legacyName": "CASA",
+      "nativeId": "frlg_09_07",
+      "nativeName": "VermilionCity_House3",
+      "status": "story_equivalent",
+      "legacySize": [
+        13,
+        11
+      ],
+      "nativeSize": [
+        11,
+        9
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "vermilion_gym",
+      "legacyName": "GIMNASIO",
+      "nativeId": "frlg_09_06",
+      "nativeName": "VermilionCity_Gym",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        11,
+        21
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "lavender_center",
+      "legacyName": "CENTRO POKÉMON",
+      "nativeId": "frlg_08_00",
+      "nativeName": "LavenderTown_PokemonCenter_1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        15,
+        12
+      ],
+      "nativeSize": [
+        15,
+        10
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "lavender_shop",
+      "legacyName": "TIENDA POKÉMON",
+      "nativeId": "frlg_08_05",
+      "nativeName": "LavenderTown_Mart",
+      "status": "story_equivalent",
+      "legacySize": [
+        11,
+        11
+      ],
+      "nativeSize": [
+        11,
+        9
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "lavender_house",
+      "legacyName": "CASA",
+      "nativeId": "frlg_08_02",
+      "nativeName": "LavenderTown_VolunteerPokemonHouse",
+      "status": "story_equivalent",
+      "legacySize": [
+        13,
+        11
+      ],
+      "nativeSize": [
+        12,
+        9
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "celadon_center",
+      "legacyName": "CENTRO POKÉMON",
+      "nativeId": "frlg_10_12",
+      "nativeName": "CeladonCity_PokemonCenter_1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        15,
+        12
+      ],
+      "nativeSize": [
+        15,
+        10
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "celadon_shop",
+      "legacyName": "TIENDA POKÉMON",
+      "nativeId": "frlg_10_00",
+      "nativeName": "CeladonCity_DepartmentStore_1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        11,
+        11
+      ],
+      "nativeSize": [
+        13,
+        16
+      ],
+      "note": "La planta1Fes recepción. Dependientes reales están enplantas2F..5F; no trasladar todos alvestíbulo."
+    },
+    {
+      "legacyId": "celadon_house",
+      "legacyName": "CASA",
+      "nativeId": "frlg_10_07",
+      "nativeName": "CeladonCity_Condominiums_1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        13,
+        11
+      ],
+      "nativeSize": [
+        15,
+        20
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "celadon_gym",
+      "legacyName": "GIMNASIO",
+      "nativeId": "frlg_10_16",
+      "nativeName": "CeladonCity_Gym",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        13,
+        20
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "saffron_center",
+      "legacyName": "CENTRO POKÉMON",
+      "nativeId": "frlg_14_06",
+      "nativeName": "SaffronCity_PokemonCenter_1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        15,
+        12
+      ],
+      "nativeSize": [
+        15,
+        10
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "saffron_shop",
+      "legacyName": "TIENDA POKÉMON",
+      "nativeId": "frlg_14_05",
+      "nativeName": "SaffronCity_Mart",
+      "status": "story_equivalent",
+      "legacySize": [
+        11,
+        11
+      ],
+      "nativeSize": [
+        11,
+        9
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "saffron_house",
+      "legacyName": "CASA",
+      "nativeId": "frlg_14_04",
+      "nativeName": "SaffronCity_House",
+      "status": "story_equivalent",
+      "legacySize": [
+        13,
+        11
+      ],
+      "nativeSize": [
+        11,
+        9
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "saffron_gym",
+      "legacyName": "GIMNASIO",
+      "nativeId": "frlg_14_03",
+      "nativeName": "SaffronCity_Gym",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        29,
+        25
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "fuchsia_center",
+      "legacyName": "CENTRO POKÉMON",
+      "nativeId": "frlg_11_05",
+      "nativeName": "FuchsiaCity_PokemonCenter_1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        15,
+        12
+      ],
+      "nativeSize": [
+        15,
+        10
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "fuchsia_shop",
+      "legacyName": "TIENDA POKÉMON",
+      "nativeId": "frlg_11_01",
+      "nativeName": "FuchsiaCity_Mart",
+      "status": "story_equivalent",
+      "legacySize": [
+        11,
+        11
+      ],
+      "nativeSize": [
+        11,
+        9
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "fuchsia_house",
+      "legacyName": "CASA",
+      "nativeId": "frlg_11_07",
+      "nativeName": "FuchsiaCity_WardensHouse",
+      "status": "story_equivalent",
+      "legacySize": [
+        13,
+        11
+      ],
+      "nativeSize": [
+        13,
+        11
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "fuchsia_gym",
+      "legacyName": "GIMNASIO",
+      "nativeId": "frlg_11_03",
+      "nativeName": "FuchsiaCity_Gym",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        15,
+        23
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "cinnabar_center",
+      "legacyName": "CENTRO POKÉMON",
+      "nativeId": "frlg_12_05",
+      "nativeName": "CinnabarIsland_PokemonCenter_1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        15,
+        12
+      ],
+      "nativeSize": [
+        15,
+        10
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "cinnabar_shop",
+      "legacyName": "TIENDA POKÉMON",
+      "nativeId": "frlg_12_07",
+      "nativeName": "CinnabarIsland_Mart",
+      "status": "story_equivalent",
+      "legacySize": [
+        11,
+        11
+      ],
+      "nativeSize": [
+        11,
+        9
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "cinnabar_house",
+      "legacyName": "CASA",
+      "nativeId": "frlg_12_02",
+      "nativeName": "CinnabarIsland_PokemonLab_Lounge",
+      "status": "adaptation",
+      "legacySize": [
+        13,
+        11
+      ],
+      "nativeSize": [
+        15,
+        11
+      ],
+      "note": "No hay casa equivalente. Reubicar el vecino en el salón del laboratorio."
+    },
+    {
+      "legacyId": "cinnabar_gym",
+      "legacyName": "GIMNASIO",
+      "nativeId": "frlg_12_00",
+      "nativeName": "CinnabarIsland_Gym",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        30,
+        25
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "indigo_center",
+      "legacyName": "CENTRO POKÉMON",
+      "nativeId": "frlg_13_00",
+      "nativeName": "IndigoPlateau_PokemonCenter_1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        15,
+        12
+      ],
+      "nativeSize": [
+        25,
+        18
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "indigo_shop",
+      "legacyName": "TIENDA POKÉMON",
+      "nativeId": "frlg_13_00",
+      "nativeName": "IndigoPlateau_PokemonCenter_1F",
+      "status": "adaptation",
+      "legacySize": [
+        11,
+        11
+      ],
+      "nativeSize": [
+        25,
+        18
+      ],
+      "note": "La tienda está dentro del Centro/Liga, no en edificio independiente. Fusionar NPC dependiente con indigo_center."
+    },
+    {
+      "legacyId": "indigo_house",
+      "legacyName": "CASA",
+      "nativeId": "frlg_13_00",
+      "nativeName": "IndigoPlateau_PokemonCenter_1F",
+      "status": "adaptation",
+      "legacySize": [
+        13,
+        11
+      ],
+      "nativeSize": [
+        25,
+        18
+      ],
+      "note": "No hay casa independiente en Meseta Añil. Reubicar el NPC en el vestíbulo; no crear puerta ficticia."
+    },
+    {
+      "legacyId": "pewter_museum",
+      "legacyName": "MUSEO DE CIENCIAS",
+      "nativeId": "frlg_06_00",
+      "nativeName": "PewterCity_Museum_1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        32,
+        32
+      ],
+      "nativeSize": [
+        28,
+        11
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "ssanne",
+      "legacyName": "S. S. ANNE",
+      "nativeId": "frlg_01_05",
+      "nativeName": "SSAnne_1F_Corridor",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        31,
+        21
+      ],
+      "note": "El mapa actual mezcla pasillos/pisos. Rival pertenece al pasillo2F; añadir exterior, pasillos1F/2F/3F/B1F y camarotes."
+    },
+    {
+      "legacyId": "ssanne_cabin",
+      "legacyName": "Camarote del capitán",
+      "nativeId": "frlg_01_11",
+      "nativeName": "SSAnne_CaptainsOffice",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        9,
+        10
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "moon_b1",
+      "legacyName": "Monte Moon · Galería de fósiles",
+      "nativeId": "frlg_01_02",
+      "nativeName": "MtMoon_B1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        49,
+        40
+      ],
+      "note": "Conservar solo el piso B1F; el paleontólogo y los fósiles pertenecen al B2F."
+    },
+    {
+      "legacyId": "moon_b2",
+      "legacyName": "Monte Moon · Excavación",
+      "nativeId": "frlg_01_03",
+      "nativeName": "MtMoon_B2F",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        48,
+        40
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "rocktunnel_b1",
+      "legacyName": "Túnel Roca · Galería oscura",
+      "nativeId": "frlg_01_82",
+      "nativeName": "RockTunnel_B1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        48,
+        40
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "casino",
+      "legacyName": "CASINO DE AZULONA",
+      "nativeId": "frlg_10_14",
+      "nativeName": "CeladonCity_GameCorner",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        18,
+        15
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "rocket_b1",
+      "legacyName": "Guarida Rocket · Almacén",
+      "nativeId": "frlg_01_42",
+      "nativeName": "RocketHideout_B1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        28,
+        34
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "rocket_b2",
+      "legacyName": "Guarida Rocket · Despacho",
+      "nativeId": "frlg_01_45",
+      "nativeName": "RocketHideout_B4F",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        24,
+        26
+      ],
+      "note": "El despacho de Giovanni está en B4F. Este ID actual no representa realmente B2F; añadir B2F/B3F/elevador originales."
+    },
+    {
+      "legacyId": "tower_1",
+      "legacyName": "TORRE POKÉMON",
+      "nativeId": "frlg_01_88",
+      "nativeName": "PokemonTower_1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        24,
+        20
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "tower_2",
+      "legacyName": "Torre Pokémon · Santuario",
+      "nativeId": "frlg_01_93",
+      "nativeName": "PokemonTower_6F",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        24,
+        20
+      ],
+      "note": "El espíritu de Marowak está en6F. Añadir2F/3F/4F/5F separados."
+    },
+    {
+      "legacyId": "tower_3",
+      "legacyName": "Torre Pokémon · Cima",
+      "nativeId": "frlg_01_94",
+      "nativeName": "PokemonTower_7F",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        24,
+        20
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "silph_1",
+      "legacyName": "SILPH S. A.",
+      "nativeId": "frlg_01_47",
+      "nativeName": "SilphCo_1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        36,
+        22
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "silph_2",
+      "legacyName": "Silph · Departamento de desarrollo",
+      "nativeId": "frlg_01_51",
+      "nativeName": "SilphCo_5F",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        36,
+        22
+      ],
+      "note": "La Tarjeta Llave corresponde a5F; reubicar el rival existente a7F. Restaurar los11pisos y elevador."
+    },
+    {
+      "legacyId": "silph_3",
+      "legacyName": "Silph · Presidencia",
+      "nativeId": "frlg_01_57",
+      "nativeName": "SilphCo_11F",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        17,
+        20
+      ],
+      "note": "Presidencia/Giovanni corresponden a11F."
+    },
+    {
+      "legacyId": "safari_hut",
+      "legacyName": "CASA SECRETA",
+      "nativeId": "frlg_01_71",
+      "nativeName": "SafariZone_SecretHouse",
+      "status": "story_equivalent",
+      "legacySize": [
+        13,
+        11
+      ],
+      "nativeSize": [
+        13,
+        11
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "mansion_1",
+      "legacyName": "MANSIÓN POKÉMON",
+      "nativeId": "frlg_01_59",
+      "nativeName": "PokemonMansion_1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        38,
+        35
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "mansion_2",
+      "legacyName": "Mansión · Laboratorio abandonado",
+      "nativeId": "frlg_01_62",
+      "nativeName": "PokemonMansion_B1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        38,
+        35
+      ],
+      "note": "Llave Secreta y laboratorio corresponden aB1F; añadir2F/3F."
+    },
+    {
+      "legacyId": "indigo_arena",
+      "legacyName": "LIGA POKÉMON",
+      "nativeId": "frlg_01_75",
+      "nativeName": "PokemonLeague_LoreleisRoom",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        13,
+        13
+      ],
+      "note": "La sala única actual concentra toda la Liga. Restaurar Lorelei/Bruno/Agatha/Lance/Campeón/Salón de la Fama como6mapas."
+    },
+    {
+      "legacyId": "route2",
+      "legacyName": "Ruta 2",
+      "nativeId": "frlg_03_20",
+      "nativeName": "Route2",
+      "status": "story_equivalent",
+      "legacySize": [
+        44,
+        34
+      ],
+      "nativeSize": [
+        24,
+        80
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "route4",
+      "legacyName": "Ruta 4",
+      "nativeId": "frlg_03_22",
+      "nativeName": "Route4",
+      "status": "story_equivalent",
+      "legacySize": [
+        44,
+        34
+      ],
+      "nativeSize": [
+        108,
+        20
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "route5",
+      "legacyName": "Ruta 5",
+      "nativeId": "frlg_03_23",
+      "nativeName": "Route5",
+      "status": "story_equivalent",
+      "legacySize": [
+        44,
+        34
+      ],
+      "nativeSize": [
+        48,
+        40
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "route5_daycare",
+      "legacyName": "GUARDERÍA",
+      "nativeId": "frlg_17_00",
+      "nativeName": "Route5_PokemonDayCare",
+      "status": "story_equivalent",
+      "legacySize": [
+        13,
+        11
+      ],
+      "nativeSize": [
+        12,
+        9
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "route22",
+      "legacyName": "Ruta 22",
+      "nativeId": "frlg_03_41",
+      "nativeName": "Route22",
+      "status": "story_equivalent",
+      "legacySize": [
+        44,
+        34
+      ],
+      "nativeSize": [
+        48,
+        24
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "route19",
+      "legacyName": "Ruta 19",
+      "nativeId": "frlg_03_37",
+      "nativeName": "Route19",
+      "status": "story_equivalent",
+      "legacySize": [
+        44,
+        34
+      ],
+      "nativeSize": [
+        24,
+        60
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "route16",
+      "legacyName": "Ruta 16",
+      "nativeId": "frlg_03_34",
+      "nativeName": "Route16",
+      "status": "story_equivalent",
+      "legacySize": [
+        44,
+        34
+      ],
+      "nativeSize": [
+        48,
+        20
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "route17",
+      "legacyName": "Ruta 17 · Camino de Bicis",
+      "nativeId": "frlg_03_35",
+      "nativeName": "Route17",
+      "status": "story_equivalent",
+      "legacySize": [
+        44,
+        34
+      ],
+      "nativeSize": [
+        24,
+        160
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "route18",
+      "legacyName": "Ruta 18",
+      "nativeId": "frlg_03_36",
+      "nativeName": "Route18",
+      "status": "story_equivalent",
+      "legacySize": [
+        44,
+        34
+      ],
+      "nativeSize": [
+        60,
+        20
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "route16_house",
+      "legacyName": "CASA DEL BOSQUE",
+      "nativeId": "frlg_25_00",
+      "nativeName": "Route16_House",
+      "status": "story_equivalent",
+      "legacySize": [
+        13,
+        11
+      ],
+      "nativeSize": [
+        11,
+        9
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "cinnabar_lab",
+      "legacyName": "LABORATORIO",
+      "nativeId": "frlg_12_04",
+      "nativeName": "CinnabarIsland_PokemonLab_ExperimentRoom",
+      "status": "story_equivalent",
+      "legacySize": [
+        17,
+        12
+      ],
+      "nativeSize": [
+        15,
+        11
+      ],
+      "note": "La restauración de fósiles pertenece aExperimentRoom; añadirEntrada/Lounge/ResearchRoom."
+    },
+    {
+      "legacyId": "route11",
+      "legacyName": "Ruta 11",
+      "nativeId": "frlg_03_29",
+      "nativeName": "Route11",
+      "status": "story_equivalent",
+      "legacySize": [
+        44,
+        34
+      ],
+      "nativeSize": [
+        72,
+        20
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "diglett",
+      "legacyName": "Cueva Diglett",
+      "nativeId": "frlg_01_37",
+      "nativeName": "DiglettsCave_B1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        44,
+        34
+      ],
+      "nativeSize": [
+        85,
+        80
+      ],
+      "note": "Añadir entradas norte/sur separadas; B1F no tiene salidas exteriores directas."
+    },
+    {
+      "legacyId": "oneisland",
+      "legacyName": "Isla Prima",
+      "nativeId": "frlg_03_12",
+      "nativeName": "OneIsland",
+      "status": "story_equivalent",
+      "legacySize": [
+        30,
+        26
+      ],
+      "nativeSize": [
+        24,
+        20
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "ember",
+      "legacyName": "Monte Ascuas",
+      "nativeId": "frlg_01_97",
+      "nativeName": "MtEmber_Exterior",
+      "status": "story_equivalent",
+      "legacySize": [
+        44,
+        34
+      ],
+      "nativeSize": [
+        57,
+        54
+      ],
+      "note": "Rubí corresponde aMtEmber_RubyPath_B5F; restaurar camino y pisos separados."
+    },
+    {
+      "legacyId": "fourisland",
+      "legacyName": "Isla Quarta",
+      "nativeId": "frlg_03_15",
+      "nativeName": "FourIsland",
+      "status": "story_equivalent",
+      "legacySize": [
+        30,
+        26
+      ],
+      "nativeSize": [
+        48,
+        40
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "oneisland_center",
+      "legacyName": "CENTRO POKÉMON",
+      "nativeId": "frlg_32_00",
+      "nativeName": "OneIsland_PokemonCenter_1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        15,
+        12
+      ],
+      "nativeSize": [
+        19,
+        11
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "fourisland_center",
+      "legacyName": "CENTRO POKÉMON",
+      "nativeId": "frlg_35_01",
+      "nativeName": "FourIsland_PokemonCenter_1F",
+      "status": "story_equivalent",
+      "legacySize": [
+        15,
+        12
+      ],
+      "nativeSize": [
+        15,
+        10
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "fourisland_daycare",
+      "legacyName": "GUARDERÍA",
+      "nativeId": "frlg_35_00",
+      "nativeName": "FourIsland_PokemonDayCare",
+      "status": "story_equivalent",
+      "legacySize": [
+        13,
+        11
+      ],
+      "nativeSize": [
+        12,
+        9
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "ssanne_rest",
+      "legacyName": "Camarote de descanso",
+      "nativeId": "frlg_01_29",
+      "nativeName": "SSAnne_1F_Room6",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        6,
+        8
+      ],
+      "note": "La habitación nativa6contiene la señora que cura al equipo (SSAnne_1F_Room6_EventScript_Woman)."
+    },
+    {
+      "legacyId": "ssanne_guest",
+      "legacyName": "Camarote de pasajeros",
+      "nativeId": "frlg_01_12",
+      "nativeName": "SSAnne_1F_Room1",
+      "status": "adaptation",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        6,
+        8
+      ],
+      "note": "Habitación actual combina huéspedes de varias habitaciones; repartir por camarotes nativos."
+    },
+    {
+      "legacyId": "ssanne_kitchen",
+      "legacyName": "Cocina del S. S. Anne",
+      "nativeId": "frlg_01_10",
+      "nativeName": "SSAnne_Kitchen",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        16,
+        14
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "ssanne_deck",
+      "legacyName": "Cubierta del S. S. Anne",
+      "nativeId": "frlg_01_09",
+      "nativeName": "SSAnne_Deck",
+      "status": "story_equivalent",
+      "legacySize": [
+        22,
+        18
+      ],
+      "nativeSize": [
+        24,
+        19
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "vermilion_fanclub",
+      "legacyName": "CLUB DE FANS",
+      "nativeId": "frlg_09_03",
+      "nativeName": "VermilionCity_PokemonFanClub",
+      "status": "story_equivalent",
+      "legacySize": [
+        13,
+        11
+      ],
+      "nativeSize": [
+        12,
+        12
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "vermilion_boathouse",
+      "legacyName": "CASA DEL MAR",
+      "nativeId": "frlg_09_04",
+      "nativeName": "VermilionCity_House2",
+      "status": "adaptation",
+      "legacySize": [
+        13,
+        11
+      ],
+      "nativeSize": [
+        11,
+        9
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    },
+    {
+      "legacyId": "pallet_bedroom",
+      "legacyName": "Tu habitación",
+      "nativeId": "frlg_04_01",
+      "nativeName": "PalletTown_PlayersHouse_2F",
+      "status": "story_equivalent",
+      "legacySize": [
+        12,
+        10
+      ],
+      "nativeSize": [
+        12,
+        9
+      ],
+      "note": "Conservar ID lógico; sustituir dimensiones, bloques y transiciones por los nativos."
+    }
+  ]
+}

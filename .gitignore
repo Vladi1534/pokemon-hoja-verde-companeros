@@ -36,3 +36,13 @@ Thumbs.db
 __pycache__/
 /hg-work/
 /hg-audit.json
+
+/online-server/public/native-maps/
+/online-server/public/environment/
+
+/online-server/public/world-assets.json
+
+# Reproducible artwork packages expanded by npm run build.
+/assets/leafgreen-world/atlases/
+/assets/heartgold-environment/textures/
+/assets/heartgold-environment/models/

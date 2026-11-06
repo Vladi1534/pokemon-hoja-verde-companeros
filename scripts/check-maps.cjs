@@ -1,16 +1,11 @@
-const assert=require('node:assert/strict');
-const world=require('../online-server/server/world.json'),D=[[0,1],[0,-1],[1,0],[-1,0]],key=(m,x,y)=>m+':'+x+':'+y;
-const walkable=(m,x,y,cut=true)=>m.grid[y]?.[x]!==undefined&&![2,3,7,10].includes(m.grid[y][x])&&![...m.npcs,...m.signs].some(n=>n.x===x&&n.y===y)&&(cut||!(m.blockers||[]).some(n=>n.x===x&&n.y===y));
-function reach(cut){const q=[world.spawn],seen=new Set();for(let i=0;i<q.length;i++){const p=q[i],k=key(p.map,p.x,p.y);if(seen.has(k))continue;seen.add(k);const m=world.maps[p.map];for(const [dx,dy]of D){const x=p.x+dx,y=p.y+dy;if(!walkable(m,x,y,cut))continue;const t=m.portals.find(p=>x>=p.x&&x<p.x+p.w&&y>=p.y&&y<p.y+p.h),d=m.doors.find(p=>x===p.x&&y===p.y);q.push(t?{map:t.to,x:t.tx??21,y:t.ty??3}:d?{map:d.to,x:d.tx??10,y:d.ty??15}:{map:p.map,x,y});}}return seen;}
-const seen=reach(true),closed=reach(false),adjacent=(set,m,x,y)=>D.some(([dx,dy])=>set.has(key(m,x+dx,y+dy)));
-assert.equal(new Set([...seen].map(k=>k.split(':')[0])).size,Object.keys(world.maps).length);
-for(const [id,m]of Object.entries(world.maps)){
- for(const p of [...m.npcs,...m.items,...m.signs,...m.blockers||[]])assert(adjacent(seen,id,p.x,p.y),id+': unreachable '+(p.id||p.text));
- for(const p of m.portals){assert(adjacent(seen,id,p.x,p.y),id+': portal '+p.to);assert(walkable(world.maps[p.to],p.tx??21,p.ty??3),id+': unsafe landing '+p.to);}
- if(!m.inside)for(let y=0;y<m.h;y++)for(let x=0;x<m.w;x++)if((x===0||y===0||x===m.w-1||y===m.h-1)&&walkable(m,x,y))assert(m.portals.some(p=>x>=p.x&&x<p.x+p.w&&y>=p.y&&y<p.y+p.h),id+': false exit '+x+','+y);
+const assert=require('node:assert/strict'),fs=require('node:fs'),cp=require('node:child_process');
+const world=require('../online-server/server/world.json'),source=JSON.parse(require('node:zlib').gunzipSync(fs.readFileSync(require('node:path').join(__dirname,'../assets/leafgreen-world/runtime-world.json.gz')))).maps;
+for(const m of Object.values(world.maps).filter(m=>!m.aliasOf)){
+ const n=source[m.native.id];assert(n);assert.equal(m.w,n.w);assert.equal(m.h,n.h);
+ assert.deepEqual(m.native.blocks,n.blocks.map(row=>row.map(tile=>tile&1023)),m.id+' original tiles');
+ assert.deepEqual(m.native.elevation,n.elevation,m.id+' elevations');
+ assert.equal(m.nativeConnections.length,n.connections.reduce((sum,c)=>sum+c.contacts.length,0),m.id+' edge connections');
 }
-const student=world.maps.pewter.npcs.find(n=>n.id==='pewter_town_0');assert(adjacent(closed,'pewter',student.x,student.y));
-for(const id of ['pewter','celadon','fuchsia']){const item=world.maps[id].items.find(i=>i.id===id+'_garden_reward');assert(!adjacent(closed,id,item.x,item.y),id+': Cut reward must remain gated');}
-assert.equal(world.maps.saffron.portals.find(p=>p.to==='route5').y,0);
-assert(world.maps.route4.npcs.length&&world.maps.route4.signs.length&&world.maps.route4.items.length);
-console.log('PASS all '+Object.keys(world.maps).length+' maps, portals, landings, NPCs and items reachable; no false boundary exits; optional Cut gardens stay gated');
+for(const id of ['moon','moon_b1','moon_b2','forest','rocktunnel','rocktunnel_b1'])assert(world.maps[id]?.native,id);
+const native=cp.spawnSync(process.execPath,['online-server/tests/native-world.test.mjs'],{stdio:'inherit'});assert.equal(native.status,0);
+console.log('PASS original geometry, all 425 map dimensions, metatiles, elevations and edge contacts');

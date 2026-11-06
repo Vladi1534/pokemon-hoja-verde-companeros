@@ -1,0 +1,26 @@
+[
+  {
+    "file": "leafgreen-atlases-1.tar.gz",
+    "sha256": "1c82a44e4994a0e82e59e4d89aeedc35646fa87a5336e8b5dc9170c6fd392b57",
+    "files": 40,
+    "bytes": 788524
+  },
+  {
+    "file": "leafgreen-atlases-2.tar.gz",
+    "sha256": "cd256abae69ed87deb96bc02ecefec2eaad825b5d40b37a5f6d7493254a47230",
+    "files": 40,
+    "bytes": 950354
+  },
+  {
+    "file": "leafgreen-atlases-3.tar.gz",
+    "sha256": "efffb9d01387f22fcbde798492f430a540c2cbd05df90070586322c5287677ff",
+    "files": 40,
+    "bytes": 1439432
+  },
+  {
+    "file": "heartgold-environment.tar.gz",
+    "sha256": "cdcff5a79f6e20153386415f4edb76ee82ed2a0e640d177e5af9ef3da279f3ec",
+    "files": 152,
+    "bytes": 124101
+  }
+]

@@ -1,5 +1,6 @@
 import {newPersonal} from '../server/portable.mjs';
 import {newBattle} from '../server/battles.mjs';
+import {world} from '../server/campaign.mjs';
 import {createRequire} from 'node:module';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -9,7 +10,7 @@ const mf=new Miniflare({modules:[{type:'ESModule',path:path.resolve('dist/server
 try{
  const db=await mf.getD1Database('DB');for(const f of fs.readdirSync('drizzle').filter(f=>f.endsWith('.sql')).sort())for(const sql of fs.readFileSync('drizzle/'+f,'utf8').split('--> statement-breakpoint'))if(sql.trim())await db.prepare(sql).run();
  const token='f'.repeat(36),call=async (input,key=token)=>{const r=await mf.dispatchFetch('https://test.local/api/coop',{method:'POST',headers:{Authorization:'Bearer '+key},body:JSON.stringify(input)});const data=await r.json();assert.equal(r.status,200,JSON.stringify(data));return data};
- const a=await call({action:'create',key:token,name:'Bundle QA',starter:4});await call({action:'sync',room:a.room,seq:1,steps:['right','right']});let state=await call({action:'propose',room:a.room,requestId:crypto.randomUUID(),kind:'coop',npc:'guide'});assert.equal(state.battle.turn,1);
+ const a=await call({action:'create',key:token,name:'Bundle QA',starter:4});await call({action:'sync',room:a.room,seq:1,steps:['right','right']});const fixtureRow=await db.prepare('SELECT state FROM rooms WHERE id=?').bind(a.room).first(),fixtureState=JSON.parse(fixtureRow.state),guide=world.storyAnchors.guide;Object.assign(fixtureState.members[0].position,{...guide,y:guide.y+1});await db.prepare('UPDATE rooms SET state=? WHERE id=?').bind(JSON.stringify(fixtureState),a.room).run();let state=await call({action:'propose',room:a.room,requestId:crypto.randomUUID(),kind:'coop',npc:'guide'});assert.equal(state.battle.turn,1);
  state=await call({action:'choose',room:a.room,requestId:crypto.randomUUID(),battle:state.battle.id,turn:1,choice:'move 1'});assert.equal(state.battle.turn,2);assert.equal(state.battle.you.team[0].pp[0].pp,34);
  const hostKey='7'.repeat(36),guestKey='6'.repeat(36),profile=newPersonal('Host QA',1),guest=newPersonal('Guest QA',7);
  const hosted=await call({action:'host',key:hostKey,requestId:crypto.randomUUID(),portable:profile},hostKey);assert.match(hosted.invite,/^[A-F0-9]{8}$/);
@@ -35,7 +36,7 @@ try{
  console.log('PASS production Worker bundle: create room, D1, start battle, deserialize separate request, advance turn, persist PP');
  const fixture=async fn=>{const row=await db.prepare('SELECT state FROM rooms WHERE id=?').bind(hosted.room).first();const s=JSON.parse(row.state);fn(s);await db.prepare('UPDATE rooms SET state=? WHERE id=?').bind(JSON.stringify(s),hosted.room).run();};
  const command=(action,args={})=>call({action,room:hosted.room,requestId:crypto.randomUUID(),...args},hostKey);
- await fixture(s=>Object.assign(s.members[0].position,{map:'viridian_center',x:7,y:5,seq:20,seen:Date.now()-5000}));
+ await fixture(s=>Object.assign(s.members[0].position,{map:'viridian_center',x:7,y:4,seq:20,seen:Date.now()-5000}));
  await command('quest',{npc:'viridian_center_nurse'});
  await command('sync',{seq:21,steps:['down']});
  await fixture(s=>{const m=s.members[0];m.lastCenter={...m.lastCenter,seq:20,seen:1};m.party[0].hp=1;newBattle(s,{kind:'coop',players:[m.id],encounter:{kind:'wild',name:'Recovery fixture',team:[[18,100]]}},Date.now());});

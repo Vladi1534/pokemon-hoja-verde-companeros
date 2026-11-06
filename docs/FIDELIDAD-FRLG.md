@@ -1,3 +1,7 @@
+# Estado actual 3.0
+
+La referencia histórica de abajo describe la versión 2.4. Para el estado vigente, consulta [RELEASE-3.0](../RELEASE-3.0.md): ahora se importa la geometría original de 425 mapas, se usan reglas HeartGold, XP por rival y objetos clave persistentes. La conversión de todos los eventos y gráficos sigue en curso.
+
 # Referencia de Verde Hoja y alcance de la adaptación 2.4
 
 Se consultan datos y eventos de la descompilación pública [pret/pokefirered](https://github.com/pret/pokefirered), datos de [PokéAPI](https://github.com/PokeAPI/pokeapi) y el motor MIT [pkmn/sim](https://github.com/pkmn/ps). La copia española aportada por el usuario se analizó como datos para contrastar cabeceras y dimensiones de tres mapas; no se ejecuta ni se incluye en el repositorio o despliegue. La disponibilidad pública de una descompilación no concede automáticamente una licencia para redistribuir todo su contenido. Los textos y la geometría de esta aplicación son propios; los avisos de sprites y dependencias se conservan en `reference/` y `online-server/licenses/`.

@@ -14,7 +14,10 @@ root=Path(__file__).resolve().parents[1]/'assets/heartgold-models'
 out=root/'previews';out.mkdir(exist_ok=True)
 manifest=json.loads((root/'manifest.json').read_text())
 keys={'museum-exterior','pokemon-center','poke-mart','oak-laboratory','pokemon-league','silph-company','celadon-casino','red-house','blue-house','pewter-house','viridian-house','cerulean-house','vermilion-house','bills-house','celadon-department-store','pewter-gym','cerulean-gym','vermilion-gym','celadon-gym','fuchsia-gym','saffron-gym','viridian-gym','museum-display-case','museum-bookcase','museum-table','museum-interior-complete'}
-metadata={}
+keys.update(a['key'] for a in manifest['assets'] if a.get('environment'))
+only=os.getenv('HG_RENDER_KEYS')
+if only:keys=set(only.split(','))
+metadata=json.loads((out/'manifest.json').read_text()) if (out/'manifest.json').exists() else {}
 for asset in manifest['assets']:
  key=asset['key']
  if key not in keys:continue

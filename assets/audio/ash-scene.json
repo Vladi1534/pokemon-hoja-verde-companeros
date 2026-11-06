@@ -1,0 +1,70 @@
+{
+  "schema": 1,
+  "created": "2026-11-06",
+  "edition": "3.0 · Ash: alternativa musical de HeartGold",
+  "source": {
+    "kind": "user-supplied-ROM",
+    "game": "Pokémon Edición Oro HeartGold (España)",
+    "gameCode": "IPKS",
+    "romSha256": "9e0f7a1a4a18d9015936678722ce081d08b6a5d882fd648e89b624307f8f9e19",
+    "nitroFSPath": "data/sound/gs_sound_data.sdat",
+    "sdatSha256": "3b63b5b7aa7714a1906320be106beecebae89f8daf3988be699d41d4309454e6",
+    "renderer": "DualRip",
+    "rendererCommit": "f69e23c63a7d0985a474d0cbaeb2b364174748ac",
+    "rendererSource": "https://github.com/TetraSsky/DualRip",
+    "rendererLicense": "MIT"
+  },
+  "music": {
+    "ash": {
+      "file": "music/ash.ogg",
+      "duration": 69.130406,
+      "loop": true,
+      "loopStart": 13.430125,
+      "loopEnd": 69.13040625,
+      "sampleRate": 32000,
+      "channels": 2,
+      "bytes": 464416,
+      "sha256": "b2bc2ccb89c141b71b81edcb268ada4f93279dc49e61e961bec4a031c8a3c5e5",
+      "sourceSequenceId": 1119,
+      "sourceSequenceName": "SEQ_GS_VS_RIVAL",
+      "sourceBankId": 721,
+      "sourceEntryVolume": 84,
+      "author": "GAME FREAK / Nintendo / Creatures",
+      "license": "User-supplied game resource; original copyright retained",
+      "licenseUrl": null,
+      "sourceUrl": null,
+      "title": "Ash · desafío amistoso (HG: combate contra el rival)",
+      "gainDb": 8.5,
+      "sourceRmsDbFS": -28.5,
+      "sourcePeakDbFS": -12.2,
+      "peakDbFS": -4.2,
+      "rmsDbFS": -20.1,
+      "processing": "Original SSEQ events and SBNK/SWAR samples rendered at 32000 Hz. Mixer attenuated before PCM conversion; constant mastering gain; no tempo or pitch change. Intro and one complete steady-state loop; 5 ms bridge before loop entry. Ogg Vorbis quality 0 stereo."
+    }
+  },
+  "requestMatch": {
+    "video": "https://www.youtube.com/watch?v=4a--6NBG4jw",
+    "identifiedTitle": "🇺🇸 Pokemon Theme instrumental · Pokémon season 1 intro",
+    "channel": "Instrumentals by Toby Wheeler",
+    "match": false,
+    "reason": "The provided video identifies an anime opening. This file is the HG rival battle sequence; it is a distinct native-DS alternative, not an arrangement of that opening.",
+    "metadataSource": "youtube-oembed.json",
+    "youtubeAudioDownloaded": false,
+    "youtubeAudioAuditioned": false
+  },
+  "checks": {
+    "unmasteredClippedSamples": 0,
+    "originalRenderDuration": 125.33078125,
+    "originalLoopStart": 69.13040625,
+    "originalLoopEnd": 124.8306875,
+    "loopRangeValid": true,
+    "decodedPeakBelowZero": true,
+    "finalAuditioned": false,
+    "decodedSamples": 2212173,
+    "decodedDuration": 69.13040625,
+    "finiteSamples": true,
+    "decodedMaxAbs": 0.6167469024658203,
+    "decodedSamplesOverFullScale": 0,
+    "loopBoundaryJumpMax": 0.1137729063630104
+  }
+}

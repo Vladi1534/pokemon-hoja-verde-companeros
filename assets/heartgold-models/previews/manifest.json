@@ -415,5 +415,229 @@
     "cos": 0.7071067811865476,
     "distance": 2000,
     "depth": "model-previews/museum-interior-complete-depth.png"
+  },
+  "route-sign": {
+    "image": "model-previews/route-sign.png",
+    "width": 768,
+    "height": 1041,
+    "anchorX": 384.0,
+    "anchorY": 933.0049583693942,
+    "scale": 27.428571428571427,
+    "center": [
+      0.0,
+      20.6875,
+      0.5
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "forest-gate": {
+    "image": "model-previews/forest-gate.png",
+    "width": 768,
+    "height": 793,
+    "anchorX": 384.0,
+    "anchorY": 570.0270662404942,
+    "scale": 6.193548387096774,
+    "center": [
+      0.0,
+      41.302734375,
+      4.0
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "cave-ladder-up": {
+    "image": "model-previews/cave-ladder-up.png",
+    "width": 768,
+    "height": 753,
+    "anchorX": 384.0,
+    "anchorY": 669.556784389955,
+    "scale": 11.294117647058824,
+    "center": [
+      0.0,
+      27.712890625,
+      -8.0
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "cave-ladder-down": {
+    "image": "model-previews/cave-ladder-down.png",
+    "width": 768,
+    "height": 416,
+    "anchorX": 384.0,
+    "anchorY": 263.1989267402288,
+    "scale": 11.294117647058824,
+    "center": [
+      0.0,
+      0.71875,
+      -6.505859375
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "forest-branch": {
+    "image": "model-previews/forest-branch.png",
+    "width": 768,
+    "height": 600,
+    "anchorX": 384.0,
+    "anchorY": 347.5612688305532,
+    "scale": 21.333333333333332,
+    "center": [
+      0.0,
+      3.0,
+      0.0
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "forest-tree": {
+    "image": "model-previews/forest-tree.png",
+    "width": 768,
+    "height": 768,
+    "anchorX": 384.0,
+    "anchorY": 745.1129215454005,
+    "scale": 11.294117647058824,
+    "center": [
+      0.0,
+      24.671875,
+      -20.3828125
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "forest-canopy-strip": {
+    "image": "model-previews/forest-canopy-strip.png",
+    "width": 768,
+    "height": 396,
+    "anchorX": 384.0,
+    "anchorY": 384.0278686749033,
+    "scale": 5.818181818181818,
+    "center": [
+      0.0,
+      24.671875,
+      -20.3828125
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "kanto-tree": {
+    "image": "model-previews/kanto-tree.png",
+    "width": 768,
+    "height": 768,
+    "anchorX": 384.0,
+    "anchorY": 745.1129215454005,
+    "scale": 11.294117647058824,
+    "center": [
+      0.0,
+      24.671875,
+      -20.3828125
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "kanto-tree-edge": {
+    "image": "model-previews/kanto-tree-edge.png",
+    "width": 768,
+    "height": 1450,
+    "anchorX": 384.0,
+    "anchorY": 1407.102185141312,
+    "scale": 21.333333333333332,
+    "center": [
+      0.0,
+      24.671875,
+      -20.3828125
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "cave-stalagmite": {
+    "image": "model-previews/cave-stalagmite.png",
+    "width": 768,
+    "height": 1336,
+    "anchorX": 384.0,
+    "anchorY": 1258.8632372587376,
+    "scale": 38.4,
+    "center": [
+      0.0,
+      10.5546875,
+      -11.2734375
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "cave-wall-n": {
+    "image": "model-previews/cave-wall-n.png",
+    "width": 768,
+    "height": 1022,
+    "anchorX": 76.80000000000001,
+    "anchorY": 533.7371681132142,
+    "scale": 38.4,
+    "center": [
+      8.0,
+      8.0,
+      8.0
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "cave-wall-e": {
+    "image": "model-previews/cave-wall-e.png",
+    "width": 768,
+    "height": 1022,
+    "anchorX": 76.80000000000001,
+    "anchorY": 533.7371681132142,
+    "scale": 38.4,
+    "center": [
+      8.0,
+      8.0,
+      8.0
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "cave-wall-s": {
+    "image": "model-previews/cave-wall-s.png",
+    "width": 768,
+    "height": 1022,
+    "anchorX": 76.80000000000001,
+    "anchorY": 533.7371681132142,
+    "scale": 38.4,
+    "center": [
+      8.0,
+      8.0,
+      8.0
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "cave-wall-w": {
+    "image": "model-previews/cave-wall-w.png",
+    "width": 768,
+    "height": 1022,
+    "anchorX": 76.80000000000001,
+    "anchorY": 533.7371681132142,
+    "scale": 38.4,
+    "center": [
+      8.0,
+      8.0,
+      8.0
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
   }
 }

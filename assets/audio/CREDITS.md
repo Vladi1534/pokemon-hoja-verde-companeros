@@ -26,3 +26,6 @@ El oEmbed oficial de YouTube identifica https://www.youtube.com/watch?v=TsxlTd69
 La selección básica mantiene las claves de escenas y efectos que usa Compañeros. Se añaden claves de ciudades y rutas de Kanto para seleccionar su música de forma contextual sin archivos duplicados. Los índices exactos están en `manifest.json` y `sources/selection.json`.
 
 El paquete publicable contiene únicamente audio convertido, catálogo, créditos y scripts de conversión. No contiene el ZIP, la ROM NDS, el archivo SDAT ni los bancos de datos completos del juego.
+
+## Ash · 3.0
+Tema exclusivo: HG VS Rival (secuencia 1119, banco 721), renderizado con las muestras originales de HG. Es una alternativa temporal: el enlace de YouTube aportado corresponde al opening instrumental del anime, que no está en la banda sonora de HG. No se ha descargado ni convertido ese vídeo. Véase ash-scene.json para el detalle de origen y mezcla.

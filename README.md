@@ -1,6 +1,6 @@
-# Pokémon Hoja Verde · Compañeros 2.9.0
+# Pokémon Hoja Verde · Compañeros 3.0.0
 
-Aventura fan de Kanto para navegador, con tu líder siguiéndote y una partida personal que puedes abrir a amigos. Los mapas y diálogos son una adaptación propia, todavía no una reproducción íntegra de Verde Hoja.
+Aventura fan de Kanto para navegador, con tu líder siguiéndote y una partida personal que puedes abrir a amigos. La geometría procede de 425 mapas originales de Verde Hoja; la campaña y sus eventos siguen adaptados al motor web compartido. El arte de HeartGold se integra progresivamente sin cambiar esas coordenadas.
 
 **Jugar:** https://vladi1534.github.io/pokemon-hoja-verde-companeros/
 
@@ -18,13 +18,14 @@ Las medallas y objetos clave pertenecen a cada entrenador. La historia avanza pa
 
 ## Cambios de esta versión
 
-- Nuevos combates basados en HeartGold (Gen4): datos contrastados de 159 especies, 467 movimientos, 76 habilidades y las 289 combinaciones de tipos. Separación física/especial por movimiento.
-- Somnífero explica si lo bloquea Espíritu Vital o Insomnio. Bajo estas reglas, los Pokémon Planta pueden dormir. Se mantiene la mejora moderna de Robustez ya solicitada.
-- Museo con modelo, vitrinas, mobiliario y colisiones originales; personajes 2D dentro de una escena 3D. Alternativa visual equivalente para dispositivos sin WebGL.
-- Fachadas HeartGold para museo, gimnasios, centros, tiendas, laboratorio, Silph, casino, Liga y casas. La conversión de todo Kanto continúa.
-- Aprendizaje, PP y crianza actualizados; huevos de nivel 1 y aceleración por Cuerpo Llama/Escudo Magma. Los guardados conservan identidad, movimientos elegidos y progreso; los combates ya iniciados terminan con su formato anterior.
+- Experiencia y EV tras cada rival debilitado, con mensaje, barra y nivel durante el combate. Repartir Exp. se obtiene al entregar el paquete de Oak y se equipa desde la mochila.
+- Fichas con efecto de las 25 naturalezas, filas de características en verde/rojo y recomendaciones orientativas según especie y movimientos, contrastadas con Pokéxperto.
+- Motes persistentes; Pokédex con zonas, niveles y disponibilidad diurna/nocturna. Nidoran macho aparece en rutas iniciales.
+- Pokéflauta, billete, llaves y MO visibles en Objetos clave. Se conservan al guardar, importar o visitar un mundo.
+- Los 425 mapas conservan dimensiones, metatiles, elevaciones y conexiones de Verde Hoja. Edificios HG anclados a sus puertas originales; bosques y cuevas reciben texturas y modelos HG.
+- Tema exclusivo para Ash tomado de VS Rival de HeartGold. El opening de anime del enlace solicitado no está incluido en los juegos aportados y continúa pendiente.
 
-Detalle y límites: [cambios 2.9.0](RELEASE-2.9.md). Historial: [2.8.0](RELEASE-2.8.md), [2.7.0](RELEASE-2.7.md).
+Detalle, pruebas y límites: [cambios 3.0.0](RELEASE-3.0.md). Historial: [2.9.0](RELEASE-2.9.md), [2.8.0](RELEASE-2.8.md).
 
 La versión 2.4.1 incorporó:
 
@@ -53,9 +54,9 @@ La partida solitaria antigua se convierte sin borrar su original. Sus datos de e
 
 ## Mundo y mecánicas
 
-112 mapas e interiores, diario de 24 hitos, atlas y mapa local; campaña adaptada desde Oak hasta Liga y acceso a Isla Quarta. Ciudades con trazados distintos, puerto navegable, seis interiores del S. S. Anne, vecinos con pistas, objetos ocultos y jardines opcionales con Corte.
+425 mapas nativos y dos alias de compatibilidad, diario de 24 hitos, atlas y mapa local. Campaña adaptada desde Oak hasta Liga y acceso a Isla Quarta. Se mantienen los 26 mapas del S. S. Anne y las plantas originales de cuevas, Silph y Torre. Importar geometría no equivale a ejecutar todos los scripts originales; consulta los límites de la versión.
 
-Los entrenadores normales admiten tres victorias por entrenador, con recompensa reducida en las revanchas. Los gimnasios y jefes de historia se completan una vez; la Liga permite tres recorridos. Ayudar en un desafío ya completado no vuelve a conceder sus recompensas.
+Los entrenadores adaptados admiten tres victorias por entrenador, con recompensa reducida en las revanchas; los entrenadores importados del mapa original admiten una victoria. Los gimnasios y jefes de historia se completan una vez; la Liga permite tres recorridos. Ayudar en un desafío ya completado no vuelve a conceder sus recompensas.
 
 Seis Pokémon por equipo, PC de 180, PS/PP/estados persistentes, captura, piedras e intercambio, guardería individual en Ruta 5 y crianza en Quarta. Cuatro movimientos como máximo, con elección al aprender/evolucionar. Reglas HeartGold/Gen4 mediante `@pkmn/sim@0.10.11` (MIT): IV 0–31, EV 255 por característica/510 totales, naturalezas, habilidades normales, ataques de carga y efectos de turno.
 
@@ -71,7 +72,7 @@ Consulta [fidelidad y pendientes](docs/FIDELIDAD-FRLG.md), [multijugador](docs/M
 
 ## Desarrollo
 
-Ejecuta `npm ci`, `npm run build` y `npm test` con Node 24. La compilación genera mapas, sprites embebidos y el motor desde el código fuente con dependencias fijadas. `dist/` contiene el HTML, los motores personal y visual, audio, modelos, vistas compatibles, avisos legales y `sw.js`; mantén todos sus archivos juntos para distribuir el juego. Los archivos generados no se versionan. GitHub Actions los reconstruye, comprueba el motor resultante y publica `dist` en Pages.
+Ejecuta `npm ci`, `npm run build` y `npm test` con Node 24. La compilación verifica y expande los paquetes gráficos de `assets/world-bundles`, y genera mapas, sprites embebidos y el motor desde el código fuente con dependencias fijadas. No necesita los cartuchos originales. `dist/` contiene el HTML, los motores personal y visual, audio, modelos, vistas compatibles, avisos legales y `sw.js`; mantén todos sus archivos juntos para distribuir el juego. Los archivos generados no se versionan. GitHub Actions los reconstruye, comprueba el motor resultante y publica `dist` en Pages.
 
 El código compartido está en `online-server/server/` y el adaptador local en `online-server/browser/local-engine.mjs`. La compilación raíz actualiza también `online-server/server/world.json` y los archivos de juego de `online-server/public/`, antes de construir el servidor por separado. `online-server` incluye pruebas D1 de concurrencia, campaña, transferencia, regalos, aislamiento y paquete Worker.
 
