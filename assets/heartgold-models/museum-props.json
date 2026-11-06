@@ -1,0 +1,211 @@
+[
+  {
+    "key": "plant",
+    "modelID": 23,
+    "translation": [
+      56.0,
+      0.0,
+      -24.0
+    ],
+    "rotationRaw": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "key": "plant",
+    "modelID": 23,
+    "translation": [
+      -232.0,
+      0.0,
+      -24.0
+    ],
+    "rotationRaw": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "key": "plant",
+    "modelID": 23,
+    "translation": [
+      -232.0,
+      0.0,
+      -200.0
+    ],
+    "rotationRaw": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "key": "plant",
+    "modelID": 23,
+    "translation": [
+      -216.0,
+      0.0,
+      -200.0
+    ],
+    "rotationRaw": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "key": "plant",
+    "modelID": 23,
+    "translation": [
+      40.0,
+      0.0,
+      -200.0
+    ],
+    "rotationRaw": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "key": "plant",
+    "modelID": 23,
+    "translation": [
+      56.0,
+      0.0,
+      -200.0
+    ],
+    "rotationRaw": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "key": "entry-mat",
+    "modelID": 1,
+    "translation": [
+      -88.0,
+      0.0,
+      56.0
+    ],
+    "rotationRaw": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "key": "museum-table",
+    "modelID": 95,
+    "translation": [
+      120.0,
+      0.0,
+      -96.0
+    ],
+    "rotationRaw": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "key": "museum-bookcase",
+    "modelID": 67,
+    "translation": [
+      88.5,
+      0.0,
+      -168.0
+    ],
+    "rotationRaw": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "key": "museum-display-case",
+    "modelID": 74,
+    "translation": [
+      144.0,
+      0.0,
+      -168.0
+    ],
+    "rotationRaw": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "key": "museum-display-case",
+    "modelID": 74,
+    "translation": [
+      176.0,
+      0.0,
+      -168.0
+    ],
+    "rotationRaw": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  }
+]

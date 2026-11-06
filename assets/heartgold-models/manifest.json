@@ -1,0 +1,1686 @@
+{
+  "romSha256": "9e0f7a1a4a18d9015936678722ce081d08b6a5d882fd648e89b624307f8f9e19",
+  "romGameCode": "IPKS",
+  "converter": "Apicula 3d4e91e14045392a49c89e86dab8cb936225588c (0BSD), headless build",
+  "assets": [
+    {
+      "key": "museum-exterior",
+      "file": "models/museum-exterior.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 293,
+      "sourceModel": "nbc_msem",
+      "bytes": 52896,
+      "sha256": "de9651b4999d3fcefc9454325cca1c5f217c8b943878b989c9554ba2abcecfea",
+      "texturesEmbedded": 11,
+      "bounds": {
+        "min": [
+          -91,
+          1,
+          -62.7890625
+        ],
+        "max": [
+          160,
+          96.515625,
+          65
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        0.0,
+        0,
+        48.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json"
+    },
+    {
+      "key": "pewter-gym",
+      "file": "models/pewter-gym.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 294,
+      "sourceModel": "nbc_gym",
+      "bytes": 32976,
+      "sha256": "27a719c390517cd7e0ced1be62d6a34b1d053374f5213027889efaac6e5c7226",
+      "texturesEmbedded": 4,
+      "bounds": {
+        "min": [
+          -55.669921875,
+          1,
+          -41.392578125
+        ],
+        "max": [
+          61.84375,
+          61.52734375,
+          34.38671875
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        0.0,
+        0,
+        24.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json"
+    },
+    {
+      "key": "pokemon-center",
+      "file": "models/pokemon-center.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 40,
+      "sourceModel": "pc",
+      "bytes": 29988,
+      "sha256": "2f6b2524a71d6807205d577327be213216b9417ecd6b25ceef7b01aabe7a23d0",
+      "texturesEmbedded": 3,
+      "bounds": {
+        "min": [
+          -42,
+          1.5,
+          -32
+        ],
+        "max": [
+          48,
+          60,
+          36.98828125
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        0.0,
+        0,
+        23.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json"
+    },
+    {
+      "key": "poke-mart",
+      "file": "models/poke-mart.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 39,
+      "sourceModel": "fs",
+      "bytes": 22084,
+      "sha256": "143ad39bb4f400807aab7b669e48c68252dec54b997161341bdbe3f76681384f",
+      "texturesEmbedded": 2,
+      "bounds": {
+        "min": [
+          -34,
+          1.5,
+          -29
+        ],
+        "max": [
+          58.129886627197266,
+          76,
+          22
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        -8.0,
+        0,
+        16.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json"
+    },
+    {
+      "key": "oak-laboratory",
+      "file": "models/oak-laboratory.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 314,
+      "sourceModel": "mst_okl",
+      "bytes": 32864,
+      "sha256": "c20fbf673b770356cdc972835432bd29227cfebcea43ddcd774c961195410ba0",
+      "texturesEmbedded": 10,
+      "bounds": {
+        "min": [
+          -54,
+          1,
+          -34
+        ],
+        "max": [
+          62,
+          81,
+          36
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        0.0,
+        0,
+        24.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json"
+    },
+    {
+      "key": "pokemon-league",
+      "file": "models/pokemon-league.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 146,
+      "sourceModel": "pke_league",
+      "bytes": 45164,
+      "sha256": "01d747296482170c4682ad432a4f0deeb58b89493ad61c30a3927f5bffcde74b",
+      "texturesEmbedded": 4,
+      "bounds": {
+        "min": [
+          -92,
+          3,
+          -85.54296875
+        ],
+        "max": [
+          108,
+          123,
+          96.45703125
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        0.0,
+        0,
+        60.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json"
+    },
+    {
+      "key": "silph-company",
+      "file": "models/silph-company.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 257,
+      "sourceModel": "ybc_slf",
+      "bytes": 64976,
+      "sha256": "6ffd306adb68ce8e06e2e746d87aa8b440ecb04734bdb83211bc2d7f93e3d793",
+      "texturesEmbedded": 8,
+      "bounds": {
+        "min": [
+          -88,
+          1,
+          -66
+        ],
+        "max": [
+          96,
+          166.4921875,
+          73
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        -8.0,
+        0,
+        50.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json"
+    },
+    {
+      "key": "celadon-casino",
+      "file": "models/celadon-casino.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 241,
+      "sourceModel": "ta_game",
+      "bytes": 29152,
+      "sha256": "9c10cf8198cc5325cff56fed15e8db6bc8b8704fc3b7a3284d2f5064ed7a8e86",
+      "texturesEmbedded": 3,
+      "bounds": {
+        "min": [
+          -59.578125,
+          2,
+          -29.92578125
+        ],
+        "max": [
+          70.60546875,
+          73.18359375,
+          40.9609375
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        0.0,
+        0,
+        29.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json"
+    },
+    {
+      "key": "lavender-radio-tower",
+      "file": "models/lavender-radio-tower.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 281,
+      "sourceModel": "si_radio",
+      "bytes": 53008,
+      "sha256": "907a99b8b63da45a1bf7d45320ec5d14bf88fd7f729cdb1a3531c26141398ab5",
+      "texturesEmbedded": 4,
+      "bounds": {
+        "min": [
+          -58.5625,
+          0.828125,
+          -69.578125
+        ],
+        "max": [
+          65.203125,
+          281.078125,
+          58.5625
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        0.0,
+        0,
+        44.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json"
+    },
+    {
+      "key": "lavender-memorial",
+      "file": "models/lavender-memorial.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 282,
+      "sourceModel": "si_temp",
+      "bytes": 24320,
+      "sha256": "9d8807185d52b79307b13f147a84cbbd547936f38e25053114184bcf9f8d0f2f",
+      "texturesEmbedded": 3,
+      "bounds": {
+        "min": [
+          -42.5625,
+          0.83203125,
+          -43.671875
+        ],
+        "max": [
+          49.20703125,
+          99.828125,
+          34.5625
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        0.0,
+        0,
+        24.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json"
+    },
+    {
+      "key": "celadon-mansion",
+      "file": "models/celadon-mansion.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 244,
+      "sourceModel": "ta_mansion",
+      "bytes": 44176,
+      "sha256": "d818766429e94abcbf8cf38965949e181f9260b63ed206fa744ad21eb842ede6",
+      "texturesEmbedded": 3,
+      "bounds": {
+        "min": [
+          -51.578125,
+          2,
+          -42.76953125
+        ],
+        "max": [
+          57.60546875,
+          103,
+          40.9609375
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        24.0,
+        0,
+        27.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json"
+    },
+    {
+      "key": "red-house",
+      "file": "models/red-house.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 313,
+      "sourceModel": "mst_rdh",
+      "bytes": 29688,
+      "sha256": "d2ad8d90c868847aa12d89f66778f65371644456705edd8bacece71fe03afb46",
+      "texturesEmbedded": 5,
+      "bounds": {
+        "min": [
+          -46,
+          1,
+          -38
+        ],
+        "max": [
+          50,
+          90.01953125,
+          36
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        -16.0,
+        0,
+        24.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json"
+    },
+    {
+      "key": "blue-house",
+      "file": "models/blue-house.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 313,
+      "sourceModel": "mst_rdh",
+      "bytes": 29688,
+      "sha256": "d2ad8d90c868847aa12d89f66778f65371644456705edd8bacece71fe03afb46",
+      "texturesEmbedded": 5,
+      "bounds": {
+        "min": [
+          -46,
+          1,
+          -38
+        ],
+        "max": [
+          50,
+          90.01953125,
+          36
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        -16.0,
+        0,
+        24.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json"
+    },
+    {
+      "key": "pewter-house",
+      "file": "models/pewter-house.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 292,
+      "sourceModel": "nbc_h01",
+      "bytes": 23260,
+      "sha256": "c0ca6ab9fe6266a1e3ddba1d4d44c1a9267d1086c11161fe97e68e5013db3865",
+      "texturesEmbedded": 4,
+      "bounds": {
+        "min": [
+          -33,
+          1,
+          -26
+        ],
+        "max": [
+          40,
+          64,
+          32
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        -8.0,
+        0,
+        16.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json"
+    },
+    {
+      "key": "viridian-house",
+      "file": "models/viridian-house.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 315,
+      "sourceModel": "to_h01",
+      "bytes": 25668,
+      "sha256": "3f0daa8ef608d805ea4052faa485f40df5cd4f6a8b63d351430cae73db1e78db",
+      "texturesEmbedded": 3,
+      "bounds": {
+        "min": [
+          -34,
+          1,
+          -26
+        ],
+        "max": [
+          40,
+          66.5,
+          28
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        -8.0,
+        0,
+        16.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json"
+    },
+    {
+      "key": "cerulean-house",
+      "file": "models/cerulean-house.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 276,
+      "sourceModel": "ha_h01a",
+      "bytes": 23324,
+      "sha256": "faee08b4e1561c75807863a6296df0e09cf8fe8afca2a684c88703a63e3265bd",
+      "texturesEmbedded": 4,
+      "bounds": {
+        "min": [
+          -30.953125,
+          1,
+          -28
+        ],
+        "max": [
+          35,
+          50.46484375,
+          24
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        -8.0,
+        0,
+        16.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json"
+    },
+    {
+      "key": "vermilion-house",
+      "file": "models/vermilion-house.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 215,
+      "sourceModel": "kbc_h01",
+      "bytes": 23916,
+      "sha256": "69ba8214560418328acba0eb47d1dea254c60ceedc8fac77c54aac0bcd5e1ab5",
+      "texturesEmbedded": 4,
+      "bounds": {
+        "min": [
+          -32,
+          1,
+          -26
+        ],
+        "max": [
+          40,
+          48.484375,
+          32
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        -8.0,
+        0,
+        19.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json"
+    },
+    {
+      "key": "celadon-department-store",
+      "file": "models/celadon-department-store.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 242,
+      "sourceModel": "ta_depart",
+      "bytes": 42488,
+      "sha256": "a42b40c80b8474e4099125a8a2265558e92c355a57b4a47e9b177d4e4ed83d06",
+      "texturesEmbedded": 6,
+      "bounds": {
+        "min": [
+          -59.93359375,
+          2,
+          -44.76953125
+        ],
+        "max": [
+          70.60546875,
+          113.6328125,
+          40.9609375
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        0.0,
+        0,
+        32.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json"
+    },
+    {
+      "key": "bills-house",
+      "file": "models/bills-house.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 279,
+      "sourceModel": "misaki_h01",
+      "bytes": 24036,
+      "sha256": "2eb1c3478f44ccead8868c49e407f9aa2ceda4839f666748522b90cb87c86da7",
+      "texturesEmbedded": 4,
+      "bounds": {
+        "min": [
+          -35,
+          1,
+          -26
+        ],
+        "max": [
+          40,
+          72,
+          32
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        -8.0,
+        0,
+        16.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json"
+    },
+    {
+      "key": "fuchsia-gym",
+      "file": "models/fuchsia-gym.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 300,
+      "sourceModel": "sk_gym",
+      "bytes": 32972,
+      "sha256": "405ed57d12180161c7100b4ec1ba1ecf6a52cd0d3c194500908bf84dbfb5be44",
+      "texturesEmbedded": 4,
+      "bounds": {
+        "min": [
+          -55.669921875,
+          1,
+          -41.392578125
+        ],
+        "max": [
+          61.84375,
+          61.52734375,
+          34.38671875
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        0.0,
+        0,
+        24.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json"
+    },
+    {
+      "key": "celadon-gym",
+      "file": "models/celadon-gym.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 245,
+      "sourceModel": "ta_gym",
+      "bytes": 32976,
+      "sha256": "9cc1dd4858a12221e3e4390c53a8ea85eec74df9750444761b4ef9cfd2b48218",
+      "texturesEmbedded": 4,
+      "bounds": {
+        "min": [
+          -55.669921875,
+          1,
+          -41.392578125
+        ],
+        "max": [
+          61.84375,
+          61.52734375,
+          34.38671875
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        0.0,
+        0,
+        24.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json"
+    },
+    {
+      "key": "viridian-gym",
+      "file": "models/viridian-gym.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 318,
+      "sourceModel": "to_gym",
+      "bytes": 32956,
+      "sha256": "6e2d23401e4c859b9b8e99e6c178854c9afb3c876a5ac9b1731b760a27d53095",
+      "texturesEmbedded": 4,
+      "bounds": {
+        "min": [
+          -55.669921875,
+          1,
+          -41.392578125
+        ],
+        "max": [
+          61.84375,
+          61.52734375,
+          34.38671875
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        0.0,
+        0,
+        16.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json"
+    },
+    {
+      "key": "cerulean-gym",
+      "file": "models/cerulean-gym.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 284,
+      "sourceModel": "ha_gym",
+      "bytes": 32908,
+      "sha256": "25af12b587eabb5fbac66d1790d56f36915ea4308b22ed84761b2b062a7e2768",
+      "texturesEmbedded": 4,
+      "bounds": {
+        "min": [
+          -55.669921875,
+          1,
+          -41.392578125
+        ],
+        "max": [
+          61.84375,
+          61.52734375,
+          34.38671875
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        0.0,
+        0,
+        24.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json"
+    },
+    {
+      "key": "vermilion-gym",
+      "file": "models/vermilion-gym.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 219,
+      "sourceModel": "kbc_gym",
+      "bytes": 32952,
+      "sha256": "6e84b8b5d05f1efc101a29b6473b3a66706d82b4e912aadc0912f793aaec1769",
+      "texturesEmbedded": 4,
+      "bounds": {
+        "min": [
+          -55.669921875,
+          1,
+          -41.392578125
+        ],
+        "max": [
+          61.84375,
+          61.52734375,
+          34.38671875
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        0.0,
+        0,
+        24.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json"
+    },
+    {
+      "key": "saffron-gym",
+      "file": "models/saffron-gym.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 250,
+      "sourceModel": "ya_gym",
+      "bytes": 32960,
+      "sha256": "7aff98a684fc8b7f3dae27fed37ef053dce41b2b2fcf1fdbf3ffa42d105d8eb4",
+      "texturesEmbedded": 4,
+      "bounds": {
+        "min": [
+          -55.669921875,
+          1,
+          -41.392578125
+        ],
+        "max": [
+          61.84375,
+          61.52734375,
+          34.38671875
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved",
+      "doorNative": [
+        0.0,
+        0,
+        24.0
+      ],
+      "doorVerified": true,
+      "doorEvidence": "door-anchors.json"
+    },
+    {
+      "key": "pallet-lab-door",
+      "file": "models/pallet-lab-door.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 311,
+      "sourceModel": "mst_dr2",
+      "bytes": 3716,
+      "sha256": "f08908821eaa0c606f44716b94ce3d19c7be554da3a89fffed0580f333164f9c",
+      "texturesEmbedded": 1,
+      "bounds": {
+        "min": [
+          -20,
+          2.638671875,
+          0
+        ],
+        "max": [
+          0,
+          27.61328125,
+          2.0615234375
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "pallet-house-door",
+      "file": "models/pallet-house-door.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 310,
+      "sourceModel": "mst_dr1",
+      "bytes": 5616,
+      "sha256": "b487a62918f7a7644e9c2d9adcb3cb4a1498738e30f3ddee6a4418151db2f2d5",
+      "texturesEmbedded": 1,
+      "bounds": {
+        "min": [
+          -20,
+          1.98046875,
+          0
+        ],
+        "max": [
+          0,
+          26.9560546875,
+          2.0615234375
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "pokemon-center-door",
+      "file": "models/pokemon-center-door.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 15,
+      "sourceModel": "p_door",
+      "bytes": 2528,
+      "sha256": "8d4a1d21ceb5a93b24aca64acf16505796b9d2984acc0eb870d221f761200304",
+      "texturesEmbedded": 1,
+      "bounds": {
+        "min": [
+          -10,
+          1.5,
+          0
+        ],
+        "max": [
+          10,
+          26.5,
+          0
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "gym-door",
+      "file": "models/gym-door.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 220,
+      "sourceModel": "gym_door_kn",
+      "bytes": 3632,
+      "sha256": "9d829ad4e1e9d713f8f8d1c01d8263991138c6c2b89e028668f39d0fdce734e7",
+      "texturesEmbedded": 1,
+      "bounds": {
+        "min": [
+          -10.83203125,
+          2.900390625,
+          0
+        ],
+        "max": [
+          10.83203125,
+          36.16796875,
+          4
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "museum-area-door",
+      "file": "models/museum-area-door.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 301,
+      "sourceModel": "nbc_dr1",
+      "bytes": 4180,
+      "sha256": "efe97cbb266abd9abbbc4c07001460ec8d72b1e3ee1973308f595b76bd3a903d",
+      "texturesEmbedded": 1,
+      "bounds": {
+        "min": [
+          -20,
+          0,
+          0
+        ],
+        "max": [
+          0,
+          28.9755859375,
+          2.0615234375
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "ss-aqua-reference",
+      "file": "models/ss-aqua-reference.glb",
+      "sourceArchive": "a/0/4/0",
+      "sourceMember": 168,
+      "sourceModel": "aqua_go",
+      "bytes": 75692,
+      "sha256": "027d5a134694f68ae4c16488eb27c59db9e98fd9d18c05bbebc8f4c7fe7b409f",
+      "texturesEmbedded": 7,
+      "bounds": {
+        "min": [
+          -66.0234375,
+          3.3515625,
+          -94
+        ],
+        "max": [
+          176.3828125,
+          99.9609375,
+          40.8984375
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "museum-display-case",
+      "file": "models/museum-display-case.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 74,
+      "sourceModel": "shelf_muse01",
+      "bytes": 9432,
+      "sha256": "66af7eb21c73172520007c31222ea8baef75508bcfe0faedaee553b3fbc28e8a",
+      "texturesEmbedded": 2,
+      "bounds": {
+        "min": [
+          -15,
+          1,
+          -10
+        ],
+        "max": [
+          16,
+          38,
+          8
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "museum-bookcase",
+      "file": "models/museum-bookcase.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 67,
+      "sourceModel": "shelf04",
+      "bytes": 7332,
+      "sha256": "6da23d06b4fc5e8316fc9348d1dc54d03337afe29961cbfc9820fb4585a8e757",
+      "texturesEmbedded": 1,
+      "bounds": {
+        "min": [
+          -8,
+          0.5,
+          -10
+        ],
+        "max": [
+          8,
+          32,
+          6
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "museum-table",
+      "file": "models/museum-table.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 95,
+      "sourceModel": "table02_3",
+      "bytes": 8736,
+      "sha256": "813b5b408f482cd4f237c401c27c4771ef2010c45c849159b1cebd5746594281",
+      "texturesEmbedded": 1,
+      "bounds": {
+        "min": [
+          -24,
+          0.5,
+          -16
+        ],
+        "max": [
+          24,
+          13,
+          16
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "plant",
+      "file": "models/plant.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 23,
+      "sourceModel": "plant01",
+      "bytes": 7520,
+      "sha256": "501b91c9a110200b5dbdadafc89b9ab86466a8e104533a4764824fd89e3ea5a5",
+      "texturesEmbedded": 1,
+      "bounds": {
+        "min": [
+          -8,
+          0.5,
+          -8
+        ],
+        "max": [
+          8,
+          34.251953125,
+          8
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "entry-mat",
+      "file": "models/entry-mat.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 1,
+      "sourceModel": "d_mat01",
+      "bytes": 2692,
+      "sha256": "13bece276f80d587e0c8db790a8a6eff0d81e29acf352f2dd73fa91a76fafd81",
+      "texturesEmbedded": 1,
+      "bounds": {
+        "min": [
+          -14,
+          0,
+          -4
+        ],
+        "max": [
+          14,
+          0,
+          12
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "lab-pokemon-machine",
+      "file": "models/lab-pokemon-machine.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 27,
+      "sourceModel": "machine_l01",
+      "bytes": 7324,
+      "sha256": "9e45e934d4487b0574b4ccc4cad7cbd8224633fa5444e8fc58a85328517bb5d2",
+      "texturesEmbedded": 3,
+      "bounds": {
+        "min": [
+          -7,
+          1,
+          -8
+        ],
+        "max": [
+          8,
+          28,
+          7
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "lab-computer-machine",
+      "file": "models/lab-computer-machine.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 28,
+      "sourceModel": "machine_l02",
+      "bytes": 18068,
+      "sha256": "1bfbe98bd3da433154e1ce583064b7949bf1ecac6f435c1ad8acee8a119a5446",
+      "texturesEmbedded": 3,
+      "bounds": {
+        "min": [
+          -18.91796875,
+          1.19921875,
+          -18.3828125
+        ],
+        "max": [
+          18.91796875,
+          46.828125,
+          14.3828125
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "lab-research-machine",
+      "file": "models/lab-research-machine.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 29,
+      "sourceModel": "machine_l03",
+      "bytes": 8528,
+      "sha256": "769248646c0c8e14f0c9f61f9404d2025daecb40d5c49210a524ea578679ecb9",
+      "texturesEmbedded": 3,
+      "bounds": {
+        "min": [
+          -7,
+          1,
+          -8
+        ],
+        "max": [
+          8,
+          28,
+          7.150390625
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "lab-bookcase",
+      "file": "models/lab-bookcase.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 30,
+      "sourceModel": "shelf09a",
+      "bytes": 9476,
+      "sha256": "f7962b331c3f237986fd69a4415c629416641bb0067e30a56f6b03833a7a8fd7",
+      "texturesEmbedded": 2,
+      "bounds": {
+        "min": [
+          -15,
+          1,
+          -10
+        ],
+        "max": [
+          16,
+          38,
+          8
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "lab-chair",
+      "file": "models/lab-chair.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 32,
+      "sourceModel": "chair_l01",
+      "bytes": 2920,
+      "sha256": "032a40797e305410deadadffc63c479ee417ac13bc6d92c28d35dea24ffab31b",
+      "texturesEmbedded": 1,
+      "bounds": {
+        "min": [
+          -8,
+          1,
+          -8
+        ],
+        "max": [
+          8,
+          1,
+          8
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "healing-machine",
+      "file": "models/healing-machine.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 35,
+      "sourceModel": "machine_pc01",
+      "bytes": 9840,
+      "sha256": "b83f125aa74d9689b5c289599acb426d0d5f866a686ed768a8a9256569931f59",
+      "texturesEmbedded": 1,
+      "bounds": {
+        "min": [
+          -9.662109375,
+          2,
+          -24
+        ],
+        "max": [
+          9,
+          24.158203125,
+          26
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "pokemon-center-counter",
+      "file": "models/pokemon-center-counter.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 33,
+      "sourceModel": "pc01",
+      "bytes": 7620,
+      "sha256": "ad839a6920dff0c5bd83b047d6e3d1d573fb2b54edd64a4b611dedb885acbb67",
+      "texturesEmbedded": 2,
+      "bounds": {
+        "min": [
+          -9.2255859375,
+          3.2900390625,
+          -4.810546875
+        ],
+        "max": [
+          9.2255859375,
+          24.8876953125,
+          1.5380859375
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "pokemon-center-pc",
+      "file": "models/pokemon-center-pc.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 34,
+      "sourceModel": "pc02",
+      "bytes": 10436,
+      "sha256": "b7380100cb12945ef4a8f3e0306d1d42ce0e89669cb7bfbf3cda989e2d7198aa",
+      "texturesEmbedded": 2,
+      "bounds": {
+        "min": [
+          -10.478515625,
+          0.478515625,
+          -9.041015625
+        ],
+        "max": [
+          11,
+          51,
+          10
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "pokemon-center-bench",
+      "file": "models/pokemon-center-bench.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 57,
+      "sourceModel": "chair_pc01",
+      "bytes": 2828,
+      "sha256": "1985c06bfb4b362dd311e1c649c23904aeb0a70c87e27dcf55673c4e504e9f7f",
+      "texturesEmbedded": 1,
+      "bounds": {
+        "min": [
+          -8,
+          1,
+          -8
+        ],
+        "max": [
+          8,
+          1,
+          8
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "shop-counter",
+      "file": "models/shop-counter.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 43,
+      "sourceModel": "counter_fs01",
+      "bytes": 6688,
+      "sha256": "dde2960145653103152df55ba4fb981fd5db81936bb5eaf0e2ff5095c5a8497f",
+      "texturesEmbedded": 2,
+      "bounds": {
+        "min": [
+          -4.19970703125,
+          0.699951171875,
+          -3.499755859375
+        ],
+        "max": [
+          6.299560546875,
+          9.099365234375,
+          4.899658203125
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "shop-shelves",
+      "file": "models/shop-shelves.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 45,
+      "sourceModel": "shelf_fs01",
+      "bytes": 10088,
+      "sha256": "b0d5722d400cb1e51305c1415fb041a919e371c84af2a6cb1e6787f58700ecb3",
+      "texturesEmbedded": 2,
+      "bounds": {
+        "min": [
+          -15,
+          1,
+          -10
+        ],
+        "max": [
+          15,
+          21,
+          6
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "home-bed",
+      "file": "models/home-bed.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 17,
+      "sourceModel": "bed_h01",
+      "bytes": 12320,
+      "sha256": "93c74977e4f8ec066ab63c57a47cfae32a25b3b5ffa3d89e330b728f6e19c187",
+      "texturesEmbedded": 1,
+      "bounds": {
+        "min": [
+          -14,
+          0.5,
+          -16
+        ],
+        "max": [
+          17,
+          16,
+          24
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "home-console",
+      "file": "models/home-console.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 18,
+      "sourceModel": "game_h01",
+      "bytes": 3616,
+      "sha256": "8198e8e49a17012afc4c6910fc8fb0bf11d89c8e7bb02cebf57c3220dba15e80",
+      "texturesEmbedded": 1,
+      "bounds": {
+        "min": [
+          -8,
+          0.5,
+          -8
+        ],
+        "max": [
+          8,
+          2.5,
+          8
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "home-tv",
+      "file": "models/home-tv.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 19,
+      "sourceModel": "tv01",
+      "bytes": 5828,
+      "sha256": "2ce4fd6ff46f0b50dc1bb7ceec2efade9d710504ba902a2809deb6e4a2107743",
+      "texturesEmbedded": 1,
+      "bounds": {
+        "min": [
+          -16,
+          0.5,
+          -10
+        ],
+        "max": [
+          16,
+          33,
+          6
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "home-kitchen",
+      "file": "models/home-kitchen.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 20,
+      "sourceModel": "sink01",
+      "bytes": 6600,
+      "sha256": "40eff88b17e0681430aa778665e2b2750800f3e559e72330abca0f39c4bfb482",
+      "texturesEmbedded": 1,
+      "bounds": {
+        "min": [
+          -16,
+          0.5,
+          -10
+        ],
+        "max": [
+          16,
+          17,
+          6
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "home-fridge",
+      "file": "models/home-fridge.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 21,
+      "sourceModel": "ref01",
+      "bytes": 5448,
+      "sha256": "b6b81dfc8f61b130e3adfda0e1a1ebaaa2718181601d406c448f43273edfa7ee",
+      "texturesEmbedded": 1,
+      "bounds": {
+        "min": [
+          -8,
+          0.5,
+          -10
+        ],
+        "max": [
+          8,
+          31,
+          6
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "home-clock",
+      "file": "models/home-clock.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 16,
+      "sourceModel": "clock01",
+      "bytes": 3028,
+      "sha256": "5714fdbc9a4b749344981bf45185760362755365e1931b5b1139638d918e5cf6",
+      "texturesEmbedded": 1,
+      "bounds": {
+        "min": [
+          -8,
+          0,
+          -2
+        ],
+        "max": [
+          8,
+          20,
+          -2
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "home-window",
+      "file": "models/home-window.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 5,
+      "sourceModel": "window01",
+      "bytes": 5708,
+      "sha256": "dd4f3519759367fb4092af3f902c8ca8bb8fe5eb5f5e47bebb11a301ea456756",
+      "texturesEmbedded": 2,
+      "bounds": {
+        "min": [
+          -16,
+          -3,
+          -2
+        ],
+        "max": [
+          16,
+          26,
+          2
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "home-table",
+      "file": "models/home-table.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 89,
+      "sourceModel": "table01_1",
+      "bytes": 8732,
+      "sha256": "8384ec67d2242b09d7374c13d99316c9b8e7b37edd9916f45ecfe6b977e0b103",
+      "texturesEmbedded": 1,
+      "bounds": {
+        "min": [
+          -8,
+          0.5,
+          -8
+        ],
+        "max": [
+          8,
+          13,
+          8
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "home-chair",
+      "file": "models/home-chair.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 53,
+      "sourceModel": "chair01",
+      "bytes": 3484,
+      "sha256": "b87f7efec8fe079c4b767ee2a544eb7c91b4c94ed36777f0487700a2b5213c86",
+      "texturesEmbedded": 1,
+      "bounds": {
+        "min": [
+          -8,
+          0.5,
+          -8
+        ],
+        "max": [
+          8,
+          2.5,
+          8
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "home-sofa",
+      "file": "models/home-sofa.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 101,
+      "sourceModel": "sofa01_d",
+      "bytes": 9656,
+      "sha256": "17098ebdb698d801f20a150205960f24e51194da77ad84d9d674be30a110715c",
+      "texturesEmbedded": 2,
+      "bounds": {
+        "min": [
+          -15,
+          1,
+          -9.12890625
+        ],
+        "max": [
+          17,
+          18,
+          9
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "home-bookshelf",
+      "file": "models/home-bookshelf.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 64,
+      "sourceModel": "shelf01",
+      "bytes": 7296,
+      "sha256": "d92025164d945e70450e395715365dd4ec1ca1f20bd8ef9ed0cb07406cfed3da",
+      "texturesEmbedded": 1,
+      "bounds": {
+        "min": [
+          -16,
+          0.5,
+          -10
+        ],
+        "max": [
+          16,
+          32,
+          6
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "gym-statue",
+      "file": "models/gym-statue.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 78,
+      "sourceModel": "object01",
+      "bytes": 10140,
+      "sha256": "ffebdcb19080000f1c3bf8c128e77089126111f168aee1f0c2218177fd52631b",
+      "texturesEmbedded": 3,
+      "bounds": {
+        "min": [
+          -9,
+          2,
+          -10
+        ],
+        "max": [
+          11,
+          36.587890625,
+          13
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "oak-starter-display",
+      "file": "models/oak-starter-display.glb",
+      "sourceArchive": "a/1/4/8",
+      "sourceMember": 210,
+      "sourceModel": "o_kido_obj",
+      "bytes": 33580,
+      "sha256": "811e71860c6b5d281231e67eed552d28c12ec533d767dae0086cf6cdb8e4c93e",
+      "texturesEmbedded": 4,
+      "bounds": {
+        "min": [
+          -21.072265625,
+          2,
+          -16
+        ],
+        "max": [
+          21.1171875,
+          56.482421875,
+          16
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "museum-interior-base",
+      "file": "models/museum-interior-base.glb",
+      "sourceArchive": "a/0/6/5",
+      "sourceMember": 358,
+      "sourceModel": "m_museum01_00_00",
+      "bytes": 168840,
+      "sha256": "d854e681b44317e0e1dc1ff95babaafb2cdddaaa6f0331b460f6a08d2c56dab0",
+      "texturesEmbedded": 18,
+      "bounds": {
+        "min": [
+          -368,
+          -2,
+          -352
+        ],
+        "max": [
+          320,
+          46,
+          152
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    },
+    {
+      "key": "museum-interior-complete",
+      "file": "models/museum-interior-complete.glb",
+      "sourceArchive": "a/0/6/5",
+      "sourceMember": 358,
+      "sourceModel": "m_museum01_00_00 + 11 original placed props",
+      "propSourceArchive": "a/1/4/8",
+      "propPlacements": "museum-props.json",
+      "bytes": 248340,
+      "sha256": "81bf4afe116bd19ec0b903743e0853e95b326e49a8742ee5ba9a2afb237d2124",
+      "texturesEmbedded": 31,
+      "bounds": {
+        "min": [
+          -368,
+          -2,
+          -352
+        ],
+        "max": [
+          320,
+          46,
+          152
+        ]
+      },
+      "unitsPerTile": 16,
+      "axis": "Y up; +Z front/south; +X east; native origin preserved"
+    }
+  ],
+  "museumInterior": {
+    "matrixArchive": "a/0/4/1",
+    "matrixMember": 242,
+    "name": "m_museum01_",
+    "landMember": 358,
+    "textureArchive": "a/0/4/4",
+    "textureMember": 44,
+    "propCount": 11,
+    "complete": "models/museum-interior-complete.glb",
+    "props": "museum-props.json"
+  },
+  "note": "HG Lavender tower is the later radio tower; no claim that this is FRLG Pok\u00e9mon Tower. Celadon mansion is not Cinnabar Pok\u00e9mon Mansion.",
+  "doorAnchors": "door-anchors.json",
+  "museumCollision": "museum-collision.json"
+}

@@ -1,0 +1,419 @@
+{
+  "museum-exterior": {
+    "image": "model-previews/museum-exterior.png",
+    "width": 768,
+    "height": 484,
+    "anchorX": 280.09411764705885,
+    "anchorY": 445.6334898934933,
+    "scale": 3.011764705882353,
+    "center": [
+      34.5,
+      48.7578125,
+      1.10546875
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "pewter-gym": {
+    "image": "model-previews/pewter-gym.png",
+    "width": 768,
+    "height": 631,
+    "anchorX": 364.489849714699,
+    "anchorY": 578.6541149968921,
+    "scale": 6.3202764606606125,
+    "center": [
+      3.0869140625,
+      31.263671875,
+      -3.5029296875
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "pokemon-center": {
+    "image": "model-previews/pokemon-center.png",
+    "width": 768,
+    "height": 766,
+    "anchorX": 359.48936170212767,
+    "anchorY": 681.8075697097513,
+    "scale": 8.170212765957446,
+    "center": [
+      3.0,
+      30.75,
+      2.494140625
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "poke-mart": {
+    "image": "model-previews/poke-mart.png",
+    "width": 768,
+    "height": 747,
+    "anchorX": 223.6973406969154,
+    "anchorY": 707.8069579564581,
+    "scale": 7.989190739175551,
+    "center": [
+      12.064943313598633,
+      38.75,
+      -3.5
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "oak-laboratory": {
+    "image": "model-previews/oak-laboratory.png",
+    "width": 768,
+    "height": 706,
+    "anchorX": 358.4,
+    "anchorY": 646.4972274612921,
+    "scale": 6.4,
+    "center": [
+      4.0,
+      41.0,
+      1.0
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "pokemon-league": {
+    "image": "model-previews/pokemon-league.png",
+    "width": 768,
+    "height": 810,
+    "anchorX": 353.88235294117646,
+    "anchorY": 718.6545647336493,
+    "scale": 3.764705882352941,
+    "center": [
+      8.0,
+      63.0,
+      5.45703125
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "silph-company": {
+    "image": "model-previews/silph-company.png",
+    "width": 768,
+    "height": 899,
+    "anchorX": 334.97872340425533,
+    "anchorY": 830.8448827367931,
+    "scale": 4.085106382978723,
+    "center": [
+      4.0,
+      83.74609375,
+      3.5
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "celadon-casino": {
+    "image": "model-previews/celadon-casino.png",
+    "width": 768,
+    "height": 598,
+    "anchorX": 352.4424907571832,
+    "anchorY": 548.8248680593557,
+    "scale": 5.7235014992285524,
+    "center": [
+      5.513671875,
+      37.591796875,
+      5.517578125
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "red-house": {
+    "image": "model-previews/red-house.png",
+    "width": 768,
+    "height": 920,
+    "anchorX": 245.76,
+    "anchorY": 848.2133400976322,
+    "scale": 7.68,
+    "center": [
+      2.0,
+      45.509765625,
+      -1.0
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "blue-house": {
+    "image": "model-previews/blue-house.png",
+    "width": 768,
+    "height": 920,
+    "anchorX": 245.76,
+    "anchorY": 848.2133400976322,
+    "scale": 7.68,
+    "center": [
+      2.0,
+      45.509765625,
+      -1.0
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "pewter-house": {
+    "image": "model-previews/pewter-house.png",
+    "width": 768,
+    "height": 894,
+    "anchorX": 269.2987012987013,
+    "anchorY": 774.6557768545792,
+    "scale": 9.974025974025974,
+    "center": [
+      3.5,
+      32.5,
+      3.0
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "viridian-house": {
+    "image": "model-previews/viridian-house.png",
+    "width": 768,
+    "height": 875,
+    "anchorX": 275.6923076923077,
+    "anchorY": 783.2781854054886,
+    "scale": 9.846153846153847,
+    "center": [
+      3.0,
+      33.75,
+      1.0
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "cerulean-house": {
+    "image": "model-previews/cerulean-house.png",
+    "width": 768,
+    "height": 830,
+    "anchorX": 273.95488050033504,
+    "anchorY": 757.1785819547283,
+    "scale": 10.978780433325888,
+    "center": [
+      2.0234375,
+      25.732421875,
+      -2.0
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "vermilion-house": {
+    "image": "model-previews/vermilion-house.png",
+    "width": 768,
+    "height": 790,
+    "anchorX": 262.7368421052632,
+    "anchorY": 688.9936166402513,
+    "scale": 10.105263157894736,
+    "center": [
+      4.0,
+      24.7421875,
+      3.0
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "celadon-department-store": {
+    "image": "model-previews/celadon-department-store.png",
+    "width": 768,
+    "height": 824,
+    "anchorX": 353.5404448057604,
+    "anchorY": 786.7686065476179,
+    "scale": 5.708379304337727,
+    "center": [
+      5.3359375,
+      57.81640625,
+      -1.904296875
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "bills-house": {
+    "image": "model-previews/bills-house.png",
+    "width": 768,
+    "height": 930,
+    "anchorX": 281.9240506329114,
+    "anchorY": 813.2586800211286,
+    "scale": 9.721518987341772,
+    "center": [
+      2.5,
+      36.5,
+      3.0
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "fuchsia-gym": {
+    "image": "model-previews/fuchsia-gym.png",
+    "width": 768,
+    "height": 631,
+    "anchorX": 364.489849714699,
+    "anchorY": 578.6541149968921,
+    "scale": 6.3202764606606125,
+    "center": [
+      3.0869140625,
+      31.263671875,
+      -3.5029296875
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "celadon-gym": {
+    "image": "model-previews/celadon-gym.png",
+    "width": 768,
+    "height": 631,
+    "anchorX": 364.489849714699,
+    "anchorY": 578.6541149968921,
+    "scale": 6.3202764606606125,
+    "center": [
+      3.0869140625,
+      31.263671875,
+      -3.5029296875
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "viridian-gym": {
+    "image": "model-previews/viridian-gym.png",
+    "width": 768,
+    "height": 631,
+    "anchorX": 364.489849714699,
+    "anchorY": 544.8213916330725,
+    "scale": 6.3202764606606125,
+    "center": [
+      3.0869140625,
+      31.263671875,
+      -3.5029296875
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "cerulean-gym": {
+    "image": "model-previews/cerulean-gym.png",
+    "width": 768,
+    "height": 631,
+    "anchorX": 364.489849714699,
+    "anchorY": 578.6541149968921,
+    "scale": 6.3202764606606125,
+    "center": [
+      3.0869140625,
+      31.263671875,
+      -3.5029296875
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "vermilion-gym": {
+    "image": "model-previews/vermilion-gym.png",
+    "width": 768,
+    "height": 631,
+    "anchorX": 364.489849714699,
+    "anchorY": 578.6541149968921,
+    "scale": 6.3202764606606125,
+    "center": [
+      3.0869140625,
+      31.263671875,
+      -3.5029296875
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "saffron-gym": {
+    "image": "model-previews/saffron-gym.png",
+    "width": 768,
+    "height": 631,
+    "anchorX": 364.489849714699,
+    "anchorY": 578.6541149968921,
+    "scale": 6.3202764606606125,
+    "center": [
+      3.0869140625,
+      31.263671875,
+      -3.5029296875
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "museum-display-case": {
+    "image": "model-previews/museum-display-case.png",
+    "width": 768,
+    "height": 956,
+    "anchorX": 373.0285714285714,
+    "anchorY": 911.8180694724356,
+    "scale": 21.942857142857143,
+    "center": [
+      0.5,
+      19.5,
+      -1.0
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "museum-bookcase": {
+    "image": "model-previews/museum-bookcase.png",
+    "width": 768,
+    "height": 1464,
+    "anchorX": 384.0,
+    "anchorY": 1387.0109127221695,
+    "scale": 38.4,
+    "center": [
+      0.0,
+      16.25,
+      -2.0
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "museum-table": {
+    "image": "model-previews/museum-table.png",
+    "width": 768,
+    "height": 513,
+    "anchorX": 384.0,
+    "anchorY": 483.2186933313297,
+    "scale": 14.76923076923077,
+    "center": [
+      0.0,
+      6.75,
+      0.0
+    ],
+    "sin": 0.6691306063588582,
+    "cos": 0.7431448254773942,
+    "distance": 2000
+  },
+  "museum-interior-complete": {
+    "image": "model-previews/museum-interior-complete.png",
+    "width": 2048,
+    "height": 1168,
+    "anchorX": 1095.028901734104,
+    "anchorY": 1161.5877078788058,
+    "scale": 2.959537572254335,
+    "center": [
+      -24.0,
+      22.0,
+      -100.0
+    ],
+    "sin": 0.7071067811865475,
+    "cos": 0.7071067811865476,
+    "distance": 2000,
+    "depth": "model-previews/museum-interior-complete-depth.png"
+  }
+}

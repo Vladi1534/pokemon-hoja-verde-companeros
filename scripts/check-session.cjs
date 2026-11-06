@@ -47,6 +47,8 @@ for(const file of ['coop.js','personal-client.js'])vm.runInContext(fs.readFileSy
 
  const battles=vm.runInContext(`(()=>{
   const profile=PersonalEngine.newPersonal('Replay QA',4);const mon=profile.trainer.party[0];
+  // No Guard makes the presentation fixture deterministic even against a Hustle Rattata.
+  mon.species=68;mon.abilitySlot=1;
   mon.level=50;mon.xp=117360;mon.moves=[{id:45,pp:40}];
   const game=new PersonalEngine.LocalGame(profile);game.dispatch({action:'sync',seq:1,steps:['right','right']});
   const before=game.dispatch({action:'propose',kind:'coop',npc:'guide',requestId:crypto.randomUUID()}).battle;
@@ -59,7 +61,8 @@ for(const file of ['coop.js','personal-client.js'])vm.runInContext(fs.readFileSy
  const moves=Replay.freshLines(before,after).filter(l=>l.startsWith('|move|')).map(l=>/^p\d/.exec(l.split('|')[2])[0]);
  assert.deepEqual(frames.filter(f=>f.actor).map(f=>f.actor),moves);assert.equal(moves.length,2);
  for(const frame of frames)assert.equal(frame.view.ended,false);
- const enemyMove=frames.findIndex(f=>f.actor==='p2'),damage=frames.findIndex(f=>f.view.sides[0].active[0].hp<before.sides[0].active[0].hp);
+ const ownHP=view=>view.you.team.find(m=>m.active).hp;
+ const enemyMove=frames.findIndex(f=>f.actor==='p2'),damage=frames.findIndex(f=>ownHP(f.view)<ownHP(before));
  assert(enemyMove>=0&&damage>enemyMove,'damage is shown after its own attacker, never on the first snapshot');
  assert.equal(JSON.stringify({before,after}),saved,'presentation cannot mutate battle authority');
  assert.equal(Replay.frames(after,after,()=>'' ).length,0);

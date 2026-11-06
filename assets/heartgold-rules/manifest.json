@@ -1,0 +1,24 @@
+{
+  "files": {
+    "README.md": {
+      "bytes": 7120,
+      "sha256": "f7c7599308ec75b9e533e35f166128c04649c4954904748ccef0097f1541e1a8"
+    },
+    "ability-descriptions-es.json": {
+      "bytes": 5224,
+      "sha256": "11878aa38b31015d0e18dd121a2961e74c95614749a56683b5aeafe1aeb91d7e"
+    },
+    "audit.json": {
+      "bytes": 28466,
+      "sha256": "ca41c7db53b754a7d20c907bf1c29b7ac31c7c766d5d4dd6f57d43f48e4697ba"
+    },
+    "hg-differences.json": {
+      "bytes": 35818,
+      "sha256": "540e55c7aa93ba380d5a25b545cd6c3c7c8d4da80c19a9802fab40ee27b41b8a"
+    },
+    "hg-rules.json": {
+      "bytes": 213961,
+      "sha256": "2318450907891a8b7f5ac1bf5898091fc6838fc25b925a1086efd673373e0514"
+    }
+  }
+}

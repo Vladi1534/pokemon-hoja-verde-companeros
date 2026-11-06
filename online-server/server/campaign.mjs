@@ -76,7 +76,9 @@ export function interact(s,m,p,n,input={}){const f=s.progress,key=n.data?.key;
  case 'ruby':return f.ember_rocket?set('ruby','Recuperaste el Rubí. Llévaselo a Celio en el Centro Pokémon de Isla Prima.'):'Los Rocket custodian la entrada de esta galería.';
  case 'lost':return 'Ya he encontrado el sendero. ¡En el Bosque Verde viven Pikachu y muchos Pokémon bicho!';
  case 'lantern':return 'La salida del Túnel Roca lleva a Pueblo Lavanda. Las galerías permiten buscar Pokémon y entrenadores.';
- case 'curator':case 'fossil_case':case 'moon_case':return 'El museo estudia los fósiles del Monte Moon. Visitarlo es opcional; Brock acepta desafíos en el gimnasio.';
+ case 'curator':return 'Bienvenido al Museo de Ciencias de Ciudad Plateada. La sala principal reúne fósiles y fragmentos del Monte Moon; al este encontrarás nuestro laboratorio. Brock acepta desafíos en el gimnasio, al sur de la ciudad.';
+ case 'fossil_case':return 'Fósiles marinos. Hace mucho tiempo, algunos Pokémon de Kanto vivían en un antiguo mar. Los científicos de Isla Canela investigan cómo devolverles la vida a partir de sus restos.';
+ case 'moon_case':return 'Fragmentos del Monte Moon. Estas rocas conservan minerales poco comunes. Se cree que una Piedra Lunar puede provocar la evolución de ciertas especies de Pokémon.';
  case 'sailor':return 'El capitán está en su camarote, al fondo del barco.';
  default:if(n.role==='coach')return 'Entrena, revisa tus movimientos y lleva un equipo recuperado. También puedes invitar a un compañero para un combate doble.';return 'Revisa el diario para encontrar tu siguiente objetivo.';
  }

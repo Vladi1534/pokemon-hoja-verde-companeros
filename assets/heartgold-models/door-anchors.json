@@ -1,0 +1,927 @@
+{
+  "museum-exterior": {
+    "verified": true,
+    "doorNative": [
+      0.0,
+      0,
+      48.0
+    ],
+    "basis": "Original warp tile center minus original model placement; Y=0 is local logical floor.",
+    "evidence": {
+      "native": [
+        0.0,
+        0,
+        48.0
+      ],
+      "sourceMap": "MAP_PEWTER",
+      "sourceMapId": 51,
+      "eventMember": 48,
+      "warpIndex": 0,
+      "warpTile": [
+        1048,
+        78
+      ],
+      "target": "MAP_PEWTER_MUSEUM_OF_SCIENCE",
+      "landMember": 192,
+      "worldCell": [
+        32,
+        2
+      ],
+      "propTranslation": [
+        136.0,
+        64.0,
+        -72.0
+      ],
+      "sourceMember": 293
+    },
+    "matches": 1
+  },
+  "pokemon-center": {
+    "verified": true,
+    "doorNative": [
+      0.0,
+      0,
+      23.0
+    ],
+    "basis": "Original warp tile center minus original model placement; Y=0 is local logical floor.",
+    "evidence": {
+      "native": [
+        0.0,
+        0,
+        23.0
+      ],
+      "sourceMap": "MAP_MOUNT_SILVER",
+      "sourceMapId": 90,
+      "eventMember": 87,
+      "warpIndex": 1,
+      "warpTile": [
+        820,
+        265
+      ],
+      "target": "MAP_MOUNT_SILVER_POKECENTER_1F",
+      "landMember": 125,
+      "worldCell": [
+        25,
+        8
+      ],
+      "propTranslation": [
+        72.0,
+        178.0,
+        -127.0
+      ],
+      "sourceMember": 40
+    },
+    "matches": 21
+  },
+  "poke-mart": {
+    "verified": true,
+    "doorNative": [
+      -8.0,
+      0,
+      16.0
+    ],
+    "basis": "Original warp tile center minus original model placement; Y=0 is local logical floor.",
+    "evidence": {
+      "native": [
+        -8.0,
+        0,
+        16.0
+      ],
+      "sourceMap": "MAP_PEWTER",
+      "sourceMapId": 51,
+      "eventMember": 48,
+      "warpIndex": 3,
+      "warpTile": [
+        1060,
+        97
+      ],
+      "target": "MAP_PEWTER_POKEMART",
+      "landMember": 195,
+      "worldCell": [
+        33,
+        3
+      ],
+      "propTranslation": [
+        -176.0,
+        48.0,
+        -248.0
+      ],
+      "sourceMember": 39
+    },
+    "matches": 11
+  },
+  "pewter-gym": {
+    "verified": true,
+    "doorNative": [
+      0.0,
+      0,
+      24.0
+    ],
+    "basis": "Original warp tile center minus original model placement; Y=0 is local logical floor.",
+    "evidence": {
+      "native": [
+        0.0,
+        0,
+        24.0
+      ],
+      "sourceMap": "MAP_PEWTER",
+      "sourceMapId": 51,
+      "eventMember": 48,
+      "warpIndex": 2,
+      "warpTile": [
+        1047,
+        92
+      ],
+      "target": "MAP_PEWTER_GYM",
+      "landMember": 192,
+      "worldCell": [
+        32,
+        2
+      ],
+      "propTranslation": [
+        120.0,
+        64.0,
+        176.0
+      ],
+      "sourceMember": 294
+    },
+    "matches": 1
+  },
+  "oak-laboratory": {
+    "verified": true,
+    "doorNative": [
+      0.0,
+      0,
+      24.0
+    ],
+    "basis": "Original warp tile center minus original model placement; Y=0 is local logical floor.",
+    "evidence": {
+      "native": [
+        0.0,
+        0,
+        24.0
+      ],
+      "sourceMap": "MAP_PALLET",
+      "sourceMapId": 49,
+      "eventMember": 46,
+      "warpIndex": 2,
+      "warpTile": [
+        1045,
+        373
+      ],
+      "target": "MAP_PALLET_TOWN_OAKS_LAB",
+      "landMember": 201,
+      "worldCell": [
+        32,
+        11
+      ],
+      "propTranslation": [
+        88.0,
+        16.0,
+        64.0
+      ],
+      "sourceMember": 314
+    },
+    "matches": 1
+  },
+  "pokemon-league": {
+    "verified": true,
+    "doorNative": [
+      0.0,
+      0,
+      60.0
+    ],
+    "basis": "Original warp tile center minus original model placement; Y=0 is local logical floor.",
+    "evidence": {
+      "native": [
+        0.0,
+        0,
+        60.0
+      ],
+      "sourceMap": "MAP_INDIGO_PLATEAU",
+      "sourceMapId": 58,
+      "eventMember": 55,
+      "warpIndex": 1,
+      "warpTile": [
+        912,
+        200
+      ],
+      "target": "MAP_POKEMON_LEAGUE_ENTRANCE",
+      "landMember": 115,
+      "worldCell": [
+        28,
+        6
+      ],
+      "propTranslation": [
+        8.0,
+        272.0,
+        -180.0
+      ],
+      "sourceMember": 146
+    },
+    "matches": 1
+  },
+  "silph-company": {
+    "verified": true,
+    "doorNative": [
+      -8.0,
+      0,
+      50.0
+    ],
+    "basis": "Original warp tile center minus original model placement; Y=0 is local logical floor.",
+    "evidence": {
+      "native": [
+        -8.0,
+        0,
+        50.0
+      ],
+      "sourceMap": "MAP_SAFFRON",
+      "sourceMapId": 59,
+      "eventMember": 56,
+      "warpIndex": 8,
+      "warpTile": [
+        1308,
+        229
+      ],
+      "target": "MAP_SAFFRON_SILPH_CO_HQ",
+      "landMember": 135,
+      "worldCell": [
+        40,
+        7
+      ],
+      "propTranslation": [
+        208.0,
+        32.0,
+        -218.0
+      ],
+      "sourceMember": 257
+    },
+    "matches": 2
+  },
+  "celadon-casino": {
+    "verified": true,
+    "doorNative": [
+      0.0,
+      0,
+      29.0
+    ],
+    "basis": "Original warp tile center minus original model placement; Y=0 is local logical floor.",
+    "evidence": {
+      "native": [
+        0.0,
+        0,
+        29.0
+      ],
+      "sourceMap": "MAP_CELADON",
+      "sourceMapId": 55,
+      "eventMember": 52,
+      "warpIndex": 3,
+      "warpTile": [
+        1218,
+        249
+      ],
+      "target": "MAP_CELADON_GAME_CORNER",
+      "landMember": 170,
+      "worldCell": [
+        37,
+        7
+      ],
+      "propTranslation": [
+        296.0,
+        48.0,
+        123.0
+      ],
+      "sourceMember": 241
+    },
+    "matches": 1
+  },
+  "lavender-radio-tower": {
+    "verified": true,
+    "doorNative": [
+      0.0,
+      0,
+      44.0
+    ],
+    "basis": "Original warp tile center minus original model placement; Y=0 is local logical floor.",
+    "evidence": {
+      "native": [
+        0.0,
+        0,
+        44.0
+      ],
+      "sourceMap": "MAP_LAVENDER",
+      "sourceMapId": 53,
+      "eventMember": 50,
+      "warpIndex": 6,
+      "warpTile": [
+        1429,
+        234
+      ],
+      "target": "MAP_LAVENDER_RADIO_STATION",
+      "landMember": 156,
+      "worldCell": [
+        44,
+        7
+      ],
+      "propTranslation": [
+        88.0,
+        32.0,
+        -132.0
+      ],
+      "sourceMember": 281
+    },
+    "matches": 1
+  },
+  "lavender-memorial": {
+    "verified": true,
+    "doorNative": [
+      0.0,
+      0,
+      24.0
+    ],
+    "basis": "Original warp tile center minus original model placement; Y=0 is local logical floor.",
+    "evidence": {
+      "native": [
+        0.0,
+        0,
+        24.0
+      ],
+      "sourceMap": "MAP_LAVENDER",
+      "sourceMapId": 53,
+      "eventMember": 50,
+      "warpIndex": 5,
+      "warpTile": [
+        1431,
+        246
+      ],
+      "target": "MAP_LAVENDER_HOUSE_OF_MEMORIES",
+      "landMember": 156,
+      "worldCell": [
+        44,
+        7
+      ],
+      "propTranslation": [
+        120.0,
+        32.0,
+        80.0
+      ],
+      "sourceMember": 282
+    },
+    "matches": 1
+  },
+  "celadon-mansion": {
+    "verified": true,
+    "doorNative": [
+      24.0,
+      0,
+      27.0
+    ],
+    "basis": "Original warp tile center minus original model placement; Y=0 is local logical floor.",
+    "evidence": {
+      "native": [
+        24.0,
+        0,
+        27.0
+      ],
+      "sourceMap": "MAP_CELADON",
+      "sourceMapId": 55,
+      "eventMember": 52,
+      "warpIndex": 1,
+      "warpTile": [
+        1218,
+        237
+      ],
+      "target": "MAP_CELADON_CONDOMINIUMS_1F",
+      "landMember": 170,
+      "worldCell": [
+        37,
+        7
+      ],
+      "propTranslation": [
+        272.0,
+        48.0,
+        -67.0
+      ],
+      "sourceMember": 244
+    },
+    "matches": 1
+  },
+  "red-house": {
+    "verified": true,
+    "doorNative": [
+      -16.0,
+      0,
+      24.0
+    ],
+    "basis": "Original warp tile center minus original model placement; Y=0 is local logical floor.",
+    "evidence": {
+      "native": [
+        -16.0,
+        0,
+        24.0
+      ],
+      "sourceMap": "MAP_PALLET",
+      "sourceMapId": 49,
+      "eventMember": 46,
+      "warpIndex": 0,
+      "warpTile": [
+        1033,
+        363
+      ],
+      "target": "MAP_PALLET_TOWN_REDS_HOUSE_1F",
+      "landMember": 201,
+      "worldCell": [
+        32,
+        11
+      ],
+      "propTranslation": [
+        -88.0,
+        16.0,
+        -96.0
+      ],
+      "sourceMember": 313
+    },
+    "matches": 1
+  },
+  "blue-house": {
+    "verified": true,
+    "doorNative": [
+      -16.0,
+      0,
+      24.0
+    ],
+    "basis": "Original warp tile center minus original model placement; Y=0 is local logical floor.",
+    "evidence": {
+      "native": [
+        -16.0,
+        0,
+        24.0
+      ],
+      "sourceMap": "MAP_PALLET",
+      "sourceMapId": 49,
+      "eventMember": 46,
+      "warpIndex": 1,
+      "warpTile": [
+        1044,
+        363
+      ],
+      "target": "MAP_PALLET_TOWN_BLUES_HOUSE_1F",
+      "landMember": 201,
+      "worldCell": [
+        32,
+        11
+      ],
+      "propTranslation": [
+        88.0,
+        16.0,
+        -96.0
+      ],
+      "sourceMember": 313
+    },
+    "matches": 1
+  },
+  "pewter-house": {
+    "verified": true,
+    "doorNative": [
+      -8.0,
+      0,
+      16.0
+    ],
+    "basis": "Original warp tile center minus original model placement; Y=0 is local logical floor.",
+    "evidence": {
+      "native": [
+        -8.0,
+        0,
+        16.0
+      ],
+      "sourceMap": "MAP_PEWTER",
+      "sourceMapId": 51,
+      "eventMember": 48,
+      "warpIndex": 1,
+      "warpTile": [
+        1068,
+        87
+      ],
+      "target": "MAP_PEWTER_NORTHEAST_HOUSE",
+      "landMember": 193,
+      "worldCell": [
+        33,
+        2
+      ],
+      "propTranslation": [
+        -48.0,
+        48.0,
+        104.0
+      ],
+      "sourceMember": 292
+    },
+    "matches": 2
+  },
+  "viridian-house": {
+    "verified": true,
+    "doorNative": [
+      -8.0,
+      0,
+      16.0
+    ],
+    "basis": "Original warp tile center minus original model placement; Y=0 is local logical floor.",
+    "evidence": {
+      "native": [
+        -8.0,
+        0,
+        16.0
+      ],
+      "sourceMap": "MAP_VIRIDIAN",
+      "sourceMapId": 50,
+      "eventMember": 47,
+      "warpIndex": 1,
+      "warpTile": [
+        1034,
+        244
+      ],
+      "target": "MAP_VIRIDIAN_NORTHEAST_HOUSE",
+      "landMember": 118,
+      "worldCell": [
+        32,
+        7
+      ],
+      "propTranslation": [
+        -80.0,
+        48.0,
+        56.0
+      ],
+      "sourceMember": 315
+    },
+    "matches": 2
+  },
+  "cerulean-house": {
+    "verified": true,
+    "doorNative": [
+      -8.0,
+      0,
+      16.0
+    ],
+    "basis": "Original warp tile center minus original model placement; Y=0 is local logical floor.",
+    "evidence": {
+      "native": [
+        -8.0,
+        0,
+        16.0
+      ],
+      "sourceMap": "MAP_CERULEAN",
+      "sourceMapId": 52,
+      "eventMember": 49,
+      "warpIndex": 0,
+      "warpTile": [
+        1305,
+        116
+      ],
+      "target": "MAP_CERULEAN_NORTH_HOUSE",
+      "landMember": 141,
+      "worldCell": [
+        40,
+        3
+      ],
+      "propTranslation": [
+        160.0,
+        48.0,
+        56.0
+      ],
+      "sourceMember": 276
+    },
+    "matches": 3
+  },
+  "vermilion-house": {
+    "verified": true,
+    "doorNative": [
+      -8.0,
+      0,
+      19.0
+    ],
+    "basis": "Original warp tile center minus original model placement; Y=0 is local logical floor.",
+    "evidence": {
+      "native": [
+        -8.0,
+        0,
+        19.0
+      ],
+      "sourceMap": "MAP_VERMILION",
+      "sourceMapId": 54,
+      "eventMember": 51,
+      "warpIndex": 0,
+      "warpTile": [
+        1292,
+        294
+      ],
+      "target": "MAP_VERMILION_FISHING_DUDE_HOUSE",
+      "landMember": 126,
+      "worldCell": [
+        40,
+        9
+      ],
+      "propTranslation": [
+        -48.0,
+        16.0,
+        -171.0
+      ],
+      "sourceMember": 215
+    },
+    "matches": 4
+  },
+  "celadon-department-store": {
+    "verified": true,
+    "doorNative": [
+      0.0,
+      0,
+      32.0
+    ],
+    "basis": "Original warp tile center minus original model placement; Y=0 is local logical floor.",
+    "evidence": {
+      "native": [
+        0.0,
+        0,
+        32.0
+      ],
+      "sourceMap": "MAP_CELADON",
+      "sourceMapId": 55,
+      "eventMember": 52,
+      "warpIndex": 0,
+      "warpTile": [
+        1201,
+        237
+      ],
+      "target": "MAP_CELADON_DEPARTMENT_STORE_1F",
+      "landMember": 170,
+      "worldCell": [
+        37,
+        7
+      ],
+      "propTranslation": [
+        24.0,
+        50.0,
+        -72.0
+      ],
+      "sourceMember": 242
+    },
+    "matches": 1
+  },
+  "bills-house": {
+    "verified": true,
+    "doorNative": [
+      -8.0,
+      0,
+      16.0
+    ],
+    "basis": "Original warp tile center minus original model placement; Y=0 is local logical floor.",
+    "evidence": {
+      "native": [
+        -8.0,
+        0,
+        16.0
+      ],
+      "sourceMap": "MAP_ROUTE_25",
+      "sourceMapId": 29,
+      "eventMember": 26,
+      "warpIndex": 0,
+      "warpTile": [
+        1407,
+        38
+      ],
+      "target": "MAP_ROUTE_25_SEA_COTTAGE",
+      "landMember": 148,
+      "worldCell": [
+        43,
+        1
+      ],
+      "propTranslation": [
+        256.0,
+        48.0,
+        -168.0
+      ],
+      "sourceMember": 279
+    },
+    "matches": 1
+  },
+  "fuchsia-gym": {
+    "verified": true,
+    "doorNative": [
+      0.0,
+      0,
+      24.0
+    ],
+    "basis": "Original warp tile center minus original model placement; Y=0 is local logical floor.",
+    "evidence": {
+      "native": [
+        0.0,
+        0,
+        24.0
+      ],
+      "sourceMap": "MAP_FUCHSIA",
+      "sourceMapId": 56,
+      "eventMember": 53,
+      "warpIndex": 7,
+      "warpTile": [
+        1195,
+        439
+      ],
+      "target": "MAP_FUCHSIA_GYM",
+      "landMember": 184,
+      "worldCell": [
+        37,
+        13
+      ],
+      "propTranslation": [
+        -72.0,
+        16.0,
+        96.0
+      ],
+      "sourceMember": 300
+    },
+    "matches": 1
+  },
+  "celadon-gym": {
+    "verified": true,
+    "doorNative": [
+      0.0,
+      0,
+      24.0
+    ],
+    "basis": "Original warp tile center minus original model placement; Y=0 is local logical floor.",
+    "evidence": {
+      "native": [
+        0.0,
+        0,
+        24.0
+      ],
+      "sourceMap": "MAP_CELADON",
+      "sourceMapId": 55,
+      "eventMember": 52,
+      "warpIndex": 5,
+      "warpTile": [
+        1201,
+        266
+      ],
+      "target": "MAP_CELADON_GYM",
+      "landMember": 172,
+      "worldCell": [
+        37,
+        8
+      ],
+      "propTranslation": [
+        24.0,
+        48.0,
+        -112.0
+      ],
+      "sourceMember": 245
+    },
+    "matches": 1
+  },
+  "viridian-gym": {
+    "verified": true,
+    "doorNative": [
+      0.0,
+      0,
+      16.0
+    ],
+    "basis": "Original warp tile center minus original model placement; Y=0 is local logical floor.",
+    "evidence": {
+      "native": [
+        0.0,
+        0,
+        16.0
+      ],
+      "sourceMap": "MAP_VIRIDIAN",
+      "sourceMapId": 50,
+      "eventMember": 47,
+      "warpIndex": 0,
+      "warpTile": [
+        1045,
+        239
+      ],
+      "target": "MAP_VIRIDIAN_GYM",
+      "landMember": 118,
+      "worldCell": [
+        32,
+        7
+      ],
+      "propTranslation": [
+        88.0,
+        48.0,
+        -24.0
+      ],
+      "sourceMember": 318
+    },
+    "matches": 1
+  },
+  "cerulean-gym": {
+    "verified": true,
+    "doorNative": [
+      0.0,
+      0,
+      24.0
+    ],
+    "basis": "Original warp tile center minus original model placement; Y=0 is local logical floor.",
+    "evidence": {
+      "native": [
+        0.0,
+        0,
+        24.0
+      ],
+      "sourceMap": "MAP_CERULEAN",
+      "sourceMapId": 52,
+      "eventMember": 49,
+      "warpIndex": 4,
+      "warpTile": [
+        1318,
+        134
+      ],
+      "target": "MAP_CERULEAN_GYM",
+      "landMember": 144,
+      "worldCell": [
+        41,
+        4
+      ],
+      "propTranslation": [
+        -152.0,
+        48.0,
+        -176.0
+      ],
+      "sourceMember": 284
+    },
+    "matches": 1
+  },
+  "vermilion-gym": {
+    "verified": true,
+    "doorNative": [
+      0.0,
+      0,
+      24.0
+    ],
+    "basis": "Original warp tile center minus original model placement; Y=0 is local logical floor.",
+    "evidence": {
+      "native": [
+        0.0,
+        0,
+        24.0
+      ],
+      "sourceMap": "MAP_VERMILION",
+      "sourceMapId": 54,
+      "eventMember": 51,
+      "warpIndex": 6,
+      "warpTile": [
+        1295,
+        319
+      ],
+      "target": "MAP_VERMILION_GYM",
+      "landMember": 126,
+      "worldCell": [
+        40,
+        9
+      ],
+      "propTranslation": [
+        -8.0,
+        16.0,
+        224.0
+      ],
+      "sourceMember": 219
+    },
+    "matches": 1
+  },
+  "saffron-gym": {
+    "verified": true,
+    "doorNative": [
+      0.0,
+      0,
+      24.0
+    ],
+    "basis": "Original warp tile center minus original model placement; Y=0 is local logical floor.",
+    "evidence": {
+      "native": [
+        0.0,
+        0,
+        24.0
+      ],
+      "sourceMap": "MAP_SAFFRON",
+      "sourceMapId": 59,
+      "eventMember": 56,
+      "warpIndex": 11,
+      "warpTile": [
+        1328,
+        204
+      ],
+      "target": "MAP_SAFFRON_GYM",
+      "landMember": 134,
+      "worldCell": [
+        41,
+        6
+      ],
+      "propTranslation": [
+        8.0,
+        32.0,
+        -80.0
+      ],
+      "sourceMember": 250
+    },
+    "matches": 1
+  }
+}

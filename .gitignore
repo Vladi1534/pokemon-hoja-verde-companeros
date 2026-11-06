@@ -21,3 +21,18 @@ Thumbs.db
 /online-server/public/sw.js
 
 /online-server/public/audio/
+
+/hg-data.js
+/landmark-data.js
+/model-engine.js
+/model-engine.js.LEGAL.txt
+/online-server/public/models/
+/online-server/public/model-engine.js
+/online-server/public/model-engine.js.LEGAL.txt
+/online-server/public/model-manifest.json
+
+/online-server/public/model-previews/
+
+__pycache__/
+/hg-work/
+/hg-audit.json

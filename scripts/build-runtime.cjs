@@ -22,7 +22,7 @@ fs.writeFileSync(path.join(root, 'character-data.js'),
 const world = vm.runInNewContext(fs.readFileSync(path.join(root, 'coop-world.js'), 'utf8') + '\nCOOP_WORLD');
 fs.writeFileSync(path.join(root, 'online-server/server/world.json'), JSON.stringify(world));
 
-build({
+Promise.all([build({
   absWorkingDir: root,
   entryPoints: ['online-server/browser/local-engine.mjs'],
   outfile: 'personal-engine.js',
@@ -34,5 +34,7 @@ build({
   minify: true,
   keepNames: true,
   legalComments: 'external',
-}).then(() => console.log('Shared local engine and ' + Object.keys(people).length + ' character sprites built.'))
+}),build({absWorkingDir:root,entryPoints:['model-renderer.mjs'],outfile:'model-engine.js',bundle:true,platform:'browser',format:'iife',globalName:'HGModels',target:['es2022'],minify:true,legalComments:'external'})]).then(() => console.log('Shared local engine and ' + Object.keys(people).length + ' character sprites built.'))
   .catch(error => { console.error(error); process.exitCode = 1; });
+
+const landmarks=JSON.parse(fs.readFileSync(path.join(root,'assets/heartgold-models/manifest.json'),'utf8'));const previews=JSON.parse(fs.readFileSync(path.join(root,'assets/heartgold-models/previews/manifest.json'),'utf8'));for(const a of landmarks.assets)a.preview=previews[a.key];fs.writeFileSync(path.join(root,'landmark-data.js'),'const HG_LANDMARKS='+JSON.stringify(Object.fromEntries(landmarks.assets.map(a=>[a.key,a])))+';\n');

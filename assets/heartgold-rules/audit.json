@@ -1,0 +1,1806 @@
+{
+  "speciesMismatches": [],
+  "moveMismatches": [
+    {
+      "move": "Guillotina",
+      "id": 12,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Perforador",
+      "id": 32,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Bomba Sónica",
+      "id": 49,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Patada Baja",
+      "id": 67,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Contraataque",
+      "id": 68,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Sísmico",
+      "id": 69,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Furia Dragón",
+      "id": 82,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Fisura",
+      "id": 90,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Tinieblas",
+      "id": 101,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Venganza",
+      "id": 117,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Psicoonda",
+      "id": 149,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Superdiente",
+      "id": 162,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Azote",
+      "id": 175,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Inversión",
+      "id": 179,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Aguante",
+      "id": 203,
+      "key": "priority",
+      "dex": 4,
+      "rom": 3
+    },
+    {
+      "move": "Retribución",
+      "id": 216,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Presente",
+      "id": 217,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Frustración",
+      "id": 218,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Magnitud",
+      "id": 222,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Poder Oculto",
+      "id": 237,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Manto Espejo",
+      "id": 243,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Escupir",
+      "id": 255,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Esfuerzo",
+      "id": 283,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Frío Polar",
+      "id": 329,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Giro Bola",
+      "id": 360,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Don Natural",
+      "id": 363,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Represión Metal",
+      "id": 368,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Lanzamiento",
+      "id": 374,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "As Oculto",
+      "id": 376,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Estrujón",
+      "id": 378,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Castigo",
+      "id": 386,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Hierba Lazo",
+      "id": 447,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Agarrón",
+      "id": 462,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    }
+  ],
+  "gen3AbilityChanges": [
+    {
+      "id": 16,
+      "name": "Pidgey",
+      "old": [
+        51
+      ],
+      "hg": [
+        51,
+        77
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Pidgeotto",
+      "old": [
+        51
+      ],
+      "hg": [
+        51,
+        77
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Pidgeot",
+      "old": [
+        51
+      ],
+      "hg": [
+        51,
+        77
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Nidoran♀",
+      "old": [
+        38
+      ],
+      "hg": [
+        38,
+        79
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Nidorina",
+      "old": [
+        38
+      ],
+      "hg": [
+        38,
+        79
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Nidoqueen",
+      "old": [
+        38
+      ],
+      "hg": [
+        38,
+        79
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Nidoran♂",
+      "old": [
+        38
+      ],
+      "hg": [
+        38,
+        79
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Nidorino",
+      "old": [
+        38
+      ],
+      "hg": [
+        38,
+        79
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Nidoking",
+      "old": [
+        38
+      ],
+      "hg": [
+        38,
+        79
+      ]
+    },
+    {
+      "id": 35,
+      "name": "Clefairy",
+      "old": [
+        56
+      ],
+      "hg": [
+        56,
+        98
+      ]
+    },
+    {
+      "id": 36,
+      "name": "Clefable",
+      "old": [
+        56
+      ],
+      "hg": [
+        56,
+        98
+      ]
+    },
+    {
+      "id": 46,
+      "name": "Paras",
+      "old": [
+        27
+      ],
+      "hg": [
+        27,
+        87
+      ]
+    },
+    {
+      "id": 47,
+      "name": "Parasect",
+      "old": [
+        27
+      ],
+      "hg": [
+        27,
+        87
+      ]
+    },
+    {
+      "id": 48,
+      "name": "Venonat",
+      "old": [
+        14
+      ],
+      "hg": [
+        14,
+        110
+      ]
+    },
+    {
+      "id": 49,
+      "name": "Venomoth",
+      "old": [
+        19
+      ],
+      "hg": [
+        19,
+        110
+      ]
+    },
+    {
+      "id": 52,
+      "name": "Meowth",
+      "old": [
+        53
+      ],
+      "hg": [
+        53,
+        101
+      ]
+    },
+    {
+      "id": 53,
+      "name": "Persian",
+      "old": [
+        7
+      ],
+      "hg": [
+        7,
+        101
+      ]
+    },
+    {
+      "id": 56,
+      "name": "Mankey",
+      "old": [
+        72
+      ],
+      "hg": [
+        72,
+        83
+      ]
+    },
+    {
+      "id": 57,
+      "name": "Primeape",
+      "old": [
+        72
+      ],
+      "hg": [
+        72,
+        83
+      ]
+    },
+    {
+      "id": 66,
+      "name": "Machop",
+      "old": [
+        62
+      ],
+      "hg": [
+        62,
+        99
+      ]
+    },
+    {
+      "id": 67,
+      "name": "Machoke",
+      "old": [
+        62
+      ],
+      "hg": [
+        62,
+        99
+      ]
+    },
+    {
+      "id": 68,
+      "name": "Machamp",
+      "old": [
+        62
+      ],
+      "hg": [
+        62,
+        99
+      ]
+    },
+    {
+      "id": 86,
+      "name": "Seel",
+      "old": [
+        47
+      ],
+      "hg": [
+        47,
+        93
+      ]
+    },
+    {
+      "id": 87,
+      "name": "Dewgong",
+      "old": [
+        47
+      ],
+      "hg": [
+        47,
+        93
+      ]
+    },
+    {
+      "id": 90,
+      "name": "Shellder",
+      "old": [
+        75
+      ],
+      "hg": [
+        75,
+        92
+      ]
+    },
+    {
+      "id": 91,
+      "name": "Cloyster",
+      "old": [
+        75
+      ],
+      "hg": [
+        75,
+        92
+      ]
+    },
+    {
+      "id": 96,
+      "name": "Drowzee",
+      "old": [
+        15
+      ],
+      "hg": [
+        15,
+        108
+      ]
+    },
+    {
+      "id": 97,
+      "name": "Hypno",
+      "old": [
+        15
+      ],
+      "hg": [
+        15,
+        108
+      ]
+    },
+    {
+      "id": 106,
+      "name": "Hitmonlee",
+      "old": [
+        7
+      ],
+      "hg": [
+        7,
+        120
+      ]
+    },
+    {
+      "id": 107,
+      "name": "Hitmonchan",
+      "old": [
+        51
+      ],
+      "hg": [
+        51,
+        89
+      ]
+    },
+    {
+      "id": 114,
+      "name": "Tangela",
+      "old": [
+        34
+      ],
+      "hg": [
+        34,
+        102
+      ]
+    },
+    {
+      "id": 115,
+      "name": "Kangaskhan",
+      "old": [
+        48
+      ],
+      "hg": [
+        48,
+        113
+      ]
+    },
+    {
+      "id": 116,
+      "name": "Horsea",
+      "old": [
+        33
+      ],
+      "hg": [
+        33,
+        97
+      ]
+    },
+    {
+      "id": 117,
+      "name": "Seadra",
+      "old": [
+        38
+      ],
+      "hg": [
+        38,
+        97
+      ]
+    },
+    {
+      "id": 122,
+      "name": "Mr. Mime",
+      "old": [
+        43
+      ],
+      "hg": [
+        43,
+        111
+      ]
+    },
+    {
+      "id": 123,
+      "name": "Scyther",
+      "old": [
+        68
+      ],
+      "hg": [
+        68,
+        101
+      ]
+    },
+    {
+      "id": 124,
+      "name": "Jynx",
+      "old": [
+        12
+      ],
+      "hg": [
+        12,
+        108
+      ]
+    },
+    {
+      "id": 127,
+      "name": "Pinsir",
+      "old": [
+        52
+      ],
+      "hg": [
+        52,
+        104
+      ]
+    },
+    {
+      "id": 128,
+      "name": "Tauros",
+      "old": [
+        22
+      ],
+      "hg": [
+        22,
+        83
+      ]
+    },
+    {
+      "id": 133,
+      "name": "Eevee",
+      "old": [
+        50
+      ],
+      "hg": [
+        50,
+        91
+      ]
+    },
+    {
+      "id": 137,
+      "name": "Porygon",
+      "old": [
+        36
+      ],
+      "hg": [
+        36,
+        88
+      ]
+    },
+    {
+      "id": 173,
+      "name": "Cleffa",
+      "old": [
+        56
+      ],
+      "hg": [
+        56,
+        98
+      ]
+    },
+    {
+      "id": 236,
+      "name": "Tyrogue",
+      "old": [
+        62
+      ],
+      "hg": [
+        62,
+        80
+      ]
+    },
+    {
+      "id": 237,
+      "name": "Hitmontop",
+      "old": [
+        22
+      ],
+      "hg": [
+        22,
+        101
+      ]
+    },
+    {
+      "id": 238,
+      "name": "Smoochum",
+      "old": [
+        12
+      ],
+      "hg": [
+        12,
+        108
+      ]
+    }
+  ],
+  "gen3MoveChanges": [
+    {
+      "move": "Puño Fuego",
+      "id": 7,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Puño Hielo",
+      "id": 8,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Puño Trueno",
+      "id": 9,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Guillotina",
+      "id": 12,
+      "key": "power",
+      "old": 0,
+      "hg": 1
+    },
+    {
+      "move": "Viento Cortante",
+      "id": 13,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    },
+    {
+      "move": "Tornado",
+      "id": 16,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    },
+    {
+      "move": "Vuelo",
+      "id": 19,
+      "key": "power",
+      "old": 70,
+      "hg": 90
+    },
+    {
+      "move": "Látigo Cepa",
+      "id": 22,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Látigo Cepa",
+      "id": 22,
+      "key": "pp",
+      "old": 10,
+      "hg": 15
+    },
+    {
+      "move": "Patada Salto",
+      "id": 26,
+      "key": "power",
+      "old": 70,
+      "hg": 85
+    },
+    {
+      "move": "Perforador",
+      "id": 32,
+      "key": "power",
+      "old": 0,
+      "hg": 1
+    },
+    {
+      "move": "Mordisco",
+      "id": 44,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Bomba Sónica",
+      "id": 49,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    },
+    {
+      "move": "Bomba Sónica",
+      "id": 49,
+      "key": "power",
+      "old": 0,
+      "hg": 1
+    },
+    {
+      "move": "Anulación",
+      "id": 50,
+      "key": "accuracy",
+      "old": 55,
+      "hg": 80
+    },
+    {
+      "move": "Ácido",
+      "id": 51,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    },
+    {
+      "move": "Hiperrayo",
+      "id": 63,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    },
+    {
+      "move": "Patada Baja",
+      "id": 67,
+      "key": "power",
+      "old": 0,
+      "hg": 1
+    },
+    {
+      "move": "Contraataque",
+      "id": 68,
+      "key": "power",
+      "old": 0,
+      "hg": 1
+    },
+    {
+      "move": "Sísmico",
+      "id": 69,
+      "key": "power",
+      "old": 0,
+      "hg": 1
+    },
+    {
+      "move": "Absorber",
+      "id": 71,
+      "key": "pp",
+      "old": 20,
+      "hg": 25
+    },
+    {
+      "move": "Megaagotar",
+      "id": 72,
+      "key": "pp",
+      "old": 10,
+      "hg": 15
+    },
+    {
+      "move": "Hoja Afilada",
+      "id": 75,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Danza Pétalo",
+      "id": 80,
+      "key": "power",
+      "old": 70,
+      "hg": 90
+    },
+    {
+      "move": "Furia Dragón",
+      "id": 82,
+      "key": "power",
+      "old": 0,
+      "hg": 1
+    },
+    {
+      "move": "Fisura",
+      "id": 90,
+      "key": "power",
+      "old": 0,
+      "hg": 1
+    },
+    {
+      "move": "Excavar",
+      "id": 91,
+      "key": "power",
+      "old": 60,
+      "hg": 80
+    },
+    {
+      "move": "Tinieblas",
+      "id": 101,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    },
+    {
+      "move": "Tinieblas",
+      "id": 101,
+      "key": "power",
+      "old": 0,
+      "hg": 1
+    },
+    {
+      "move": "Recuperación",
+      "id": 105,
+      "key": "pp",
+      "old": 20,
+      "hg": 10
+    },
+    {
+      "move": "Venganza",
+      "id": 117,
+      "key": "power",
+      "old": 0,
+      "hg": 1
+    },
+    {
+      "move": "Venganza",
+      "id": 117,
+      "key": "accuracy",
+      "old": 100,
+      "hg": true
+    },
+    {
+      "move": "Venganza",
+      "id": 117,
+      "key": "priority",
+      "old": 0,
+      "hg": 1
+    },
+    {
+      "move": "Polución",
+      "id": 123,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    },
+    {
+      "move": "Residuos",
+      "id": 124,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    },
+    {
+      "move": "Cascada",
+      "id": 127,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Tenaza",
+      "id": 128,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Meteoros",
+      "id": 129,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    },
+    {
+      "move": "Patada Salto Alta",
+      "id": 136,
+      "key": "power",
+      "old": 85,
+      "hg": 100
+    },
+    {
+      "move": "Destello",
+      "id": 148,
+      "key": "accuracy",
+      "old": 70,
+      "hg": 100
+    },
+    {
+      "move": "Psicoonda",
+      "id": 149,
+      "key": "power",
+      "old": 0,
+      "hg": 1
+    },
+    {
+      "move": "Martillazo",
+      "id": 152,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Triataque",
+      "id": 161,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    },
+    {
+      "move": "Superdiente",
+      "id": 162,
+      "key": "power",
+      "old": 0,
+      "hg": 1
+    },
+    {
+      "move": "Forcejeo",
+      "id": 165,
+      "key": "accuracy",
+      "old": 100,
+      "hg": true
+    },
+    {
+      "move": "Ladrón",
+      "id": 168,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Telépata",
+      "id": 170,
+      "key": "accuracy",
+      "old": 100,
+      "hg": true
+    },
+    {
+      "move": "Pesadilla",
+      "id": 171,
+      "key": "accuracy",
+      "old": true,
+      "hg": 100
+    },
+    {
+      "move": "Rueda Fuego",
+      "id": 172,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Ronquido",
+      "id": 173,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    },
+    {
+      "move": "Azote",
+      "id": 175,
+      "key": "power",
+      "old": 0,
+      "hg": 1
+    },
+    {
+      "move": "Aerochorro",
+      "id": 177,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    },
+    {
+      "move": "Inversión",
+      "id": 179,
+      "key": "power",
+      "old": 0,
+      "hg": 1
+    },
+    {
+      "move": "Finta",
+      "id": 185,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Bomba Lodo",
+      "id": 188,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    },
+    {
+      "move": "Bofetón Lodo",
+      "id": 189,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    },
+    {
+      "move": "Electrocañón",
+      "id": 192,
+      "key": "power",
+      "old": 100,
+      "hg": 120
+    },
+    {
+      "move": "Profecía",
+      "id": 193,
+      "key": "accuracy",
+      "old": 100,
+      "hg": true
+    },
+    {
+      "move": "Fijar Blanco",
+      "id": 199,
+      "key": "accuracy",
+      "old": 100,
+      "hg": true
+    },
+    {
+      "move": "Enfado",
+      "id": 200,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Enfado",
+      "id": 200,
+      "key": "power",
+      "old": 90,
+      "hg": 120
+    },
+    {
+      "move": "Gigadrenado",
+      "id": 202,
+      "key": "pp",
+      "old": 5,
+      "hg": 10
+    },
+    {
+      "move": "Aguante",
+      "id": 203,
+      "key": "priority",
+      "old": 4,
+      "hg": 3
+    },
+    {
+      "move": "Chispa",
+      "id": 209,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Retribución",
+      "id": 216,
+      "key": "power",
+      "old": 0,
+      "hg": 1
+    },
+    {
+      "move": "Presente",
+      "id": 217,
+      "key": "power",
+      "old": 0,
+      "hg": 1
+    },
+    {
+      "move": "Frustración",
+      "id": 218,
+      "key": "power",
+      "old": 0,
+      "hg": 1
+    },
+    {
+      "move": "Fuego Sagrado",
+      "id": 221,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Magnitud",
+      "id": 222,
+      "key": "power",
+      "old": 0,
+      "hg": 1
+    },
+    {
+      "move": "Persecución",
+      "id": 228,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Poder Oculto",
+      "id": 237,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    },
+    {
+      "move": "Poder Oculto",
+      "id": 237,
+      "key": "power",
+      "old": 0,
+      "hg": 1
+    },
+    {
+      "move": "Triturar",
+      "id": 242,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Manto Espejo",
+      "id": 243,
+      "key": "power",
+      "old": 0,
+      "hg": 1
+    },
+    {
+      "move": "Poder Pasado",
+      "id": 246,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    },
+    {
+      "move": "Bola Sombra",
+      "id": 247,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    },
+    {
+      "move": "Golpe Roca",
+      "id": 249,
+      "key": "power",
+      "old": 20,
+      "hg": 40
+    },
+    {
+      "move": "Paliza",
+      "id": 251,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Alboroto",
+      "id": 253,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    },
+    {
+      "move": "Reserva",
+      "id": 254,
+      "key": "pp",
+      "old": 10,
+      "hg": 20
+    },
+    {
+      "move": "Escupir",
+      "id": 255,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    },
+    {
+      "move": "Escupir",
+      "id": 255,
+      "key": "power",
+      "old": 0,
+      "hg": 1
+    },
+    {
+      "move": "Legado",
+      "id": 262,
+      "key": "accuracy",
+      "old": true,
+      "hg": 100
+    },
+    {
+      "move": "Adaptación",
+      "id": 267,
+      "key": "accuracy",
+      "old": 95,
+      "hg": true
+    },
+    {
+      "move": "Desarme",
+      "id": 282,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Esfuerzo",
+      "id": 283,
+      "key": "power",
+      "old": 0,
+      "hg": 1
+    },
+    {
+      "move": "Buceo",
+      "id": 291,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Buceo",
+      "id": 291,
+      "key": "power",
+      "old": 60,
+      "hg": 80
+    },
+    {
+      "move": "Patada Ígnea",
+      "id": 299,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Bola Hielo",
+      "id": 301,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Brazo Pincho",
+      "id": 302,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Vozarrón",
+      "id": 304,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    },
+    {
+      "move": "Meteorobola",
+      "id": 311,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    },
+    {
+      "move": "Aire Afilado",
+      "id": 314,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    },
+    {
+      "move": "Rastreo",
+      "id": 316,
+      "key": "accuracy",
+      "old": 100,
+      "hg": true
+    },
+    {
+      "move": "Viento Plata",
+      "id": 318,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    },
+    {
+      "move": "Rayo Señal",
+      "id": 324,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    },
+    {
+      "move": "Frío Polar",
+      "id": 329,
+      "key": "power",
+      "old": 0,
+      "hg": 1
+    },
+    {
+      "move": "Semilladora",
+      "id": 331,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Carámbano",
+      "id": 333,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Garra Dragón",
+      "id": 337,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Disparo Lodo",
+      "id": 341,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    },
+    {
+      "move": "Placaje Eléctrico",
+      "id": 344,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Hoja Aguda",
+      "id": 348,
+      "key": "category",
+      "old": "Special",
+      "hg": "Physical"
+    },
+    {
+      "move": "Hoja Aguda",
+      "id": 348,
+      "key": "power",
+      "old": 70,
+      "hg": 90
+    },
+    {
+      "move": "Deseo Oculto",
+      "id": 353,
+      "key": "category",
+      "old": "Physical",
+      "hg": "Special"
+    }
+  ],
+  "statusTests": [
+    {
+      "gen": 4,
+      "attacker": "Tangela",
+      "defender": "Mankey",
+      "ability": "Vital Spirit",
+      "move": "sleeppowder",
+      "status": "",
+      "events": [
+        "|-immune|p2a: Mankey|[from] ability: Vital Spirit"
+      ]
+    },
+    {
+      "gen": 4,
+      "attacker": "Tangela",
+      "defender": "Mankey",
+      "ability": "Anger Point",
+      "move": "sleeppowder",
+      "status": "slp",
+      "events": [
+        "|-status|p2a: Mankey|slp|[from] move: Sleep Powder"
+      ]
+    },
+    {
+      "gen": 4,
+      "attacker": "Tangela",
+      "defender": "Venusaur",
+      "ability": "Overgrow",
+      "move": "sleeppowder",
+      "status": "slp",
+      "events": [
+        "|-status|p2a: Venusaur|slp|[from] move: Sleep Powder"
+      ]
+    },
+    {
+      "gen": 4,
+      "attacker": "Venusaur",
+      "defender": "Tangela",
+      "ability": "Chlorophyll",
+      "move": "sleeppowder",
+      "status": "slp",
+      "events": [
+        "|-status|p2a: Tangela|slp|[from] move: Sleep Powder"
+      ]
+    },
+    {
+      "gen": 4,
+      "attacker": "Tangela",
+      "defender": "Drowzee",
+      "ability": "Insomnia",
+      "move": "sleeppowder",
+      "status": "",
+      "events": [
+        "|-immune|p2a: Drowzee|[from] ability: Insomnia"
+      ]
+    },
+    {
+      "gen": 6,
+      "attacker": "Tangela",
+      "defender": "Venusaur",
+      "ability": "Overgrow",
+      "move": "sleeppowder",
+      "status": "",
+      "events": [
+        "|-immune|p2a: Venusaur"
+      ]
+    },
+    {
+      "gen": 4,
+      "attacker": "Tangela",
+      "defender": "Venusaur",
+      "ability": "Overgrow",
+      "move": "poisonpowder",
+      "status": "",
+      "events": [
+        "|-immune|p2a: Venusaur"
+      ]
+    }
+  ],
+  "representationDifferences": [
+    {
+      "move": "Guillotina",
+      "id": 12,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Perforador",
+      "id": 32,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Bomba Sónica",
+      "id": 49,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Patada Baja",
+      "id": 67,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Contraataque",
+      "id": 68,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Sísmico",
+      "id": 69,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Furia Dragón",
+      "id": 82,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Fisura",
+      "id": 90,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Tinieblas",
+      "id": 101,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Venganza",
+      "id": 117,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Psicoonda",
+      "id": 149,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Superdiente",
+      "id": 162,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Azote",
+      "id": 175,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Inversión",
+      "id": 179,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Retribución",
+      "id": 216,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Presente",
+      "id": 217,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Frustración",
+      "id": 218,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Magnitud",
+      "id": 222,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Poder Oculto",
+      "id": 237,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Manto Espejo",
+      "id": 243,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Escupir",
+      "id": 255,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Esfuerzo",
+      "id": 283,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Frío Polar",
+      "id": 329,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Giro Bola",
+      "id": 360,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Don Natural",
+      "id": 363,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Represión Metal",
+      "id": 368,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Lanzamiento",
+      "id": 374,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "As Oculto",
+      "id": 376,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Estrujón",
+      "id": 378,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Castigo",
+      "id": 386,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Hierba Lazo",
+      "id": 447,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    },
+    {
+      "move": "Agarrón",
+      "id": 462,
+      "key": "power",
+      "dex": 0,
+      "rom": 1
+    }
+  ],
+  "functionalMismatches": [
+    {
+      "move": "Aguante",
+      "id": 203,
+      "key": "priority",
+      "dex": 4,
+      "rom": 3
+    }
+  ],
+  "typeChartMismatches": [],
+  "summary": {
+    "typeMatchups": 289,
+    "typeChartMismatches": 0,
+    "representationDifferences": 32,
+    "functionalMismatches": 1,
+    "species": 159,
+    "moves": 467,
+    "abilities": 76,
+    "speciesMismatches": 0,
+    "moveFieldMismatches": 33,
+    "gen3AbilityChanges": 45,
+    "gen3MoveChanges": 106,
+    "statusTestsPassed": 7
+  }
+}

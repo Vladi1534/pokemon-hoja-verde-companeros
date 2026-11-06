@@ -173,3 +173,5 @@ body.hg-edition{--ink:#26374c;--muted:#91a7c3;background:radial-gradient(ellipse
  .hg-edition .screen .hg-bag-items>button{min-height:31px}.hg-bag-items>button img{width:22px;height:22px}
  .hg-party-list{grid-template-columns:1fr 1fr}.hg-menu-footer{margin-top:6px;padding-top:6px}
 }
+
+.hg-battle-journal{margin:8px 0 12px;padding:8px 8px 8px 30px;background:#e7edf0;border:2px inset #b5c8d3;border-radius:6px;max-height:38vh;overflow:auto;font-size:13px;line-height:1.65}.hg-battle-journal li{padding:4px;border-bottom:1px solid #c8d5dc}.campaign-moves small{display:block;font-size:11px;color:#4b6171}.campaign-profile small{display:block;margin-top:6px}

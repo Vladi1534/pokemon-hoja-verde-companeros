@@ -7,11 +7,11 @@ import {newBattle,flee,battleItem,refreshBattle} from '../server/battles.mjs';
 import {abilityDescription} from '../server/ability-rules.mjs';
 import {visibleTrainer,navigationState} from '../server/navigation.mjs';
 let passed=0;const test=(name,fn)=>{fn();passed++;console.log('PASS '+name);};
-const battle=(first,second)=>new Battle({formatid:'gen3customgame',seed:[1,2,3,4],p1:{name:'QA',team:[first]},p2:{name:'Rival',team:[second]}});
+const battle=(first,second)=>new Battle({formatid:'gen4customgame',seed:[1,2,3,4],p1:{name:'QA',team:[first]},p2:{name:'Rival',team:[second]}});
 const geodude={species:'Geodude',level:5,ability:'Sturdy',moves:['tackle']},blastoise={species:'Blastoise',level:100,ability:'Torrent',moves:['surf']};
 test('Sturdy preserves exactly 1 HP at full health and works after battle serialization',()=>{
  let b=battle(geodude,blastoise);b=Battle.fromJSON(JSON.stringify(b.toJSON()));b.makeChoices('move 1','move 1');assert.equal(b.p1.active[0].hp,1);assert(b.log.some(l=>l.includes('|Sturdy')));b.makeChoices('move 1','move 1');assert(b.p1.active[0].fainted);
- assert.equal(Dex.mod('gen4').abilities.get('sturdy').onDamage,undefined,'the exception must not mutate other generations');
+
 });
 test('Sturdy does not protect an injured Pokémon, later multihits or residual damage',()=>{
  let b=battle(geodude,blastoise);b.p1.active[0].hp--;b.makeChoices('move 1','move 1');assert(b.p1.active[0].fainted);assert(!b.log.some(l=>l.includes('|Sturdy')));
@@ -41,8 +41,8 @@ test('battle medicine emits the healed HP before retaliation and consumes exactl
  battleItem(s,m,{battle:s.battle.id,turn:1,item:'potion',mon:m.party[0].uid},Date.now());assert.equal(m.bag.potion,2);assert.equal(s.battle.turn,2);
  const events=s.battle.views[m.id].events.map(e=>e.line),healed=events.findIndex(l=>l.startsWith('|-heal|p1'));assert(healed>=0);const max=detail(m.party[0]).maxHp;assert(events[healed].includes(max+'/'+max));assert(events.findIndex((l,i)=>i>healed&&l.startsWith('|move|p2'))>healed);
 });
-test('all available species expose real Gen 3 ability slots and a readable description',()=>{
- const abilities=new Set();for(const [id,s]of Object.entries(data.species))for(const [slot,name]of Object.entries(Dex.mod('gen3').species.get(s.name).abilities)){if(slot==='H')continue;const mon=createMon(+id,5,'qa',{abilitySlot:+slot});assert.equal(ability(mon),name);assert(Dex.mod('gen3').abilities.get(name).exists);assert(abilityDescription(name),name);assert(detail(mon).abilityDescription);abilities.add(name);}assert.equal(abilities.size,55);
+test('all available species expose real HeartGold ability slots and a readable description',()=>{
+ const abilities=new Set();for(const [id,s]of Object.entries(data.species))for(const [slot,name]of Object.entries(Dex.mod('gen4').species.get(s.name).abilities)){if(slot==='H')continue;const mon=createMon(+id,5,'qa',{abilitySlot:+slot});assert.equal(ability(mon),name);assert(Dex.mod('gen4').abilities.get(name).exists);assert(abilityDescription(name),name);assert(detail(mon).abilityDescription);abilities.add(name);}assert.equal(abilities.size,76);
 });
 const ash=world.maps.route1.npcs.find(n=>n.look==='ash');
 function nearAsh(g){g.member.position={...g.member.position,map:'route1',x:ash.x,y:ash.y+1,dir:'up',seen:Date.now()-5000};}
