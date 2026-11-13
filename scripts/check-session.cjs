@@ -49,7 +49,7 @@ for(const file of ['coop.js','personal-client.js'])vm.runInContext(fs.readFileSy
   const profile=PersonalEngine.newPersonal('Replay QA',4);const mon=profile.trainer.party[0];
   // No Guard makes the presentation fixture deterministic even against a Hustle Rattata.
   mon.species=68;mon.abilitySlot=1;
-  mon.level=50;mon.xp=117360;mon.moves=[{id:45,pp:40}];
+  mon.level=5;mon.xp=135;mon.moves=[{id:45,pp:40}];
   Object.assign(profile.trainer.position,${JSON.stringify({...require('../online-server/server/world.json').storyAnchors.guide,y:require('../online-server/server/world.json').storyAnchors.guide.y+1})});const game=new PersonalEngine.LocalGame(profile);
   const before=game.dispatch({action:'propose',kind:'coop',npc:'guide',requestId:crypto.randomUUID()}).battle;
   const after=game.dispatch({action:'choose',battle:before.id,turn:1,choice:'move 1',requestId:crypto.randomUUID()}).battle;

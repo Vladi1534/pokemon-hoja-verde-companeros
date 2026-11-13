@@ -14,6 +14,7 @@ var BattleReplay=(()=>{
   const mon=view.sides.find(s=>s.id===sideId)?.active[0];if(!mon)return;
   const match=/^(\d+)(?:\/(\d+))?(?:\s+(\w+))?/.exec(value||'');if(!match)return;
   mon.hp=match[2]?Math.ceil(100*Number(match[1])/Number(match[2])):0;
+  const roster=view.sides.find(s=>s.id===sideId)?.roster?.find(m=>m.active);if(roster)roster.fainted=mon.hp===0;
   mon.fainted=mon.hp===0;mon.status=['psn','tox','brn','par','slp','frz'].includes(match[3])?match[3]:'';
   if(view.you?.side===sideId){const own=view.you.team.find(p=>p.active);if(own){own.hp=view.you.events&&match[2]?Number(match[1]):Math.round(mon.hp*own.maxHp/100);own.fainted=mon.fainted;own.status=mon.status;}}
  }
@@ -32,6 +33,13 @@ var BattleReplay=(()=>{
     messages=[`${p[4]} ganó ${p[5]} puntos de experiencia.`];push(null,950);continue;
    }
 
+   if(kind==='ball'){
+    const capture={side:sideOf(p[3]),key:p[2],shakes:Number(p[4]),caught:p[5]==='caught'};
+    messages=['Lanzaste '+(({ball:'una Poké Ball',superball:'una Super Ball',ultraball:'una Ultra Ball',masterball:'la Master Ball'})[p[2]]||'una Ball')+'.'];
+    push(null,700,'capture');out.at(-1).capture={...capture,phase:'throw'};
+    for(let i=0;i<capture.shakes;i++){messages=['…'];push(null,450);out.at(-1).capture={...capture,phase:'shake'};}
+    messages=[capture.caught?'¡Capturado!':capture.shakes?'¡Se escapó de la Ball!':'¡Se liberó enseguida!'];push(null,650);out.at(-1).capture={...capture,phase:capture.caught?'caught':'escaped'};continue;
+   }
    if(kind==='move'){
     const moveId=String(p[3]).toLowerCase().replace(/[^a-z]/g,'');
     const move=typeof MOVES!=='undefined'?Object.values(MOVES).find(m=>m.slug?.replaceAll('-','')===moveId||m.english?.toLowerCase().replace(/[^a-z]/g,'')===moveId):null;
@@ -75,9 +83,10 @@ if(typeof Coop!=='undefined')(()=>{
   const replay=this.playback;if(!replay)return;
   if(!this.active||this.dismissed===replay.latest.id||this.state?.battle?.id!==replay.latest.id){this.cancelPlayback();return;}
   const step=replay.queue.shift();if(!step){this.finishPlayback();return;}
-  step.view.revision='animation-'+(++replay.serial);replay.frame=step.view;if(step.sfx&&typeof Audio!=='undefined')Audio.effect(step.sfx);
+  const previousFrame=replay.frame||this.presentedBattle;step.view.revision='animation-'+(++replay.serial);replay.frame=step.view;if(step.sfx&&typeof Audio!=='undefined')Audio.effect(step.sfx);
   render.call(this,step.view,true);
   const el=$('coopBattle');if(!el){this.cancelPlayback();return;}
+  if(typeof BattleStage!=='undefined')BattleStage.frame(step,previousFrame,el);
   el.classList.add('playing-turn');el.dataset.phase=step.actor?'attack-'+step.actor:'effect';if(step.sfx)el.dataset.effect=step.sfx;
   if(step.target&&step.target!==step.actor)el.querySelector(`[data-side="${step.target}"]`)?.classList.add('hurt');
   if(step.actor)el.querySelector(`[data-side="${step.actor}"]`)?.classList.add('attacking');

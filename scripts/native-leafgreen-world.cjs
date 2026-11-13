@@ -82,7 +82,7 @@ module.exports=function nativeLeafGreen(world){
    if(used.has(n.id+':objects:'+obj.index))continue;
    if(/CUT_TREE|BREAKABLE_ROCK|PUSHABLE_BOULDER/.test(g)){m.blockers.push({id,x:obj.x,y:obj.y,kind:/TREE/.test(g)?'cutTree':'boulder',gate:/TREE/.test(g)?'cut_use':'strength_use'});continue;}
    const battle=trainerObjects.find(t=>t.nativeMapId===n.id&&t.eventIndex===obj.index),trainer=battle&&trainers[battle.initialTrainerId];
-   if(trainer&&trainer.team.length&&trainer.team.every(p=>p.speciesId<=151)){if(m.npcs.some(p=>p.x===obj.x&&p.y===obj.y))continue;m.npcs.push({id,x:obj.x,y:obj.y,homeX:obj.x,homeY:obj.y,dir:npcDir(obj),look:looks(g)||'gentleman',nativeGraphic:g,name:trainer.nameSpanish||'Entrenador',role:'trainer',nativeIndex:obj.index,data:{team:trainer.team.map(p=>[p.speciesId,p.level]),nativeTrainer:trainer.id,maxWins:1,quote:battle.introSpanish,after:battle.defeatSpanish,sight:battle.sight}});continue;}
+   if(trainer&&trainer.team.length&&trainer.team.every(p=>p.speciesId<=151)){if(m.npcs.some(p=>p.x===obj.x&&p.y===obj.y))continue;m.npcs.push({id,x:obj.x,y:obj.y,homeX:obj.x,homeY:obj.y,dir:npcDir(obj),look:looks(g)||'gentleman',nativeGraphic:g,name:trainer.nameSpanish||'Entrenador',role:'trainer',nativeIndex:obj.index,data:{team:trainer.team.map(p=>[p.speciesId,p.level]),nativeTrainer:trainer.id,trainerPic:trainer.trainerPicId,trainerClass:trainer.classSymbol,maxWins:1,quote:battle.introSpanish,after:battle.defeatSpanish,sight:battle.sight}});continue;}
    // Variable graphics are multiplayer placeholders; objects are not people.
    if(sym.flag!=='0'||!obj.scriptAddress||!looks(g)||obj.trainerType)continue;
    if(m.npcs.some(p=>p.x===obj.x&&p.y===obj.y))continue;

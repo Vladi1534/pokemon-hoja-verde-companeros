@@ -2,6 +2,7 @@
 (()=>{
  const person=Renderer.person;
  Renderer.person=function(c,x,y,dir,look,moving=false,cloneVariant=false){
+  if(look?.endsWith('_bike'))return BattleStage.bicycle(c,x,y,dir,look.startsWith('leaf')?'leaf':'red',moving);
   const native=typeof NATIVE_NPC_FRAMES!=='undefined'&&NATIVE_NPC_FRAMES[look];
   if(native){
    const pic=ASSET.people[look];if(!pic?.complete||!pic.naturalWidth)return;

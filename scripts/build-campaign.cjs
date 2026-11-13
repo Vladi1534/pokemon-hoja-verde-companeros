@@ -68,6 +68,7 @@ require('./heartgold-museum.cjs')(world);
 require('./landmark-collision.cjs')(world);
 require('./native-leafgreen-world.cjs')(world);
 require('./mewtwo-world.cjs')(world);
+require('./services-world.cjs')(world);
 
 // The online renderer only uses our static geometry; all interactions are server owned.
 fs.writeFileSync(path.join(root,'coop-world.js'),'const COOP_WORLD='+JSON.stringify(world)+';\n');

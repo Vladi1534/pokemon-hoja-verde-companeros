@@ -2,7 +2,7 @@
 const point=(p,t)=>({map:p.map,x:p.x,y:p.y,fx:p.fx??p.x,fy:p.fy??p.y,dir:p.dir,fdir:p.fdir||p.dir,t});
 export function recordMotion(member,before,path,now){
  if(!path.length)return;
- const interval=Math.max(90,Math.min(170,(now-before.seen)/path.length||120));
+ const interval=Math.max(member.cycling?70:90,Math.min(170,(now-before.seen)/path.length||120));
  let trail=member.motion?.trail||[];
  const start=now-path.length*interval;
  if(!trail.length||trail.at(-1).map!==before.map||trail.at(-1).x!==before.x||trail.at(-1).y!==before.y)trail=[point(before,start)];

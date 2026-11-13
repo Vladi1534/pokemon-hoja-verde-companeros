@@ -41,7 +41,7 @@
   for(const b of m.blockers)if(!Game.flags[b.id])actors.push({y:b.y*T+29,draw:()=>{if(model(ctx,b.kind==='cutTree'?'kanto-tree':'cave-stalagmite',(b.x+.5)*T-ox,(b.y+1)*T-oy,b.kind==='cutTree'?1.3*T:T))return;const x=b.x*T-ox,y=b.y*T-oy;this.ellipse(ctx,x+T/2,y+T*.8,T*.4,T*.2,'#314530');if(b.kind==='cutTree'){this.box(ctx,x+T*.43,y+T*.48,T*.15,T*.45,'#88613d');this.ellipse(ctx,x+T/2,y+T*.3,T*.43,T*.5,'#44894e');this.ellipse(ctx,x+T*.42,y+T*.18,T*.28,T*.3,'#8abc55');}else this.ellipse(ctx,x+T/2,y+T*.5,T*.4,T*.4,'#8d8577');}});
   for(const i of m.items)if(!i.hidden&&!Game.flags[i.id])actors.push({y:i.y*T+25,draw:()=>this.item(ctx,i.x*T-ox,i.y*T-oy)});
   if(Game.lead)actors.push({y:Game.follower.py*T+30,draw:()=>this.follow(ctx,Game.follower.px*T-ox,Game.follower.py*T-oy,Game.follower.dir,!!Game.anim)});
-  actors.push({y:p.py*T+31,draw:()=>this.person(ctx,p.px*T-ox,p.py*T-oy,p.dir,Game.settings.avatar,!!Game.anim)});
+  actors.push({y:p.py*T+31,draw:()=>this.person(ctx,p.px*T-ox,p.py*T-oy,p.dir,Game.settings.avatar+(Coop.state?.trainer.cycling?'_bike':''),!!Game.anim)});
   Coop.drawActors(actors,ctx,ox,oy);actors.sort((a,b)=>a.y-b.y).forEach(a=>a.draw());upper.forEach(draw=>draw());
   ctx.restore();if(this.frames%15===0){this.hint();const mini=$('minimap');if(mini){mini.hidden=UI.opened;if(!mini.hidden)UI.drawLocal(mini);}}
  };

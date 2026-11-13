@@ -45,3 +45,5 @@ Promise.all([build({
   .catch(error => { console.error(error); process.exitCode = 1; });
 
 const landmarks=JSON.parse(fs.readFileSync(path.join(root,'assets/heartgold-models/manifest.json'),'utf8'));const previews=JSON.parse(fs.readFileSync(path.join(root,'assets/heartgold-models/previews/manifest.json'),'utf8'));const openings=JSON.parse(fs.readFileSync(path.join(root,'assets/heartgold-models/door-openings.json'),'utf8'));for(const a of landmarks.assets)a.preview={...previews[a.key],opening:openings[a.key]};fs.writeFileSync(path.join(root,'landmark-data.js'),'const HG_LANDMARKS='+JSON.stringify(Object.fromEntries(landmarks.assets.map(a=>[a.key,a])))+';\n');
+
+fs.writeFileSync(path.join(root,'trainer-presentation-data.js'),'const TRAINER_ART='+fs.readFileSync(path.join(root,'assets/trainer-presentation/sprites.json'),'utf8').trim()+';\n');

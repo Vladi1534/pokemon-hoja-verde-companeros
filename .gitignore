@@ -49,3 +49,5 @@ __pycache__/
 
 # NPC source PNG bytes are losslessly packed in sprites.json.
 /assets/native-npcs/*.png
+
+/trainer-presentation-data.js

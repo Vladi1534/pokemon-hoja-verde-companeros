@@ -1,11 +1,11 @@
 {
   "name": "pokemon-hoja-verde-companeros",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "private": true,
   "description": "Aventura fan de Kanto para navegador, con un compañero que sigue al jugador.",
   "scripts": {
     "build": "node scripts/prepare-world-assets.cjs && node scripts/import-heartgold.cjs && node scripts/build-campaign.cjs && node scripts/build-runtime.cjs && node build.cjs",
-    "test": "node validate.cjs && node scripts/check-personal.cjs && node scripts/check-session.cjs && node scripts/check-motion.cjs && node scripts/check-responsive.cjs && node scripts/check-audio.cjs && node scripts/check-maps.cjs && node scripts/check-classic.cjs && node scripts/check-immersion.cjs && node online-server/tests/immersion.test.mjs && node online-server/tests/heartgold.test.mjs && node scripts/check-heartgold.cjs && node online-server/tests/adventure-upgrade.test.mjs && node online-server/tests/map-collision.test.mjs && node scripts/check-native-input.mjs && node scripts/check-npc-passages.cjs && node online-server/tests/cloning.test.mjs"
+    "test": "node validate.cjs && node scripts/check-personal.cjs && node scripts/check-session.cjs && node scripts/check-motion.cjs && node scripts/check-responsive.cjs && node scripts/check-audio.cjs && node scripts/check-maps.cjs && node scripts/check-classic.cjs && node scripts/check-immersion.cjs && node online-server/tests/immersion.test.mjs && node online-server/tests/heartgold.test.mjs && node scripts/check-heartgold.cjs && node online-server/tests/adventure-upgrade.test.mjs && node online-server/tests/map-collision.test.mjs && node scripts/check-native-input.mjs && node scripts/check-npc-passages.cjs && node online-server/tests/cloning.test.mjs && node online-server/tests/services-upgrade.test.mjs"
   },
   "devDependencies": {
     "@pkmn/sim": "0.10.11",

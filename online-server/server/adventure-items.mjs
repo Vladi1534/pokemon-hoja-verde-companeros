@@ -1,5 +1,8 @@
 // Story objects are a real, personal pocket, reconstructed for older saves.
 export const adventureItems={
+ bike_voucher:{name:'Bono Bici',description:'El regalo del presidente del Club Pokémon de Carmín. Canjéalo en la tienda de bicicletas de Ciudad Celeste.'},
+ bicycle:{name:'Bicicleta',description:'Sube o baja de la bicicleta. Puedes pedalear al aire libre y por el Camino de Bicis. Atajo: B.'},
+ coin_case:{name:'Monedero',description:'Guarda hasta 9.999 fichas del casino de Azulona. Se conservan al guardar tu partida.'},
  clone_invitation:{name:'Invitación de Isla Nueva',description:'Neesha te invita a Isla Nueva. Habla con la marinera de Ciudad Carmín.'},
  clone_remote:{name:'Dispositivo de clonación',description:'Transporta una copia idéntica desde tu laboratorio. Dos Clon Balls como máximo; recarga en Isla Nueva. Una captura consume un turno y recibir el clon en tu equipo consume otro.'},
  map:{name:'Mapa de Kanto',description:'Muestra tu ubicación y los caminos de Kanto.'},
@@ -25,7 +28,7 @@ export const adventureItems={
 for(const item of Object.values(adventureItems))Object.assign(item,{keyItem:true,price:0,pocket:item.pocket||'key'});
 export function syncAdventureItems(m,p={}){
  m.bag ||= {};m.rewards ||= {};
- const own={...p,map:true,parcel:p.parcel&&!p.delivery,lift_key:p.rocket_b1_key,teeth:p.teeth&&!p.strength,ruby:p.ruby&&!p.rainbow,helix:p.fossils&&p.fossil!==140&&!m.rewards.fossil,dome:p.fossils&&p.fossil===140&&!m.rewards.fossil,expShare:!!p.delivery};
+ const own={...p,bike_voucher:p.bike_voucher&&!p.bicycle,map:true,parcel:p.parcel&&!p.delivery,lift_key:p.rocket_b1_key,teeth:p.teeth&&!p.strength,ruby:p.ruby&&!p.rainbow,helix:p.fossils&&p.fossil!==140&&!m.rewards.fossil,dome:p.fossils&&p.fossil===140&&!m.rewards.fossil,expShare:!!p.delivery};
  for(const key of Object.keys(adventureItems)){if(own[key])m.bag[key]=1;else delete m.bag[key];}
  if(!m.bag.expShare||!m.party.some(p=>p.uid===m.expShareUid))m.expShareUid=null;
 }

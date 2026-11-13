@@ -45,7 +45,7 @@ const MotionClient={
    Coop.queue.push(dir);
    if(predicted.moved&&predicted.position.map===this.mapId){
     const from={x:this.player.x,y:this.player.y},to={x:predicted.position.x,y:predicted.position.y},f=this.follower;
-    this.anim={elapsed:0,duration:(Input.shift||this.settings.run)?.105:.17,from,to,ffrom:{x:f.px,y:f.py},fto:{...from}};
+    this.anim={elapsed:0,duration:Coop.state?.trainer.cycling?.075:(Input.shift||this.settings.run)?.105:.17,from,to,ffrom:{x:f.px,y:f.py},fto:{...from}};
     const fx=from.x-f.x,fy=from.y-f.y;if(fx||fy)f.dir=Math.abs(fx)>Math.abs(fy)?(fx>0?'right':'left'):(fy>0?'down':'up');f.x=from.x;f.y=from.y;Object.assign(this.player,to);
    }
   }else move.call(this,dir);
