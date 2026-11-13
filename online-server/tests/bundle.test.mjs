@@ -1,5 +1,6 @@
 import {newPersonal} from '../server/portable.mjs';
 import {newBattle} from '../server/battles.mjs';
+import {createMon} from '../server/creatures.mjs';
 import {world} from '../server/campaign.mjs';
 import {createRequire} from 'node:module';
 import assert from 'node:assert/strict';
@@ -51,4 +52,16 @@ try{
  const reopened=await call({action:'host',key:hostKey,requestId:crypto.randomUUID(),portable:finalProfile},hostKey);
  assert.match(reopened.invite,/^[A-F0-9]{8}$/);assert.equal(reopened.me,hosted.me);
  console.log('PASS production Worker: heal, walk, lose, exit Center, walk again and reopen world after a legacy checkpoint');
+// Exercise clone receipt through independent HTTP requests and the built Worker.
+ const cloneRoom=reopened.room,row=await db.prepare('SELECT state FROM rooms WHERE id=?').bind(cloneRoom).first(),s=JSON.parse(row.state),m=s.members[0];
+ m.progress.clone_remote=true;m.bag.cloneball=2;m.party=Array.from({length:6},()=>createMon(143,100,m.id));m.party[3].hp=0;const old=m.party[3].uid,cloneActiveUid=m.party[0].uid;
+ newBattle(s,{kind:'coop',npc:'agatha_test',players:[m.id],encounter:{kind:'trainer',name:'Agatha',team:[[94,54]]}},Date.now());
+ await db.prepare('UPDATE rooms SET state=? WHERE id=?').bind(JSON.stringify(s),cloneRoom).run();
+ const cloneCommand=(action,args={})=>call({action,room:cloneRoom,requestId:crypto.randomUUID(),...args},hostKey);
+ let v=await cloneCommand('sync');v=await cloneCommand('battle_item',{battle:v.battle.id,turn:v.battle.turn,item:'cloneball'});
+ assert.equal(v.battle.turn,2);assert.equal(v.trainer.bag.cloneball,1);const clone=v.trainer.box.find(p=>p.clone);assert(clone);assert.equal(clone.level,54);
+ v=await cloneCommand('clone_receive',{battle:v.battle.id,turn:v.battle.turn,mode:'replace',mon:old,name:'Sombra'});
+ assert.equal(v.battle.turn,3);assert.equal(v.trainer.party[3].uid,clone.uid);assert.equal(v.trainer.party[3].nickname,'Sombra');assert.equal(v.trainer.box.find(p=>p.uid===old).hp,0);assert.equal(v.battle.you.team.find(p=>p.active).uid,cloneActiveUid);
+ const checkpoint=await cloneCommand('checkpoint');assert.deepEqual(checkpoint.portable.trainer.party[3].clone,clone.clone);
+ console.log('PASS production Worker cloning: capture, distinct receipt request, fainted bench replacement, nickname, provenance and checkpoint');
 }finally{await mf.dispose()}

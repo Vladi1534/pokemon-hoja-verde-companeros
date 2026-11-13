@@ -9,7 +9,7 @@ export function nativeStep(p,dir,state={progress:{}}){
  const arrive=d=>{const reason=gate(state,d.gate);if(reason)return {...moving,notice:reason};const dest=world.maps[d.to],nextDir=d.arrivalDir||(dest.inside&&!m.inside?'up':!dest.inside&&m.inside?'down':dir);const next={...moving,map:d.to,x:d.tx,y:d.ty,dir:nextDir,fx:d.tx,fy:d.ty,fdir:nextDir};if(dest.dynamicExit)next.returnWarp={to:p.map,tx:p.x,ty:p.y};else delete next.returnWarp;return next;};
  // Arrow warps also activate from their current tile. This handles old saves
  // and side approaches without requiring a step backwards first.
- const standing=m.portals.find(w=>w.x===p.x&&w.y===p.y&&w.dir===dir&&m.native.behavior[p.y]?.[p.x]>=98&&m.native.behavior[p.y]?.[p.x]<=101);
+ const standing=m.portals.find(w=>w.x===p.x&&w.y===p.y&&w.dir===dir&&(w.nativeExit||m.native.behavior[p.y]?.[p.x]>=98&&m.native.behavior[p.y]?.[p.x]<=101));
  if(standing)return arrive(standing);
  if(transition)return arrive(transition);
  if(m.dynamicWarps?.some(w=>w.x===x&&w.y===y)){const d=m.dynamicExit;return arrive(p.returnWarp||{to:d.map,tx:d.x,ty:d.y});}

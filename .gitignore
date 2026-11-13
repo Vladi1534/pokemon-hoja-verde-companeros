@@ -46,3 +46,6 @@ __pycache__/
 /assets/leafgreen-world/atlases/
 /assets/heartgold-environment/textures/
 /assets/heartgold-environment/models/
+
+# NPC source PNG bytes are losslessly packed in sprites.json.
+/assets/native-npcs/*.png

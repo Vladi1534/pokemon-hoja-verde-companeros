@@ -1,4 +1,4 @@
-# Pokémon Hoja Verde · Compañeros 3.0.1
+# Pokémon Hoja Verde · Compañeros 3.1.0
 
 Aventura fan de Kanto para navegador, con tu líder siguiéndote y una partida personal que puedes abrir a amigos. La geometría procede de 425 mapas originales de Verde Hoja; la campaña y sus eventos siguen adaptados al motor web compartido. El arte de HeartGold se integra progresivamente sin cambiar esas coordenadas.
 
@@ -18,13 +18,13 @@ Las medallas y objetos clave pertenecen a cada entrenador. La historia avanza pa
 
 ## Cambios de esta versión
 
-- Árboles de Corte con texturas visibles y paso libre tras despejarlos.
-- Fachadas completas, puertas alineadas y vegetación nativa conservada. Las fachadas sin correspondencia exacta mantienen su arte original.
-- Movimiento unificado con el motor nativo: cruces de rutas, saltos y barreras abiertas sin rechazos del navegador por una cuadrícula antigua.
-- Entradas y salidas corregidas, incluso al cargar partidas guardadas sobre una flecha de salida. Las placas y otros objetos invisibles de interacción ya no generan paredes.
-- Auditoría automática de 425 mapas, 1.018 transiciones utilizables, 784 contactos entre bordes y 107 obstáculos removibles.
+- 118 hojas originales de NPC, identidades correctas y eliminación del fallback al personaje jugador.
+- Aberturas visibles alineadas con las 74 puertas adaptadas. Recuperadas 159 casillas laterales de salidas anchas.
+- Historia opcional de Mewtwo e Isla Nueva desde la cuarta medalla y el Scope Silph, con Corey, Fergus, Neesha, tres clones guardianes y Mewtwo capturable.
+- Laboratorio remoto, Clon Balls, motes y recepción en el puesto activo, la banca o el PC. Los clones conservan nivel y genética; el original vuelve a su NPC y este recuerda lo ocurrido.
+- Marcas visuales de clon en batalla, fichas y seguidores. Menús integrados en la consola azul.
 
-Detalle y límites: [correcciones 3.0.1](RELEASE-3.0.1.md).
+Detalle, límites y reglas: [actualización 3.1.0](RELEASE-3.1.0.md). Correcciones anteriores del mapa: [3.0.1](RELEASE-3.0.1.md).
 
 ## Novedades de 3.0.0
 
@@ -64,7 +64,7 @@ La partida solitaria antigua se convierte sin borrar su original. Sus datos de e
 
 ## Mundo y mecánicas
 
-425 mapas nativos y dos alias de compatibilidad, diario de 24 hitos, atlas y mapa local. Campaña adaptada desde Oak hasta Liga y acceso a Isla Quarta. Se mantienen los 26 mapas del S. S. Anne y las plantas originales de cuevas, Silph y Torre. Importar geometría no equivale a ejecutar todos los scripts originales; consulta los límites de la versión.
+425 mapas nativos, cinco mapas del episodio opcional y dos alias de compatibilidad, diario de 24 hitos, atlas y mapa local. Campaña adaptada desde Oak hasta Liga y acceso a Isla Quarta. Se mantienen los 26 mapas del S. S. Anne y las plantas originales de cuevas, Silph y Torre. Importar geometría no equivale a ejecutar todos los scripts originales; consulta los límites de la versión.
 
 Los entrenadores adaptados admiten tres victorias por entrenador, con recompensa reducida en las revanchas; los entrenadores importados del mapa original admiten una victoria. Los gimnasios y jefes de historia se completan una vez; la Liga permite tres recorridos. Ayudar en un desafío ya completado no vuelve a conceder sus recompensas.
 

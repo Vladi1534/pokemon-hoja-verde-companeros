@@ -4,6 +4,9 @@ const root=path.resolve(__dirname,'..'),dir=path.join(root,'assets/leafgreen-wor
 const read=f=>JSON.parse(f==='runtime-world.json'?require('node:zlib').gunzipSync(fs.readFileSync(path.join(dir,f+'.gz'))).toString():fs.readFileSync(path.join(dir,f),'utf8'));
 module.exports=function nativeLeafGreen(world){
  const source=read('runtime-world.json').maps,links=read('legacy-map-correspondence.json').maps,anchors=read('legacy-story-anchors.json').anchors,old=world.maps;
+ const npcGraphics=JSON.parse(fs.readFileSync(path.join(root,'assets/native-npcs/manifest.json'),'utf8')).graphics;
+ const npcLook=s=>npcGraphics[s]?.key;
+ const npcDir=o=>o?.symbols?.movement_type?.match(/FACE_(UP|DOWN|LEFT|RIGHT)$/)?.[1].toLowerCase()||'down';
  const ids={};for(const n of Object.values(source))ids[n.id]=links.find(l=>l.nativeId===n.id)?.legacyId||n.id;
  const tables=read('encounters.json'),overrides=JSON.parse(fs.readFileSync(path.join(root,'campaign-encounter-overrides.json'),'utf8'));
  const alias=Object.fromEntries(links.map(l=>[l.legacyId,ids[l.nativeId]])),byName=Object.fromEntries(Object.values(source).map(m=>[m.sourceName,m]));
@@ -16,7 +19,14 @@ module.exports=function nativeLeafGreen(world){
   for(const w of n.warps){
    if(w.dynamic||!w.destinationId)continue;
    if(!w.arrival){const dst=source[w.destinationId],at=dst.warps[w.destinationWarp];if(!dst.sourceName.startsWith('PokemonLeague_')||!at)continue;w.arrival={x:at.x,y:at.y-2};}
-   if(!w.activeWarpBehaviorByDefault&&!n.sourceName.startsWith('PokemonLeague_')&&n.sourceName!=='MtEmber_Exterior')continue;
+   // Wide exit mats contain one arrow plus lateral, registered warp tiles.
+   // The import previously discarded the sides and left a visible 3-cell exit
+   // with only its center usable. Expand only a contiguous registered opening
+   // to the same destination, never an inactive story door elsewhere.
+   const exitAnchor=n.warps.find(a=>a.activeWarpBehaviorByDefault&&a.sourceCell?.behavior>=98&&a.sourceCell?.behavior<=101&&a.destinationId===w.destinationId&&a.destinationWarp===w.destinationWarp&&(
+    ['up','down'].includes(a.entryDirection)?a.y===w.y&&Math.abs(a.x-w.x)<=2:a.x===w.x&&Math.abs(a.y-w.y)<=2)&&
+    Array.from({length:Math.abs(a.x-w.x)+Math.abs(a.y-w.y)+1},(_,i)=>n.warps.find(q=>q.x===w.x+Math.sign(a.x-w.x)*i&&q.y===w.y+Math.sign(a.y-w.y)*i&&q.destinationId===a.destinationId&&q.destinationWarp===a.destinationWarp&&q.sourceCell?.collision===0)).every(Boolean));
+   if(!w.activeWarpBehaviorByDefault&&!exitAnchor&&!n.sourceName.startsWith('PokemonLeague_')&&n.sourceName!=='MtEmber_Exterior')continue;
    const dst=source[w.destinationId],at=dst.warps[w.destinationWarp],arrival={...w.arrival};let arrivalDir;
    // GBA doorway animations finish one step inside the room, not stranded on
    // its outward arrow. Keep stairs on their actual landing tile.
@@ -26,7 +36,7 @@ module.exports=function nativeLeafGreen(world){
      arrival.x=contact.x;arrival.y=contact.y;arrivalDir=contact.side;
     }
    }
-   const d={x:w.x,y:w.y,w:1,h:1,to:ids[w.destinationId],tx:arrival.x,ty:arrival.y,nativeWarp:w.index,dir:w.entryDirection||null,gate:null,...(arrivalDir?{arrivalDir}:{})};
+   const d={x:w.x,y:w.y,w:1,h:1,to:ids[w.destinationId],tx:arrival.x,ty:arrival.y,nativeWarp:w.index,dir:w.entryDirection||exitAnchor?.entryDirection||null,nativeExit:!!exitAnchor,gate:null,...(arrivalDir?{arrivalDir}:{})};
    m.grid[w.y][w.x]=8;
    if(w.trigger==='approach')m.doors.push(d);else m.portals.push(d);
   }
@@ -51,24 +61,33 @@ module.exports=function nativeLeafGreen(world){
   else pos=safe(m,n.x/o.w*m.w,n.y/o.h*m.h);
   if(m.npcs.some(p=>p.x===pos.x&&p.y===pos.y))pos=safe(m,pos.x,pos.y);
   Object.assign(n,pos,{homeX:pos.x,homeY:pos.y});
+  if(a?.nativeEventKind==='objects'){
+   const event=source[a.nativeId].events.objects[a.nativeEventIndex],graphic=event?.symbols?.graphics_id;
+   n.nativeGraphic=graphic;
+   // Keep authored anime characters and named leaders. Ordinary residents use
+   // their own native graphic, including sailors, swimmers, children and elders.
+   if(!n.data?.anime&&!['gym','rival','league'].includes(n.role)&&npcLook(graphic))n.look=npcLook(graphic);
+   n.dir=npcDir(event);
+  }
   if(['snorlax','snorlax16'].includes(n.data?.key)||n.id==='ssanne_rival')n.hideWhen=n.id;
   if(a?.nativeEventKind!=='objects'&&a)n.staticObject=true;
   if(n.role==='league')n.data.round=0;
   m.npcs.push(n);
  }
  // Populate everyday residents, services and removable native obstacles.
- const looks=s=>/NURSE/.test(s)?'nurse':/CLERK/.test(s)?'clerk':/SCIENTIST/.test(s)?'scientist':/LASS|WOMAN|GIRL/.test(s)?'lass':/HIKER/.test(s)?'hiker':/ROCKET/.test(s)?'rocket':/BUG_CATCHER/.test(s)?'bug':/YOUNGSTER|BOY/.test(s)?'youngster':'gentleman';
+ const looks=npcLook;
  for(const n of Object.values(source)){const m=maps[ids[n.id]];
   for(const obj of n.events.objects){const sym=obj.symbols||{},g=sym.graphics_id||'',id=m.id+'_native_'+obj.localId;
    if(obj.x<0||obj.y<0||obj.x>=m.w||obj.y>=m.h)continue; // connected-map scenery copies
    if(used.has(n.id+':objects:'+obj.index))continue;
    if(/CUT_TREE|BREAKABLE_ROCK|PUSHABLE_BOULDER/.test(g)){m.blockers.push({id,x:obj.x,y:obj.y,kind:/TREE/.test(g)?'cutTree':'boulder',gate:/TREE/.test(g)?'cut_use':'strength_use'});continue;}
    const battle=trainerObjects.find(t=>t.nativeMapId===n.id&&t.eventIndex===obj.index),trainer=battle&&trainers[battle.initialTrainerId];
-   if(trainer&&trainer.team.length&&trainer.team.every(p=>p.speciesId<=151)){if(m.npcs.some(p=>p.x===obj.x&&p.y===obj.y))continue;m.npcs.push({id,x:obj.x,y:obj.y,homeX:obj.x,homeY:obj.y,dir:'down',look:looks(g),name:trainer.nameSpanish||'Entrenador',role:'trainer',nativeIndex:obj.index,data:{team:trainer.team.map(p=>[p.speciesId,p.level]),nativeTrainer:trainer.id,maxWins:1,quote:battle.introSpanish,after:battle.defeatSpanish,sight:battle.sight}});continue;}
-   if(sym.flag!=='0'||!obj.scriptAddress||/POKE_BALL|FOSSIL|SNORLAX|LAPRAS|BIRD|POKEMON|ROCK|BALL/.test(g)||obj.trainerType)continue;
+   if(trainer&&trainer.team.length&&trainer.team.every(p=>p.speciesId<=151)){if(m.npcs.some(p=>p.x===obj.x&&p.y===obj.y))continue;m.npcs.push({id,x:obj.x,y:obj.y,homeX:obj.x,homeY:obj.y,dir:npcDir(obj),look:looks(g)||'gentleman',nativeGraphic:g,name:trainer.nameSpanish||'Entrenador',role:'trainer',nativeIndex:obj.index,data:{team:trainer.team.map(p=>[p.speciesId,p.level]),nativeTrainer:trainer.id,maxWins:1,quote:battle.introSpanish,after:battle.defeatSpanish,sight:battle.sight}});continue;}
+   // Variable graphics are multiplayer placeholders; objects are not people.
+   if(sym.flag!=='0'||!obj.scriptAddress||!looks(g)||obj.trainerType)continue;
    if(m.npcs.some(p=>p.x===obj.x&&p.y===obj.y))continue;
    const role=/NURSE/.test(g)?'heal':/CLERK/.test(g)&&/Mart|DepartmentStore/.test(n.sourceName)?'shop':'talk';
-   m.npcs.push({id,x:obj.x,y:obj.y,homeX:obj.x,homeY:obj.y,dir:'down',look:looks(g),name:role==='heal'?'Enfermera Joy':role==='shop'?'Dependiente':'Habitante de Kanto',role,data:{lines:[dialogues.find(d=>d.nativeMapId===n.id&&d.eventIndex===obj.index)?.textSpanish||'Explora '+m.name+'. Consulta el Pokégear para seguir tu objetivo y la Pokédex para buscar Pokémon.']},nativeIndex:obj.index});
+   m.npcs.push({id,x:obj.x,y:obj.y,homeX:obj.x,homeY:obj.y,dir:npcDir(obj),look:looks(g),nativeGraphic:g,name:role==='heal'?'Enfermera Joy':role==='shop'?'Dependiente':npcGraphics[g].creature?'Pokémon':'Habitante de Kanto',role,data:{lines:[dialogues.find(d=>d.nativeMapId===n.id&&d.eventIndex===obj.index)?.textSpanish||'Explora '+m.name+'. Consulta el Pokégear para seguir tu objetivo y la Pokédex para buscar Pokémon.']},nativeIndex:obj.index});
   }
   if(/PokemonCenter_1F/.test(n.sourceName)&&!m.npcs.some(n=>n.role==='pc')){const cells=n.behavior.flatMap((r,y)=>r.flatMap((v,x)=>v===131?[{x,y}]:[])),p=cells[0];if(p)m.npcs.push({id:m.id+'_pc',...p,homeX:p.x,homeY:p.y,name:'PC de Bill',role:'pc',look:'pc',dir:'down',data:{},staticObject:true});}
  }

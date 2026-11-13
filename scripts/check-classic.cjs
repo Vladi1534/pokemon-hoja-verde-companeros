@@ -19,6 +19,7 @@ const c=vm.createContext({console,Audio:{effect(){}},UI:{toast:s=>notices.push(s
  document:{createElement:()=>element(),body:{classList:{add(){}}}},$:id=>nodes.get(id),esc:String,
  ASSETS:{front:{7:'front7',19:'front19'},back:{7:'back7'}},TYPE_NAMES:{water:'Agua',normal:'Normal'},
  Coop:{active:true,moveName:m=>m,logText(){return ''},state:{members:[]},sendChoice:(b,s)=>calls.push(s),action:(a,s)=>calls.push([a,s]),bag:b=>calls.push(['bag',b.id])}});
+vm.runInContext(fs.readFileSync('clone-appearance.js','utf8'),c);
 vm.runInContext(fs.readFileSync('classic-battle.js','utf8'),c);
 const b={id:'battle-test',revision:1,turn:1,kind:'coop',encounter:'wild',title:'Rattata salvaje',log:[],sides:[{id:'p1',owner:'me',trainer:'Vladimir',active:[{id:7,name:'Squirtle',level:5,hp:100,gender:'M'}]},{id:'p2',trainer:'Salvaje',active:[{id:19,name:'Rattata',level:3,hp:100}]}],you:{side:'p1',moves:[{move:'Water Gun',type:'Water',pp:25,maxpp:25}],team:[{uid:'squirtle',id:7,name:'Squirtle',active:true,hp:20,maxHp:20,level:5,xp:150,levelXp:100,nextXp:300,gender:'M'}]}};
 const choose=menu=>buttons.find(b=>b.dataset.battleMenu===menu).onclick();

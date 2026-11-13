@@ -1,5 +1,7 @@
 // Story objects are a real, personal pocket, reconstructed for older saves.
 export const adventureItems={
+ clone_invitation:{name:'Invitación de Isla Nueva',description:'Neesha te invita a Isla Nueva. Habla con la marinera de Ciudad Carmín.'},
+ clone_remote:{name:'Dispositivo de clonación',description:'Transporta una copia idéntica desde tu laboratorio. Dos Clon Balls como máximo; recarga en Isla Nueva. Una captura consume un turno y recibir el clon en tu equipo consume otro.'},
  map:{name:'Mapa de Kanto',description:'Muestra tu ubicación y los caminos de Kanto.'},
  parcel:{name:'Paquete de Oak',description:'Un pedido para el profesor Oak. Entrégalo en el laboratorio de Paleta.'},
  bill:{name:'Ticket del S. S. Anne',description:'El billete que Bill te entregó. Permite embarcar en Ciudad Carmín.'},

@@ -1,0 +1,1186 @@
+{
+  "source": "https://github.com/pret/pokefirered",
+  "commit": "ce6406d8c2eaf46d543c8a2606de0c3cb1951982",
+  "graphics": {
+    "OBJ_EVENT_GFX_LITTLE_BOY": {
+      "key": "native_little_boy",
+      "file": "native_little_boy.png",
+      "width": 16,
+      "height": 16,
+      "frames": 9,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/little_boy.png"
+    },
+    "OBJ_EVENT_GFX_LITTLE_GIRL": {
+      "key": "native_little_girl",
+      "file": "native_little_girl.png",
+      "width": 16,
+      "height": 16,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/little_girl.png"
+    },
+    "OBJ_EVENT_GFX_YOUNGSTER": {
+      "key": "native_youngster",
+      "file": "native_youngster.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/youngster.png"
+    },
+    "OBJ_EVENT_GFX_BOY": {
+      "key": "native_boy",
+      "file": "native_boy.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/boy.png"
+    },
+    "OBJ_EVENT_GFX_BUG_CATCHER": {
+      "key": "native_bug_catcher",
+      "file": "native_bug_catcher.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/bug_catcher.png"
+    },
+    "OBJ_EVENT_GFX_SITTING_BOY": {
+      "key": "native_sitting_boy",
+      "file": "native_sitting_boy.png",
+      "width": 16,
+      "height": 32,
+      "frames": 3,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/sitting_boy.png"
+    },
+    "OBJ_EVENT_GFX_LASS": {
+      "key": "native_lass",
+      "file": "native_lass.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/lass.png"
+    },
+    "OBJ_EVENT_GFX_WOMAN_1": {
+      "key": "native_woman_1",
+      "file": "native_woman_1.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/woman_1.png"
+    },
+    "OBJ_EVENT_GFX_CRUSH_GIRL": {
+      "key": "native_crush_girl",
+      "file": "native_crush_girl.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/crush_girl.png"
+    },
+    "OBJ_EVENT_GFX_MAN": {
+      "key": "native_man",
+      "file": "native_man.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/man.png"
+    },
+    "OBJ_EVENT_GFX_ROCKER": {
+      "key": "native_rocker",
+      "file": "native_rocker.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/rocker.png"
+    },
+    "OBJ_EVENT_GFX_FAT_MAN": {
+      "key": "native_fat_man",
+      "file": "native_fat_man.png",
+      "width": 16,
+      "height": 32,
+      "frames": 9,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/fat_man.png"
+    },
+    "OBJ_EVENT_GFX_WOMAN_2": {
+      "key": "native_woman_2",
+      "file": "native_woman_2.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/woman_2.png"
+    },
+    "OBJ_EVENT_GFX_BEAUTY": {
+      "key": "native_beauty",
+      "file": "native_beauty.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/beauty.png"
+    },
+    "OBJ_EVENT_GFX_BALDING_MAN": {
+      "key": "native_balding_man",
+      "file": "native_balding_man.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/balding_man.png"
+    },
+    "OBJ_EVENT_GFX_WOMAN_3": {
+      "key": "native_woman_3",
+      "file": "native_woman_3.png",
+      "width": 16,
+      "height": 32,
+      "frames": 9,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/woman_3.png"
+    },
+    "OBJ_EVENT_GFX_OLD_MAN_1": {
+      "key": "native_old_man_1",
+      "file": "native_old_man_1.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/old_man_1.png"
+    },
+    "OBJ_EVENT_GFX_OLD_MAN_2": {
+      "key": "native_old_man_2",
+      "file": "native_old_man_2.png",
+      "width": 16,
+      "height": 32,
+      "frames": 9,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/old_man_2.png"
+    },
+    "OBJ_EVENT_GFX_OLD_MAN_LYING_DOWN": {
+      "key": "native_old_man_lying_down",
+      "file": "native_old_man_lying_down.png",
+      "width": 32,
+      "height": 32,
+      "frames": 1,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/old_man_lying_down.png"
+    },
+    "OBJ_EVENT_GFX_OLD_WOMAN": {
+      "key": "native_old_woman",
+      "file": "native_old_woman.png",
+      "width": 16,
+      "height": 32,
+      "frames": 9,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/old_woman.png"
+    },
+    "OBJ_EVENT_GFX_TUBER_M_WATER": {
+      "key": "native_tuber_m_water",
+      "file": "native_tuber_m_water.png",
+      "width": 16,
+      "height": 16,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/tuber_m_water.png"
+    },
+    "OBJ_EVENT_GFX_TUBER_F": {
+      "key": "native_tuber_f",
+      "file": "native_tuber_f.png",
+      "width": 16,
+      "height": 16,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/tuber_f.png"
+    },
+    "OBJ_EVENT_GFX_TUBER_M_LAND": {
+      "key": "native_tuber_m_land",
+      "file": "native_tuber_m_land.png",
+      "width": 16,
+      "height": 16,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/tuber_m_land.png"
+    },
+    "OBJ_EVENT_GFX_CAMPER": {
+      "key": "native_camper",
+      "file": "native_camper.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/camper.png"
+    },
+    "OBJ_EVENT_GFX_PICNICKER": {
+      "key": "native_picnicker",
+      "file": "native_picnicker.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/picnicker.png"
+    },
+    "OBJ_EVENT_GFX_COOLTRAINER_M": {
+      "key": "native_cooltrainer_m",
+      "file": "native_cooltrainer_m.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/cooltrainer_m.png"
+    },
+    "OBJ_EVENT_GFX_COOLTRAINER_F": {
+      "key": "native_cooltrainer_f",
+      "file": "native_cooltrainer_f.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/cooltrainer_f.png"
+    },
+    "OBJ_EVENT_GFX_SWIMMER_M_WATER": {
+      "key": "native_swimmer_m_water",
+      "file": "native_swimmer_m_water.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/swimmer_m_water.png"
+    },
+    "OBJ_EVENT_GFX_SWIMMER_F_WATER": {
+      "key": "native_swimmer_f_water",
+      "file": "native_swimmer_f_water.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/swimmer_f_water.png"
+    },
+    "OBJ_EVENT_GFX_SWIMMER_M_LAND": {
+      "key": "native_swimmer_m_land",
+      "file": "native_swimmer_m_land.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/swimmer_m_land.png"
+    },
+    "OBJ_EVENT_GFX_SWIMMER_F_LAND": {
+      "key": "native_swimmer_f_land",
+      "file": "native_swimmer_f_land.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/swimmer_f_land.png"
+    },
+    "OBJ_EVENT_GFX_WORKER_M": {
+      "key": "native_worker_m",
+      "file": "native_worker_m.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/worker_m.png"
+    },
+    "OBJ_EVENT_GFX_WORKER_F": {
+      "key": "native_worker_f",
+      "file": "native_worker_f.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/worker_f.png"
+    },
+    "OBJ_EVENT_GFX_ROCKET_M": {
+      "key": "native_rocket_m",
+      "file": "native_rocket_m.png",
+      "width": 16,
+      "height": 32,
+      "frames": 9,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/rocket_m.png"
+    },
+    "OBJ_EVENT_GFX_ROCKET_F": {
+      "key": "native_rocket_f",
+      "file": "native_rocket_f.png",
+      "width": 16,
+      "height": 32,
+      "frames": 9,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/rocket_f.png"
+    },
+    "OBJ_EVENT_GFX_GBA_KID": {
+      "key": "native_gba_kid",
+      "file": "native_gba_kid.png",
+      "width": 16,
+      "height": 32,
+      "frames": 3,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/gba_kid.png"
+    },
+    "OBJ_EVENT_GFX_POKE_MANIAC": {
+      "key": "native_poke_maniac",
+      "file": "native_poke_maniac.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/poke_maniac.png"
+    },
+    "OBJ_EVENT_GFX_BIKER": {
+      "key": "native_biker",
+      "file": "native_biker.png",
+      "width": 32,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/biker.png"
+    },
+    "OBJ_EVENT_GFX_BLACK_BELT": {
+      "key": "native_black_belt",
+      "file": "native_black_belt.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/black_belt.png"
+    },
+    "OBJ_EVENT_GFX_SCIENTIST": {
+      "key": "native_scientist",
+      "file": "native_scientist.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/scientist.png"
+    },
+    "OBJ_EVENT_GFX_HIKER": {
+      "key": "native_hiker",
+      "file": "native_hiker.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/hiker.png"
+    },
+    "OBJ_EVENT_GFX_FISHER": {
+      "key": "native_fisher",
+      "file": "native_fisher.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/fisher.png"
+    },
+    "OBJ_EVENT_GFX_CHANNELER": {
+      "key": "native_channeler",
+      "file": "native_channeler.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/channeler.png"
+    },
+    "OBJ_EVENT_GFX_CHEF": {
+      "key": "native_chef",
+      "file": "native_chef.png",
+      "width": 16,
+      "height": 32,
+      "frames": 9,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/chef.png"
+    },
+    "OBJ_EVENT_GFX_POLICEMAN": {
+      "key": "native_policeman",
+      "file": "native_policeman.png",
+      "width": 16,
+      "height": 32,
+      "frames": 9,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/policeman.png"
+    },
+    "OBJ_EVENT_GFX_GENTLEMAN": {
+      "key": "native_gentleman",
+      "file": "native_gentleman.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/gentleman.png"
+    },
+    "OBJ_EVENT_GFX_SAILOR": {
+      "key": "native_sailor",
+      "file": "native_sailor.png",
+      "width": 16,
+      "height": 32,
+      "frames": 10,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/sailor.png"
+    },
+    "OBJ_EVENT_GFX_CAPTAIN": {
+      "key": "native_captain",
+      "file": "native_captain.png",
+      "width": 16,
+      "height": 32,
+      "frames": 9,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/captain.png"
+    },
+    "OBJ_EVENT_GFX_NURSE": {
+      "key": "native_nurse",
+      "file": "native_nurse.png",
+      "width": 16,
+      "height": 32,
+      "frames": 4,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/nurse.png"
+    },
+    "OBJ_EVENT_GFX_CABLE_CLUB_RECEPTIONIST": {
+      "key": "native_cable_club_receptionist",
+      "file": "native_cable_club_receptionist.png",
+      "width": 16,
+      "height": 32,
+      "frames": 3,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/cable_club_receptionist.png"
+    },
+    "OBJ_EVENT_GFX_UNION_ROOM_RECEPTIONIST": {
+      "key": "native_union_room_receptionist",
+      "file": "native_union_room_receptionist.png",
+      "width": 16,
+      "height": 32,
+      "frames": 3,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/union_room_receptionist.png"
+    },
+    "OBJ_EVENT_GFX_UNUSED_MALE_RECEPTIONIST": {
+      "key": "native_unused_male_receptionist",
+      "file": "native_unused_male_receptionist.png",
+      "width": 16,
+      "height": 32,
+      "frames": 3,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/unused_male_receptionist.png"
+    },
+    "OBJ_EVENT_GFX_CLERK": {
+      "key": "native_clerk",
+      "file": "native_clerk.png",
+      "width": 16,
+      "height": 32,
+      "frames": 9,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/clerk.png"
+    },
+    "OBJ_EVENT_GFX_MG_DELIVERYMAN": {
+      "key": "native_mg_deliveryman",
+      "file": "native_mg_deliveryman.png",
+      "width": 16,
+      "height": 32,
+      "frames": 3,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/mg_deliveryman.png"
+    },
+    "OBJ_EVENT_GFX_TRAINER_TOWER_DUDE": {
+      "key": "native_trainer_tower_dude",
+      "file": "native_trainer_tower_dude.png",
+      "width": 16,
+      "height": 32,
+      "frames": 3,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/trainer_tower_dude.png"
+    },
+    "OBJ_EVENT_GFX_PROF_OAK": {
+      "key": "native_prof_oak",
+      "file": "native_prof_oak.png",
+      "width": 16,
+      "height": 32,
+      "frames": 9,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/prof_oak.png"
+    },
+    "OBJ_EVENT_GFX_BLUE": {
+      "key": "native_blue",
+      "file": "native_blue.png",
+      "width": 16,
+      "height": 32,
+      "frames": 9,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/blue.png"
+    },
+    "OBJ_EVENT_GFX_BILL": {
+      "key": "native_bill",
+      "file": "native_bill.png",
+      "width": 16,
+      "height": 32,
+      "frames": 9,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/bill.png"
+    },
+    "OBJ_EVENT_GFX_LANCE": {
+      "key": "native_lance",
+      "file": "native_lance.png",
+      "width": 16,
+      "height": 32,
+      "frames": 3,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/lance.png"
+    },
+    "OBJ_EVENT_GFX_AGATHA": {
+      "key": "native_agatha",
+      "file": "native_agatha.png",
+      "width": 16,
+      "height": 32,
+      "frames": 3,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/agatha.png"
+    },
+    "OBJ_EVENT_GFX_DAISY": {
+      "key": "native_daisy",
+      "file": "native_daisy.png",
+      "width": 16,
+      "height": 32,
+      "frames": 9,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/daisy.png"
+    },
+    "OBJ_EVENT_GFX_LORELEI": {
+      "key": "native_lorelei",
+      "file": "native_lorelei.png",
+      "width": 16,
+      "height": 32,
+      "frames": 9,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/lorelei.png"
+    },
+    "OBJ_EVENT_GFX_MR_FUJI": {
+      "key": "native_mr_fuji",
+      "file": "native_mr_fuji.png",
+      "width": 16,
+      "height": 32,
+      "frames": 9,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/mr_fuji.png"
+    },
+    "OBJ_EVENT_GFX_BRUNO": {
+      "key": "native_bruno",
+      "file": "native_bruno.png",
+      "width": 16,
+      "height": 32,
+      "frames": 3,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/bruno.png"
+    },
+    "OBJ_EVENT_GFX_BROCK": {
+      "key": "native_brock",
+      "file": "native_brock.png",
+      "width": 16,
+      "height": 32,
+      "frames": 3,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/brock.png"
+    },
+    "OBJ_EVENT_GFX_MISTY": {
+      "key": "native_misty",
+      "file": "native_misty.png",
+      "width": 16,
+      "height": 32,
+      "frames": 3,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/misty.png"
+    },
+    "OBJ_EVENT_GFX_LT_SURGE": {
+      "key": "native_lt_surge",
+      "file": "native_lt_surge.png",
+      "width": 16,
+      "height": 32,
+      "frames": 3,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/lt_surge.png"
+    },
+    "OBJ_EVENT_GFX_ERIKA": {
+      "key": "native_erika",
+      "file": "native_erika.png",
+      "width": 16,
+      "height": 32,
+      "frames": 3,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/erika.png"
+    },
+    "OBJ_EVENT_GFX_KOGA": {
+      "key": "native_koga",
+      "file": "native_koga.png",
+      "width": 16,
+      "height": 32,
+      "frames": 3,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/koga.png"
+    },
+    "OBJ_EVENT_GFX_SABRINA": {
+      "key": "native_sabrina",
+      "file": "native_sabrina.png",
+      "width": 16,
+      "height": 32,
+      "frames": 3,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/sabrina.png"
+    },
+    "OBJ_EVENT_GFX_BLAINE": {
+      "key": "native_blaine",
+      "file": "native_blaine.png",
+      "width": 16,
+      "height": 32,
+      "frames": 3,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/blaine.png"
+    },
+    "OBJ_EVENT_GFX_GIOVANNI": {
+      "key": "native_giovanni",
+      "file": "native_giovanni.png",
+      "width": 16,
+      "height": 32,
+      "frames": 9,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/giovanni.png"
+    },
+    "OBJ_EVENT_GFX_MOM": {
+      "key": "native_mom",
+      "file": "native_mom.png",
+      "width": 16,
+      "height": 32,
+      "frames": 3,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/mom.png"
+    },
+    "OBJ_EVENT_GFX_CELIO": {
+      "key": "native_celio",
+      "file": "native_celio.png",
+      "width": 16,
+      "height": 32,
+      "frames": 9,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/celio.png"
+    },
+    "OBJ_EVENT_GFX_TEACHY_TV_HOST": {
+      "key": "native_teachy_tv_host",
+      "file": "native_teachy_tv_host.png",
+      "width": 16,
+      "height": 32,
+      "frames": 9,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/teachy_tv_host.png"
+    },
+    "OBJ_EVENT_GFX_GYM_GUY": {
+      "key": "native_gym_guy",
+      "file": "native_gym_guy.png",
+      "width": 16,
+      "height": 32,
+      "frames": 9,
+      "rows": 1,
+      "creature": false,
+      "source": "graphics/object_events/pics/people/gym_guy.png"
+    },
+    "OBJ_EVENT_GFX_SNORLAX": {
+      "key": "native_snorlax",
+      "file": "native_snorlax.png",
+      "width": 32,
+      "height": 32,
+      "frames": 1,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/snorlax.png"
+    },
+    "OBJ_EVENT_GFX_SPEAROW": {
+      "key": "native_spearow",
+      "file": "native_spearow.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/spearow.png"
+    },
+    "OBJ_EVENT_GFX_CUBONE": {
+      "key": "native_cubone",
+      "file": "native_cubone.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/cubone.png"
+    },
+    "OBJ_EVENT_GFX_POLIWRATH": {
+      "key": "native_poliwrath",
+      "file": "native_poliwrath.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/poliwrath.png"
+    },
+    "OBJ_EVENT_GFX_CLEFAIRY": {
+      "key": "native_clefairy",
+      "file": "native_clefairy.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/clefairy.png"
+    },
+    "OBJ_EVENT_GFX_PIDGEOT": {
+      "key": "native_pidgeot",
+      "file": "native_pidgeot.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/pidgeot.png"
+    },
+    "OBJ_EVENT_GFX_JIGGLYPUFF": {
+      "key": "native_jigglypuff",
+      "file": "native_jigglypuff.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/jigglypuff.png"
+    },
+    "OBJ_EVENT_GFX_PIDGEY": {
+      "key": "native_pidgey",
+      "file": "native_pidgey.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/pidgey.png"
+    },
+    "OBJ_EVENT_GFX_CHANSEY": {
+      "key": "native_chansey",
+      "file": "native_chansey.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/chansey.png"
+    },
+    "OBJ_EVENT_GFX_OMANYTE": {
+      "key": "native_omanyte",
+      "file": "native_omanyte.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/omanyte.png"
+    },
+    "OBJ_EVENT_GFX_KANGASKHAN": {
+      "key": "native_kangaskhan",
+      "file": "native_kangaskhan.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/kangaskhan.png"
+    },
+    "OBJ_EVENT_GFX_PIKACHU": {
+      "key": "native_pikachu",
+      "file": "native_pikachu.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/pikachu.png"
+    },
+    "OBJ_EVENT_GFX_PSYDUCK": {
+      "key": "native_psyduck",
+      "file": "native_psyduck.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/psyduck.png"
+    },
+    "OBJ_EVENT_GFX_NIDORAN_F": {
+      "key": "native_nidoran_f",
+      "file": "native_nidoran_f.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/nidoran_f.png"
+    },
+    "OBJ_EVENT_GFX_NIDORAN_M": {
+      "key": "native_nidoran_m",
+      "file": "native_nidoran_m.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/nidoran_m.png"
+    },
+    "OBJ_EVENT_GFX_NIDORINO": {
+      "key": "native_nidorino",
+      "file": "native_nidorino.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/nidorino.png"
+    },
+    "OBJ_EVENT_GFX_MEOWTH": {
+      "key": "native_meowth",
+      "file": "native_meowth.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/meowth.png"
+    },
+    "OBJ_EVENT_GFX_SEEL": {
+      "key": "native_seel",
+      "file": "native_seel.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/seel.png"
+    },
+    "OBJ_EVENT_GFX_VOLTORB": {
+      "key": "native_voltorb",
+      "file": "native_voltorb.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/voltorb.png"
+    },
+    "OBJ_EVENT_GFX_SLOWPOKE": {
+      "key": "native_slowpoke",
+      "file": "native_slowpoke.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/slowpoke.png"
+    },
+    "OBJ_EVENT_GFX_SLOWBRO": {
+      "key": "native_slowbro",
+      "file": "native_slowbro.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/slowbro.png"
+    },
+    "OBJ_EVENT_GFX_MACHOP": {
+      "key": "native_machop",
+      "file": "native_machop.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/machop.png"
+    },
+    "OBJ_EVENT_GFX_WIGGLYTUFF": {
+      "key": "native_wigglytuff",
+      "file": "native_wigglytuff.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/wigglytuff.png"
+    },
+    "OBJ_EVENT_GFX_DODUO": {
+      "key": "native_doduo",
+      "file": "native_doduo.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/doduo.png"
+    },
+    "OBJ_EVENT_GFX_FEAROW": {
+      "key": "native_fearow",
+      "file": "native_fearow.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/fearow.png"
+    },
+    "OBJ_EVENT_GFX_MACHOKE": {
+      "key": "native_machoke",
+      "file": "native_machoke.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/machoke.png"
+    },
+    "OBJ_EVENT_GFX_LAPRAS": {
+      "key": "native_lapras",
+      "file": "native_lapras.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/lapras.png"
+    },
+    "OBJ_EVENT_GFX_ZAPDOS": {
+      "key": "native_zapdos",
+      "file": "native_zapdos.png",
+      "width": 32,
+      "height": 32,
+      "frames": 1,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/zapdos.png"
+    },
+    "OBJ_EVENT_GFX_MOLTRES": {
+      "key": "native_moltres",
+      "file": "native_moltres.png",
+      "width": 32,
+      "height": 32,
+      "frames": 1,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/moltres.png"
+    },
+    "OBJ_EVENT_GFX_ARTICUNO": {
+      "key": "native_articuno",
+      "file": "native_articuno.png",
+      "width": 32,
+      "height": 32,
+      "frames": 1,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/articuno.png"
+    },
+    "OBJ_EVENT_GFX_MEWTWO": {
+      "key": "native_mewtwo",
+      "file": "native_mewtwo.png",
+      "width": 16,
+      "height": 16,
+      "frames": 1,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/mewtwo.png"
+    },
+    "OBJ_EVENT_GFX_MEW": {
+      "key": "native_mew",
+      "file": "native_mew.png",
+      "width": 16,
+      "height": 16,
+      "frames": 1,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/mew.png"
+    },
+    "OBJ_EVENT_GFX_ENTEI": {
+      "key": "native_entei",
+      "file": "native_entei.png",
+      "width": 16,
+      "height": 16,
+      "frames": 1,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/entei.png"
+    },
+    "OBJ_EVENT_GFX_SUICUNE": {
+      "key": "native_suicune",
+      "file": "native_suicune.png",
+      "width": 16,
+      "height": 16,
+      "frames": 1,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/suicune.png"
+    },
+    "OBJ_EVENT_GFX_RAIKOU": {
+      "key": "native_raikou",
+      "file": "native_raikou.png",
+      "width": 16,
+      "height": 16,
+      "frames": 1,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/raikou.png"
+    },
+    "OBJ_EVENT_GFX_LUGIA": {
+      "key": "native_lugia",
+      "file": "native_lugia.png",
+      "width": 32,
+      "height": 32,
+      "frames": 2,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/lugia.png"
+    },
+    "OBJ_EVENT_GFX_HO_OH": {
+      "key": "native_ho_oh",
+      "file": "native_ho_oh.png",
+      "width": 32,
+      "height": 32,
+      "frames": 2,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/ho_oh.png"
+    },
+    "OBJ_EVENT_GFX_CELEBI": {
+      "key": "native_celebi",
+      "file": "native_celebi.png",
+      "width": 16,
+      "height": 16,
+      "frames": 1,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/celebi.png"
+    },
+    "OBJ_EVENT_GFX_KABUTO": {
+      "key": "native_kabuto",
+      "file": "native_kabuto.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/kabuto.png"
+    },
+    "OBJ_EVENT_GFX_DEOXYS_D": {
+      "key": "native_deoxys_d",
+      "file": "native_deoxys_d.png",
+      "width": 32,
+      "height": 32,
+      "frames": 2,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/deoxys_d.png"
+    },
+    "OBJ_EVENT_GFX_DEOXYS_A": {
+      "key": "native_deoxys_a",
+      "file": "native_deoxys_a.png",
+      "width": 32,
+      "height": 32,
+      "frames": 2,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/deoxys_a.png"
+    },
+    "OBJ_EVENT_GFX_DEOXYS_N": {
+      "key": "native_deoxys_n",
+      "file": "native_deoxys_n.png",
+      "width": 32,
+      "height": 32,
+      "frames": 2,
+      "rows": 1,
+      "creature": true,
+      "source": "graphics/object_events/pics/pokemon/deoxys_n.png"
+    }
+  }
+}

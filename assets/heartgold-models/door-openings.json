@@ -1,0 +1,128 @@
+{
+  "cerulean-house": {
+    "left": 153,
+    "right": 395,
+    "sampleY": 625,
+    "sourceWidth": 768,
+    "sourceHeight": 830
+  },
+  "poke-mart-compact": {
+    "left": 153,
+    "right": 395,
+    "sampleY": 641,
+    "sourceWidth": 768,
+    "sourceHeight": 771
+  },
+  "red-house": {
+    "left": 169,
+    "right": 322,
+    "sampleY": 756,
+    "sourceWidth": 768,
+    "sourceHeight": 920
+  },
+  "blue-house": {
+    "left": 169,
+    "right": 322,
+    "sampleY": 756,
+    "sourceWidth": 768,
+    "sourceHeight": 920
+  },
+  "pewter-house": {
+    "left": 170,
+    "right": 369,
+    "sampleY": 655,
+    "sourceWidth": 768,
+    "sourceHeight": 894
+  },
+  "viridian-house": {
+    "left": 177,
+    "right": 374,
+    "sampleY": 665,
+    "sourceWidth": 768,
+    "sourceHeight": 875
+  },
+  "vermilion-house": {
+    "left": 162,
+    "right": 364,
+    "sampleY": 568,
+    "sourceWidth": 768,
+    "sourceHeight": 790
+  },
+  "bills-house": {
+    "left": 185,
+    "right": 379,
+    "sampleY": 697,
+    "sourceWidth": 768,
+    "sourceHeight": 930
+  },
+  "pokemon-center": {
+    "left": 278,
+    "right": 441,
+    "sampleY": 584,
+    "sourceWidth": 768,
+    "sourceHeight": 766
+  },
+  "oak-laboratory": {
+    "left": 295,
+    "right": 422,
+    "sampleY": 570,
+    "sourceWidth": 768,
+    "sourceHeight": 706
+  },
+  "pewter-gym": {
+    "left": 296,
+    "right": 433,
+    "sampleY": 503,
+    "sourceWidth": 768,
+    "sourceHeight": 631
+  },
+  "cerulean-gym": {
+    "left": 296,
+    "right": 433,
+    "sampleY": 503,
+    "sourceWidth": 768,
+    "sourceHeight": 631
+  },
+  "vermilion-gym": {
+    "left": 296,
+    "right": 433,
+    "sampleY": 503,
+    "sourceWidth": 768,
+    "sourceHeight": 631
+  },
+  "celadon-gym": {
+    "left": 296,
+    "right": 433,
+    "sampleY": 503,
+    "sourceWidth": 768,
+    "sourceHeight": 631
+  },
+  "fuchsia-gym": {
+    "left": 296,
+    "right": 433,
+    "sampleY": 503,
+    "sourceWidth": 768,
+    "sourceHeight": 631
+  },
+  "saffron-gym": {
+    "left": 296,
+    "right": 433,
+    "sampleY": 503,
+    "sourceWidth": 768,
+    "sourceHeight": 631
+  },
+  "viridian-gym": {
+    "left": 296,
+    "right": 433,
+    "sampleY": 469,
+    "sourceWidth": 768,
+    "sourceHeight": 631
+  },
+  "museum-exterior": {
+    "left": 250,
+    "right": 310,
+    "sampleY": 409,
+    "sourceWidth": 768,
+    "sourceHeight": 484
+  }
+}

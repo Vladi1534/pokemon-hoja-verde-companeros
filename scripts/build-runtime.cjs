@@ -17,6 +17,13 @@ for (const [id, data] of Object.entries(metadata)) {
 fs.writeFileSync(path.join(root, 'character-data.js'),
   'Object.assign(ASSETS.people,' + JSON.stringify(people) + ');\n\n' +
   'const CHARACTER_FRAMES=' + JSON.stringify(frames) + ';\n');
+const nativeNpcs=JSON.parse(fs.readFileSync(path.join(root,'assets/native-npcs/manifest.json'),'utf8'));
+const nativeFrames={},nativePeople={},nativePngs=JSON.parse(fs.readFileSync(path.join(root,'assets/native-npcs/sprites.json'),'utf8'));
+for(const g of Object.values(nativeNpcs.graphics)){
+ nativePeople[g.key]='data:image/png;base64,'+nativePngs[g.file];
+ nativeFrames[g.key]={width:g.width,height:g.height,frames:g.frames,rows:g.rows};
+}
+fs.appendFileSync(path.join(root,'character-data.js'),'Object.assign(ASSETS.people,'+JSON.stringify(nativePeople)+');\nconst NATIVE_NPC_FRAMES='+JSON.stringify(nativeFrames)+';\n');
 
 // Both runtimes must use exactly the same generated campaign geometry.
 const world = vm.runInNewContext(fs.readFileSync(path.join(root, 'coop-world.js'), 'utf8') + '\nCOOP_WORLD');
@@ -37,4 +44,4 @@ Promise.all([build({
 }),build({absWorkingDir:root,entryPoints:['model-renderer.mjs'],outfile:'model-engine.js',bundle:true,platform:'browser',format:'iife',globalName:'HGModels',target:['es2022'],minify:true,legalComments:'external'})]).then(() => console.log('Shared local engine and ' + Object.keys(people).length + ' character sprites built.'))
   .catch(error => { console.error(error); process.exitCode = 1; });
 
-const landmarks=JSON.parse(fs.readFileSync(path.join(root,'assets/heartgold-models/manifest.json'),'utf8'));const previews=JSON.parse(fs.readFileSync(path.join(root,'assets/heartgold-models/previews/manifest.json'),'utf8'));for(const a of landmarks.assets)a.preview=previews[a.key];fs.writeFileSync(path.join(root,'landmark-data.js'),'const HG_LANDMARKS='+JSON.stringify(Object.fromEntries(landmarks.assets.map(a=>[a.key,a])))+';\n');
+const landmarks=JSON.parse(fs.readFileSync(path.join(root,'assets/heartgold-models/manifest.json'),'utf8'));const previews=JSON.parse(fs.readFileSync(path.join(root,'assets/heartgold-models/previews/manifest.json'),'utf8'));const openings=JSON.parse(fs.readFileSync(path.join(root,'assets/heartgold-models/door-openings.json'),'utf8'));for(const a of landmarks.assets)a.preview={...previews[a.key],opening:openings[a.key]};fs.writeFileSync(path.join(root,'landmark-data.js'),'const HG_LANDMARKS='+JSON.stringify(Object.fromEntries(landmarks.assets.map(a=>[a.key,a])))+';\n');

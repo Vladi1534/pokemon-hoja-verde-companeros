@@ -11,7 +11,7 @@ for(const m of maps){
  for(const w of [...m.doors,...m.portals]){
   const contact=Object.entries(dirs).filter(([dir,[dx,dy]])=>(!w.dir||w.dir===dir)&&m.grid[w.y-dy]?.[w.x-dx]!==undefined&&![2,7,10].includes(nativeCell(m,w.x-dx,w.y-dy,open).grid));
   if(contact.length){assert(contact.some(([dir,[dx,dy]])=>same(advance({map:m.id,x:w.x-dx,y:w.y-dy},[dir],open),w)),m.id+' warp '+w.nativeWarp);portals++;}
-  if(w.dir&&m.native.behavior[w.y][w.x]>=98&&m.native.behavior[w.y][w.x]<=101){assert(same(advance({map:m.id,x:w.x,y:w.y},[w.dir],open),w),m.id+' standing exit');arrows++;}
+  if(w.dir&&(w.nativeExit||m.native.behavior[w.y][w.x]>=98&&m.native.behavior[w.y][w.x]<=101)){assert(same(advance({map:m.id,x:w.x,y:w.y},[w.dir],open),w),m.id+' standing exit');arrows++;}
  }
  for(const c of m.nativeConnections){assert(same(advance({map:m.id,x:c.x,y:c.y},[c.dir],open),c),m.id+' edge '+c.dir);edges++;}
  for(const b of m.blockers){
@@ -42,3 +42,4 @@ const plate=world.maps.victory.npcs.find(n=>n.data?.key==='native_plate');
 assert(plate.staticObject);assert(Object.entries(dirs).some(([dir,[dx,dy]])=>{const r=advance({map:'victory',x:plate.x-dx,y:plate.y-dy},[dir],open);return r.x===plate.x&&r.y===plate.y;}),'interaction markers never add invisible walls');
 
 console.log(`PASS ${maps.length} maps: ${portals} usable warps, ${arrows} standing exits, ${edges} edge contacts, ${obstacles} removable obstacles, ${facades} nonoverlapping facades and opened-tile saves`);
+for(const x of [3,4,5])assert.equal(advance({map:'frlg_12_01',x,y:8},['down'],open).map,'cinnabar','all three visible lab exit tiles work');

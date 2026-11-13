@@ -1,0 +1,18 @@
+.clone-lab-status,.clone-preview{display:flex;align-items:center;gap:16px;padding:12px 16px;background:#d9e5ef;border:2px solid #7190ac;border-radius:9px;margin:12px 0;color:#17384f}
+.clone-lab-status small,.clone-preview small{display:block;margin-top:5px}
+.clone-ball{width:46px;height:46px;border:3px solid #242539;border-radius:50%;display:grid;place-items:center;background:linear-gradient(#544c7c 46%,#222c3b 46%,#222c3b 55%,#dce1eb 55%);color:#f8d2d5;font-weight:900;text-shadow:0 2px #212139}
+.clone-preview img{width:88px;height:88px;object-fit:contain;image-rendering:pixelated}
+.clone-rules{font-size:13px;line-height:1.6;border-left:3px solid #738aa2;padding-left:14px}
+.clone-provenance{padding:12px;background:#d8d5e9;color:#363252;border:1px solid #8e85ae;border-radius:8px;font-size:12px;line-height:1.6}
+.clone-ready{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 12px;margin-bottom:6px;border:2px solid #a0aad0;background:#e4e7f7;color:#263954;border-radius:7px}
+.clone-ready span{font-size:12px}.clone-ready button{min-height:36px;background:#54658b;color:white;font-weight:700}
+#cloneJournal .compact-chapter small{display:block;font-weight:400;margin-top:3px;color:#4e687c}
+.clone-slots button:disabled{opacity:.5}.clone-slots small{line-height:1.4}
+@media(max-width:700px){.clone-preview img{width:64px;height:64px}.clone-rules{font-size:12px}.clone-ready{padding:5px 8px}.clone-ready span{font-size:10px}.clone-ready button{font-size:11px;padding:5px 8px}.clone-slots{grid-template-columns:1fr}}
+
+.classic-battle.coop-battle:has(.clone-ready){grid-template-rows:28px minmax(0,1fr) 194px}
+.clone-ready{flex-shrink:0}
+@media(max-width:760px),(max-width:950px) and (max-height:520px){.classic-battle.coop-battle:has(.clone-ready){grid-template-rows:22px minmax(0,1fr) 51px 157px}}
+@media(max-width:950px) and (max-height:520px) and (orientation:landscape){.classic-battle.coop-battle:has(.clone-ready){grid-template-rows:22px minmax(0,1fr) 145px}}
+
+.hg-bag-items .clone-ball{width:26px;height:26px;flex:0 0 26px;min-width:26px;font-size:12px}

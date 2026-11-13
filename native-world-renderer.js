@@ -36,7 +36,7 @@
   for(const {b,frame}of facades)actors.push({y:(b.door.y+1)*T,draw:()=>{ctx.fillStyle='#24384a';ctx.fillRect(b.door.x*T-ox,(b.door.y+.15)*T-oy,T,.85*T);NativeFacade.draw(ctx,b,frame,ox,oy,T);}});
   for(const n of m.npcs){if(n.hideWhen&&Game.flags[n.hideWhen])continue;if(n.staticObject&&n.look!=='pc')continue;actors.push({y:n.y*T+31,draw:()=>{
    if(n.staticObject)return;const f=Math.max(0,Math.min(1,1-((n.walkUntil||0)-Game.time)/.3)),nx=(n.fromX??n.x)+(n.x-(n.fromX??n.x))*f,ny=(n.fromY??n.y)+(n.y-(n.fromY??n.y))*f;
-   if(this.storyObject(ctx,n,ox,oy))return;this.person(ctx,nx*T-ox,ny*T-oy,n.dir,n.look,(n.walkUntil||0)>Game.time);
+   if(this.storyObject(ctx,n,ox,oy))return;this.person(ctx,nx*T-ox,ny*T-oy,n.dir,n.look,(n.walkUntil||0)>Game.time,n.cloneVariant);
   }});}
   for(const b of m.blockers)if(!Game.flags[b.id])actors.push({y:b.y*T+29,draw:()=>{if(model(ctx,b.kind==='cutTree'?'kanto-tree':'cave-stalagmite',(b.x+.5)*T-ox,(b.y+1)*T-oy,b.kind==='cutTree'?1.3*T:T))return;const x=b.x*T-ox,y=b.y*T-oy;this.ellipse(ctx,x+T/2,y+T*.8,T*.4,T*.2,'#314530');if(b.kind==='cutTree'){this.box(ctx,x+T*.43,y+T*.48,T*.15,T*.45,'#88613d');this.ellipse(ctx,x+T/2,y+T*.3,T*.43,T*.5,'#44894e');this.ellipse(ctx,x+T*.42,y+T*.18,T*.28,T*.3,'#8abc55');}else this.ellipse(ctx,x+T/2,y+T*.5,T*.4,T*.4,'#8d8577');}});
   for(const i of m.items)if(!i.hidden&&!Game.flags[i.id])actors.push({y:i.y*T+25,draw:()=>this.item(ctx,i.x*T-ox,i.y*T-oy)});

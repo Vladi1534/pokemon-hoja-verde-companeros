@@ -12,7 +12,7 @@ export function unlockedReach(){
  }
  return {tiles,maps:new Set(queue.map(p=>p.map)),states:seen.size};
 }
-const native=Object.values(world.maps).filter(m=>!m.aliasOf);assert.equal(native.length,425);assert.equal(new Set(native.map(m=>m.native.id)).size,425);
+const native=Object.values(world.maps).filter(m=>!m.aliasOf&&!m.extension);assert.equal(native.length,425);assert.equal(new Set(native.map(m=>m.native.id)).size,425);
 for(const m of native){assert.equal(m.grid.length,m.h);assert(m.grid.every(row=>row.length===m.w));for(const p of [...m.doors,...m.portals,...m.nativeConnections]){const d=world.maps[p.to];assert(d,m.id);assert(p.tx>=0&&p.tx<d.w&&p.ty>=0&&p.ty<d.h,m.id+' → '+d.id);}for(const i of m.items)assert(items[i.key],i.key);}
 const reach=unlockedReach(),near=p=>[[0,-1],[0,1],[-1,0],[1,0],[0,-2],[0,2],[-2,0],[2,0]].some(([dx,dy])=>reach.tiles.has(p.map+':'+(p.x+dx)+','+(p.y+dy)));
 for(const chapter of chapters){const p=world.storyAnchors[chapter[3]];assert(p,chapter[3]);assert(near(p),'No walking route to '+chapter[3]);}

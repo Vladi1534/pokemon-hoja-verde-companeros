@@ -39,13 +39,14 @@ if(typeof Coop!=='undefined')(()=>{
    const mine=active?{...this.state.trainer?.party.find(m=>m.uid===active.uid),...active}:null;
    const mon=mine?{...p,...mine}:p,progress=mine?ClassicBattle.experience(mine):0;
    const sprites=typeof BATTLE_SPRITES!=='undefined'?BATTLE_SPRITES:ASSETS;
-   const pic=(ally?sprites.back:sprites.front)[p.id]||ASSETS.front[p.id];
+   const source=(ally?sprites.back:sprites.front)[p.id]||ASSETS.front[p.id],cloned=!!mon.clone||mon.cloneVariant;
+   const pic=CloneAppearance.sprite(source,p.id,cloned);
    const bounds=sprites.bounds?.[ally?'back':'front']?.[p.id];
    const pad=bounds?(96-bounds[3])/96*100:0;
    const scale=bounds?96/Math.max(1,bounds[3]-bounds[1]):1;
    const hp=mine?Math.ceil(mine.hp/mine.maxHp*100):p.hp;
    return `<div data-side="${s.id}" class="coop-fighter ${side} slot-${slot} ${p.fainted?'fainted':''}">
-    <div class="battle-platform"></div><img class="battle-sprite" style="--sprite-pad:${pad}%;--sprite-scale:${scale}" src="${pic}" alt="${esc(p.name)} ${ally?'de espaldas':'rival'}">
+    <div class="battle-platform"></div><img class="battle-sprite" style="--sprite-pad:${pad}%;--sprite-scale:${scale}" src="${pic}" ${cloned?`data-clone-source="${esc(source)}" data-clone-species="${p.id}"`:""} alt="${esc(p.name)} ${ally?'de espaldas':'rival'}">
     <section class="coop-fighter-card" aria-label="${esc(p.name)}: ${mine?mine.hp+' de '+mine.maxHp:hp+'%'} PS">
      <div class="classic-name"><b>${esc(p.name)}${gender(mon)}</b><span>Nv. ${mon.level||p.level}</span></div>
      <div class="battle-health"><strong>${status(p)||'PS'}</strong><div class="hpbar"><i style="width:${hp}%;--health:${hp<25?'#ed6564':hp<50?'#efc958':'#5fd7a0'}"></i></div></div>
@@ -63,10 +64,12 @@ if(typeof Coop!=='undefined')(()=>{
   else if(!you)commands='<p>Observando el combate.</p><button id="coopBattleDone">Volver al mapa</button>';
   else if(you.ready||you.wait)commands='<p class="coop-wait">Esperando la decisión del otro entrenador…</p>';
   else if(menu==='moves'&&!you.forceSwitch)commands=`<div class="battle-move-grid">${you.moves.map((m,i)=>`<button data-online-choice data-move="${i}" ${m.disabled||m.pp===0?'disabled':''} style="--move-color:${typeof TYPE_COLORS!=='undefined'?TYPE_COLORS[(m.type||'normal').toLowerCase()]||'#829273':'#829273'}"><b>${esc(this.moveName(m.move))}</b><small>${esc(TYPE_NAMES[(m.type||'').toLowerCase()]||m.type||'')} · ${{Physical:'Físico',Special:'Especial',Status:'Estado'}[m.category]||''} <span>${m.pp===undefined?'Preparado':m.pp+'/'+m.maxpp+' PP'}</span></small></button>`).join('')}</div><button class="battle-back" data-battle-menu="root">‹ Volver</button>`;
-  else if(menu==='party'||you.forceSwitch)commands=`<div class="battle-party-grid">${you.team.map((p,i)=>`<button data-online-choice data-switch="${i+1}" ${p.active||p.fainted||you.trapped?'disabled':''}><img src="${ASSETS.front[p.id]}" alt=""><span><b>${esc(p.name)}</b><small>${p.hp}/${p.maxHp} PS</small></span></button>`).join('')}</div>${!you.forceSwitch?'<button class="battle-back" data-battle-menu="root">‹ Volver</button>':''}`;
+  else if(menu==='party'||you.forceSwitch)commands=`<div class="battle-party-grid">${you.team.map((p,i)=>`<button data-online-choice data-switch="${i+1}" ${p.active||p.fainted||you.trapped?'disabled':''}>${CloneAppearance.image(ASSETS.front[p.id],p.id,p.cloneVariant)}<span><b>${esc(p.name)}</b><small>${p.hp}/${p.maxHp} PS</small></span></button>`).join('')}</div>${!you.forceSwitch?'<button class="battle-back" data-battle-menu="root">‹ Volver</button>':''}`;
   else commands='<div class="battle-command-grid"><button class="fight" data-battle-menu="moves"><span>⚔</span> LUCHA</button><button class="bag" id="onlineBattleBag"><span>▣</span> MOCHILA</button><button class="party" data-battle-menu="party"><span>◉</span> POKÉMON</button><button class="run" id="battleRun"><span>➜</span> HUIDA</button></div>';
+  if(you?.pendingClone?.ready)commands=`<div class="clone-ready"><span>◈ ${esc(you.pendingClone.name)} · clon listo en el PC</span><button id="cloneReceive">Elegir destino / mote</button></div>`+commands;
   el.innerHTML=`<div class="coop-battle-top"><span>${esc(b.title||'Combate Pokémon')}</span><b>Turno ${b.turn} <small id="coopDeadline"></small></b><button id="coopBattleExit" aria-label="Opciones del combate">•••</button></div><div class="coop-arena"><div class="battle-scenery" aria-hidden="true"></div>${fighters}</div><div class="coop-combat-log" role="status"><span>${esc(message)}</span>${b.ended&&b.result==='defeat'?'<small>Tu progreso se conserva.</small>':''}</div><div class="coop-command-area">${commands}</div>`;
   const done=()=>{this.dismissed=b.id;this.battleMenu='root';this.apply(this.state);this.side();};
+  if($('cloneReceive'))$('cloneReceive').onclick=()=>CloneUI.receive(b);
   if($('coopBattleDone'))$('coopBattleDone').onclick=done;
   $('coopBattleExit').onclick=()=>{if(b.ended||!you)return done();UI.ask('Combate en curso','La partida se guarda automáticamente. Puedes continuar o retirarte del combate.',[{label:'Seguir combatiendo',fn:()=>UI.close(true)},{label:'Registro y reglas',fn:()=>this.battleJournal(b)},{label:b.encounter==='wild'?'Huir':'Rendirme',fn:async()=>{UI.close(true);await this.action('concede');}}]);};
   el.querySelectorAll('[data-battle-menu]').forEach(button=>button.onclick=()=>{this.battleMenu=button.dataset.battleMenu;Audio.effect('menu');this.renderBattle(b,true);});

@@ -41,7 +41,9 @@ var BattleReplay=(()=>{
    }
    if(['switch','drag','replace'].includes(kind)){
     const side=view.sides.find(s=>s.id===id),target=next.sides.find(s=>s.id===id)?.active[0];
-    if(side&&target)side.active=[copy(target)];condition(view,id,p[4]);
+    if(side&&target)side.active=[copy(target)];
+    if(view.you?.side===id){const active=next.you?.team.find(m=>m.active);if(active)view.you.team=next.you.team.map(m=>m.uid===active.uid?copy(m):{...copy(view.you.team.find(old=>old.uid===m.uid)||m),active:false});}
+    condition(view,id,p[4]);
     messages=[text||'Un nuevo Pokémon entra al combate.'];push(null,650);continue;
    }
    if(kind==='-damage'||kind==='-heal'){

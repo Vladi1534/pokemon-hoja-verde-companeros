@@ -2,7 +2,7 @@
 // keep actors behind walls/exhibits on devices without hardware WebGL.
 const images=new Map(),depths=new Map();let canvas,actorCanvas;
 function image(url){if(!url)return null;if(!images.has(url)){const im=new Image();im.src='./'+url;images.set(url,im);}const im=images.get(url);return im.complete&&im.naturalWidth?im:null;}
-export function fallbackFrame(meta){const f=meta.preview;if(!f)return null;const im=image(f.image);return im?{image:im,nativePixelsPerUnit:f.scale,anchorX:f.anchorX,anchorY:f.anchorY}:null;}
+export function fallbackFrame(meta){const f=meta.preview;if(!f)return null;const im=image(f.image);return im?{image:im,nativePixelsPerUnit:f.scale,anchorX:f.anchorX,anchorY:f.anchorY,opening:f.opening}:null;}
 export function project(f,x,y,z){return {x:(x-f.center[0])*f.scale+f.width/2,y:(-(y-f.center[1])*f.cos+(z-f.center[2])*f.sin)*f.scale+f.height/2,depth:f.distance-(y-f.center[1])*f.sin-(z-f.center[2])*f.cos};}
 export function fallbackRoom(placements,{width,height,player,origin,zoom,meta}){
  const f=meta?.preview;if(!f)return null;const im=image(f.image),di=image(f.depth);if(!im||!di)return null;
